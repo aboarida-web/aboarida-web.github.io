@@ -3,18 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>الأدب - اللغة العربية</title>
+  <title>اللغة العربية - الأقسام</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Arial, sans-serif; }
     body { background: #f4f7fb; color: #1a2b3c; padding: 20px; }
     .container { max-width: 800px; margin: 0 auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-    h1 { color: #1e3a8a; text-align: center; margin-bottom: 20px; border-bottom: 2px solid #e5e7eb; padding-bottom: 10px; font-size: 24px; }
-    h2 { color: #2563eb; margin: 25px 0 15px; font-size: 20px; border-right: 4px solid #2563eb; padding-right: 10px; }
-    .lesson { background: #f8fafc; padding: 20px; border-radius: 8px; margin-bottom: 20px; border: 1px solid #e5e7eb; }
-    .lesson h3 { font-size: 18px; margin-bottom: 10px; color: #1e293b; border-bottom: 1px solid #cbd5e1; padding-bottom: 5px;}
-    .lesson p { font-size: 15px; line-height: 1.8; color: #334155; text-align: justify; margin-bottom: 10px; }
-    .lesson ul { margin-right: 20px; margin-bottom: 10px; color: #334155; font-size: 15px; line-height: 1.7;}
-    .lesson ul li { margin-bottom: 5px; }
+    h1 { color: #1e3a8a; text-align: center; margin-bottom: 30px; border-bottom: 2px solid #e5e7eb; padding-bottom: 10px; font-size: 24px; }
+    
+    .menu-grid { display: grid; grid-template-columns: 1fr; gap: 15px; }
+    
+    .menu-card { display: flex; align-items: center; justify-content: space-between; background: #f8fafc; padding: 20px; border-radius: 10px; text-decoration: none; color: #1e293b; border: 1px solid #e2e8f0; transition: 0.3s; }
+    .menu-card:hover { background: #e0f2fe; border-color: #38bdf8; transform: translateY(-2px); }
+    
+    .menu-card .info { display: flex; align-items: center; gap: 15px; }
+    .menu-card .icon { font-size: 30px; }
+    .menu-card h2 { font-size: 18px; margin: 0; border: none; padding: 0; color: #1e3a8a; }
+    
+    .arrow { font-size: 20px; color: #94a3b8; }
     
     .back-btn { display: inline-block; background: #64748b; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; margin-bottom: 20px; font-size: 14px; }
     .back-btn:hover { background: #475569; }
@@ -25,101 +30,48 @@
   <div class="container">
     <a href="index.html" class="back-btn">← العودة للرئيسية</a>
     
-    <h1>📖 الأدب <br><small style="font-size:16px; color:#64748b;">الصف الثالث الثانوي</small></h1>
+    <h1>📖 أقسام اللغة العربية<br><small style="font-size:16px; color:#64748b;">اختر القسم الذي تريد دراسته</small></h1>
 
-    <h2>1. المدرسة الكلاسيكية (الإحياء والبعث)</h2>
-    <div class="lesson">
-      <h3>النشأة والرواد:</h3>
-      <p>ظهرت في أواخر القرن التاسع عشر. رائدها الأول هو <b>محمود سامي البارودي</b>، الذي أعاد للشعر العربي قوته وجزالة ألفاظه. من أعلامها: <b>أحمد شوقي، حافظ إبراهيم، وإسماعيل صبري</b>.</p>
-      <h3>الخصائص الفنية:</h3>
-      <ul>
-        <li><b>المحاكاة:</b> محاكاة القدماء في بناء القصيدة (البيت والقافية).</li>
-        <li><b>الموضوعات:</b> اهتمت بالمديح، الرثاء، الغزل، والفخر (الموضوعات التقليدية).</li>
-        <li><b>اللغة:</b> جزلة وقوية، تعتمد على البلاغة القديمة.</li>
-        <li><b>الوحدة:</b> الاهتمام بوحدة البيت (كل بيت يعبر عن فكرة مستقلة).</li>
-      </ul>
+    <div class="menu-grid">
+      
+      <!-- زرار الأدب -->
+      <a href="adab.html" class="menu-card">
+        <div class="info">
+          <span class="icon">📚</span>
+          <h2>الأدب</h2>
+        </div>
+        <span class="arrow">←</span>
+      </a>
+
+      <!-- زرار النصوص -->
+      <a href="texts.html" class="menu-card">
+        <div class="info">
+          <span class="icon">📜</span>
+          <h2>النصوص والقراءة</h2>
+        </div>
+        <span class="arrow">←</span>
+      </a>
+
+      <!-- زرار النحو -->
+      <a href="nahw.html" class="menu-card">
+        <div class="info">
+          <span class="icon">✍️</span>
+          <h2>النحو</h2>
+        </div>
+        <span class="arrow">←</span>
+      </a>
+
+      <!-- زرار البلاغة -->
+      <a href="balagha.html" class="menu-card">
+        <div class="info">
+          <span class="icon">💡</span>
+          <h2>البلاغة</h2>
+        </div>
+        <span class="arrow">←</span>
+      </a>
+
     </div>
-
-    <h2>2. الاتجاه الوجداني (الديوان وأبولو)</h2>
-    <div class="lesson">
-      <h3>أولاً: مدرسة الديوان</h3>
-      <p>ظهرت كرد فعل للمدرسة الكلاسيكية. سميت بهذا الاسم نسبة لكتاب "الديوان في الأدب والنقد". روادها: <b>عباس محمود العقاد، إبراهيم عبد القادر المازني، وعبد الرحمن شكري</b>.</p>
-      <ul>
-        <li><b>الفكرة:</b> الاهتمام بالفكرة أكثر من اللفظ (شعر الفكر).</li>
-        <li><b>اللغة:</b> سهلة وبسيطة، بعيدة عن الزخرفة البديعية المتكلفة.</li>
-        <li><b>النقد:</b> اهتموا بالنقد الأدبي، وكانوا حادين في نقد خصومهم.</li>
-      </ul>
-      <h3>ثانياً: مدرسة أبولو</h3>
-      <p>أسسها <b>أحمد زكي أبو شادي</b> عام 1932م. من أعلامها: <b>إبراهيم ناجي، علي محمود طه، وأبو القاسم الشابي</b>.</p>
-      <ul>
-        <li><b>العاطفة:</b> سيطرت العاطفة والوجدان على شعرهم (شعر الغزل والحب).</li>
-        <li><b>الطبيعة:</b> الاهتمام بتصوير الطبيعة والتأمل فيها.</li>
-        <li><b>اللغة:</b> رقيقة وعذبة، تتناسب مع عواطفهم.</li>
-      </ul>
-    </div>
-
-    <h2>3. مدرسة المهاجر (الرابطة القلمية والعصبة الأندلسية)</h2>
-    <div class="lesson">
-      <h3>النشأة والرواد:</h3>
-      <p>ظهرت في المهجر (أمريكا الشمالية والجنوبية) بسبب هجرة الأدباء من لبنان وسوريا. انقسمت إلى: <b>الرابطة القلمية</b> (جبران خليل جبران، ميخائيل نعيمة، إيليا أبو ماضي) و<b>العصبة الأندلسية</b> (ميشيل معلوف، رشيد سليم الخوري).</p>
-      <h3>الخصائص الفنية:</h3>
-      <ul>
-        <li><b>الحنين:</b> الحنين الجارف للوطن الأم (لبنان وسوريا).</li>
-        <li><b>التأمل:</b> التأمل في الكون والحياة والموت (فلسفة).</li>
-        <li><b>اللغة:</b> سهلة، حية، ومحملة بالرموز.</li>
-        <li><b>الشكل:</b> تحرروا من القافية أحياناً (شعر منثور).</li>
-      </ul>
-    </div>
-
-    <h2>4. المدرسة الجديدة (الواقعية / شعر التفعيلة)</h2>
-    <div class="lesson">
-      <h3>النشأة والرواد:</h3>
-      <p>ظهرت بعد الحرب العالمية الثانية، وتأثرت بالواقعية والاشتراكية. من أعلامها: <b>صلاح عبد الصبور، أحمد عبد المعطي حجازي، ونازك الملائكة</b>.</p>
-      <h3>الخصائص الفنية:</h3>
-      <ul>
-        <li><b>الموضوع:</b> الاهتمام بقضايا الإنسان والمجتمع (الفقر، الحرية، العدالة).</li>
-        <li><b>اللغة:</b> لغة حية قريبة من لغة الحياة اليومية.</li>
-        <li><b>الشكل:</b> التحرر من وحدة الوزن والقافية (شعر التفعيلة).</li>
-        <li><b>الرمز:</b> استخدام الرموز في الشعر للتعبير عن الواقع.</li>
-      </ul>
-    </div>
-
-    <h2>5. فنون النثر: المقال</h2>
-    <div class="lesson">
-      <h3>تعريفه وأنواعه:</h3>
-      <p>المقال هو بحث قصير في موضوع معين، يعبر فيه الكاتب عن رأيه. ينقسم إلى:</p>
-      <ul>
-        <li><b>المقال الذاتي:</b> يهتم بذات الكاتب وعواطفه (مثل: مصطفى صادق الرافعي، أحمد أمين).</li>
-        <li><b>المقال الموضوعي:</b> يهتم بالحقائق والأفكار بعيداً عن العواطف (مثل: طه حسين، العقاد).</li>
-      </ul>
-      <h3>خصائصه:</h3>
-      <p>الإيجاز، وضوح الفكرة، السلاسة، والاستشهاد بالأدلة.</p>
-    </div>
-
-    <h2>6. فنون النثر: الرواية والقصة القصيرة</h2>
-    <div class="lesson">
-      <h3>الرواية:</h3>
-      <p>عمل أدبي طويل، يعتمد على السرد، وله أحداث وشخصيات وزمان ومكان. من روادها في مصر: <b>نجيب محفوظ</b> (زقاق المدق، الثلاثية)، وطه حسين (الأيام).</p>
-      <h3>القصة القصيرة:</h3>
-      <p>عمل أدبي قصير، يركز على موقف واحد (لحظة واحدة)، وله بداية ونهاية. من روادها: <b>يوسف إدريس، محمود تيمور، ويحيى حقي</b>.</p>
-      <h3>الخصائص المشتركة:</h3>
-      <p>الواقعية، تحليل الشخصيات، الحوار، والصراع الدرامي.</p>
-    </div>
-
-    <h2>7. فنون النثر: المسرحية</h2>
-    <div class="lesson">
-      <h3>النشأة والرواد:</h3>
-      <p>ظهرت في مصر في القرن التاسع عشر، وبدأها <b>يعقوب صنوع</b>، ثم تطورت مع <b>أحمد شوقي</b> (مسرحية مصرع كليوباترا)، و<b>توفيق الحكيم</b> (أهل الكهف).</p>
-      <h3>أنواعها:</h3>
-      <ul>
-        <li><b>المسرحية المأساوية (التراجيديا):</b> نهاية حزينة.</li>
-        <li><b>المسرحية الكوميدية:</b> نهاية سعيدة.</li>
-      </ul>
-      <h3>عناصرها:</h3>
-      <p>الصراع، الحوار، الشخصيات، الحدث، والعقدة (الحبكة).</p>
-    </div>
-
   </div>
 
 </body>
-  </html>
+</html>
