@@ -3,24 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>النحو - اللغة العربية</title>
+  <title>النحو - اللغة العربية (الجزء الأول)</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Arial, sans-serif; }
     body { background: #f4f7fb; color: #1a2b3c; padding: 20px; }
     .container { max-width: 800px; margin: 0 auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
     h1 { color: #1e3a8a; text-align: center; margin-bottom: 20px; border-bottom: 2px solid #e5e7eb; padding-bottom: 10px; font-size: 24px; }
-    h2 { color: #2563eb; margin: 30px 0 15px; font-size: 22px; border-right: 4px solid #2563eb; padding-right: 10px; }
-    .lesson { background: #f8fafc; padding: 25px; border-radius: 8px; margin-bottom: 25px; border: 1px solid #e5e7eb; }
-    .lesson h3 { font-size: 20px; margin-bottom: 15px; color: #1e293b; border-bottom: 2px solid #cbd5e1; padding-bottom: 8px;}
-    .lesson h4 { font-size: 16px; margin: 15px 0 8px; color: #2563eb; }
-    .lesson p { font-size: 16px; line-height: 1.9; color: #334155; text-align: justify; margin-bottom: 12px; }
-    .lesson ul { margin-right: 20px; margin-bottom: 15px; color: #334155; font-size: 16px; line-height: 1.8;}
-    .lesson ul li { margin-bottom: 8px; }
+    
+    /* تنسيق الدروس القابلة للفتح */
+    details { background: #f8fafc; padding: 15px; border-radius: 8px; margin-bottom: 15px; border: 1px solid #e5e7eb; }
+    summary { font-size: 18px; font-weight: bold; color: #1e3a8a; cursor: pointer; outline: none; padding: 5px; }
+    summary:hover { color: #2563eb; }
+    
+    .lesson-content { padding-top: 15px; margin-top: 15px; border-top: 1px dashed #cbd5e1; }
+    .lesson-content h4 { font-size: 16px; margin: 15px 0 8px; color: #2563eb; }
+    .lesson-content p { font-size: 15px; line-height: 1.8; color: #334155; text-align: justify; margin-bottom: 10px; }
+    .lesson-content ul { margin-right: 20px; margin-bottom: 15px; color: #334155; font-size: 15px; line-height: 1.8;}
+    .lesson-content ul li { margin-bottom: 8px; }
     
     .example-box { background: #fef3c7; padding: 15px; border-radius: 8px; border-right: 4px solid #d97706; margin: 15px 0; }
     .example-box p { font-weight: bold; color: #92400e; margin-bottom: 8px; }
     .example-box ul { margin-bottom: 0; }
-    .example-box li { color: #78350f; }
+    .example-box li { color: #78350f; font-size: 14px;}
     
     .back-btn { display: inline-block; background: #64748b; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; margin-bottom: 20px; font-size: 14px; }
     .back-btn:hover { background: #475569; }
@@ -29,137 +33,75 @@
 <body>
   <div class="container">
     <a href="arabic.html" class="back-btn">← العودة لأقسام العربي</a>
-    <h1>✍️ النحو <br><small style="font-size:16px; color:#64748b;">الصف الثالث الثانوي - شرح وإعراب</small></h1>
+    <h1>✍️ النحو (الجزء الأول) <br><small style="font-size:16px; color:#64748b;">تأسيس وإعراب</small></h1>
+    <p style="text-align:center; margin-bottom:20px; color:#64748b;">اضغط على اسم الدرس لفتحه وقراءة الشرح.</p>
 
-    <!-- 1. الممنوع من الصرف -->
-    <div class="lesson">
-      <h2>1. الممنوع من الصرف</h2>
-      <p>هو الاسم الذي لا يقبل التنوين (لا ينون)، ويُجر بالفتحة نيابة عن الكسرة (إذا لم يكن مضافاً أو معرفاً بـ "ال").</p>
-      <h4>أشهر أنواعه في المنهج:</h4>
-      <ul>
-        <li><b>صيغة منتهى الجموع:</b> كل جمع تكسير بعد ألفه حرفان أو ثلاثة (مثل: مساجد، مصابيح، كتائب).</li>
-        <li><b>الأسماء الأعجمية:</b> مثل (إبراهيم، يوسف، لندن، باريس).</li>
-        <li><b>الوصف على وزن "أفعل":</b> مثل (أحمر، أفضل، أكبر).</li>
-        <li><b>الاسم المنتهي بألف التأنيث الممدودة:</b> (صحراء، علماء، أصدقاء).</li>
-        <li><b>الاسم المنتهي بألف التأنيث المقصورة:</b> (ذكرى، حبلى، سلمى).</li>
-      </ul>
-      <div class="example-box">
-        <p>مثال إعرابي:</p>
-        <p>"صليتُ في مساجدَ كثيرةٍ"</p>
+    <details>
+      <summary>1. أنواع الكلمة (اسم، فعل، حرف)</summary>
+      <div class="lesson-content">
+        <p>الكلمة في اللغة العربية ثلاثة أنواع: اسم، وفعل، وحرف. (ويُضاف لها في بعض التفاصيل: الفعل، والاسم المشتق).</p>
         <ul>
-          <li>مساجدَ: اسم مجرور بـ "في" وعلامة جره الفتحة نيابة عن الكسرة لأنه ممنوع من الصرف.</li>
+          <li><b>الاسم:</b> هو ما دل على معنى في نفسه ولم يقترن بزمن (مثل: محمد، كتاب، شجرة).</li>
+          <li><b>الفعل:</b> هو ما دل على معنى في نفسه واقترن بزمن (ماضٍ، مضارع، أمر).</li>
+          <li><b>الحرف:</b> هو ما دل على معنى في غيره (مثل: من، في، إن، هل).</li>
         </ul>
       </div>
-    </div>
+    </details>
 
-    <!-- 2. أسلوب النداء -->
-    <div class="lesson">
-      <h2>2. أسلوب النداء</h2>
-      <p>أدواته: (يا، أيْ، أيا، هيا، همزة النداء). والمنادى أنواع:</p>
-      <ul>
-        <li><b>منادى مفرد علم:</b> يُبنى على ما يُرفع به (مثل: يا محمدُ).</li>
-        <li><b>منادى نكرة مقصودة:</b> يُبنى على ما يُرفع به (مثل: يا رجلُ).</li>
-        <li><b>منادى مضاف:</b> يُنصب (مثل: يا عبدَ اللهِ).</li>
-        <li><b>منادى شبيه بالمضاف:</b> يُنصب (مثل: يا طالعاً جبلاً).</li>
-        <li><b>منادى نكرة غير مقصودة:</b> يُنصب (مثل: يا غافلاً).</li>
-      </ul>
-      <div class="example-box">
-        <p>مثال إعرابي:</p>
-        <p>"يا طالبَ العلمِ اجتهد"</p>
+    <details>
+      <summary>2. النكرة والمعرفة</summary>
+      <div class="lesson-content">
+        <p><b>النكرة:</b> كل اسم شائع في جنسه لا يختص به واحد عن آخر (مثل: رجل، كتاب).</p>
+        <p><b>المعرفة:</b> كل اسم يدل على شيء معين. وأنواع المعرفة:</p>
         <ul>
-          <li>يا: حرف نداء مبني على السكون.</li>
-          <li>طالبَ: منادى مضاف منصوب وعلامة نصبه الفتحة الظاهرة.</li>
-          <li>العلمِ: مضاف إليه مجرور وعلامة جره الكسرة.</li>
+          <li>الضمير (أنا، أنت، هو).</li>
+          <li>العلم (محمد، مكة).</li>
+          <li>اسم الإشارة (هذا، هذه).</li>
+          <li>الاسم الموصول (الذي، التي).</li>
+          <li>المعرف بـ (ال) (الكتاب).</li>
+          <li>المضاف إلى معرفة (كتابُ محمدٍ).</li>
         </ul>
       </div>
-    </div>
+    </details>
 
-    <!-- 3. أسلوب الاختصاص -->
-    <div class="lesson">
-      <h2>3. أسلوب الاختصاص</h2>
-      <p>هو أسلوب يُذكر فيه اسم منصوب بعد ضمير المتكلم (أنا، نحن) لبيان المقصود.</p>
-      <p><b>إعرابه:</b> الاسم المنصوب يُعرب: <b>مفعول به ثانٍ لفعل محذوف وجوباً تقديره (أخص)</b>.</p>
-      <div class="example-box">
-        <p>مثال إعرابي:</p>
-        <p>"نحن - الطلابَ - نذاكر بجد"</p>
+    <details>
+      <summary>3. المبني والمعرب وعلامات الإعراب</summary>
+      <div class="lesson-content">
+        <p><b>المبني:</b> هو الاسم الذي لا تتغير حركة آخره بتغير موقعه في الجملة (مثل: هذا، أنت، الذي، منذ).</p>
+        <p><b>المعرب:</b> هو الاسم الذي تتغير حركة آخره بتغير موقعه في الجملة (مثل: الطالب، الكتاب).</p>
+        <h4>علامات الإعراب:</h4>
         <ul>
-          <li>نحن: ضمير رفع منفصل مبني في محل رفع مبتدأ.</li>
-          <li>الطلابَ: مفعول به ثانٍ لفعل محذوف وجوباً تقديره (أخص) منصوب وعلامة نصبه الفتحة.</li>
-          <li>نذاكر: فعل مضارع مرفوع، والفاعل ضمير مستتر تقديره (نحن)، والجملة في محل رفع خبر المبتدأ.</li>
+          <li><b>الرفع:</b> الضمة (ظاهرة/مقدرة)، الواو (جمع مذكر سالم)، الألف (المثنى).</li>
+          <li><b>النصب:</b> الفتحة، الياء (مثنى وجمع مذكر سالم)، الكسرة (جمع مؤنث سالم).</li>
+          <li><b>الجر:</b> الكسرة، الياء (مثنى وجمع مذكر سالم)، الفتحة (الممنوع من الصرف).</li>
         </ul>
       </div>
-    </div>
+    </details>
 
-    <!-- 4. أسلوب الإغراء والتحذير -->
-    <div class="lesson">
-      <h2>4. أسلوب الإغراء والتحذير</h2>
-      <ul>
-        <li><b>الإغراء:</b> حث المخاطب على فعل محمود (مثل: الصدقَ).</li>
-        <li><b>التحذير:</b> تنبيه المخاطب من أمر مذموم (مثل: الكذبَ).</li>
-      </ul>
-      <p><b>إعرابه:</b> الاسم المنصوب يُعرب: <b>مفعول به لفعل محذوف وجوباً</b>.</p>
-      <div class="example-box">
-        <p>مثال إعرابي:</p>
-        <p>"الصدقَ يا فتى"</p>
-        <ul>
-          <li>الصدقَ: مفعول به لفعل محذوف وجوباً تقديره (الزم) منصوب وعلامة نصبه الفتحة.</li>
-        </ul>
+    <details>
+      <summary>4. همزة القطع وألف الوصل</summary>
+      <div class="lesson-content">
+        <p><b>همزة القطع (أ):</b> تُنطق وتُكتب دائماً، وتأتي في الأسماء والأفعال والحروف (مثل: أحمد، أكل، إلى).</p>
+        <p><b>ألف الوصل (ا):</b> تُنطق في بداية الكلام وتُختفي في الوصل، وتأتي في الأسماء (مثل: اسم، ابن)، وفي الأفعال الخماسية والسداسية (مثل: انطلق، استخرج)، وفي "ال" التعريف.</p>
       </div>
-    </div>
+    </details>
 
-    <!-- 5. أساليب المدح والذم -->
-    <div class="lesson">
-      <h2>5. أساليب المدح والذم</h2>
-      <p>أفعال المدح: (نِعمَ، حبَّذا). أفعال الذم: (بئسَ، لا حبَّذا).</p>
-      <ul>
-        <li><b>الفاعل:</b> يأتي اسماً ظاهراً (مثل: نعم الطالبُ محمدٌ).</li>
-        <li><b>المخصوص بالمدح/الذم:</b> يُعرب: خبر لمبتدأ محذوف وجوباً (مثل: نعم الطالبُ محمدٌ -> محمدٌ: خبر لمبتدأ محذوف تقديره "هو").</li>
-      </ul>
-      <div class="example-box">
-        <p>مثال إعرابي:</p>
-        <p>"نعم الخلقُ الصدقُ"</p>
-        <ul>
-          <li>نعم: فعل ماضٍ جامد مبني على الفتح.</li>
-          <li>الخلقُ: فاعل مرفوع وعلامة رفعه الضمة.</li>
-          <li>الصدقُ: خبر لمبتدأ محذوف وجوباً تقديره (هو) مرفوع وعلامة رفعه الضمة.</li>
-        </ul>
+    <details>
+      <summary>5. الهمزة المتوسطة والمتطرفة</summary>
+      <div class="lesson-content">
+        <p><b>المتوسطة:</b> تُكتب حسب أقوى الحركتين (الكسرة > الضمة > الفتحة > السكون)، وتُكتب على نبرة (ئ) أو واو (ؤ) أو ألف (أ) أو سطر (ء).</p>
+        <p><b>المتطرفة:</b> تُكتب حسب حركة الحرف الذي قبلها (إذا كان قبلها ساكن تُكتب على السطر مثل: جزء، وإذا كان قبلها مضموم على واو، وإذا كان مكسور على ياء، وإذا كان مفتوح على ألف).</p>
       </div>
-    </div>
+    </details>
 
-    <!-- 6. التوكيد -->
-    <div class="lesson">
-      <h2>6. التوكيد</h2>
-      <ul>
-        <li><b>توكيد لفظي:</b> تكرار اللفظ نفسه (مثل: جاء الطالبُ الطالبُ).</li>
-        <li><b>توكيد معنوي:</b> استخدام ألفاظ (نفس، عين، كل، جميع، كلا، كلتا).</li>
-      </ul>
-      <div class="example-box">
-        <p>مثال إعرابي:</p>
-        <p>"نجح الطلابُ كلُّهم"</p>
-        <ul>
-          <li>كل: توكيد معنوي مرفوع وعلامة رفعه الضمة، وهو مضاف.</li>
-          <li>هم: ضمير متصل مبني في محل جر مضاف إليه.</li>
-        </ul>
+    <details>
+      <summary>6. الشمسية والقمرية (ال التعريف)</summary>
+      <div class="lesson-content">
+        <p><b>اللام الشمسية:</b> تُكتب ولا تُنطق، ويُشدد الحرف الذي بعدها (مثل: الشمس، النور).</p>
+        <p><b>اللام القمرية:</b> تُكتب وتُنطق، ولا يُشدد الحرف الذي بعدها (مثل: القمر، الكتاب).</p>
       </div>
-    </div>
-
-    <!-- 7. النعت (الصفة) -->
-    <div class="lesson">
-      <h2>7. النعت (الصفة)</h2>
-      <ul>
-        <li><b>النعت الحقيقي:</b> يصف اسماً ظاهراً، ويتبعه في (الإعراب، التعريف والتنكير، التذكير والتأنيث، العدد).</li>
-        <li><b>النعت السببي:</b> يصف اسماً بعده، ويتبعه في (الإعراب، التعريف والتنكير)، ويكون مفرداً دائماً.</li>
-      </ul>
-      <div class="example-box">
-        <p>مثال إعرابي:</p>
-        <p>"قرأت كتاباً مفيداً"</p>
-        <ul>
-          <li>كتاباً: مفعول به منصوب وعلامة نصبه الفتحة.</li>
-          <li>مفيداً: نعت منصوب وعلامة نصبه الفتحة.</li>
-        </ul>
-      </div>
-    </div>
+    </details>
 
   </div>
 </body>
-  </html>
+        </html>
