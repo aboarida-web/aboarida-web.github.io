@@ -19,16 +19,19 @@
     .lesson-content h4 { font-size: 16px; margin: 15px 0 8px; color: #2563eb; }
     .lesson-content p { font-size: 15px; line-height: 1.8; color: #334155; text-align: justify; margin-bottom: 10px; }
     
-    table { width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 14px; }
-    th, td { padding: 10px; border: 1px solid #cbd5e1; text-align: center; }
-    th { background-color: #e0f2fe; color: #1e3a8a; font-weight: bold; }
-    td.en { direction: ltr; font-weight: bold; color: #2563eb; }
-
+    /* تنسيق الجداول الجديد */
+    .table-container { overflow-x: auto; margin: 15px 0; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; background: white; border-radius: 8px; overflow: hidden; }
+    th, td { padding: 12px 10px; text-align: center; border: 1px solid #e2e8f0; }
+    th { background-color: #2563eb; color: white; font-weight: bold; }
+    td { color: #334155; }
+    td strong { color: #1e3a8a; }
+    
     .example-box { background: #fef3c7; padding: 15px; border-radius: 8px; border-right: 4px solid #d97706; margin: 15px 0; }
     .example-box p { font-weight: bold; color: #92400e; margin-bottom: 8px; }
-    .example-box ul { margin-bottom: 0; list-style: none;}
-    .example-box li { color: #78350f; font-size: 15px; direction: ltr; text-align: left; margin-bottom: 12px;}
-    .example-box li span.ar { display: block; direction: rtl; text-align: right; color: #92400e; font-size: 14px; margin-top: 3px; font-weight: normal;}
+    .example-box ul { margin-bottom: 0; list-style: none; padding-right: 0;}
+    .example-box li { color: #78350f; font-size: 15px; direction: ltr; text-align: left; margin-bottom: 12px; background: white; padding: 10px; border-radius: 6px;}
+    .example-box li span.ar { display: block; direction: rtl; text-align: right; color: #92400e; font-size: 14px; margin-top: 8px; font-weight: normal; border-top: 1px dashed #fcd34d; padding-top: 5px;}
     
     .back-btn { display: inline-block; background: #64748b; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; margin-bottom: 20px; font-size: 14px; }
     .back-btn:hover { background: #475569; }
@@ -36,22 +39,24 @@
 </head>
 <body>
   <div class="container">
-    <a href="unit2.html" class="back-btn">← العودة للوحدة</a>
-    <h1>Unit 2 Grammar: Part A (Statements)</h1>
+    <a href="unit2_grammar_main.html" class="back-btn">← العودة للأقسام</a>
+    <h1>Unit 2: Reported Statements</h1>
     <p style="text-align:center; color:#64748b; margin-bottom:20px;">شرح الجمل الخبرية في الكلام غير المباشر</p>
 
     <details open>
-      <summary>1. القاعدة الأساسية (تكوين الجملة)</summary>
+      <summary>1. القاعدة الأساسية لتكوين الجملة</summary>
       <div class="lesson-content">
-        <p>تتكون الجملة الخبرية في الكلام غير المباشر من: <b>(نص الكلام غير المباشر) + (فعل إبلاغ) + (that يمكن حذفها) + (مبلغ / متحدث)</b>.</p>
-        <p>تبدأ جملة الكلام غير المباشر بالمبلغ (المتحدث) الذي يأتي بعد فعل الإبلاغ أو ضمير المفعول.</p>
+        <p>تتكون الجملة الخبرية في الكلام غير المباشر من 4 أجزاء أساسية:</p>
+        <p style="text-align: center; font-weight: bold; background: #e0f2fe; padding: 10px; border-radius: 6px; color: #1e3a8a;">
+          نص الكلام غير المباشر + فعل الإبلاغ + (that) + المبلغ (المتحدث)
+        </p>
         <div class="example-box">
           <ul>
-            <li>Sama said <b>that her father</b> worked in a secondary school.
-              <span class="ar">قالت سامه إن والدها كان يعمل في مدرسة ثانوية.</span>
+            <li>Sama said (that) her father worked in a school.
+              <span class="ar">قالت سامه إن والدها كان يعمل في مدرسة. (المتحدث هنا هو الأب).</span>
             </li>
-            <li>Mr Omar said <b>that he</b> was traveling to Cairo the next day.
-              <span class="ar">قال السيد عمر إنه كان مسافراً إلى القاهرة في اليوم التالي.</span>
+            <li>Mr Omar said (that) he was traveling to Cairo.
+              <span class="ar">قال السيد عمر إنه كان مسافراً إلى القاهرة. (المتحدث هو السيد عمر).</span>
             </li>
           </ul>
         </div>
@@ -61,29 +66,21 @@
     <details>
       <summary>2. أفعال الإبلاغ (Reporting Verbs)</summary>
       <div class="lesson-content">
-        <p>هناك نوعان من أفعال الإبلاغ:</p>
         <h4>أ. أفعال يليها مفعول به (Object) ثم that:</h4>
-        <p>مثل: <b>told</b> (أخبر)، <b>reminded</b> (ذكر)، <b>persuaded/ convinced</b> (أقنع)، <b>warned</b> (حذر).</p>
-        <p>والمخاطب يكون اسماً أو ضمير مفعول (me, him, her, it, you, us, them).</p>
+        <p>مثل: <b>told</b> (أخبر)، <b>reminded</b> (ذكر)، <b>warned</b> (حذر)، <b>persuaded</b> (أقنع).</p>
         <div class="example-box">
           <ul>
             <li>Mohammed <b>told Omar</b> that he wanted to go swimming.
               <span class="ar">أخبر محمد عمر أنه يريد الذهاب للسباحة.</span>
             </li>
-            <li>Nada <b>reminded me</b> that we had to get up early the day after.
-              <span class="ar">ذكّرتني ندى أنه كان علينا الاستيقاظ مبكراً في اليوم التالي.</span>
-            </li>
           </ul>
         </div>
-        <h4>ب. أفعال لا يليها مفعول به (بدون Object):</h4>
-        <p>مثل: <b>said</b> (قال)، <b>admitted</b> (أقر)، <b>shouted</b> (صاح)، <b>remarked</b> (أبدى ملاحظة)، <b>reported</b> (أبلغ)، <b>answered</b> (أجاب)، <b>replied</b> (رد)، <b>explained</b> (أوضح)، <b>complained</b> (قال شاكياً)، <b>cried</b> (هتف)، <b>whispered</b> (همس).</p>
+        <h4>ب. أفعال لا يليها مفعول به:</h4>
+        <p>مثل: <b>said</b> (قال)، <b>explained</b> (أوضح)، <b>complained</b> (اشتكى)، <b>admitted</b> (أقر).</p>
         <div class="example-box">
           <ul>
             <li>Yara <b>said</b> that her mother was very busy.
               <span class="ar">قالت يارا إن والدتها كانت مشغولة جداً.</span>
-            </li>
-            <li>The worker <b>complained</b> that the weather had been too hot the day before.
-              <span class="ar">اشتكى العامل من أن الطقس كان حاراً جداً في اليوم السابق.</span>
             </li>
           </ul>
         </div>
@@ -91,24 +88,63 @@
     </details>
 
     <details>
-      <summary>3. تحويل الضمائر (Pronouns)</summary>
+      <summary>3. تحويل الضمائر (Pronouns) - بطريقة مبسطة</summary>
       <div class="lesson-content">
-        <p>تتحول الضمائر حسب المتكلم والمخاطب. إليك الجدول:</p>
-        <table>
-          <tr><th>Direct (مباشر)</th><th>Reported (غير مباشر)</th><th>Direct (مباشر)</th><th>Reported (غير مباشر)</th></tr>
-          <tr><td class="en">I</td><td class="en">he / she / you / I</td><td class="en">mine</td><td class="en">his / hers / yours / mine</td></tr>
-          <tr><td class="en">we</td><td class="en">they / we</td><td class="en">ours</td><td class="en">theirs / ours</td></tr>
-          <tr><td class="en">me</td><td class="en">him / her / you / me</td><td class="en">you (فاعل)</td><td class="en">I / he / she / they / we / you</td></tr>
-          <tr><td class="en">us</td><td class="en">them / us</td><td class="en">you (مفعول)</td><td class="en">me / him / her / them / us</td></tr>
-          <tr><td class="en">my</td><td class="en">his / her / your / my</td><td class="en">your</td><td class="en">my / his / her / their / our</td></tr>
-        </table>
+        <p>القاعدة: الضمير يتحول حسب المتحدث والمخاطب. إليك الجدول المبسط:</p>
+        
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>نوع الضمير</th>
+                <th>مباشر (Direct)</th>
+                <th>غير مباشر (Reported)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td rowspan="2"><strong>المتكلم (I / We)</strong></td>
+                <td>I (أنا)</td>
+                <td>he / she (هو / هي)</td>
+              </tr>
+              <tr>
+                <td>we (نحن)</td>
+                <td>they (هم)</td>
+              </tr>
+              <tr>
+                <td rowspan="2"><strong>المخاطب (You)</strong></td>
+                <td>you (أنت / أنتم) فاعل</td>
+                <td>I / he / she / they (حسب الشخص)</td>
+              </tr>
+              <tr>
+                <td>you (أنت / أنتم) مفعول</td>
+                <td>me / him / her / them (حسب الشخص)</td>
+              </tr>
+              <tr>
+                <td rowspan="2"><strong>الملكية (My / Our)</strong></td>
+                <td>my (ملكي)</td>
+                <td>his / her (ملكه / ملكها)</td>
+              </tr>
+              <tr>
+                <td>our (ملكنا)</td>
+                <td>their (ملكهم)</td>
+              </tr>
+              <tr>
+                <td><strong>الغائب (He / She / They)</strong></td>
+                <td>he / she / they</td>
+                <td>يبقى كما هو (أو يتغير حسب السياق)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
         <div class="example-box">
           <ul>
-            <li>Karim said, "My mother will give me a nice present".
-              <span class="ar">قال كريم: "ستعطيني أمي هدية جميلة".</span>
+            <li>Direct: "I want to buy a new tablet", said Rodayna.
+              <span class="ar">المباشر: "أريد شراء جهاز لوحي جديد"، قالت رودينا.</span>
             </li>
-            <li>Karim said that <b>his</b> mother would give <b>him</b> a nice present.
-              <span class="ar">قال كريم إن أمه ستعطيه هدية جميلة.</span>
+            <li>Indirect: Rodayna said that <b>she</b> wanted to buy a new tablet.
+              <span class="ar">غير المباشر: قالت رودينا إنها تريد شراء جهاز لوحي جديد. (I تحولت إلى she).</span>
             </li>
           </ul>
         </div>
@@ -118,66 +154,103 @@
     <details>
       <summary>4. تحويل الأزمنة (Tenses)</summary>
       <div class="lesson-content">
-        <p>نرجع الزمن خطوة للوراء (إلى الماضي):</p>
-        <table>
-          <tr><th>Direct (مباشر)</th><th>Reported (غير مباشر)</th></tr>
-          <tr><td class="en">Present Simple (play/plays)</td><td class="en">Past Simple (played)</td></tr>
-          <tr><td class="en">Present Continuous (am/is/are + v-ing)</td><td class="en">Past Continuous (was/were + v-ing)</td></tr>
-          <tr><td class="en">Past Simple (played)</td><td class="en">Past Perfect (had played)</td></tr>
-          <tr><td class="en">Present Perfect (have/has + p.p)</td><td class="en">Past Perfect (had + p.p)</td></tr>
-          <tr><td class="en">can / will / may</td><td class="en">could / would / might</td></tr>
-          <tr><td class="en">must</td><td class="en">had to (للمضارع) / would have to (للمستقبل)</td></tr>
-        </table>
+        <p>نرجع الزمن خطوة للوراء (إلى الماضي) كما يوضح الجدول:</p>
+        
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>مباشر (Direct)</th>
+                <th>غير مباشر (Reported)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Present Simple (يكتب / يلعب)</td>
+                <td>Past Simple (كتب / لعب)</td>
+              </tr>
+              <tr>
+                <td>Present Continuous (يكتب الآن)</td>
+                <td>Past Continuous (كان يكتب)</td>
+              </tr>
+              <tr>
+                <td>Past Simple (كتب)</td>
+                <td>Past Perfect (كان قد كتب)</td>
+              </tr>
+              <tr>
+                <td>Present Perfect (قد كتب)</td>
+                <td>Past Perfect (كان قد كتب)</td>
+              </tr>
+              <tr>
+                <td>can / will / may</td>
+                <td>could / would / might</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
         <div class="example-box">
           <ul>
-            <li>My wife <b>likes</b> green salad. -> He said his wife <b>liked</b> green salad.</li>
-            <li>I <b>am watching</b> a film. -> She said she <b>was watching</b> a film.</li>
-            <li>He <b>ate</b> fish. -> He said he <b>had eaten</b> fish.</li>
-            <li>I <b>will</b> help her. -> I promised I <b>would</b> help her.</li>
+            <li>Direct: "My wife <b>likes</b> green salad", said Magdi.
+              <span class="ar">المباشر: "زوجتي تحب السلطة الخضراء"، قال مجدي.</span>
+            </li>
+            <li>Indirect: Magdi said that his wife <b>liked</b> green salad.
+              <span class="ar">غير المباشر: قال مجدي إن زوجته كانت تحب السلطة الخضراء.</span>
+            </li>
           </ul>
         </div>
       </div>
     </details>
 
     <details>
-      <summary>5. تحويل ظروف الزمان والمكان (Time & Place)</summary>
+      <summary>5. تحويل ظروف الزمان والمكان</summary>
       <div class="lesson-content">
-        <table>
-          <tr><th>Direct</th><th>Reported</th><th>Direct</th><th>Reported</th></tr>
-          <tr><td class="en">now</td><td class="en">then / at that time</td><td class="en">tonight</td><td class="en">that night</td></tr>
-          <tr><td class="en">this</td><td class="en">that</td><td class="en">today</td><td class="en">that day</td></tr>
-          <tr><td class="en">these</td><td class="en">those</td><td class="en">yet</td><td class="en">by then</td></tr>
-          <tr><td class="en">here</td><td class="en">there</td><td class="en">yesterday</td><td class="en">the day before</td></tr>
-          <tr><td class="en">ago</td><td class="en">before / earlier</td><td class="en">tomorrow</td><td class="en">the following day</td></tr>
-          <tr><td class="en">last week</td><td class="en">the previous week</td><td class="en">next week</td><td class="en">the following week</td></tr>
-        </table>
-        <div class="example-box">
-          <ul>
-            <li>"These chairs will be moved <b>here tomorrow</b>", said Nada.
-              <span class="ar">قالت ندى: "ستُنقل هذه الكراسي هنا غداً".</span>
-            </li>
-            <li>Nada said that <b>those</b> chairs would be moved <b>there the following day</b>.
-              <span class="ar">قالت ندى إن تلك الكراسي ستُنقل هناك في اليوم التالي.</span>
-            </li>
-          </ul>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>مباشر (Direct)</th>
+                <th>غير مباشر (Reported)</th>
+                <th>مباشر (Direct)</th>
+                <th>غير مباشر (Reported)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>now (الآن)</td>
+                <td>then / at that time (حينها)</td>
+                <td>today (اليوم)</td>
+                <td>that day (ذلك اليوم)</td>
+              </tr>
+              <tr>
+                <td>here (هنا)</td>
+                <td>there (هناك)</td>
+                <td>tomorrow (غداً)</td>
+                <td>the following day (اليوم التالي)</td>
+              </tr>
+              <tr>
+                <td>this (هذا)</td>
+                <td>that (ذلك)</td>
+                <td>yesterday (أمس)</td>
+                <td>the day before (اليوم السابق)</td>
+              </tr>
+              <tr>
+                <td>these (هؤلاء)</td>
+                <td>those (أولئك)</td>
+                <td>last week (الأسبوع الماضي)</td>
+                <td>the previous week (الأسبوع السابق)</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-      </div>
-    </details>
-
-    <details>
-      <summary>6. ملاحظات هامة (Important Notes)</summary>
-      <div class="lesson-content">
-        <ul style="margin-right: 20px; color:#334155; line-height: 1.8; font-size: 15px;">
-          <li><b>الماضي التام والمنصوب:</b> لا يوجد تحويل للماضي التام (had returned -> had returned).</li>
-          <li><b>الأفعال الناقصة:</b> لا يوجد تحويل لصيغة الماضي من الأفعال الناقصة (would, could, might, should, had better).</li>
-          <li><b>الحقائق الثابتة:</b> إذا كانت الجملة تعبر عن حقيقة ثابتة، لا يتغير الزمن (Water boils at 100°C).</li>
-          <li><b>used to:</b> تبقى كما هي (used to).</li>
-          <li><b>If / I wish / It is time:</b> يبقى الماضي البسيط كما هو.</li>
-        </ul>
         <div class="example-box">
           <ul>
-            <li>"Water <b>boils</b> at 100°C," she said. -> She said that water <b>boils</b> at 100°C.</li>
-            <li>She said, "I <b>used to</b> get up late." -> She said that she <b>used to</b> get up late.</li>
+            <li>Direct: "These chairs will be moved <b>here tomorrow</b>", said Nada.
+              <span class="ar">المباشر: "ستُنقل هذه الكراسي هنا غداً".</span>
+            </li>
+            <li>Indirect: Nada said that <b>those</b> chairs would be moved <b>there the following day</b>.
+              <span class="ar">غير المباشر: قالت ندى إن تلك الكراسي ستُنقل هناك في اليوم التالي.</span>
+            </li>
           </ul>
         </div>
       </div>
@@ -185,4 +258,4 @@
 
   </div>
 </body>
-</html>
+  </html>
