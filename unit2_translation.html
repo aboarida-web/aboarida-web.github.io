@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unit 2 Translation</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Arial, sans-serif; }
+    body { background: #f4f7fb; color: #1a2b3c; padding: 20px; }
+    .container { max-width: 800px; margin: 0 auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+    h1 { color: #1e3a8a; text-align: center; margin-bottom: 20px; border-bottom: 2px solid #e5e7eb; padding-bottom: 10px; font-size: 24px; }
+    h2 { color: #2563eb; margin: 25px 0 15px; font-size: 20px; border-right: 4px solid #2563eb; padding-right: 10px; }
+    
+    .q-box { background: #f8fafc; padding: 20px; border-radius: 8px; margin-bottom: 20px; border: 1px solid #e5e7eb; }
+    .q-text { font-weight: bold; margin-bottom: 10px; font-size: 16px; color: #1e293b; direction: ltr; text-align: left; line-height: 1.5; }
+    .options { list-style-type: none; padding: 0; }
+    .options li { background: white; padding: 12px 15px; margin-bottom: 8px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 15px; cursor: pointer; transition: 0.2s; direction: ltr; text-align: left; line-height: 1.5;}
+    .options li:hover { background: #f1f5f9; }
+    
+    .options li.correct { background: #dcfce7; border-color: #22c55e; font-weight: bold; color: #166534; }
+    .options li.wrong { background: #fee2e2; border-color: #ef4444; color: #991b1b; }
+    
+    .back-btn { display: inline-block; background: #64748b; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; margin-bottom: 20px; font-size: 14px; }
+    .back-btn:hover { background: #475569; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="unit2_trans_writ.html" class="back-btn">← العودة للاختيارات</a>
+    <h1>Unit 2: Translation</h1>
+    
+    <h2>Part 1: Choose the correct Arabic translation</h2>
+
+    <div class="q-box">
+      <p class="q-text">1. Success is something that needs determination and stamina. No one can achieve success without facing different and difficult conditions in life.</p>
+      <ul class="options" onclick="checkAns(this, 'a')">
+        <li data-opt="a">أ. النجاح هو شيء يحتاج إلى العزيمة والقدرة على التحمل. لا يمكن لأحد أن يحقق النجاح دون أن يواجه ظروفاً مختلفة وصعبة في الحياة.</li>
+        <li data-opt="b">ب. النجاح هو شيء يحتاج إلى العزيمة والقدرة على التحمل. لا يمكن لأحد أن يحقق النجاح بعد أن يواجه ظروفاً مختلفة وصعبة في الحياة.</li>
+        <li data-opt="c">ج. النجاح شيء يحتاج إلى الإصرار والقدرة على التحمل. يمكن لأحد أن يحقق النجاح دون أن يواجه ظروفاً مختلفة وصعبة في الحياة.</li>
+        <li data-opt="d">د. النجاح هو شيء يحتاج إلى الإصرار والقدرة على التحمل. لا يمكن لأحد أن يحقق النجاح قبل أن يواجه ظروفاً مختلفة وصعبة في الحياة.</li>
+      </ul>
+    </div>
+
+    <div class="q-box">
+      <p class="q-text">2. Resilience is the ability to become strong, happy, or successful especially after a difficult situation or event you undergo.</p>
+      <ul class="options" onclick="checkAns(this, 'c')">
+        <li data-opt="a">أ. المرونة هي القدرة على أن تصبح قوياً وسعيداً وناجحاً خاصة بعد موقف أو حدث صعب تمر به.</li>
+        <li data-opt="b">ب. المرونة هي القدرة على أن تصبح قوياً أو سعيداً أو ناجحاً خاصة بعد موقف أو حدث صعب تمر به.</li>
+        <li data-opt="c">ج. المرونة هي القدرة على أن تصبح قوياً أو سعيداً أو ناجحاً خاصة بعد موقف أو حدث صعب تمر به.</li>
+        <li data-opt="d">د. المرونة هي القدرة على أن تصبح قوياً أو سعيداً أو ناجحاً خاصة بعد موقف أو حدث صعب تمر به.</li>
+      </ul>
+    </div>
+
+    <h2>Part 2: Choose the correct English translation</h2>
+
+    <div class="q-box">
+      <p class="q-text">1. تطورت الرياضة النسائية على مستوى الهواية والاحتراف دولياً، فازدادت مشاركة النساء والفتيات في الرياضة هذه الأيام وقد حققن نجاحاً كبيراً.</p>
+      <ul class="options" onclick="checkAns(this, 'd')">
+        <li data-opt="a">a. Woman's sports have developing in amateur and professional level internationally, participation of women and girls in sport increased these days and they achieved great success.</li>
+        <li data-opt="b">b. Female sports have developing for amateur and professional levels internationally. So participating women and girls in sports increased those days to achieve great success.</li>
+        <li data-opt="c">c. Female sports developed for amateur and professional level internationally, So participating women and girls in sports has increased today so that they will achieve great success.</li>
+        <li data-opt="d">d. Women's sports have developed in amateur and professional levels internationally; participation of women and girls in sports has increased these days and they have achieved great success.</li>
+      </ul>
+    </div>
+
+    <div class="q-box">
+      <p class="q-text">2. لقد أصبح النساء نفس حقوق الرجال تقريبا لكن هذا لم يحدث بسهولة، فلقد استغرق الأمر سنوات طويلة من الكفاح للحصول على هذه الحقوق.</p>
+      <ul class="options" onclick="checkAns(this, 'a')">
+        <li data-opt="a">a. Women have almost the same rights as men, but this was not achieved easily. It took many years of struggle to obtain these rights.</li>
+        <li data-opt="b">b. Women have at most the same rights as men, but this was not achieved easily. It took many years of struggle to obtain these rights.</li>
+        <li data-opt="c">c. Women have almost the same rights as men, but this was not achieved easily. It took many years of struggle to surrender these rights.</li>
+        <li data-opt="d">d. Women have almost the same rights as men, yet this was achieved easily. It took many years of struggle to obtain these rights.</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <script>
+    function checkAns(ul, correctOpt) {
+      if (ul.classList.contains('answered')) return;
+      ul.classList.add('answered');
+
+      const lis = ul.querySelectorAll('li');
+      lis.forEach(li => {
+        if (li.getAttribute('data-opt') === correctOpt) {
+          li.classList.add('correct');
+        }
+      });
+    }
+  </script>
+</body>
+</html>
