@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unit 1 Translation</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Arial, sans-serif; }
+    body { background: #f4f7fb; color: #1a2b3c; padding: 20px; }
+    .container { max-width: 800px; margin: 0 auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+    h1 { color: #1e3a8a; text-align: center; margin-bottom: 20px; border-bottom: 2px solid #e5e7eb; padding-bottom: 10px; font-size: 24px; }
+    h2 { color: #2563eb; margin: 25px 0 15px; font-size: 20px; border-right: 4px solid #2563eb; padding-right: 10px; }
+    
+    .q-box { background: #f8fafc; padding: 20px; border-radius: 8px; margin-bottom: 20px; border: 1px solid #e5e7eb; }
+    .q-text { font-weight: bold; margin-bottom: 10px; font-size: 16px; color: #1e293b; direction: ltr; text-align: left; }
+    .options { list-style-type: none; padding: 0; }
+    .options li { background: white; padding: 10px; margin-bottom: 8px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 15px; cursor: pointer; transition: 0.2s; direction: ltr; text-align: left;}
+    .options li:hover { background: #f1f5f9; }
+    
+    .options li.correct { background: #dcfce7; border-color: #22c55e; font-weight: bold; color: #166534; }
+    .options li.wrong { background: #fee2e2; border-color: #ef4444; color: #991b1b; }
+    
+    .back-btn { display: inline-block; background: #64748b; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; margin-bottom: 20px; font-size: 14px; }
+    .back-btn:hover { background: #475569; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- تم تعديل اللينك هنا ليرجع للصفحة الوسيطة -->
+    <a href="unit1_trans_writ.html" class="back-btn">← العودة للاختيارات</a>
+    <h1>Unit 1: Translation</h1>
+    
+    <h2>Part 1: Choose the correct Arabic translation</h2>
+
+    <div class="q-box">
+      <p class="q-text">1. Modern culture and civilization greatly depend on science and technology. They have become an essential part of life according to the requirements of people and their needs.</p>
+      <ul class="options" onclick="checkAns(this, 'a')">
+        <li data-opt="a">أ. تعتمد الثقافة والحضارة الحديثة بشكل كبير على العلوم والتكنولوجيا، فقد أصبحت جزءاً أساسياً من الحياة وفقاً لمتطلبات الناس واحتياجاتهم.</li>
+        <li data-opt="b">ب. تعتمد الثقافة والحضارة القديمة بشكل كبير على العلوم والتكنولوجيا، فقد أصبحت جزءاً أساسياً من الحياة وفقاً لمتطلبات الناس.</li>
+        <li data-opt="c">ج. تعتمد التكنولوجيا الحديثة فقط على العلوم، فقد أصبحت جزءاً من الحياة.</li>
+        <li data-opt="d">د. الثقافة الحديثة لا تعتمد على التكنولوجيا، بل تعتمد على متطلبات الناس.</li>
+      </ul>
+    </div>
+
+    <div class="q-box">
+      <p class="q-text">2. The importance of charitable organisations lies in helping poor and needy people. Charities do an excellent job as they work all over the world.</p>
+      <ul class="options" onclick="checkAns(this, 'a')">
+        <li data-opt="a">أ. يكمن أهمية الجمعيات الخيرية في مساعدة الفقراء والمحتاجين، فتقوم الجمعيات الخيرية بعمل ممتاز لأنها تعمل في كل أنحاء العالم.</li>
+        <li data-opt="b">ب. يكمن اهتمام الجمعيات الخيرية في مساعدة الفقراء والمشردين، فتقوم الجمعيات بعمل ممتاز لأنها تعمل في كل أنحاء العالم.</li>
+        <li data-opt="c">ج. الجمعيات الخيرية تساعد الأغنياء فقط، وتعمل في بعض الدول.</li>
+        <li data-opt="d">د. أهمية الجمعيات الخيرية تكمن في بناء المستشفيات فقط.</li>
+      </ul>
+    </div>
+
+    <h2>Part 2: Choose the correct English translation</h2>
+
+    <div class="q-box">
+      <p class="q-text">1. يمتلك العديد من الناس قدرات هائلة، ولو استخدموها في مكانها الصحيح لتغيرت أمور كثيرة وعلت شأن وطننا وسرنا نحو التقدم الحقيقي الذي نسعى إليه.</p>
+      <ul class="options" onclick="checkAns(this, 'b')">
+        <li data-opt="a">a. A lot of people have great disabilities. If they had used them in their proper place...</li>
+        <li data-opt="b">b. A lot of people have great abilities. If they had used them in their proper place, our homeland would have risen, and we would have moved towards the real progress that we seek.</li>
+        <li data-opt="c">c. Many people have great abilities. If we had used them in their write place...</li>
+        <li data-opt="d">d. A lot of people have great abilities. If they had used them in their proper place, our land would have got up...</li>
+      </ul>
+    </div>
+
+    <div class="q-box">
+      <p class="q-text">2. يجب على الدول التعاون من أجل تطوير صور جديدة من الطاقة، فعليهم أن يتحدوا لكي يجدوا حلولاً للحد من الآثار الضارة مثل الاحتباس الحراري وكذلك التغلب على نقص الوقود.</p>
+      <ul class="options" onclick="checkAns(this, 'd')">
+        <li data-opt="a">a. Countries must cooperate to evolve new images of energy...</li>
+        <li data-opt="b">b. Countries must cooperate to evolve new forms of energy. They must unit to find solution...</li>
+        <li data-opt="c">c. Countries need to cooperate to develop new images of energy...</li>
+        <li data-opt="d">d. Countries need to cooperate to develop new forms of energy. They must unite to find solutions to reduce harmful effects such as global warming and overcome fuel shortage.</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <script>
+    function checkAns(ul, correctOpt) {
+      if (ul.classList.contains('answered')) return;
+      ul.classList.add('answered');
+
+      const lis = ul.querySelectorAll('li');
+      lis.forEach(li => {
+        if (li.getAttribute('data-opt') === correctOpt) {
+          li.classList.add('correct');
+        }
+      });
+    }
+  </script>
+</body>
+</html>
