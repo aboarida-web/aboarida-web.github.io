@@ -7,14 +7,25 @@
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Arial, sans-serif; }
     body { background: #f4f7fb; color: #1a2b3c; padding: 20px; }
-    .container { max-width: 800px; margin: 0 auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+    .container { max-width: 1000px; margin: 0 auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
     h1 { color: #1e3a8a; text-align: center; margin-bottom: 20px; border-bottom: 2px solid #e5e7eb; padding-bottom: 10px; font-size: 24px; }
     
-    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-    th, td { padding: 12px; text-align: right; border-bottom: 1px solid #e5e7eb; font-size: 15px; }
-    th { background-color: #f8fafc; color: #1e3a8a; font-weight: bold; }
-    td.en { direction: ltr; text-align: left; font-weight: bold; color: #2563eb; }
-    tr:hover { background-color: #f1f5f9; }
+    .table-responsive { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; min-width: 600px; }
+    th, td { padding: 12px; text-align: right; border-bottom: 1px solid #e5e7eb; font-size: 14px; vertical-align: top; }
+    th { background-color: #1e3a8a; color: white; font-weight: bold; text-align: center;}
+    
+    td.en { direction: ltr; text-align: left; font-weight: bold; color: #2563eb; font-size: 16px;}
+    .meaning { font-weight: bold; color: #1e293b; }
+    .derivatives ul { list-style: none; padding: 0; margin: 0; font-size: 13px; color: #475569;}
+    .derivatives li { margin-bottom: 4px; }
+    .derivatives span { color: #d97706; font-weight: bold; }
+    
+    .syn-ant { font-size: 13px; }
+    .syn { color: #16a34a; }
+    .ant { color: #dc2626; }
+    
+    tr:hover { background-color: #f8fafc; }
     
     .back-btn { display: inline-block; background: #64748b; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; margin-bottom: 20px; font-size: 14px; }
     .back-btn:hover { background: #475569; }
@@ -23,72 +34,188 @@
 <body>
   <div class="container">
     <a href="unit1.html" class="back-btn">← العودة للوحدة</a>
-    <h1>Unit 1 Vocabulary</h1>
-    <p style="text-align:center; color:#64748b; margin-bottom:20px;">أهم 50 كلمة في الوحدة الأولى</p>
+    <h1>Unit 1: Key Vocabulary</h1>
+    <p style="text-align:center; color:#64748b; margin-bottom:20px;">المفردات الأساسية كما وردت في كتاب الطالب</p>
 
-    <table>
-      <thead>
-        <tr>
-          <th>Word (الكلمة)</th>
-          <th>Meaning (المعنى)</th>
-          <th>Derivatives (المشتقات)</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td class="en">Care</td><td>رعاية / اهتمام</td><td>Careful (حذر) / Careless (مهمل) / Caring (مهتم)</td></tr>
-        <tr><td class="en">Patient</td><td>مريض / صبور</td><td>Patience (صبر) / Patiently (بصبر)</td></tr>
-        <tr><td class="en">Treatment</td><td>علاج</td><td>Treat (يعالج) / Treated (معالج)</td></tr>
-        <tr><td class="en">Cure</td><td>شفاء / علاج</td><td>Curable (قابل للشفاء) / Incurable (غير قابل للشفاء)</td></tr>
-        <tr><td class="en">Nurse</td><td>ممرض / ممرضة</td><td>Nursing (تمريض)</td></tr>
-        <tr><td class="en">Surgeon</td><td>جراح</td><td>Surgery (جراحة) / Surgical (جراحي)</td></tr>
-        <tr><td class="en">Medicine</td><td>دواء / طب</td><td>Medical (طبي) / Medicinal (طبي)</td></tr>
-        <tr><td class="en">Health</td><td>صحة</td><td>Healthy (صحي) / Unhealthy (غير صحي)</td></tr>
-        <tr><td class="en">Disease</td><td>مرض</td><td>Diseased (مريض)</td></tr>
-        <tr><td class="en">Injury</td><td>إصابة</td><td>Injure (يُصاب) / Injured (مُصاب)</td></tr>
-        <tr><td class="en">Pain</td><td>ألم</td><td>Painful (مؤلم) / Painless (غير مؤلم)</td></tr>
-        <tr><td class="en">Symptom</td><td>عَرَض / علامة مرض</td><td>Symptomatic (به أعراض)</td></tr>
-        <tr><td class="en">Diagnosis</td><td>تشخيص</td><td>Diagnose (يشخص)</td></tr>
-        <tr><td class="en">Prevention</td><td>وقاية</td><td>Prevent (يمنع) / Preventable (قابل للوقاية)</td></tr>
-        <tr><td class="en">Vaccine</td><td>لقاح / تطعيم</td><td>Vaccinate (يُطعم) / Vaccination (تطعيم)</td></tr>
-        <tr><td class="en">Hygiene</td><td>نظافة</td><td>Hygienic (نظيف)</td></tr>
-        <tr><td class="en">Recovery</td><td>تعافي / شفاء</td><td>Recover (يتعافى)</td></tr>
-        <tr><td class="en">Emergency</td><td>طوارئ</td><td>Emergencies (طوارئ)</td></tr>
-        <tr><td class="en">Ambulance</td><td>إسعاف</td><td>-</td></tr>
-        <tr><td class="en">Clinic</td><td>عيادة</td><td>Clinical (سريري)</td></tr>
-        <tr><td class="en">Hospital</td><td>مستشفى</td><td>Hospitalize (يدخل المستشفى)</td></tr>
-        <tr><td class="en">Ward</td><td>عنبر / قسم في المستشفى</td><td>-</td></tr>
-        <tr><td class="en">Prescription</td><td>روشتة / وصفة طبية</td><td>Prescribe (يصف دواء)</td></tr>
-        <tr><td class="en">Pharmacy</td><td>صيدلية</td><td>Pharmacist (صيدلي)</td></tr>
-        <tr><td class="en">Dose</td><td>جرعة</td><td>Dosage (جرعة / مقدار)</td></tr>
-        
-        <!-- الجزء الثاني -->
-        <tr><td class="en">Injection</td><td>حقنة</td><td>Inject (يحقن)</td></tr>
-        <tr><td class="en">Bandage</td><td>ضمادة / رباط</td><td>Bandaged (مربوط)</td></tr>
-        <tr><td class="en">Surgery</td><td>جراحة</td><td>Surgeon (جراح) / Surgical (جراحي)</td></tr>
-        <tr><td class="en">Therapy</td><td>علاج طبيعي / نفسي</td><td>Therapist (معالج)</td></tr>
-        <tr><td class="en">Nutrition</td><td>تغذية</td><td>Nutritious (مغذي) / Nutritionist (أخصائي تغذية)</td></tr>
-        <tr><td class="en">Diet</td><td>نظام غذائي</td><td>Dietary (غذائي)</td></tr>
-        <tr><td class="en">Fitness</td><td>لياقة بدنية</td><td>Fit (لائق)</td></tr>
-        <tr><td class="en">Exercise</td><td>تمرين / ممارسة رياضة</td><td>-</td></tr>
-        <tr><td class="en">Mental</td><td>عقلي / نفسي</td><td>Mentally (عقلياً) / Mentality (عقلية)</td></tr>
-        <tr><td class="en">Physical</td><td>بدني / جسدي</td><td>Physically (بدنياً) / Physique (بنية جسدية)</td></tr>
-        <tr><td class="en">Stress</td><td>توتر / ضغط نفسي</td><td>Stressed (متوتر) / Stressful (مسبب للتوتر)</td></tr>
-        <tr><td class="en">Anxiety</td><td>قلق</td><td>Anxious (قلق)</td></tr>
-        <tr><td class="en">Depression</td><td>اكتئاب</td><td>Depressed (مكتئب)</td></tr>
-        <tr><td class="en">Counseling</td><td>استشارة / إرشاد</td><td>Counselor (مستشار)</td></tr>
-        <tr><td class="en">Support</td><td>دعم / مساندة</td><td>Supporter (داعم) / Supportive (داعم)</td></tr>
-        <tr><td class="en">Volunteer</td><td>متطوع / يتطوع</td><td>Voluntary (تطوعي)</td></tr>
-        <tr><td class="en">Charity</td><td>عمل خيري / جمعية خيرية</td><td>Charitable (خيري)</td></tr>
-        <tr><td class="en">Donate</td><td>يتبرع</td><td>Donation (تبرع) / Donor (متبرع)</td></tr>
-        <tr><td class="en">Aid</td><td>مساعدة / مساعدة إنسانية</td><td>-</td></tr>
-        <tr><td class="en">Relief</td><td>إغاثة / تخفيف</td><td>Relieve (يخفف)</td></tr>
-        <tr><td class="en">Shelter</td><td>مأوى / ملجأ</td><td>Sheltered (محمي)</td></tr>
-        <tr><td class="en">Poverty</td><td>فقر</td><td>Poor (فقير)</td></tr>
-        <tr><td class="en">Disability</td><td>إعاقة</td><td>Disabled (معاق)</td></tr>
-        <tr><td class="en">Elderly</td><td>كبار السن / مسن</td><td>-</td></tr>
-        <tr><td class="en">Orphan</td><td>يتيم</td><td>Orphanage (دار أيتام)</td></tr>
-      </tbody>
-    </table>
+    <div class="table-responsive">
+      <table>
+        <thead>
+          <tr>
+            <th>Word (الكلمة)</th>
+            <th>Meaning (المعنى)</th>
+            <th>Derivatives (المشتقات)</th>
+            <th>Synonyms / Antonyms (مرادف / مضاد)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- الصورة الأولى -->
+          <tr>
+            <td class="en">administer (v)</td>
+            <td class="meaning">يعطي دواء - يدير - ينظم</td>
+            <td class="derivatives"><ul><li><span>N:</span> administration</li><li><span>Adj:</span> administrative</li></ul></td>
+            <td class="syn-ant"><span class="syn">Syn:</span> manage, give<br><span class="ant">Ant:</span> neglect</td>
+          </tr>
+          <tr>
+            <td class="en">attention (n)</td>
+            <td class="meaning">اهتمام - انتباه</td>
+            <td class="derivatives"><ul><li><span>V:</span> attend</li><li><span>Adj:</span> attentive</li></ul></td>
+            <td class="syn-ant"><span class="syn">Syn:</span> focus, care<br><span class="ant">Ant:</span> neglect, inattention</td>
+          </tr>
+          <tr>
+            <td class="en">beep (n - v)</td>
+            <td class="meaning">بصفر (صوت)</td>
+            <td class="derivatives"><ul><li>-</li></ul></td>
+            <td class="syn-ant"><span class="syn">Syn:</span> sound, ring<br><span class="ant">Ant:</span> silence</td>
+          </tr>
+          <tr>
+            <td class="en">chaos (n)</td>
+            <td class="meaning">فوضى</td>
+            <td class="derivatives"><ul><li><span>Adj:</span> chaotic</li></ul></td>
+            <td class="syn-ant"><span class="syn">Syn:</span> disorder, mess<br><span class="ant">Ant:</span> order, calm</td>
+          </tr>
+          <tr>
+            <td class="en">chest (n)</td>
+            <td class="meaning">صدر</td>
+            <td class="derivatives"><ul><li>-</li></ul></td>
+            <td class="syn-ant"><span class="syn">Syn:</span> breast</td>
+          </tr>
+          <tr>
+            <td class="en">collapse (n - v)</td>
+            <td class="meaning">انهيار - ينهار / يتهاوى</td>
+            <td class="derivatives"><ul><li><span>Adj:</span> collapsed</li></ul></td>
+            <td class="syn-ant"><span class="syn">Syn:</span> fall, breakdown<br><span class="ant">Ant:</span> rise, recovery</td>
+          </tr>
+          <tr>
+            <td class="en">consciousness (n)</td>
+            <td class="meaning">الوعي - الإدراك</td>
+            <td class="derivatives"><ul><li><span>Adj:</span> conscious</li><li><span>Adj:</span> unconscious</li></ul></td>
+            <td class="syn-ant"><span class="syn">Syn:</span> awareness<br><span class="ant">Ant:</span> unconsciousness</td>
+          </tr>
+          <tr>
+            <td class="en">CPR (Cardiopulmonary Resuscitation)</td>
+            <td class="meaning">الإنعاش القلبي الرئوي</td>
+            <td class="derivatives"><ul><li>-</li></ul></td>
+            <td class="syn-ant">-</td>
+          </tr>
+          <tr>
+            <td class="en">emergency (n)</td>
+            <td class="meaning">طوارئ (حالة)</td>
+            <td class="derivatives"><ul><li><span>Adj:</span> emergent</li></ul></td>
+            <td class="syn-ant"><span class="syn">Syn:</span> crisis, urgency<br><span class="ant">Ant:</span> normality</td>
+          </tr>
+          <tr>
+            <td class="en">grab (n - v)</td>
+            <td class="meaning">شدة/جذبة - يمسك بشدة</td>
+            <td class="derivatives"><ul><li>-</li></ul></td>
+            <td class="syn-ant"><span class="syn">Syn:</span> snatch, seize<br><span class="ant">Ant:</span> release, let go</td>
+          </tr>
+          <tr>
+            <td class="en">heartbreaking (adj)</td>
+            <td class="meaning">مؤلم - محزن</td>
+            <td class="derivatives"><ul><li><span>N:</span> heartbreak</li></ul></td>
+            <td class="syn-ant"><span class="syn">Syn:</span> sad, tragic<br><span class="ant">Ant:</span> joyful</td>
+          </tr>
+          <tr>
+            <td class="en">kick off (phr. v)</td>
+            <td class="meaning">يبدأ - يستهل - ينطلق</td>
+            <td class="derivatives"><ul><li>-</li></ul></td>
+            <td class="syn-ant"><span class="syn">Syn:</span> start, begin<br><span class="ant">Ant:</span> end, finish</td>
+          </tr>
+          <tr>
+            <td class="en">medication (n)</td>
+            <td class="meaning">دواء</td>
+            <td class="derivatives"><ul><li><span>V:</span> medicate</li><li><span>Adj:</span> medical</li></ul></td>
+            <td class="syn-ant"><span class="syn">Syn:</span> medicine, drug<br><span class="ant">Ant:</span> -</td>
+          </tr>
+          <tr>
+            <td class="en">paramedic (n)</td>
+            <td class="meaning">مسعف</td>
+            <td class="derivatives"><ul><li>-</li></ul></td>
+            <td class="syn-ant">-</td>
+          </tr>
+          <tr>
+            <td class="en">pulse (n)</td>
+            <td class="meaning">النبض</td>
+            <td class="derivatives"><ul><li>-</li></ul></td>
+            <td class="syn-ant"><span class="syn">Syn:</span> beat, throb</td>
+          </tr>
+          <tr>
+            <td class="en">rewarding (adj)</td>
+            <td class="meaning">مرضي - مجزي</td>
+            <td class="derivatives"><ul><li><span>N:</span> reward</li><li><span>V:</span> reward</li></ul></td>
+            <td class="syn-ant"><span class="syn">Syn:</span> satisfying, fulfilling<br><span class="ant">Ant:</span> unrewarding</td>
+          </tr>
+          <tr>
+            <td class="en">rollercoaster (n)</td>
+            <td class="meaning">قطار ملاهي - موقف متارجح</td>
+            <td class="derivatives"><ul><li>-</li></ul></td>
+            <td class="syn-ant">-</td>
+          </tr>
+          <tr>
+            <td class="en">shift (n)</td>
+            <td class="meaning">دوام (وردية عمل)</td>
+            <td class="derivatives"><ul><li>-</li></ul></td>
+            <td class="syn-ant"><span class="syn">Syn:</span> period, turn</td>
+          </tr>
+          <tr>
+            <td class="en">victim (n)</td>
+            <td class="meaning">ضحية</td>
+            <td class="derivatives"><ul><li><span>V:</span> victimize</li></ul></td>
+            <td class="syn-ant"><span class="syn">Syn:</span> casualty, sufferer</td>
+          </tr>
+          
+          <!-- الصورة الثانية -->
+          <tr>
+            <td class="en">clutch (v)</td>
+            <td class="meaning">يمسك بقوة</td>
+            <td class="derivatives"><ul><li>-</li></ul></td>
+            <td class="syn-ant"><span class="syn">Syn:</span> grip, grab<br><span class="ant">Ant:</span> release</td>
+          </tr>
+          <tr>
+            <td class="en">forehead (n)</td>
+            <td class="meaning">جبهة / جبين</td>
+            <td class="derivatives"><ul><li>-</li></ul></td>
+            <td class="syn-ant"><span class="syn">Syn:</span> brow</td>
+          </tr>
+          <tr>
+            <td class="en">groan (n - v)</td>
+            <td class="meaning">يتأوه (صوت)</td>
+            <td class="derivatives"><ul><li>-</li></ul></td>
+            <td class="syn-ant"><span class="syn">Syn:</span> moan, sigh</td>
+          </tr>
+          <tr>
+            <td class="en">moan (n - v)</td>
+            <td class="meaning">يئن</td>
+            <td class="derivatives"><ul><li>-</li></ul></td>
+            <td class="syn-ant"><span class="syn">Syn:</span> groan, complain</td>
+          </tr>
+          <tr>
+            <td class="en">scope (n)</td>
+            <td class="meaning">منظار طبي - مجهر - نطاق / مجال</td>
+            <td class="derivatives"><ul><li>-</li></ul></td>
+            <td class="syn-ant"><span class="syn">Syn:</span> range, extent</td>
+          </tr>
+          <tr>
+            <td class="en">stitch (n - v)</td>
+            <td class="meaning">غرزة / وخزة - ألم مفاجئ - يخيط</td>
+            <td class="derivatives"><ul><li>-</li></ul></td>
+            <td class="syn-ant"><span class="syn">Syn:</span> sew, suture</td>
+          </tr>
+          <tr>
+            <td class="en">swallow (v)</td>
+            <td class="meaning">يبلع - يغلب</td>
+            <td class="derivatives"><ul><li>-</li></ul></td>
+            <td class="syn-ant"><span class="syn">Syn:</span> gulp, ingest<br><span class="ant">Ant:</span> spit out</td>
+          </tr>
+          <tr>
+            <td class="en">urgency (n)</td>
+            <td class="meaning">إلحاح - ضرورة</td>
+            <td class="derivatives"><ul><li><span>Adj:</span> urgent</li><li><span>Adv:</span> urgently</li></ul></td>
+            <td class="syn-ant"><span class="syn">Syn:</span> importance, necessity<br><span class="ant">Ant:</span> delay</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </body>
-  </html>
+                                  </html>
