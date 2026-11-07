@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unit 2 Full Exam</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Arial, sans-serif; }
+    body { background: #f4f7fb; color: #1a2b3c; padding: 20px; }
+    .container { max-width: 800px; margin: 0 auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+    h1 { color: #1e3a8a; text-align: center; margin-bottom: 20px; border-bottom: 2px solid #e5e7eb; padding-bottom: 10px; font-size: 24px; }
+    h2 { color: #2563eb; margin: 30px 0 15px; font-size: 20px; border-right: 4px solid #2563eb; padding-right: 10px; }
+    
+    .q-box { background: #f8fafc; padding: 20px; border-radius: 8px; margin-bottom: 20px; border: 1px solid #e5e7eb; }
+    .q-text { font-weight: bold; margin-bottom: 15px; font-size: 16px; color: #1e293b; direction: ltr; text-align: left; line-height: 1.5;}
+    
+    .options { list-style-type: none; padding: 0; }
+    .options li { background: white; padding: 12px 15px; margin-bottom: 10px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 15px; cursor: pointer; transition: 0.2s; direction: ltr; text-align: left;}
+    .options li:hover { background: #f1f5f9; }
+    .options li.correct { background: #dcfce7; border-color: #22c55e; font-weight: bold; color: #166534; }
+    
+    .back-btn { display: inline-block; background: #64748b; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; margin-bottom: 20px; font-size: 14px; }
+    .back-btn:hover { background: #475569; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="unit2.html" class="back-btn">← العودة للوحدة</a>
+    <h1>Unit 2: Full Exam</h1>
+    <p style="text-align:center; color:#64748b; margin-bottom:20px;">الامتحان الشامل (الجزء الأول: اختياري)</p>
+
+    <h2>Part 1: Multiple Choice (Questions 1-21)</h2>
+
+    <!-- أسئلة الكلمات (1-7) -->
+    <div class="q-box">
+      <p class="q-text">1. The invention of the internet has .......... the way we communicate.</p>
+      <ul class="options" onclick="checkAns(this, 'c')">
+        <li data-opt="a">a. adopted</li>
+        <li data-opt="b">b. packed</li>
+        <li data-opt="c">c. revolutionized</li>
+        <li data-opt="d">d. tracked</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">2. The country needs to improve its .......... like roads and bridges to attract more investors.</p>
+      <ul class="options" onclick="checkAns(this, 'b')">
+        <li data-opt="a">a. initiative</li>
+        <li data-opt="b">b. infrastructure</li>
+        <li data-opt="c">c. dynasty</li>
+        <li data-opt="d">d. revolution</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">3. A .......... is a person whose job is to check and fix technical equipment.</p>
+      <ul class="options" onclick="checkAns(this, 'd')">
+        <li data-opt="a">a. household</li>
+        <li data-opt="b">b. cable</li>
+        <li data-opt="c">c. driver</li>
+        <li data-opt="d">d. technician</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">4. The software is very ..........; it has many advanced features that are easy to use.</p>
+      <ul class="options" onclick="checkAns(this, 'a')">
+        <li data-opt="a">a. sophisticated</li>
+        <li data-opt="b">b. offline</li>
+        <li data-opt="c">c. urgent</li>
+        <li data-opt="d">d. automated</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">5. He called the IT support to help him .......... the problem with his email.</p>
+      <ul class="options" onclick="checkAns(this, 'c')">
+        <li data-opt="a">a. adopt</li>
+        <li data-opt="b">b. track</li>
+        <li data-opt="c">c. troubleshoot</li>
+        <li data-opt="d">d. charge</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">6. The .......... of the old factory caused many workers to lose their jobs.</p>
+      <ul class="options" onclick="checkAns(this, 'd')">
+        <li data-opt="a">a. version</li>
+        <li data-opt="b">b. partnership</li>
+        <li data-opt="c">c. efficiency</li>
+        <li data-opt="d">d. automation</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">7. Let's .......... the groundwork for the new project by gathering all the data first.</p>
+      <ul class="options" onclick="checkAns(this, 'a')">
+        <li data-opt="a">a. lay</li>
+        <li data-opt="b">b. charge</li>
+        <li data-opt="c">c. come</li>
+        <li data-opt="d">d. state</li>
+      </ul>
+    </div>
+
+    <!-- أسئلة الجرامر (8-21) -->
+    <div class="q-box">
+      <p class="q-text">8. "I am tired," said Ahmed. -> Ahmed said that he .......... tired.</p>
+      <ul class="options" onclick="checkAns(this, 'b')">
+        <li data-opt="a">a. is</li>
+        <li data-opt="b">b. was</li>
+        <li data-opt="c">c. has been</li>
+        <li data-opt="d">d. had been</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">9. "I will help you," said my brother. -> My brother said that he .......... help me.</p>
+      <ul class="options" onclick="checkAns(this, 'c')">
+        <li data-opt="a">a. will</li>
+        <li data-opt="b">b. can</li>
+        <li data-opt="c">c. would</li>
+        <li data-opt="d">d. should</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">10. "We bought a new house yesterday," they said. -> They said that they .......... a new house the day before.</p>
+      <ul class="options" onclick="checkAns(this, 'b')">
+        <li data-opt="a">a. bought</li>
+        <li data-opt="b">b. had bought</li>
+        <li data-opt="c">c. have bought</li>
+        <li data-opt="d">d. were buying</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">11. The teacher told us .......... noise in the class.</p>
+      <ul class="options" onclick="checkAns(this, 'd')">
+        <li data-opt="a">a. don't make</li>
+        <li data-opt="b">b. not make</li>
+        <li data-opt="c">c. to not make</li>
+        <li data-opt="d">d. not to make</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">12. "Open the window, Ali," said his father. -> His father asked Ali .......... the window.</p>
+      <ul class="options" onclick="checkAns(this, 'a')">
+        <li data-opt="a">a. to open</li>
+        <li data-opt="b">b. open</li>
+        <li data-opt="c">c. opening</li>
+        <li data-opt="d">d. opened</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">13. "Where do you live?" she asked me. -> She asked me where I ..........</p>
+      <ul class="options" onclick="checkAns(this, 'b')">
+        <li data-opt="a">a. live</li>
+        <li data-opt="b">b. lived</li>
+        <li data-opt="c">c. do live</li>
+        <li data-opt="d">d. am living</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">14. "Did you finish your homework?" he asked. -> He asked if I .......... my homework.</p>
+      <ul class="options" onclick="checkAns(this, 'c')">
+        <li data-opt="a">a. finish</li>
+        <li data-opt="b">b. did finish</li>
+        <li data-opt="c">c. had finished</li>
+        <li data-opt="d">d. have finished</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">15. "I can speak three languages," she said. -> She said that she .......... speak three languages.</p>
+      <ul class="options" onclick="checkAns(this, 'a')">
+        <li data-opt="a">a. could</li>
+        <li data-opt="b">b. can</li>
+        <li data-opt="c">c. will</li>
+        <li data-opt="d">d. would</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">16. "I am going to the club now," said Omar. -> Omar said that he .......... to the club then.</p>
+      <ul class="options" onclick="checkAns(this, 'c')">
+        <li data-opt="a">a. is going</li>
+        <li data-opt="b">b. was going</li>
+        <li data-opt="c">c. would go</li>
+        <li data-opt="d">d. will go</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">17. She said, "I have lost my keys." -> She said that she .......... her keys.</p>
+      <ul class="options" onclick="checkAns(this, 'b')">
+        <li data-opt="a">a. lost</li>
+        <li data-opt="b">b. had lost</li>
+        <li data-opt="c">c. has lost</li>
+        <li data-opt="d">d. loses</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">18. "Don't touch that wire!" the technician warned us. -> The technician warned us .......... that wire.</p>
+      <ul class="options" onclick="checkAns(this, 'd')">
+        <li data-opt="a">a. don't touch</li>
+        <li data-opt="b">b. to not touch</li>
+        <li data-opt="c">c. not touch</li>
+        <li data-opt="d">d. not to touch</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">19. "Can you help me?" she asked him. -> She asked him .......... her.</p>
+      <ul class="options" onclick="checkAns(this, 'b')">
+        <li data-opt="a">a. help</li>
+        <li data-opt="b">b. to help</li>
+        <li data-opt="c">c. helping</li>
+        <li data-opt="d">d. helped</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">20. He said, "I will call you tomorrow." -> He said that he would call me ..........</p>
+      <ul class="options" onclick="checkAns(this, 'c')">
+        <li data-opt="a">a. tomorrow</li>
+        <li data-opt="b">b. the next day</li>
+        <li data-opt="c">c. the following day</li>
+        <li data-opt="d">d. today</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">21. "You should study hard," my father told me. -> My father advised me .......... hard.</p>
+      <ul class="options" onclick="checkAns(this, 'a')">
+        <li data-opt="a">a. to study</li>
+        <li data-opt="b">b. study</li>
+        <li data-opt="c">c. studying</li>
+        <li data-opt="d">d. studied</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <script>
+    function checkAns(ul, correctOpt) {
+      if (ul.classList.contains('answered')) return;
+      ul.classList.add('answered');
+      const lis = ul.querySelectorAll('li');
+      lis.forEach(li => {
+        if (li.getAttribute('data-opt') === correctOpt) li.classList.add('correct');
+      });
+    }
+  </script>
+    <!-- الجزء التاني: قراءة وترجمة وأسئلة مقالية -->
+    <h2>Part 2: Reading & Translation (22-31)</h2>
+    
+    <div class="q-box" style="background: #fffbeb; border-color: #fcd34d;">
+      <p style="font-weight:bold; margin-bottom:10px; color:#92400e;">Read the following passage and answer the questions:</p>
+      <div style="direction: ltr; text-align: left; line-height: 1.8; font-size: 15px;">
+        Egypt has a long history with machines. In ancient times, Egyptians used simple machines like levers and ramps to build the pyramids. During the Industrial Revolution, Egypt imported advanced machinery from Europe. Cotton gins and steam engines revolutionized agriculture. Today, Egypt adopts modern technology like artificial intelligence. While some fear machines will replace humans, others believe they enhance productivity. Egypt is charging full steam ahead into the digital age.
+      </div>
+    </div>
+
+    <div class="q-box">
+      <p class="q-text">22. What did ancient Egyptians use to build the pyramids?</p>
+      <ul class="options" onclick="checkAns(this, 'a')">
+        <li data-opt="a">a. Simple machines like levers and ramps.</li>
+        <li data-opt="b">b. Advanced machinery from Europe.</li>
+        <li data-opt="c">c. Artificial intelligence.</li>
+        <li data-opt="d">d. Computers.</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">23. What revolutionized agriculture during the Industrial Revolution?</p>
+      <ul class="options" onclick="checkAns(this, 'b')">
+        <li data-opt="a">a. 3D scanning</li>
+        <li data-opt="b">b. Cotton gins and steam engines</li>
+        <li data-opt="c">c. Robots</li>
+        <li data-opt="d">d. Smart infrastructure</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">24. The phrase "charging full steam ahead" means ..........</p>
+      <ul class="options" onclick="checkAns(this, 'c')">
+        <li data-opt="a">a. stopping completely</li>
+        <li data-opt="b">b. going backward</li>
+        <li data-opt="c">c. moving forward with a lot of energy</li>
+        <li data-opt="d">d. slowing down</li>
+      </ul>
+    </div>
+
+    <div class="q-box">
+      <p class="q-text">25. Choose the correct Arabic translation: "Machines have played an important role in shaping the nation."</p>
+      <ul class="options" onclick="checkAns(this, 'a')">
+        <li data-opt="a">أ. لعبت الآلات دوراً مهماً في تشكيل الأمة.</li>
+        <li data-opt="b">ب. الآلات ساهمت في تدمير الأمة.</li>
+        <li data-opt="c">ج. كان للآلات دور بسيط في تشكيل الأمة.</li>
+        <li data-opt="d">د. الآلات ليس لها دور في تشكيل الأمة.</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">26. Choose the correct Arabic translation: "We need enough time to lay the groundwork for the meeting."</p>
+      <ul class="options" onclick="checkAns(this, 'b')">
+        <li data-opt="a">أ. نحتاج لوقت طويل لإنهاء الاجتماع.</li>
+        <li data-opt="b">ب. نحتاج إلى وقت كافٍ لتهيئة الأوضاع للاجتماع.</li>
+        <li data-opt="c">ج. لا نحتاج وقتاً للتحضير للاجتماع.</li>
+        <li data-opt="d">د. الاجتماع سيبدأ قريباً جداً.</li>
+      </ul>
+    </div>
+
+    <div class="q-box">
+      <p class="q-text">27. Choose the correct English translation: "مصر تندفع بقوة نحو العصر الرقمي."</p>
+      <ul class="options" onclick="checkAns(this, 'd')">
+        <li data-opt="a">a. Egypt is stopping in the digital age.</li>
+        <li data-opt="b">b. Egypt is going backward in the digital age.</li>
+        <li data-opt="c">c. Egypt fears the digital age.</li>
+        <li data-opt="d">d. Egypt is charging full steam ahead into the digital age.</li>
+      </ul>
+    </div>
+    
+    <div class="q-box">
+      <p class="q-text">28. Choose the correct English translation: "تُستخدم التكنولوجيا الحديثة لتحسين الإنتاجية."</p>
+      <ul class="options" onclick="checkAns(this, 'a')">
+        <li data-opt="a">a. Modern technology is used to enhance productivity.</li>
+        <li data-opt="b">b. Modern technology destroys productivity.</li>
+        <li data-opt="c">c. Modern technology is not used in factories.</li>
+        <li data-opt="d">d. We don't need modern technology.</li>
+      </ul>
+    </div>
+    
+    <div class="q-box">
+      <p class="q-text">29. "I am working on a new project," she said. -> She said that she .......... on a new project.</p>
+      <ul class="options" onclick="checkAns(this, 'b')">
+        <li data-opt="a">a. is working</li>
+        <li data-opt="b">b. was working</li>
+        <li data-opt="c">c. has worked</li>
+        <li data-opt="d">d. works</li>
+      </ul>
+    </div>
+    
+    <div class="q-box">
+      <p class="q-text">30. "Don't play with matches," my mother said. -> My mother warned me .......... with matches.</p>
+      <ul class="options" onclick="checkAns(this, 'd')">
+        <li data-opt="a">a. to not play</li>
+        <li data-opt="b">b. not play</li>
+        <li data-opt="c">c. don't play</li>
+        <li data-opt="d">d. not to play</li>
+      </ul>
+    </div>
+    
+    <div class="q-box">
+      <p class="q-text">31. "Can you help me?" she asked me. -> She asked me .......... her.</p>
+      <ul class="options" onclick="checkAns(this, 'a')">
+        <li data-opt="a">a. to help</li>
+        <li data-opt="b">b. help</li>
+        <li data-opt="c">c. helping</li>
+        <li data-opt="d">d. helped</li>
+      </ul>
+    </div>
+
+    <!-- الجزء الثالث: المقالي -->
+    <h2>Part 3: Written Questions (32-42)</h2>
+    
+    <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
+      <p class="q-text" style="color:#1e40af;">32. Rewrite using reported speech: "I bought a new car yesterday," said Ahmed.</p>
+      <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
+      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:ltr; text-align:left;">Ahmed said that he had bought a new car the day before.</p>
+    </div>
+
+    <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
+      <p class="q-text" style="color:#1e40af;">33. Rewrite using reported speech: "Where do you live?" he asked me.</p>
+      <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
+      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:ltr; text-align:left;">He asked me where I lived.</p>
+    </div>
+    
+    <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
+      <p class="q-text" style="color:#1e40af;">34. Rewrite using reported speech: "Don't touch the wires," the technician told us.</p>
+      <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
+      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:ltr; text-align:left;">The technician told us not to touch the wires.</p>
+    </div>
+    
+    <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
+      <p class="q-text" style="color:#1e40af;">35. Complete the sentence with a suitable idiom: We need to .......... to prepare for the final exams.</p>
+      <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
+      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:ltr; text-align:left;">lay the groundwork</p>
+    </div>
+    
+    <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
+      <p class="q-text" style="color:#1e40af;">36. Complete the sentence with a suitable idiom: If the power goes out, the whole factory will ..........</p>
+      <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
+      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:ltr; text-align:left;">come to a standstill</p>
+    </div>
+
+    <!-- أسئلة الكتابة (Writing) -->
+    <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
+      <p class="q-text" style="color:#1e40af;">37. Write an introduction for an argumentative essay about "The Impact of Technology on Jobs". Include a hook and a thesis statement.</p>
+      <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
+      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:ltr; text-align:left;">Hook: Have you ever wondered if a robot could take your job? Thesis Statement: I believe that while technology replaces some jobs, it creates new opportunities and improves productivity.</p>
+    </div>
+    
+    <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
+      <p class="q-text" style="color:#1e40af;">38. What are the three main parts of an argumentative essay?</p>
+      <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
+      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:ltr; text-align:left;">1. Introduction (hook + thesis statement). 2. Body paragraphs (supporting reasons + opposing view + refutation). 3. Conclusion (restating the claim).</p>
+    </div>
+
+    <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
+      <p class="q-text" style="color:#1e40af;">39. Write a sentence to state an opinion using "I believe that..."</p>
+      <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
+      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:ltr; text-align:left;">I believe that technology makes our lives easier.</p>
+    </div>
+
+    <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
+      <p class="q-text" style="color:#1e40af;">40. Write a sentence to introduce an opposing view.</p>
+      <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
+      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:ltr; text-align:left;">Some people say that machines will replace human workers.</p>
+    </div>
+
+    <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
+      <p class="q-text" style="color:#1e40af;">41. What is a "refutation"?</p>
+      <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
+      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:ltr; text-align:left;">It is an explanation of why the opposing view is weak or wrong.</p>
+    </div>
+
+    <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
+      <p class="q-text" style="color:#1e40af;">42. Write a conclusion sentence using "In conclusion...".</p>
+      <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
+      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:ltr; text-align:left;">In conclusion, technology is a powerful tool that can improve our lives if we use it wisely.</p>
+    </div>
+
+  </div> <!-- نهاية الحاوية -->
+</body>
+</html>
