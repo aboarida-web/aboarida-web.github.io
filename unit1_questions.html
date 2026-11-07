@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unit 1 Questions</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Arial, sans-serif; }
+    body { background: #f4f7fb; color: #1a2b3c; padding: 20px; }
+    .container { max-width: 800px; margin: 0 auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+    h1 { color: #1e3a8a; text-align: center; margin-bottom: 20px; border-bottom: 2px solid #e5e7eb; padding-bottom: 10px; font-size: 24px; }
+    
+    .q-box { background: #f8fafc; padding: 20px; border-radius: 8px; margin-bottom: 20px; border: 1px solid #e5e7eb; }
+    .q-text { font-weight: bold; margin-bottom: 15px; font-size: 16px; color: #1e293b; direction: ltr; text-align: left; line-height: 1.5;}
+    .options { list-style-type: none; padding: 0; }
+    .options li { background: white; padding: 12px 15px; margin-bottom: 10px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 15px; cursor: pointer; transition: 0.2s; direction: ltr; text-align: left;}
+    .options li:hover { background: #f1f5f9; }
+    
+    .options li.correct { background: #dcfce7; border-color: #22c55e; font-weight: bold; color: #166534; }
+    .options li.wrong { background: #fee2e2; border-color: #ef4444; color: #991b1b; }
+    
+    .back-btn { display: inline-block; background: #64748b; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; margin-bottom: 20px; font-size: 14px; }
+    .back-btn:hover { background: #475569; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="unit1.html" class="back-btn">← العودة للوحدة</a>
+    <h1>Unit 1: Practice Questions</h1>
+    <p style="text-align:center; color:#64748b; margin-bottom:20px;">أهم الأسئلة على الوحدة الأولى</p>
+
+    <!-- سؤال 1 -->
+    <div class="q-box">
+      <p class="q-text">1. .......... means giving a sense of achievement or satisfaction.</p>
+      <ul class="options" onclick="checkAns(this, 'a')">
+        <li data-opt="a">a. Rewarding</li>
+        <li data-opt="b">b. Heartbreaking</li>
+        <li data-opt="c">c. Cardiopulmonary</li>
+        <li data-opt="d">d. Emergent</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 2 -->
+    <div class="q-box">
+      <p class="q-text">2. The clients began to .......... about the long waiting time.</p>
+      <ul class="options" onclick="checkAns(this, 'a')">
+        <li data-opt="a">a. complain</li>
+        <li data-opt="b">b. buzz</li>
+        <li data-opt="c">c. beep</li>
+        <li data-opt="d">d. progress</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 3 -->
+    <div class="q-box">
+      <p class="q-text">3. The teacher had to .......... the test fairly and ensure no one cheated.</p>
+      <ul class="options" onclick="checkAns(this, 'b')">
+        <li data-opt="a">a. attention</li>
+        <li data-opt="b">b. administer</li>
+        <li data-opt="c">c. shift</li>
+        <li data-opt="d">d. collapse</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 4 -->
+    <div class="q-box">
+      <p class="q-text">4. "Malak had a rewarding day helping others." The word 'rewarding' here is an antonym of ..........</p>
+      <ul class="options" onclick="checkAns(this, 'b')">
+        <li data-opt="a">a. satisfying</li>
+        <li data-opt="b">b. disappointing</li>
+        <li data-opt="c">c. fulfilling</li>
+        <li data-opt="d">d. productive</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 5 -->
+    <div class="q-box">
+      <p class="q-text">5. The new manager will take .......... the school next month.</p>
+      <ul class="options" onclick="checkAns(this, 'd')">
+        <li data-opt="a">a. off</li>
+        <li data-opt="b">b. out</li>
+        <li data-opt="c">c. on</li>
+        <li data-opt="d">d. over</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 6 -->
+    <div class="q-box">
+      <p class="q-text">6. The athlete fell hard and .......... his leg just above the knee.</p>
+      <ul class="options" onclick="checkAns(this, 'd')">
+        <li data-opt="a">a. stitched</li>
+        <li data-opt="b">b. retrieved</li>
+        <li data-opt="c">c. clutched</li>
+        <li data-opt="d">d. wounded</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 7 -->
+    <div class="q-box">
+      <p class="q-text">7. ".........." is to 'worsen' as 'recover' is to 'heal'.</p>
+      <ul class="options" onclick="checkAns(this, 'c')">
+        <li data-opt="a">a. Harm</li>
+        <li data-opt="b">b. Stitch</li>
+        <li data-opt="c">c. Weaken</li>
+        <li data-opt="d">d. Improve</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 8 -->
+    <div class="q-box">
+      <p class="q-text">8. When the teacher entered, all the students gave her their full attention. "Attention" here is a synonym of ..........</p>
+      <ul class="options" onclick="checkAns(this, 'a')">
+        <li data-opt="a">a. focus</li>
+        <li data-opt="b">b. order</li>
+        <li data-opt="c">c. distraction</li>
+        <li data-opt="d">d. confusion</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 9 -->
+    <div class="q-box">
+      <p class="q-text">9. The ride on the .......... made girls scream with excitement.</p>
+      <ul class="options" onclick="checkAns(this, 'd')">
+        <li data-opt="a">a. victim</li>
+        <li data-opt="b">b. paramedic</li>
+        <li data-opt="c">c. colleague</li>
+        <li data-opt="d">d. rollercoaster</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 10 -->
+    <div class="q-box">
+      <p class="q-text">10. The .......... of the building left several families homeless.</p>
+      <ul class="options" onclick="checkAns(this, 'b')">
+        <li data-opt="a">a. grab</li>
+        <li data-opt="b">b. collapse</li>
+        <li data-opt="c">c. chest</li>
+        <li data-opt="d">d. chart</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 11 -->
+    <div class="q-box">
+      <p class="q-text">11. Walking in the rain, Reem's clothes were completely ..........</p>
+      <ul class="options" onclick="checkAns(this, 'a')">
+        <li data-opt="a">a. soaked</li>
+        <li data-opt="b">b. sterile</li>
+        <li data-opt="c">c. viral</li>
+        <li data-opt="d">d. unconscious</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 12 -->
+    <div class="q-box">
+      <p class="q-text">12. Without strict leadership, .......... will spread in the office.</p>
+      <ul class="options" onclick="checkAns(this, 'b')">
+        <li data-opt="a">a. attention</li>
+        <li data-opt="b">b. chaos</li>
+        <li data-opt="c">c. forehead</li>
+        <li data-opt="d">d. pulse</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 13 -->
+    <div class="q-box">
+      <p class="q-text">13. "It began to rain cats and dogs during the football match, so the players ran to the locker room." What does 'rain cats and dogs' mean in this sentence?</p>
+      <ul class="options" onclick="checkAns(this, 'b')">
+        <li data-opt="a">a. Rain lightly</li>
+        <li data-opt="b">b. Rain very heavily</li>
+        <li data-opt="c">c. Snow suddenly</li>
+        <li data-opt="d">d. Stop raining quickly</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 14 -->
+    <div class="q-box">
+      <p class="q-text">14. To .......... is to give medicine or treatment to someone.</p>
+      <ul class="options" onclick="checkAns(this, 'a')">
+        <li data-opt="a">a. administer</li>
+        <li data-opt="b">b. clutch</li>
+        <li data-opt="c">c. collapse</li>
+        <li data-opt="d">d. groan</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 15 -->
+    <div class="q-box">
+      <p class="q-text">15. Huda has read two chapters of "A Tale of Two Cities" since she .......... back home.</p>
+      <ul class="options" onclick="checkAns(this, 'a')">
+        <li data-opt="a">a. came</li>
+        <li data-opt="b">b. has come</li>
+        <li data-opt="c">c. was coming</li>
+        <li data-opt="d">d. come</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 16 -->
+    <div class="q-box">
+      <p class="q-text">16. Hisham .......... this car for five years.</p>
+      <ul class="options" onclick="checkAns(this, 'b')">
+        <li data-opt="a">a. is having</li>
+        <li data-opt="b">b. has had</li>
+        <li data-opt="c">c. has</li>
+        <li data-opt="d">d. had had</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 17 -->
+    <div class="q-box">
+      <p class="q-text">17. It's a long time .......... I last saw her.</p>
+      <ul class="options" onclick="checkAns(this, 'a')">
+        <li data-opt="a">a. since</li>
+        <li data-opt="b">b. when</li>
+        <li data-opt="c">c. for</li>
+        <li data-opt="d">d. ago</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 18 -->
+    <div class="q-box">
+      <p class="q-text">18. Once she has got her visa, she ..........</p>
+      <ul class="options" onclick="checkAns(this, 'b')">
+        <li data-opt="a">a. booked her plan ticket</li>
+        <li data-opt="b">b. will travel abroad</li>
+        <li data-opt="c">c. had booked her plan ticket</li>
+        <li data-opt="d">d. going to fly to the USA</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 19 -->
+    <div class="q-box">
+      <p class="q-text">19. As soon as he finishes the report, he ..........</p>
+      <ul class="options" onclick="checkAns(this, 'b')">
+        <li data-opt="a">a. has submitted it to the manager</li>
+        <li data-opt="b">b. will submit it to the manager</li>
+        <li data-opt="c">c. submitted it to the manager</li>
+        <li data-opt="d">d. is submitting it to the manager</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 20 -->
+    <div class="q-box">
+      <p class="q-text">20. Which of the following is structurally correct?</p>
+      <ul class="options" onclick="checkAns(this, 'c')">
+        <li data-opt="a">a. I live here since five years.</li>
+        <li data-opt="b">b. It's five years that I live here.</li>
+        <li data-opt="c">c. I have lived here for five years.</li>
+        <li data-opt="d">d. I am living here for five years.</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <script>
+    function checkAns(ul, correctOpt) {
+      if (ul.classList.contains('answered')) return;
+      ul.classList.add('answered');
+
+      const lis = ul.querySelectorAll('li');
+      lis.forEach(li => {
+        if (li.getAttribute('data-opt') === correctOpt) {
+          li.classList.add('correct');
+        }
+      });
+    }
+  </script>
+</body>
+</html>
