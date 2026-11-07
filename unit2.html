@@ -9,15 +9,12 @@
     body { background: #f4f7fb; color: #1a2b3c; padding: 20px; }
     .container { max-width: 800px; margin: 0 auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
     
-    /* تنسيق الهيدر */
     .header-box { text-align: center; margin-bottom: 30px; }
     .header-box h1 { color: #1e3a8a; font-size: 28px; margin-bottom: 5px; }
     .header-box h2 { color: #64748b; font-size: 18px; font-weight: normal; }
     
-    /* تنسيق الشبكة (مربعين جنب بعض) */
     .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; }
     
-    /* تنسيق المربع نفسه */
     .menu-card { display: flex; flex-direction: column; align-items: center; justify-content: center; background: #f8fafc; padding: 25px 15px; border-radius: 12px; text-decoration: none; color: #1e293b; border: 1px solid #e2e8f0; transition: all 0.3s ease; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.02); }
     .menu-card:hover { background: #e0f2fe; border-color: #38bdf8; transform: translateY(-5px); box-shadow: 0 8px 15px rgba(56, 189, 248, 0.2); }
     
@@ -38,10 +35,8 @@
       <h2>The Power of Machines</h2>
     </div>
 
-    <!-- الشبكة الجديدة -->
     <div class="menu-grid">
       
-      <!-- زرار الجرامر (معدل عشان يفتح الصفحة الوسيطة) -->
       <a href="unit2_grammar_main.html" class="menu-card">
         <span class="icon">📝</span>
         <h3>Grammar<br><small>(القواعد)</small></h3>
@@ -67,6 +62,13 @@
         <h3>Key Idioms<br><small>(التعبيرات)</small></h3>
       </a>
 
+      <!-- زرار أهم الأسئلة (فوق الامتحان) -->
+      <a href="unit2_questions.html" class="menu-card">
+        <span class="icon">❓</span>
+        <h3>Practice Questions<br><small>(أهم الأسئلة)</small></h3>
+      </a>
+
+      <!-- زرار الامتحان الشامل -->
       <a href="unit2_exam.html" class="menu-card">
         <span class="icon">📝</span>
         <h3>Full Exam<br><small>(الامتحان)</small></h3>
@@ -76,4 +78,4 @@
   </div>
 
 </body>
-          </html>
+</html>
