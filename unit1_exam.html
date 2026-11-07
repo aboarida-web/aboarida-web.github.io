@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unit 1 Full Exam</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Arial, sans-serif; }
+    body { background: #f4f7fb; color: #1a2b3c; padding: 20px; }
+    .container { max-width: 800px; margin: 0 auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+    h1 { color: #1e3a8a; text-align: center; margin-bottom: 20px; border-bottom: 2px solid #e5e7eb; padding-bottom: 10px; font-size: 24px; }
+    h2 { color: #2563eb; margin: 30px 0 15px; font-size: 20px; border-right: 4px solid #2563eb; padding-right: 10px; }
+    
+    .q-box { background: #f8fafc; padding: 20px; border-radius: 8px; margin-bottom: 20px; border: 1px solid #e5e7eb; }
+    .q-text { font-weight: bold; margin-bottom: 15px; font-size: 16px; color: #1e293b; direction: ltr; text-align: left; line-height: 1.5;}
+    .passage { background: #fffbeb; padding: 15px; border-radius: 8px; border: 1px solid #fcd34d; margin-bottom: 20px; direction: ltr; text-align: left; line-height: 1.8; font-size: 15px;}
+    
+    .options { list-style-type: none; padding: 0; }
+    .options li { background: white; padding: 12px 15px; margin-bottom: 10px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 15px; cursor: pointer; transition: 0.2s; direction: ltr; text-align: left;}
+    .options li:hover { background: #f1f5f9; }
+    .options li.correct { background: #dcfce7; border-color: #22c55e; font-weight: bold; color: #166534; }
+    
+    .back-btn { display: inline-block; background: #64748b; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; margin-bottom: 20px; font-size: 14px; }
+    .back-btn:hover { background: #475569; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="unit1.html" class="back-btn">← العودة للوحدة</a>
+    <h1>Unit 1: Full Exam</h1>
+
+    <h2>Part 1: Multiple Choice (Questions 1-21)</h2>
+
+    <!-- MCQ 1-7: Vocabulary -->
+    <div class="q-box">
+      <p class="q-text">1. The doctor had to .......... the correct dose of medicine to the patient.</p>
+      <ul class="options" onclick="checkAns(this, 'b')">
+        <li data-opt="a">a. swallow</li><li data-opt="b">b. administer</li><li data-opt="c">c. stitch</li><li data-opt="d">d. groan</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">2. The car crash caused a lot of .......... on the main road.</p>
+      <ul class="options" onclick="checkAns(this, 'd')">
+        <li data-opt="a">a. pulse</li><li data-opt="b">b. forehead</li><li data-opt="c">c. scope</li><li data-opt="d">d. chaos</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">3. She felt a sharp pain in her .......... and found it hard to breathe.</p>
+      <ul class="options" onclick="checkAns(this, 'a')">
+        <li data-opt="a">a. chest</li><li data-opt="b">b. victim</li><li data-opt="c">c. shift</li><li data-opt="d">d. paramedic</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">4. After the accident, the driver lost .......... for a few minutes.</p>
+      <ul class="options" onclick="checkAns(this, 'c')">
+        <li data-opt="a">a. urgency</li><li data-opt="b">b. medication</li><li data-opt="c">c. consciousness</li><li data-opt="d">d. attention</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">5. It was .......... to see the little child crying in pain.</p>
+      <ul class="options" onclick="checkAns(this, 'b')">
+        <li data-opt="a">a. rewarding</li><li data-opt="b">b. heartbreaking</li><li data-opt="c">c. emergent</li><li data-opt="d">d. sterile</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">6. The nurse checked the patient's .......... to make sure his heart was beating.</p>
+      <ul class="options" onclick="checkAns(this, 'a')">
+        <li data-opt="a">a. pulse</li><li data-opt="b">b. wound</li><li data-opt="c">c. bruise</li><li data-opt="d">d. rash</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">7. Working as a paramedic is very .......... because you save lives.</p>
+      <ul class="options" onclick="checkAns(this, 'c')">
+        <li data-opt="a">a. panicky</li><li data-opt="b">b. chaotic</li><li data-opt="c">c. rewarding</li><li data-opt="d">d. urgent</li>
+      </ul>
+    </div>
+
+    <!-- MCQ 8-13: Reading Passage -->
+    <h2>Reading Comprehension (8-13)</h2>
+    <div class="passage">
+      Last night, paramedics rushed a man to the emergency room. He had a deep cut on his forehead and was covered in blood. Dr. Maha prepared to stitch the wound. "Teamwork saved him," said the ER director. Outside, it was raining cats and dogs. Inside, the ER was in chaos. A panicked mother rushed in holding her toddler who had swallowed a coin. Without hesitation, the team used a flexible scope to remove the coin. The mother wept with relief and gratitude.
+    </div>
+    <div class="q-box">
+      <p class="q-text">8. What happened to the man at the beginning of the passage?</p>
+      <ul class="options" onclick="checkAns(this, 'b')">
+        <li data-opt="a">a. He swallowed a coin.</li><li data-opt="b">b. He had a deep cut on his forehead.</li><li data-opt="c">c. He broke his leg.</li><li data-opt="d">d. He had a viral cold.</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">9. The phrase "raining cats and dogs" means ..........</p>
+      <ul class="options" onclick="checkAns(this, 'c')">
+        <li data-opt="a">a. raining lightly</li><li data-opt="b">b. animals falling from the sky</li><li data-opt="c">c. raining very heavily</li><li data-opt="d">d. stopping raining</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">10. What was the emergency room like inside?</p>
+      <ul class="options" onclick="checkAns(this, 'a')">
+        <li data-opt="a">a. In full chaos</li><li data-opt="b">b. Very quiet</li><li data-opt="c">c. Empty</li><li data-opt="d">d. Closed</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">11. Why did the mother rush into the ER?</p>
+      <ul class="options" onclick="checkAns(this, 'd')">
+        <li data-opt="a">a. She was injured.</li><li data-opt="b">b. She was looking for the doctor.</li><li data-opt="c">c. She was sick.</li><li data-opt="d">d. Her child had swallowed a coin.</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">12. How did the team remove the coin?</p>
+      <ul class="options" onclick="checkAns(this, 'b')">
+        <li data-opt="a">a. Using their hands</li><li data-opt="b">b. Using a flexible scope</li><li data-opt="c">c. Using a stethoscope</li><li data-opt="d">d. Using a bandage</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">13. The word "relief" in the passage is closest in meaning to ..........</p>
+      <ul class="options" onclick="checkAns(this, 'c')">
+        <li data-opt="a">a. fear</li><li data-opt="b">b. pain</li><li data-opt="c">c. comfort</li><li data-opt="d">d. anger</li>
+      </ul>
+    </div>
+
+    <!-- MCQ 14-21: Grammar -->
+    <h2>Grammar (14-21)</h2>
+    <div class="q-box">
+      <p class="q-text">14. I have been living in this city .......... 2015.</p>
+      <ul class="options" onclick="checkAns(this, 'c')">
+        <li data-opt="a">a. for</li><li data-opt="b">b. ago</li><li data-opt="c">c. since</li><li data-opt="d">d. yet</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">15. They .......... to Paris last summer.</p>
+      <ul class="options" onclick="checkAns(this, 'b')">
+        <li data-opt="a">a. have gone</li><li data-opt="b">b. went</li><li data-opt="c">c. have been going</li><li data-opt="d">d. go</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">16. She .......... her homework already.</p>
+      <ul class="options" onclick="checkAns(this, 'a')">
+        <li data-opt="a">a. has finished</li><li data-opt="b">b. finished</li><li data-opt="c">c. was finishing</li><li data-opt="d">d. finishes</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">17. The thief .......... by the police yesterday.</p>
+      <ul class="options" onclick="checkAns(this, 'c')">
+        <li data-opt="a">a. arrested</li><li data-opt="b">b. has arrested</li><li data-opt="c">c. was arrested</li><li data-opt="d">d. is arrested</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">18. When I was young, I .......... play football every day.</p>
+      <ul class="options" onclick="checkAns(this, 'a')">
+        <li data-opt="a">a. used to</li><li data-opt="b">b. use to</li><li data-opt="c">c. am used to</li><li data-opt="d">d. was used to</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">19. He asked me where I .......... the day before.</p>
+      <ul class="options" onclick="checkAns(this, 'c')">
+        <li data-opt="a">a. go</li><li data-opt="b">b. have gone</li><li data-opt="c">c. had gone</li><li data-opt="d">d. will go</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">20. She is a doctor, ..........?</p>
+      <ul class="options" onclick="checkAns(this, 'b')">
+        <li data-opt="a">a. is she</li><li data-opt="b">b. isn't she</li><li data-opt="c">c. doesn't she</li><li data-opt="d">d. does she</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">21. The building .......... next year.</p>
+      <ul class="options" onclick="checkAns(this, 'd')">
+        <li data-opt="a">a. will build</li><li data-opt="b">b. is building</li><li data-opt="c">c. built</li><li data-opt="d">d. will be built</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <script>
+    function checkAns(ul, correctOpt) {
+      if (ul.classList.contains('answered')) return;
+      ul.classList.add('answered');
+      const lis = ul.querySelectorAll('li');
+      lis.forEach(li => {
+        if (li.getAttribute('data-opt') === correctOpt) li.classList.add('correct');
+      });
+    }
+  </script>
+</body>
+</html>
