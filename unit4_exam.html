@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unit 4 Full Exam - Part 1</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Arial, sans-serif; }
+    body { background: #f4f7fb; color: #1a2b3c; padding: 20px; }
+    .container { max-width: 800px; margin: 0 auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+    h1 { color: #1e3a8a; text-align: center; margin-bottom: 20px; border-bottom: 2px solid #e5e7eb; padding-bottom: 10px; font-size: 24px; }
+    h2 { color: #2563eb; margin: 30px 0 15px; font-size: 20px; border-right: 4px solid #2563eb; padding-right: 10px; }
+    
+    .q-box { background: #f8fafc; padding: 20px; border-radius: 8px; margin-bottom: 20px; border: 1px solid #e5e7eb; }
+    .q-text { font-weight: bold; margin-bottom: 15px; font-size: 16px; color: #1e293b; direction: ltr; text-align: left; line-height: 1.5;}
+    .options { list-style-type: none; padding: 0; }
+    .options li { background: white; padding: 12px 15px; margin-bottom: 10px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 15px; cursor: pointer; transition: 0.2s; direction: ltr; text-align: left;}
+    .options li:hover { background: #f1f5f9; }
+    
+    .options li.correct { background: #dcfce7; border-color: #22c55e; font-weight: bold; color: #166534; }
+    .options li.wrong { background: #fee2e2; border-color: #ef4444; color: #991b1b; }
+    
+    .back-btn { display: inline-block; background: #64748b; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; margin-bottom: 20px; font-size: 14px; }
+    .back-btn:hover { background: #475569; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="unit4.html" class="back-btn">← العودة للوحدة</a>
+    <h1>Unit 4: Full Exam</h1>
+    <p style="text-align:center; color:#64748b; margin-bottom:20px;">الجزء الأول: اختياري (21 سؤال)</p>
+
+    <!-- أسئلة الكلمات (1-7) -->
+    <div class="q-box">
+      <p class="q-text">1. The marine ecosystem is incredibly .........., with thousands of different species.</p>
+      <ul class="options" onclick="checkAns(this, 'b')">
+        <li data-opt="a">a. fragile</li>
+        <li data-opt="b">b. diverse</li>
+        <li data-opt="c">c. hazardous</li>
+        <li data-opt="d">d. extinct</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">2. Pollution and climate change .......... a serious threat to coral reefs.</p>
+      <ul class="options" onclick="checkAns(this, 'c')">
+        <li data-opt="a">a. disrupt</li>
+        <li data-opt="b">b. underestimate</li>
+        <li data-opt="c">c. pose</li>
+        <li data-opt="d">d. thrive</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">3. Some people .......... the importance of sleep, but it is essential for health.</p>
+      <ul class="options" onclick="checkAns(this, 'd')">
+        <li data-opt="a">a. dedicate</li>
+        <li data-opt="b">b. detect</li>
+        <li data-opt="c">c. preserve</li>
+        <li data-opt="d">d. underestimate</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">4. The sea turtle is an .......... species and needs protection.</p>
+      <ul class="options" onclick="checkAns(this, 'a')">
+        <li data-opt="a">a. endangered</li>
+        <li data-opt="b">b. amazing</li>
+        <li data-opt="c">c. glowing</li>
+        <li data-opt="d">d. organized</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">5. The scientist used a .......... drone to observe the whales without disturbing them.</p>
+      <ul class="options" onclick="checkAns(this, 'b')">
+        <li data-opt="a">a. hazardous</li>
+        <li data-opt="b">b. non-invasive</li>
+        <li data-opt="c">c. fragile</li>
+        <li data-opt="d">d. entangled</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">6. The .......... beauty of the coral reef left the divers speechless.</p>
+      <ul class="options" onclick="checkAns(this, 'c')">
+        <li data-opt="a">a. risky</li>
+        <li data-opt="b">b. fussy</li>
+        <li data-opt="c">c. breathtaking</li>
+        <li data-opt="d">d. migratory</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">7. A .......... animal is one that is likely to become extinct.</p>
+      <ul class="options" onclick="checkAns(this, 'a')">
+        <li data-opt="a">a. endangered</li>
+        <li data-opt="b">b. magnificent</li>
+        <li data-opt="c">c. graceful</li>
+        <li data-opt="d">d. vivid</li>
+      </ul>
+    </div>
+
+    <!-- أسئلة القواعد (8-21) -->
+    <div class="q-box">
+      <p class="q-text">8. My son is a .......... child.</p>
+      <ul class="options" onclick="checkAns(this, 'b')">
+        <li data-opt="a">a. ten-years-old</li>
+        <li data-opt="b">b. ten-year-old</li>
+        <li data-opt="c">c. ten years old</li>
+        <li data-opt="d">d. ten-year-olds</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">9. Mohammed Salah is a .......... footballer.</p>
+      <ul class="options" onclick="checkAns(this, 'c')">
+        <li data-opt="a">a. well known</li>
+        <li data-opt="b">b. wellknown</li>
+        <li data-opt="c">c. well-known</li>
+        <li data-opt="d">d. known-well</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">10. My house is in a .......... street.</p>
+      <ul class="options" onclick="checkAns(this, 'd')">
+        <li data-opt="a">a. ten-metres-wide</li>
+        <li data-opt="b">b. ten-metre-wide</li>
+        <li data-opt="c">c. ten metres wide</li>
+        <li data-opt="d">d. ten-metre-wide</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">11. She has an .......... smile.</p>
+      <ul class="options" onclick="checkAns(this, 'b')">
+        <li data-opt="a">a. ever-lasting</li>
+        <li data-opt="b">b. ever-lasting</li>
+        <li data-opt="c">c. ever lasting</li>
+        <li data-opt="d">d. everlasted</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">12. I prefer .......... food to avoid gaining weight.</p>
+      <ul class="options" onclick="checkAns(this, 'a')">
+        <li data-opt="a">a. fat-free</li>
+        <li data-opt="b">b. fat free</li>
+        <li data-opt="c">c. free-fat</li>
+        <li data-opt="d">d. fat-freed</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">13. He is a .......... student; he always achieves his goals.</p>
+      <ul class="options" onclick="checkAns(this, 'c')">
+        <li data-opt="a">a. strong willed</li>
+        <li data-opt="b">b. strong-will</li>
+        <li data-opt="c">c. strong-willed</li>
+        <li data-opt="d">d. will-strong</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">14. We need to .......... the environment for future generations.</p>
+      <ul class="options" onclick="checkAns(this, 'd')">
+        <li data-opt="a">a. extinct</li>
+        <li data-opt="b">b. pollute</li>
+        <li data-opt="c">c. disrupt</li>
+        <li data-opt="d">d. preserve</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">15. The .......... of the ocean is home to many strange creatures.</p>
+      <ul class="options" onclick="checkAns(this, 'a')">
+        <li data-opt="a">a. depth</li>
+        <li data-opt="b">b. current</li>
+        <li data-opt="c">c. habitat</li>
+        <li data-opt="d">d. erosion</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">16. The company hired a .......... to fix the computer network.</p>
+      <ul class="options" onclick="checkAns(this, 'b')">
+        <li data-opt="a">a. biologist</li>
+        <li data-opt="b">b. technician</li>
+        <li data-opt="c">c. predator</li>
+        <li data-opt="d">d. campaigner</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">17. The police were able to .......... the thief using security cameras.</p>
+      <ul class="options" onclick="checkAns(this, 'a')">
+        <li data-opt="a">a. detect</li>
+        <li data-opt="b">b. hatch</li>
+        <li data-opt="c">c. scramble</li>
+        <li data-opt="d">d. bleach</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">18. The bird built a nest to .......... its eggs.</p>
+      <ul class="options" onclick="checkAns(this, 'c')">
+        <li data-opt="a">a. disrupt</li>
+        <li data-opt="b">b. underestimate</li>
+        <li data-opt="c">c. hatch</li>
+        <li data-opt="d">d. preserve</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">19. The Titanic was a .......... ship, but it sank on its first voyage.</p>
+      <ul class="options" onclick="checkAns(this, 'd')">
+        <li data-opt="a">a. fragile</li>
+        <li data-opt="b">b. hazardous</li>
+        <li data-opt="c">c. risky</li>
+        <li data-opt="d">d. magnificent</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">20. She was .......... from the boat and struggled to swim to the shore.</p>
+      <ul class="options" onclick="checkAns(this, 'b')">
+        <li data-opt="a">a. entangled</li>
+        <li data-opt="b">b. separated</li>
+        <li data-opt="c">c. exposed</li>
+        <li data-opt="d">d. dedicated</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">21. Which of the following is a compound adjective?</p>
+      <ul class="options" onclick="checkAns(this, 'c')">
+        <li data-opt="a">a. beautiful</li>
+        <li data-opt="b">b. dangerous</li>
+        <li data-opt="c">c. well-known</li>
+        <li data-opt="d">d. amazing</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <script>
+    function checkAns(ul, correctOpt) {
+      if (ul.classList.contains('answered')) return;
+      ul.classList.add('answered');
+      const lis = ul.querySelectorAll('li');
+      lis.forEach(li => {
+        if (li.getAttribute('data-opt') === correctOpt) li.classList.add('correct');
+      });
+    }
+  </script>
+    <!-- الجزء التاني: قراءة وترجمة وأسئلة مقالية -->
+    <h2>Part 2: Reading & Translation (22-31)</h2>
+    
+    <div class="q-box" style="background: #fffbeb; border-color: #fcd34d;">
+      <p style="font-weight:bold; margin-bottom:10px; color:#92400e;">Read the following passage and answer the questions:</p>
+      <div style="direction: ltr; text-align: left; line-height: 1.8; font-size: 15px;">
+        Beneath the surface of the warm, crystal-clear ocean lies a breathtaking world known as the coral reef. Often called a "colorful underwater city," the reef is home to thousands of marine species. These ecosystems are incredibly diverse and provide essential shelter, food, and protection for ocean life. Coral reefs grow slowly over thousands of years, but they are surprisingly fragile. Pollution, climate change, and destructive fishing practices pose serious threats to these natural wonders. When conditions are poor, corals bleach, losing their vivid colors, and becoming lifeless.
+      </div>
+    </div>
+
+    <div class="q-box">
+      <p class="q-text">22. What are coral reefs often called?</p>
+      <ul class="options" onclick="checkAns(this, 'a')">
+        <li data-opt="a">a. A colorful underwater city.</li>
+        <li data-opt="b">b. A dark ocean desert.</li>
+        <li data-opt="c">c. A lifeless zone.</li>
+        <li data-opt="d">d. A dangerous area.</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">23. What happens to corals when conditions are poor?</p>
+      <ul class="options" onclick="checkAns(this, 'c')">
+        <li data-opt="a">a. They grow faster.</li>
+        <li data-opt="b">b. They become more diverse.</li>
+        <li data-opt="c">c. They bleach and become lifeless.</li>
+        <li data-opt="d">d. They provide more shelter.</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">24. Why are coral reefs described as fragile?</p>
+      <ul class="options" onclick="checkAns(this, 'b')">
+        <li data-opt="a">a. Because they grow quickly.</li>
+        <li data-opt="b">b. Because they grow slowly and face many threats.</li>
+        <li data-opt="c">c. Because they are dangerous to humans.</li>
+        <li data-opt="d">d. Because they are very strong.</li>
+      </ul>
+    </div>
+
+    <div class="q-box">
+      <p class="q-text">25. Choose the correct Arabic translation: "Every little action makes a difference."</p>
+      <ul class="options" onclick="checkAns(this, 'a')">
+        <li data-opt="a">أ. كل إجراء صغير يحدث فرقاً.</li>
+        <li data-opt="b">ب. كل إجراء صغير لا يهم.</li>
+        <li data-opt="c">ج. كل إجراء كبير يحدث فرقاً.</li>
+        <li data-opt="d">د. لا يوجد إجراء يحدث فرقاً.</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">26. Choose the correct Arabic translation: "Whales play a vital role in our ecosystem."</p>
+      <ul class="options" onclick="checkAns(this, 'c')">
+        <li data-opt="a">أ. الحيتان لا تلعب أي دور في نظامنا البيئي.</li>
+        <li data-opt="b">ب. الحيتان تلعب دوراً ثانوياً في نظامنا البيئي.</li>
+        <li data-opt="c">ج. تلعب الحيتان دوراً حيوياً في نظامنا البيئي.</li>
+        <li data-opt="d">د. الحيتان تضر بنظامنا البيئي.</li>
+      </ul>
+    </div>
+
+    <div class="q-box">
+      <p class="q-text">27. Choose the correct English translation: "الوقاية خير من العلاج."</p>
+      <ul class="options" onclick="checkAns(this, 'b')">
+        <li data-opt="a">a. A thing of the past.</li>
+        <li data-opt="b">b. A stitch in time saves nine.</li>
+        <li data-opt="c">c. Better late than never.</li>
+        <li data-opt="d">d. Face the music.</li>
+      </ul>
+    </div>
+    
+    <div class="q-box">
+      <p class="q-text">28. Choose the correct English translation: "يجب علينا الحفاظ على البيئة البحرية."</p>
+      <ul class="options" onclick="checkAns(this, 'd')">
+        <li data-opt="a">a. We must destroy the marine environment.</li>
+        <li data-opt="b">b. We should ignore the marine environment.</li>
+        <li data-opt="c">c. We can pollute the marine environment.</li>
+        <li data-opt="d">d. We must preserve the marine environment.</li>
+      </ul>
+    </div>
+    
+    <div class="q-box">
+      <p class="q-text">29. The boy is a .......... child. (He is 5 years old).</p>
+      <ul class="options" onclick="checkAns(this, 'a')">
+        <li data-opt="a">a. five-year-old</li>
+        <li data-opt="b">b. five-years-old</li>
+        <li data-opt="c">c. five years old</li>
+        <li data-opt="d">d. five-year-olds</li>
+      </ul>
+    </div>
+    
+    <div class="q-box">
+      <p class="q-text">30. She is a .......... woman.</p>
+      <ul class="options" onclick="checkAns(this, 'c')">
+        <li data-opt="a">a. kind heart</li>
+        <li data-opt="b">b. kind-hearted</li>
+        <li data-opt="c">c. kind-hearted</li>
+        <li data-opt="d">d. heart-kind</li>
+      </ul>
+    </div>
+    
+    <div class="q-box">
+      <p class="q-text">31. It was a .......... journey; we didn't expect it to take so long.</p>
+      <ul class="options" onclick="checkAns(this, 'd')">
+        <li data-opt="a">a. never-ending</li>
+        <li data-opt="b">b. never ending</li>
+        <li data-opt="c">c. never-ending</li>
+        <li data-opt="d">d. never-ending</li>
+      </ul>
+    </div>
+
+    <!-- الجزء الثالث: المقالي -->
+    <h2>Part 3: Written Questions (32-42)</h2>
+    
+    <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
+      <p class="q-text" style="color:#1e40af;">32. Rewrite using a compound adjective: The boy is 10 years old.</p>
+      <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
+      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:ltr; text-align:left;">He is a 10-year-old boy.</p>
+    </div>
+
+    <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
+      <p class="q-text" style="color:#1e40af;">33. Rewrite using a compound adjective: The walk took 3 hours.</p>
+      <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
+      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:ltr; text-align:left;">It was a three-hour walk.</p>
+    </div>
+    
+    <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
+      <p class="q-text" style="color:#1e40af;">34. Complete the sentence with a suitable compound adjective: The car is very .......... (it goes very fast).</p>
+      <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
+      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:ltr; text-align:left;">high-speed / record-breaking (any suitable compound adjective)</p>
+    </div>
+    
+    <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
+      <p class="q-text" style="color:#1e40af;">35. What is the main idea of the Coral Reefs passage?</p>
+      <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
+      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:ltr; text-align:left;">Coral reefs are vital ecosystems but they are fragile and face many threats, so we must protect them.</p>
+    </div>
+    
+    <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
+      <p class="q-text" style="color:#1e40af;">36. Give two ways to protect coral reefs.</p>
+      <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
+      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:ltr; text-align:left;">Educating communities, promoting eco-friendly tourism, reducing pollution, and banning destructive fishing practices.</p>
+    </div>
+
+    <!-- أسئلة الكتابة (Writing) -->
+    <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
+      <p class="q-text" style="color:#1e40af;">37. What are the three main parts of a short story?</p>
+      <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
+      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:ltr; text-align:left;">1. Beginning (Introduction). 2. Middle (Development). 3. End (Resolution).</p>
+    </div>
+    
+    <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
+      <p class="q-text" style="color:#1e40af;">38. Define "plot" in a short story.</p>
+      <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
+      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:ltr; text-align:left;">The sequence of events (Beginning–Middle–End).</p>
+    </div>
+
+    <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
+      <p class="q-text" style="color:#1e40af;">39. Define "climax" in a short story.</p>
+      <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
+      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:ltr; text-align:left;">The most exciting turning point.</p>
+    </div>
+
+    <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
+      <p class="q-text" style="color:#1e40af;">40. Define "characters" in a short story.</p>
+      <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
+      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:ltr; text-align:left;">Believable people or animals with clear traits.</p>
+    </div>
+
+    <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
+      <p class="q-text" style="color:#1e40af;">41. What is the "theme" of a short story?</p>
+      <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
+      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:ltr; text-align:left;">The main message or moral lesson.</p>
+    </div>
+
+    <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
+      <p class="q-text" style="color:#1e40af;">42. Write a sentence using the idiom "a thing of the past".</p>
+      <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
+      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:ltr; text-align:left;">Typewriters are a thing of the past.</p>
+    </div>
+
+  </div> <!-- نهاية الحاوية -->
+</body>
+</html>
