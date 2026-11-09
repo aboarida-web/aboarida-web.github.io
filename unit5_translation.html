@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unit 5 Translation</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Arial, sans-serif; }
+    body { background: #f4f7fb; color: #1a2b3c; padding: 20px; }
+    .container { max-width: 800px; margin: 0 auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+    h1 { color: #1e3a8a; text-align: center; margin-bottom: 20px; border-bottom: 2px solid #e5e7eb; padding-bottom: 10px; font-size: 24px; }
+    h2 { color: #2563eb; margin: 25px 0 15px; font-size: 20px; border-right: 4px solid #2563eb; padding-right: 10px; }
+    
+    .q-box { background: #f8fafc; padding: 20px; border-radius: 8px; margin-bottom: 20px; border: 1px solid #e5e7eb; }
+    .q-text { font-weight: bold; margin-bottom: 10px; font-size: 16px; color: #1e293b; direction: ltr; text-align: left; line-height: 1.5; }
+    .options { list-style-type: none; padding: 0; }
+    .options li { background: white; padding: 12px 15px; margin-bottom: 8px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 15px; cursor: pointer; transition: 0.2s; direction: ltr; text-align: left; line-height: 1.5;}
+    .options li:hover { background: #f1f5f9; }
+    
+    .options li.correct { background: #dcfce7; border-color: #22c55e; font-weight: bold; color: #166534; }
+    .options li.wrong { background: #fee2e2; border-color: #ef4444; color: #991b1b; }
+    
+    .back-btn { display: inline-block; background: #64748b; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; margin-bottom: 20px; font-size: 14px; }
+    .back-btn:hover { background: #475569; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="unit5_trans_writ.html" class="back-btn">← العودة للاختيارات</a>
+    <h1>Unit 5: Translation</h1>
+    
+    <h2>Part 1: Choose the correct Arabic translation</h2>
+
+    <div class="q-box">
+      <p class="q-text">1. Young people must be armed with science and technology to achieve their ambitions.</p>
+      <ul class="options" onclick="checkAns(this, 'a')">
+        <li data-opt="a">أ. يجب أن يتسلح الشباب بالعلم والتكنولوجيا ليحققوا طموحاتهم.</li>
+        <li data-opt="b">ب. يجب أن يقتدي الشباب بالعلم والتكنولوجيا ليحققوا آمالهم.</li>
+        <li data-opt="c">ج. ينبغي أن يتسلح الشباب بالعلوم والتكنولوجيا ليحققوا أحلامهم.</li>
+        <li data-opt="d">د. يجب أن يقتدي الشباب بالعلم والتكنولوجيا ليحققوا هدفهم.</li>
+      </ul>
+    </div>
+
+    <div class="q-box">
+      <p class="q-text">2. Whoever just stands on the beach will never learn to swim. Studies show that a person should experience situations to learn from them.</p>
+      <ul class="options" onclick="checkAns(this, 'c')">
+        <li data-opt="a">أ. من يكتفي بالوقوف على الشاطئ لن يتعلم السباحة أبدا. تشير الدراسات إلى أن الإنسان يجب أن يمر بمواقف ليتعلم منها.</li>
+        <li data-opt="b">ب. من يقف على الشاطئ لن يتعلم السباحة أبدا. تشير الدراسات إلى أن الإنسان يجب أن يمر بمواقف ليتعلم منها.</li>
+        <li data-opt="c">ج. من يكتفي بالوقوف على الشاطئ لن يتعلم السباحة أبدا. تشير الدراسات إلى أن الإنسان يجب أن يكتسب الخبرة ليتعلم منها.</li>
+        <li data-opt="d">د. من يقف على الشاطئ لن يتعلم السباحة أبدا. تشير الدراسات إلى أن الإنسان يجب أن يكتسب الخبرة ليتعلم منها.</li>
+      </ul>
+    </div>
+
+    <h2>Part 2: Choose the correct English translation</h2>
+
+    <div class="q-box">
+      <p class="q-text">1. لا تتوقع نجاحاً دون صعوبات، أو سعادة دون ألم، أو مكسباً بدون خسارة. إنها الحياة أقبلها أو ارفضها، لكن لتعيشها يجب أن تفهمها.</p>
+      <ul class="options" onclick="checkAns(this, 'b')">
+        <li data-opt="a">a. Don't expect success without hardships, happiness with pain or Winning Without loss: it was life, take it or leave it, but to live, you should understand it.</li>
+        <li data-opt="b">b. Don't expect success without hardships, happiness without pain or winning without loss; it's life. Take it or leave it, but to live it, you should understand it.</li>
+        <li data-opt="c">c. Don't expect success without hardships or happiness with pain or winning without lose, it's life. Take it or live it, but to live it, you should have understood it.</li>
+        <li data-opt="d">d. Don't expect success without hardships or happiness without pain and winning without loss! It's life, take it or leave it. But, to live it, you should understood it.</li>
+      </ul>
+    </div>
+
+    <div class="q-box">
+      <p class="q-text">2. كان دائماً يحلم بأنهي دراسته الجامعية ليجد وظيفة يعتمد عليها بعد التخرج، ولكن حبه للبحث العلمي ساعده كثيراً في الحصول على الدكتوراه والعمل في الجامعة.</p>
+      <ul class="options" onclick="checkAns(this, 'd')">
+        <li data-opt="a">a. He always dreamed of completing his university degree to find an unreliable job after graduation. But his love for science search helped him a lot to get a doctorate and work at the university.</li>
+        <li data-opt="b">b. He always dreams of completing his faculty studies to find a reliable work after graduation. But his love for science research helped him a lot to get a doctorate and work at the university.</li>
+        <li data-opt="c">c. He always dreams of completing his university studies to find a reliable job after graduation. But his love for scientific search helped him a lot to get a degree and work at the university.</li>
+        <li data-opt="d">d. He always dreamed of completing his university studies to find a reliable job after graduation. But his love for scientific research helped him a lot to get a doctorate and work at the university.</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <script>
+    function checkAns(ul, correctOpt) {
+      if (ul.classList.contains('answered')) return;
+      ul.classList.add('answered');
+
+      const lis = ul.querySelectorAll('li');
+      lis.forEach(li => {
+        if (li.getAttribute('data-opt') === correctOpt) {
+          li.classList.add('correct');
+        }
+      });
+    }
+  </script>
+</body>
+</html>
