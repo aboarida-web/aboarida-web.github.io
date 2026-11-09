@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unit 5 Practice Questions</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Arial, sans-serif; }
+    body { background: #f4f7fb; color: #1a2b3c; padding: 20px; }
+    .container { max-width: 800px; margin: 0 auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+    h1 { color: #1e3a8a; text-align: center; margin-bottom: 20px; border-bottom: 2px solid #e5e7eb; padding-bottom: 10px; font-size: 24px; }
+    
+    .q-box { background: #f8fafc; padding: 20px; border-radius: 8px; margin-bottom: 20px; border: 1px solid #e5e7eb; }
+    .q-text { font-weight: bold; margin-bottom: 15px; font-size: 16px; color: #1e293b; direction: ltr; text-align: left; line-height: 1.5;}
+    .options { list-style-type: none; padding: 0; }
+    .options li { background: white; padding: 12px 15px; margin-bottom: 10px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 15px; cursor: pointer; transition: 0.2s; direction: ltr; text-align: left;}
+    .options li:hover { background: #f1f5f9; }
+    
+    .options li.correct { background: #dcfce7; border-color: #22c55e; font-weight: bold; color: #166534; }
+    .options li.wrong { background: #fee2e2; border-color: #ef4444; color: #991b1b; }
+    
+    .back-btn { display: inline-block; background: #64748b; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; margin-bottom: 20px; font-size: 14px; }
+    .back-btn:hover { background: #475569; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="unit5.html" class="back-btn">← العودة للوحدة</a>
+    <h1>Unit 5: Practice Questions</h1>
+    <p style="text-align:center; color:#64748b; margin-bottom:20px;">أهم 20 سؤال على الوحدة الخامسة</p>
+
+    <!-- سؤال 1 -->
+    <div class="q-box">
+      <p class="q-text">1. To be successful in the future, you need a positive .......... .</p>
+      <ul class="options" onclick="checkAns(this, 'c')">
+        <li data-opt="a">a. income</li>
+        <li data-opt="b">b. insight</li>
+        <li data-opt="c">c. mindset</li>
+        <li data-opt="d">d. empathy</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 2 -->
+    <div class="q-box">
+      <p class="q-text">2. She has a deep .......... into human behavior.</p>
+      <ul class="options" onclick="checkAns(this, 'b')">
+        <li data-opt="a">a. flexibility</li>
+        <li data-opt="b">b. insight</li>
+        <li data-opt="c">c. literacy</li>
+        <li data-opt="d">d. construction</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 3 -->
+    <div class="q-box">
+      <p class="q-text">3. The company is going through a digital .........., changing all its old systems.</p>
+      <ul class="options" onclick="checkAns(this, 'd')">
+        <li data-opt="a">a. emotion</li>
+        <li data-opt="b">b. accuracy</li>
+        <li data-opt="c">c. magic</li>
+        <li data-opt="d">d. transformation</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 4 -->
+    <div class="q-box">
+      <p class="q-text">4. A good manager must have .......... to deal with different types of employees.</p>
+      <ul class="options" onclick="checkAns(this, 'a')">
+        <li data-opt="a">a. flexibility</li>
+        <li data-opt="b">b. accuracy</li>
+        <li data-opt="c">c. loneliness</li>
+        <li data-opt="d">d. warmth</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 5 -->
+    <div class="q-box">
+      <p class="q-text">5. The scientist used advanced technology to .......... the data.</p>
+      <ul class="options" onclick="checkAns(this, 'c')">
+        <li data-opt="a">a. imitate</li>
+        <li data-opt="b">b. capture</li>
+        <li data-opt="c">c. analyze</li>
+        <li data-opt="d">d. diagnose</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 6 -->
+    <div class="q-box">
+      <p class="q-text">6. The painting was ..........; there wasn't a single mistake in it.</p>
+      <ul class="options" onclick="checkAns(this, 'b')">
+        <li data-opt="a">a. repetitive</li>
+        <li data-opt="b">b. flawless</li>
+        <li data-opt="c">c. lonely</li>
+        <li data-opt="d">d. future-proof</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 7 -->
+    <div class="q-box">
+      <p class="q-text">7. Machines can .......... human actions, but they can't feel emotions.</p>
+      <ul class="options" onclick="checkAns(this, 'a')">
+        <li data-opt="a">a. imitate</li>
+        <li data-opt="b">b. handle</li>
+        <li data-opt="c">c. climb</li>
+        <li data-opt="d">d. analyze</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 8 (قواعد - make / let / allow) -->
+    <div class="q-box">
+      <p class="q-text">8. My father .......... me go out with my friends yesterday.</p>
+      <ul class="options" onclick="checkAns(this, 'c')">
+        <li data-opt="a">a. allowed</li>
+        <li data-opt="b">b. made</li>
+        <li data-opt="c">c. let</li>
+        <li data-opt="d">d. forced</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 9 -->
+    <div class="q-box">
+      <p class="q-text">9. The teacher .......... the students work hard for the exam. (Active)</p>
+      <ul class="options" onclick="checkAns(this, 'b')">
+        <li data-opt="a">a. let</li>
+        <li data-opt="b">b. made</li>
+        <li data-opt="c">c. allowed</li>
+        <li data-opt="d">d. permitted</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 10 -->
+    <div class="q-box">
+      <p class="q-text">10. The students .......... to work hard for the exam. (Passive)</p>
+      <ul class="options" onclick="checkAns(this, 'd')">
+        <li data-opt="a">a. were let</li>
+        <li data-opt="b">b. were allowed</li>
+        <li data-opt="c">c. were made</li>
+        <li data-opt="d">d. were made</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 11 -->
+    <div class="q-box">
+      <p class="q-text">11. I .......... my sister to water the flowers. (Get)</p>
+      <ul class="options" onclick="checkAns(this, 'a')">
+        <li data-opt="a">a. got</li>
+        <li data-opt="b">b. had</li>
+        <li data-opt="c">c. made</li>
+        <li data-opt="d">d. let</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 12 -->
+    <div class="q-box">
+      <p class="q-text">12. The manager stopped us .......... making noise.</p>
+      <ul class="options" onclick="checkAns(this, 'b')">
+        <li data-opt="a">a. to</li>
+        <li data-opt="b">b. from</li>
+        <li data-opt="c">c. of</li>
+        <li data-opt="d">d. for</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 13 -->
+    <div class="q-box">
+      <p class="q-text">13. I had my car .......... yesterday.</p>
+      <ul class="options" onclick="checkAns(this, 'd')">
+        <li data-opt="a">a. fix</li>
+        <li data-opt="b">b. to fix</li>
+        <li data-opt="c">c. fixing</li>
+        <li data-opt="d">d. fixed</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 14 -->
+    <div class="q-box">
+      <p class="q-text">14. My mother .......... me do the shopping yesterday. (Make)</p>
+      <ul class="options" onclick="checkAns(this, 'a')">
+        <li data-opt="a">a. made</li>
+        <li data-opt="b">b. let</li>
+        <li data-opt="c">c. allowed</li>
+        <li data-opt="d">d. got</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 15 -->
+    <div class="q-box">
+      <p class="q-text">15. They weren't .......... to enter the room. (Allow)</p>
+      <ul class="options" onclick="checkAns(this, 'c')">
+        <li data-opt="a">a. let</li>
+        <li data-opt="b">b. made</li>
+        <li data-opt="c">c. allowed</li>
+        <li data-opt="d">d. forced</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 16 -->
+    <div class="q-box">
+      <p class="q-text">16. He is trying to .......... the career ladder.</p>
+      <ul class="options" onclick="checkAns(this, 'b')">
+        <li data-opt="a">a. think outside</li>
+        <li data-opt="b">b. climb</li>
+        <li data-opt="c">c. stay ahead</li>
+        <li data-opt="d">d. capture</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 17 -->
+    <div class="q-box">
+      <p class="q-text">17. To solve this complex problem, you need to .......... .</p>
+      <ul class="options" onclick="checkAns(this, 'd')">
+        <li data-opt="a">a. climb the career ladder</li>
+        <li data-opt="b">b. stay ahead of the curve</li>
+        <li data-opt="c">c. make a difference</li>
+        <li data-opt="d">d. think outside the box</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 18 -->
+    <div class="q-box">
+      <p class="q-text">18. Digital .......... is essential in today's technological world.</p>
+      <ul class="options" onclick="checkAns(this, 'a')">
+        <li data-opt="a">a. literacy</li>
+        <li data-opt="b">b. emotion</li>
+        <li data-opt="c">c. income</li>
+        <li data-opt="d">d. warmth</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 19 -->
+    <div class="q-box">
+      <p class="q-text">19. She felt very .......... after moving to a new city where she knew no one.</p>
+      <ul class="options" onclick="checkAns(this, 'c')">
+        <li data-opt="a">a. flawless</li>
+        <li data-opt="b">b. advanced</li>
+        <li data-opt="c">c. lonely</li>
+        <li data-opt="d">d. rapid</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 20 -->
+    <div class="q-box">
+      <p class="q-text">20. The doctor was able to .......... the illness quickly.</p>
+      <ul class="options" onclick="checkAns(this, 'b')">
+        <li data-opt="a">a. imitate</li>
+        <li data-opt="b">b. diagnose</li>
+        <li data-opt="c">c. handle</li>
+        <li data-opt="d">d. construct</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <script>
+    function checkAns(ul, correctOpt) {
+      if (ul.classList.contains('answered')) return;
+      ul.classList.add('answered');
+
+      const lis = ul.querySelectorAll('li');
+      lis.forEach(li => {
+        if (li.getAttribute('data-opt') === correctOpt) {
+          li.classList.add('correct');
+        }
+      });
+    }
+  </script>
+</body>
+</html>
