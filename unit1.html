@@ -8,19 +8,20 @@
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Arial, sans-serif; }
     body { background: #f4f7fb; color: #1a2b3c; padding: 20px; }
     .container { max-width: 800px; margin: 0 auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-    h1 { color: #1e3a8a; text-align: center; margin-bottom: 10px; font-size: 24px; }
-    h2 { color: #64748b; text-align: center; margin-bottom: 30px; font-size: 18px; font-weight: normal; }
     
-    .menu-grid { display: grid; grid-template-columns: 1fr; gap: 15px; }
-    .menu-card { display: flex; align-items: center; justify-content: space-between; background: #f8fafc; padding: 20px; border-radius: 10px; text-decoration: none; color: #1e293b; border: 1px solid #e2e8f0; transition: 0.3s; }
-    .menu-card:hover { background: #e0f2fe; border-color: #38bdf8; transform: translateY(-2px); }
+    .header-box { text-align: center; margin-bottom: 30px; }
+    .header-box h1 { color: #1e3a8a; font-size: 28px; margin-bottom: 5px; }
+    .header-box h2 { color: #64748b; font-size: 18px; font-weight: normal; }
     
-    .menu-card .info { display: flex; align-items: center; gap: 15px; }
-    .menu-card .icon { font-size: 30px; }
-    .menu-card h3 { font-size: 18px; margin: 0; color: #1e3a8a; }
+    .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; }
     
-    .arrow { font-size: 20px; color: #94a3b8; }
-    .back-btn { display: inline-block; background: #64748b; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; margin-bottom: 20px; font-size: 14px; }
+    .menu-card { display: flex; flex-direction: column; align-items: center; justify-content: center; background: #f8fafc; padding: 25px 15px; border-radius: 12px; text-decoration: none; color: #1e293b; border: 1px solid #e2e8f0; transition: all 0.3s ease; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.02); }
+    .menu-card:hover { background: #e0f2fe; border-color: #38bdf8; transform: translateY(-5px); box-shadow: 0 8px 15px rgba(56, 189, 248, 0.2); }
+    
+    .menu-card .icon { font-size: 40px; margin-bottom: 15px; }
+    .menu-card h3 { font-size: 16px; margin: 0; color: #1e3a8a; font-weight: bold; }
+    
+    .back-btn { display: inline-block; background: #64748b; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; margin-bottom: 20px; font-size: 14px; transition: 0.3s;}
     .back-btn:hover { background: #475569; }
   </style>
 </head>
@@ -29,67 +30,46 @@
   <div class="container">
     <a href="english.html" class="back-btn">← العودة للوحدات</a>
     
-    <h1>Unit 1</h1>
-    <h2>Inside the World of Care</h2>
+    <div class="header-box">
+      <h1>Unit 1</h1>
+      <h2>Inside the World of Care</h2>
+    </div>
 
     <div class="menu-grid">
       
       <a href="unit1_grammar.html" class="menu-card">
-        <div class="info">
-          <span class="icon">📝</span>
-          <h3>Grammar (القواعد)</h3>
-        </div>
-        <span class="arrow">←</span>
+        <span class="icon">📝</span>
+        <h3>Grammar<br><small>(القواعد)</small></h3>
       </a>
 
       <a href="unit1_vocab.html" class="menu-card">
-        <div class="info">
-          <span class="icon">📚</span>
-          <h3>Vocabulary (الكلمات)</h3>
-        </div>
-        <span class="arrow">←</span>
+        <span class="icon">📚</span>
+        <h3>Vocabulary<br><small>(الكلمات)</small></h3>
       </a>
 
       <a href="unit1_reading.html" class="menu-card">
-        <div class="info">
-          <span class="icon">📖</span>
-          <h3>Reading (القراءة)</h3>
-        </div>
-        <span class="arrow">←</span>
+        <span class="icon">📖</span>
+        <h3>Reading<br><small>(القراءة)</small></h3>
       </a>
 
       <a href="unit1_trans_writ.html" class="menu-card">
-        <div class="info">
-          <span class="icon">✍️</span>
-          <h3>Translation & Writing (الترجمة والتعبير)</h3>
-        </div>
-        <span class="arrow">←</span>
+        <span class="icon">✍️</span>
+        <h3>Trans & Writing<br><small>(الترجمة والتعبير)</small></h3>
       </a>
 
       <a href="unit1_idioms.html" class="menu-card">
-        <div class="info">
-          <span class="icon">💡</span>
-          <h3>Key Idioms (التعبيرات الاصطلاحية)</h3>
-        </div>
-        <span class="arrow">←</span>
+        <span class="icon">💡</span>
+        <h3>Key Idioms<br><small>(التعبيرات)</small></h3>
       </a>
 
-      <!-- زرار أهم الأسئلة -->
       <a href="unit1_questions.html" class="menu-card">
-        <div class="info">
-          <span class="icon">❓</span>
-          <h3>Practice Questions (أهم الأسئلة)</h3>
-        </div>
-        <span class="arrow">←</span>
+        <span class="icon">❓</span>
+        <h3>Practice Questions<br><small>(أهم الأسئلة)</small></h3>
       </a>
 
-      <!-- زرار الامتحان الشامل -->
       <a href="unit1_exam.html" class="menu-card">
-        <div class="info">
-          <span class="icon">📝</span>
-          <h3>Full Exam (الامتحان الشامل)</h3>
-        </div>
-        <span class="arrow">←</span>
+        <span class="icon">📝</span>
+        <h3>Full Exam<br><small>(الامتحان)</small></h3>
       </a>
 
     </div>
