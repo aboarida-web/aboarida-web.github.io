@@ -11,14 +11,45 @@
     h1 { color: #1e3a8a; text-align: center; margin-bottom: 20px; border-bottom: 2px solid #e5e7eb; padding-bottom: 10px; font-size: 24px; }
     
     .menu-grid { display: grid; grid-template-columns: 1fr; gap: 15px; }
-    .menu-card { display: flex; align-items: center; justify-content: space-between; background: #f8fafc; padding: 20px; border-radius: 10px; text-decoration: none; color: #1e293b; border: 1px solid #e2e8f0; transition: 0.3s; }
+    
+    /* تنسيق الكارت الجديد */
+    .menu-card { 
+      display: flex; 
+      flex-direction: column;
+      background: #f8fafc; 
+      padding: 20px; 
+      border-radius: 12px; 
+      text-decoration: none; 
+      color: #1e293b; 
+      border: 1px solid #e2e8f0; 
+      transition: 0.3s; 
+      position: relative;
+      overflow: hidden;
+    }
     .menu-card:hover { background: #e0f2fe; border-color: #38bdf8; transform: translateY(-2px); }
     
-    .menu-card .info { display: flex; align-items: center; gap: 15px; }
-    .menu-card .unit-num { font-size: 24px; font-weight: bold; color: #2563eb; width: 40px; text-align: center; }
-    .menu-card .unit-title { font-size: 16px; font-weight: bold; color: #1e3a8a; text-align: left; direction: ltr; }
+    /* رقم الوحدة صغير في الركن */
+    .unit-badge { 
+      background: #2563eb; 
+      color: white; 
+      font-size: 12px; 
+      font-weight: bold; 
+      padding: 3px 10px; 
+      border-radius: 20px; 
+      align-self: flex-start; 
+      margin-bottom: 10px;
+    }
     
-    .arrow { font-size: 20px; color: #94a3b8; }
+    /* اسم الوحدة بشكل بارز */
+    .unit-name { 
+      font-size: 18px; 
+      font-weight: bold; 
+      color: #1e3a8a; 
+      direction: ltr; 
+      text-align: left;
+      margin-bottom: 5px;
+    }
+
     .back-btn { display: inline-block; background: #64748b; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; margin-bottom: 20px; font-size: 14px; }
     .back-btn:hover { background: #475569; }
   </style>
@@ -33,55 +64,37 @@
     <div class="menu-grid">
       
       <a href="unit1.html" class="menu-card">
-        <div class="info">
-          <span class="unit-num">1</span>
-          <span class="unit-title">Inside the World of Care</span>
-        </div>
-        <span class="arrow">←</span>
+        <span class="unit-badge">Unit 1</span>
+        <span class="unit-name">Inside the World of Care</span>
       </a>
 
       <a href="unit2.html" class="menu-card">
-        <div class="info">
-          <span class="unit-num">2</span>
-          <span class="unit-title">The Power of Machines</span>
-        </div>
-        <span class="arrow">←</span>
+        <span class="unit-badge">Unit 2</span>
+        <span class="unit-name">The Power of Machines</span>
       </a>
 
       <a href="unit3.html" class="menu-card">
-        <div class="info">
-          <span class="unit-num">3</span>
-          <span class="unit-title">Protect Nature, Protect Future</span>
-        </div>
-        <span class="arrow">←</span>
+        <span class="unit-badge">Unit 3</span>
+        <span class="unit-name">Protect Nature, Protect Future</span>
       </a>
 
       <a href="unit4.html" class="menu-card">
-        <div class="info">
-          <span class="unit-num">4</span>
-          <span class="unit-title">Marine Life</span>
-        </div>
-        <span class="arrow">←</span>
+        <span class="unit-badge">Unit 4</span>
+        <span class="unit-name">Marine Life</span>
       </a>
 
       <a href="unit5.html" class="menu-card">
-        <div class="info">
-          <span class="unit-num">5</span>
-          <span class="unit-title">From Muscles to Mindset</span>
-        </div>
-        <span class="arrow">←</span>
+        <span class="unit-badge">Unit 5</span>
+        <span class="unit-name">From Muscles to Mindset</span>
       </a>
 
       <a href="unit6.html" class="menu-card">
-        <div class="info">
-          <span class="unit-num">6</span>
-          <span class="unit-title">Let's Hang Out !</span>
-        </div>
-        <span class="arrow">←</span>
+        <span class="unit-badge">Unit 6</span>
+        <span class="unit-name">Let's Hang Out !</span>
       </a>
 
     </div>
   </div>
 
 </body>
-          </html>
+</html>
