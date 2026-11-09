@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unit 5 - English</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Arial, sans-serif; }
+    body { background: #f4f7fb; color: #1a2b3c; padding: 20px; }
+    .container { max-width: 800px; margin: 0 auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+    
+    .header-box { text-align: center; margin-bottom: 30px; }
+    .header-box h1 { color: #1e3a8a; font-size: 28px; margin-bottom: 5px; }
+    .header-box h2 { color: #64748b; font-size: 18px; font-weight: normal; }
+    
+    .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; }
+    
+    .menu-card { display: flex; flex-direction: column; align-items: center; justify-content: center; background: #f8fafc; padding: 25px 15px; border-radius: 12px; text-decoration: none; color: #1e293b; border: 1px solid #e2e8f0; transition: all 0.3s ease; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.02); }
+    .menu-card:hover { background: #e0f2fe; border-color: #38bdf8; transform: translateY(-5px); box-shadow: 0 8px 15px rgba(56, 189, 248, 0.2); }
+    
+    .menu-card .icon { font-size: 40px; margin-bottom: 15px; }
+    .menu-card h3 { font-size: 16px; margin: 0; color: #1e3a8a; font-weight: bold; }
+    
+    .back-btn { display: inline-block; background: #64748b; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; margin-bottom: 20px; font-size: 14px; transition: 0.3s;}
+    .back-btn:hover { background: #475569; }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <a href="english.html" class="back-btn">← العودة للوحدات</a>
+    
+    <div class="header-box">
+      <h1>Unit 5</h1>
+      <h2>From Muscles to Mindset</h2>
+    </div>
+
+    <div class="menu-grid">
+      
+      <a href="unit5_grammar_main.html" class="menu-card">
+        <span class="icon">📝</span>
+        <h3>Grammar<br><small>(القواعد)</small></h3>
+      </a>
+
+      <a href="unit5_vocab.html" class="menu-card">
+        <span class="icon">📚</span>
+        <h3>Vocabulary<br><small>(الكلمات)</small></h3>
+      </a>
+
+      <a href="unit5_reading.html" class="menu-card">
+        <span class="icon">📖</span>
+        <h3>Reading<br><small>(القراءة)</small></h3>
+      </a>
+
+      <a href="unit5_trans_writ.html" class="menu-card">
+        <span class="icon">✍️</span>
+        <h3>Trans & Writing<br><small>(الترجمة والتعبير)</small></h3>
+      </a>
+
+      <a href="unit5_idioms.html" class="menu-card">
+        <span class="icon">💡</span>
+        <h3>Key Idioms<br><small>(التعبيرات)</small></h3>
+      </a>
+
+      <a href="unit5_questions.html" class="menu-card">
+        <span class="icon">❓</span>
+        <h3>Practice Questions<br><small>(أهم الأسئلة)</small></h3>
+      </a>
+
+      <a href="unit5_exam.html" class="menu-card">
+        <span class="icon">📝</span>
+        <h3>Full Exam<br><small>(الامتحان)</small></h3>
+      </a>
+
+    </div>
+  </div>
+
+</body>
+</html>
