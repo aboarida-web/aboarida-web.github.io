@@ -12,7 +12,7 @@
     
     .menu-grid { display: grid; grid-template-columns: 1fr; gap: 15px; }
     
-    /* تنسيق الكارت الجديد */
+    /* تنسيق الكارت */
     .menu-card { 
       display: flex; 
       flex-direction: column;
@@ -28,7 +28,7 @@
     }
     .menu-card:hover { background: #e0f2fe; border-color: #38bdf8; transform: translateY(-2px); }
     
-    /* رقم الوحدة صغير في الركن */
+    /* رقم الوحدة */
     .unit-badge { 
       background: #2563eb; 
       color: white; 
@@ -40,14 +40,21 @@
       margin-bottom: 10px;
     }
     
-    /* اسم الوحدة بشكل بارز */
-    .unit-name { 
+    /* اسم الوحدة بالإنجليزي */
+    .unit-name-en { 
       font-size: 18px; 
       font-weight: bold; 
       color: #1e3a8a; 
       direction: ltr; 
       text-align: left;
       margin-bottom: 5px;
+    }
+
+    /* اسم الوحدة بالعربي */
+    .unit-name-ar {
+      font-size: 15px;
+      color: #64748b;
+      text-align: right;
     }
 
     .back-btn { display: inline-block; background: #64748b; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; margin-bottom: 20px; font-size: 14px; }
@@ -65,32 +72,38 @@
       
       <a href="unit1.html" class="menu-card">
         <span class="unit-badge">Unit 1</span>
-        <span class="unit-name">Inside the World of Care</span>
+        <span class="unit-name-en">Inside the World of Care</span>
+        <span class="unit-name-ar">داخل عالم الرعاية</span>
       </a>
 
       <a href="unit2.html" class="menu-card">
         <span class="unit-badge">Unit 2</span>
-        <span class="unit-name">The Power of Machines</span>
+        <span class="unit-name-en">The Power of Machines</span>
+        <span class="unit-name-ar">قوة الآلات</span>
       </a>
 
       <a href="unit3.html" class="menu-card">
         <span class="unit-badge">Unit 3</span>
-        <span class="unit-name">Protect Nature, Protect Future</span>
+        <span class="unit-name-en">Protect Nature, Protect Future</span>
+        <span class="unit-name-ar">احمِ الطبيعة، احمِ المستقبل</span>
       </a>
 
       <a href="unit4.html" class="menu-card">
         <span class="unit-badge">Unit 4</span>
-        <span class="unit-name">Marine Life</span>
+        <span class="unit-name-en">Marine Life</span>
+        <span class="unit-name-ar">الحياة البحرية</span>
       </a>
 
       <a href="unit5.html" class="menu-card">
         <span class="unit-badge">Unit 5</span>
-        <span class="unit-name">From Muscles to Mindset</span>
+        <span class="unit-name-en">From Muscles to Mindset</span>
+        <span class="unit-name-ar">من العضلات إلى العقلية</span>
       </a>
 
       <a href="unit6.html" class="menu-card">
         <span class="unit-badge">Unit 6</span>
-        <span class="unit-name">Let's Hang Out !</span>
+        <span class="unit-name-en">Let's Hang Out !</span>
+        <span class="unit-name-ar">لنتسكع معاً!</span>
       </a>
 
     </div>
