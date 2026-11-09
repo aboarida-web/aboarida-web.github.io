@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unit 3 Practice Questions</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Arial, sans-serif; }
+    body { background: #f4f7fb; color: #1a2b3c; padding: 20px; }
+    .container { max-width: 800px; margin: 0 auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+    h1 { color: #1e3a8a; text-align: center; margin-bottom: 20px; border-bottom: 2px solid #e5e7eb; padding-bottom: 10px; font-size: 24px; }
+    
+    .q-box { background: #f8fafc; padding: 20px; border-radius: 8px; margin-bottom: 20px; border: 1px solid #e5e7eb; }
+    .q-text { font-weight: bold; margin-bottom: 15px; font-size: 16px; color: #1e293b; direction: ltr; text-align: left; line-height: 1.5;}
+    .options { list-style-type: none; padding: 0; }
+    .options li { background: white; padding: 12px 15px; margin-bottom: 10px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 15px; cursor: pointer; transition: 0.2s; direction: ltr; text-align: left;}
+    .options li:hover { background: #f1f5f9; }
+    
+    .options li.correct { background: #dcfce7; border-color: #22c55e; font-weight: bold; color: #166534; }
+    .options li.wrong { background: #fee2e2; border-color: #ef4444; color: #991b1b; }
+    
+    .back-btn { display: inline-block; background: #64748b; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; margin-bottom: 20px; font-size: 14px; }
+    .back-btn:hover { background: #475569; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="unit3.html" class="back-btn">← العودة للوحدة</a>
+    <h1>Unit 3: Practice Questions</h1>
+    <p style="text-align:center; color:#64748b; margin-bottom:20px;">أهم الأسئلة على الوحدة الثالثة</p>
+
+    <!-- سؤال 1 -->
+    <div class="q-box">
+      <p class="q-text">1. Communities pushed to the edge of society and given limited opportunities are called .......... .</p>
+      <ul class="options" onclick="checkAns(this, 'a')">
+        <li data-opt="a">a. marginalized communities</li>
+        <li data-opt="b">b. climate resilience</li>
+        <li data-opt="c">c. greenhouse gas emissions</li>
+        <li data-opt="d">d. extreme weather</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 2 -->
+    <div class="q-box">
+      <p class="q-text">2. Farmers faced a .......... drought that lasted nearly eight months and destroyed most of the crops.</p>
+      <ul class="options" onclick="checkAns(this, 'c')">
+        <li data-opt="a">a. profound</li>
+        <li data-opt="b">b. sustainable</li>
+        <li data-opt="c">c. prolonged</li>
+        <li data-opt="d">d. marginalized</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 3 -->
+    <div class="q-box">
+      <p class="q-text">3. Infants and the elderly are especially .......... during severe weather events.</p>
+      <ul class="options" onclick="checkAns(this, 'd')">
+        <li data-opt="a">a. prolonged</li>
+        <li data-opt="b">b. scorching</li>
+        <li data-opt="c">c. marginalized</li>
+        <li data-opt="d">d. vulnerable</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 4 -->
+    <div class="q-box">
+      <p class="q-text">4. Good education helps to .......... people to make informed decisions.</p>
+      <ul class="options" onclick="checkAns(this, 'b')">
+        <li data-opt="a">a. empowerment</li>
+        <li data-opt="b">b. empower</li>
+        <li data-opt="c">c. empowered</li>
+        <li data-opt="d">d. empowering</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 5 -->
+    <div class="q-box">
+      <p class="q-text">5. "The activists demand equal rights." The word 'activists' here is a synonym of .......... .</p>
+      <ul class="options" onclick="checkAns(this, 'c')">
+        <li data-opt="a">a. bystanders</li>
+        <li data-opt="b">b. volunteers</li>
+        <li data-opt="c">c. campaigners</li>
+        <li data-opt="d">d. managers</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 6 -->
+    <div class="q-box">
+      <p class="q-text">6. To .......... is to show, point out, or make something clear or known.</p>
+      <ul class="options" onclick="checkAns(this, 'c')">
+        <li data-opt="a">a. accompany</li>
+        <li data-opt="b">b. mitigate</li>
+        <li data-opt="c">c. indicate</li>
+        <li data-opt="d">d. intensify</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 7 -->
+    <div class="q-box">
+      <p class="q-text">7. "Lack of commitment among workers reduced the company's success." "Commitment" here is an antonym of .......... .</p>
+      <ul class="options" onclick="checkAns(this, 'c')">
+        <li data-opt="a">a. devotion</li>
+        <li data-opt="b">b. focus</li>
+        <li data-opt="c">c. indifference</li>
+        <li data-opt="d">d. loyalty</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 8 -->
+    <div class="q-box">
+      <p class="q-text">8. Ahmed .......... his classmates to plant more trees around the school.</p>
+      <ul class="options" onclick="checkAns(this, 'c')">
+        <li data-opt="a">a. innovated</li>
+        <li data-opt="b">b. melted</li>
+        <li data-opt="c">c. persuaded</li>
+        <li data-opt="d">d. reversed</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 9 -->
+    <div class="q-box">
+      <p class="q-text">9. Zein always submits homework on time. He .......... late with it today.</p>
+      <ul class="options" onclick="checkAns(this, 'a')">
+        <li data-opt="a">a. can't be</li>
+        <li data-opt="b">b. must be</li>
+        <li data-opt="c">c. might have</li>
+        <li data-opt="d">d. can't have</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 10 -->
+    <div class="q-box">
+      <p class="q-text">10. A: Where's Rodayna? Her coffee is still hot. B: She .......... far.</p>
+      <ul class="options" onclick="checkAns(this, 'b')">
+        <li data-opt="a">a. must have gone</li>
+        <li data-opt="b">b. can't be</li>
+        <li data-opt="c">c. might have</li>
+        <li data-opt="d">d. must</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 11 -->
+    <div class="q-box">
+      <p class="q-text">11. They .......... about the event. No one told them.</p>
+      <ul class="options" onclick="checkAns(this, 'b')">
+        <li data-opt="a">a. must have known</li>
+        <li data-opt="b">b. can't have known</li>
+        <li data-opt="c">c. might be</li>
+        <li data-opt="d">d. must know</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 12 -->
+    <div class="q-box">
+      <p class="q-text">12. You look tired. You .......... have stayed up so late last night.</p>
+      <ul class="options" onclick="checkAns(this, 'c')">
+        <li data-opt="a">a. mustn't</li>
+        <li data-opt="b">b. can't</li>
+        <li data-opt="c">c. shouldn't</li>
+        <li data-opt="d">d. should</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 13 -->
+    <div class="q-box">
+      <p class="q-text">13. Rodayna looks unusually confident. She .......... passed her driving test this morning.</p>
+      <ul class="options" onclick="checkAns(this, 'a')">
+        <li data-opt="a">a. must have</li>
+        <li data-opt="b">b. can't have</li>
+        <li data-opt="c">c. could</li>
+        <li data-opt="d">d. might</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 14 -->
+    <div class="q-box">
+      <p class="q-text">14. We got lost; we .......... have used the GPS instead of guessing.</p>
+      <ul class="options" onclick="checkAns(this, 'a')">
+        <li data-opt="a">a. should</li>
+        <li data-opt="b">b. shouldn't</li>
+        <li data-opt="c">c. could</li>
+        <li data-opt="d">d. must</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 15 -->
+    <div class="q-box">
+      <p class="q-text">15. She failed the test. She .......... studied harder for it.</p>
+      <ul class="options" onclick="checkAns(this, 'a')">
+        <li data-opt="a">a. should have</li>
+        <li data-opt="b">b. must have</li>
+        <li data-opt="c">c. can't have</li>
+        <li data-opt="d">d. a & c</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 16 -->
+    <div class="q-box">
+      <p class="q-text">16. We heard the door slam, but nobody came in. It .......... been the wind.</p>
+      <ul class="options" onclick="checkAns(this, 'b')">
+        <li data-opt="a">a. must</li>
+        <li data-opt="b">b. could have</li>
+        <li data-opt="c">c. can't</li>
+        <li data-opt="d">d. might not</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 17 -->
+    <div class="q-box">
+      <p class="q-text">17. The professor's office light is still on at midnight. He .......... the research paper.</p>
+      <ul class="options" onclick="checkAns(this, 'b')">
+        <li data-opt="a">a. can't be finishing</li>
+        <li data-opt="b">b. might be finishing</li>
+        <li data-opt="c">c. must have finished</li>
+        <li data-opt="d">d. could have finished</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 18 -->
+    <div class="q-box">
+      <p class="q-text">18. The museum was closed yesterday; you .......... have seen the new exhibit then.</p>
+      <ul class="options" onclick="checkAns(this, 'a')">
+        <li data-opt="a">a. can't</li>
+        <li data-opt="b">b. might</li>
+        <li data-opt="c">c. must</li>
+        <li data-opt="d">d. could</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 19 -->
+    <div class="q-box">
+      <p class="q-text">19. The museum was open yesterday; you .......... have seen the new exhibit if you'd wanted to.</p>
+      <ul class="options" onclick="checkAns(this, 'd')">
+        <li data-opt="a">a. can't</li>
+        <li data-opt="b">b. might</li>
+        <li data-opt="c">c. must</li>
+        <li data-opt="d">d. could</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 20 -->
+    <div class="q-box">
+      <p class="q-text">20. A successful persuasive essay combines logical evidence with .......... .</p>
+      <ul class="options" onclick="checkAns(this, 'c')">
+        <li data-opt="a">a. jokes and stories</li>
+        <li data-opt="b">b. personal memories</li>
+        <li data-opt="c">c. powerful emotional language</li>
+        <li data-opt="d">d. short sentences</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <script>
+    function checkAns(ul, correctOpt) {
+      if (ul.classList.contains('answered')) return;
+      ul.classList.add('answered');
+
+      const lis = ul.querySelectorAll('li');
+      lis.forEach(li => {
+        if (li.getAttribute('data-opt') === correctOpt) {
+          li.classList.add('correct');
+        }
+      });
+    }
+  </script>
+</body>
+</html>
