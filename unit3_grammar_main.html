@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unit 3 Grammar - Modals</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Arial, sans-serif; }
+    body { background: #f4f7fb; color: #1a2b3c; padding: 20px; }
+    .container { max-width: 800px; margin: 0 auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+    h1 { color: #1e3a8a; text-align: center; margin-bottom: 20px; border-bottom: 2px solid #e5e7eb; padding-bottom: 10px; font-size: 24px; }
+    
+    /* تنسيق الصناديق القابلة للفتح */
+    details { background: #f8fafc; padding: 15px; border-radius: 8px; margin-bottom: 15px; border: 1px solid #e5e7eb; }
+    summary { font-size: 18px; font-weight: bold; color: #1e3a8a; cursor: pointer; outline: none; padding: 5px; }
+    summary:hover { color: #2563eb; }
+    
+    .lesson-content { padding-top: 15px; margin-top: 15px; border-top: 1px dashed #cbd5e1; }
+    .lesson-content h4 { font-size: 16px; margin: 15px 0 8px; color: #2563eb; }
+    .lesson-content p { font-size: 15px; line-height: 1.8; color: #334155; text-align: justify; margin-bottom: 10px; }
+    .lesson-content ul { margin-right: 20px; margin-bottom: 15px; color: #334155; font-size: 15px; line-height: 1.8;}
+    .lesson-content li { margin-bottom: 8px; }
+    
+    /* تنسيق الجداول */
+    .table-container { overflow-x: auto; margin: 15px 0; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; background: white; border-radius: 8px; overflow: hidden; }
+    th, td { padding: 10px; text-align: center; border: 1px solid #e2e8f0; }
+    th { background-color: #2563eb; color: white; font-weight: bold; }
+    td strong { color: #1e3a8a; }
+    
+    /* تنسيق الأمثلة */
+    .example-box { background: #fef3c7; padding: 15px; border-radius: 8px; border-right: 4px solid #d97706; margin: 15px 0; }
+    .example-box p { font-weight: bold; color: #92400e; margin-bottom: 8px; }
+    .example-box ul { margin-bottom: 0; list-style: none; padding-right: 0;}
+    .example-box li { color: #78350f; font-size: 15px; direction: ltr; text-align: left; margin-bottom: 12px; background: white; padding: 10px; border-radius: 6px;}
+    .example-box li span.ar { display: block; direction: rtl; text-align: right; color: #92400e; font-size: 14px; margin-top: 8px; font-weight: normal; border-top: 1px dashed #fcd34d; padding-top: 5px;}
+    
+    .back-btn { display: inline-block; background: #64748b; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; margin-bottom: 20px; font-size: 14px; }
+    .back-btn:hover { background: #475569; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="unit3.html" class="back-btn">← العودة للوحدة</a>
+    <h1>Unit 3: Grammar (Modals)</h1>
+    <p style="text-align:center; color:#64748b; margin-bottom:20px;">الأفعال الناقصة للاستنتاج والنصيحة والندم</p>
+
+    <details open>
+      <summary>1. الاستنتاج في المضارع (Present Deduction)</summary>
+      <div class="lesson-content">
+        <p>بنستخدم الأفعال الناقصة عشان نستنتج حاجة بتحصل دلوقتي (في المضارع).</p>
+        
+        <h4>أ. استنتاج قوي (مبني على دليل قوي):</h4>
+        <p>بنستخدم <b>must</b> (لابد) للإثبات، و <b>can't</b> (لا يمكن) للنفي.</p>
+        <div class="table-container">
+          <table>
+            <tr><th>الحالة</th><th>القاعدة</th></tr>
+            <tr><td>معلوم (Active)</td><td>Subject + <strong>must / can't</strong> + inf. (المصدر)</td></tr>
+            <tr><td>مجهول (Passive)</td><td>Object + <strong>must / can't</strong> + be + p.p. (التصريف الثالث)</td></tr>
+          </table>
+        </div>
+        <div class="example-box">
+          <ul>
+            <li>He has eaten nothing all day. He <b>must be</b> hungry.
+              <span class="ar">لم يأكل شيئاً طوال اليوم. لابد أنه جائع. (دليل قوي)</span>
+            </li>
+            <li>He has eaten nothing all day. He <b>can't be</b> full.
+              <span class="ar">لم يأكل شيئاً طوال اليوم. لا يمكن أن يكون شبعان. (دليل قوي)</span>
+            </li>
+            <li>Mohammed Salah is healthy. He <b>must do</b> a lot of exercises.
+              <span class="ar">محمد صلاح بصحة جيدة. لابد أنه يمارس الكثير من التمارين. (معلوم)</span>
+            </li>
+            <li>His health <b>must be cared</b> about.
+              <span class="ar">لابد أن يتم الاهتمام بصحته. (مجهول)</span>
+            </li>
+          </ul>
+        </div>
+
+        <h4>ب. استنتاج ضعيف (مبني على دليل ضعيف/غير مؤكد):</h4>
+        <p>بنستخدم <b>might / may / could</b> (ربما / من المحتمل) سواء في الإثبات أو النفي (بنستخدم might not / may not).</p>
+        <div class="table-container">
+          <table>
+            <tr><th>الحالة</th><th>القاعدة</th></tr>
+            <tr><td>معلوم (Active)</td><td>Subject + <strong>might / may / could</strong> + inf.</td></tr>
+            <tr><td>مجهول (Passive)</td><td>Object + <strong>might / may / could</strong> + be + p.p.</td></tr>
+          </table>
+        </div>
+        <div class="example-box">
+          <ul>
+            <li>I don't know why Sama isn't at the party. She <b>might be</b> ill.
+              <span class="ar">لا أعرف لماذا سامه ليست في الحفلة. ربما تكون مريضة. (دليل ضعيف)</span>
+            </li>
+            <li>I've no idea when the equipment will be delivered. They <b>may deliver</b> it tomorrow.
+              <span class="ar">ليس لدي فكرة متى سيتم تسليم المعدات. ربما يقومون بتسليمها غداً. (معلوم)</span>
+            </li>
+            <li>It <b>could be delivered</b> tomorrow.
+              <span class="ar">ربما يتم تسليمها غداً. (مجهول)</span>
+            </li>
+          </ul>
+        </div>
+
+        <h4>ج. استنتاج في المضارع المستمر:</h4>
+        <p>لو الحدث بيحصل دلوقتي (مستمر)، بنضيف (be + v-ing).</p>
+        <div class="example-box">
+          <ul>
+            <li>Ayman hasn't answered my call. He <b>must be interviewing</b> some applicants.
+              <span class="ar">أيمن لم يرد على اتصالي. لابد أنه يقابل بعض المتقدمين الآن. (قوي)</span>
+            </li>
+            <li>Reem hasn't told me why she doesn't go out. She <b>might be studying</b> for the final exams.
+              <span class="ar">ريم لم تخبرني لماذا لا تخرج. ربما تدرس للامتحانات النهائية. (ضعيف)</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </details>
+
+    <details>
+      <summary>2. الاستنتاج في الماضي (Past Deduction)</summary>
+      <div class="lesson-content">
+        <p>عشان نستنتج حاجة حصلت في الماضي، بنستخدم (have + p.p).</p>
+        
+        <h4>أ. استنتاج قوي في الماضي:</h4>
+        <p>بنستخدم <b>must have + p.p</b> (لابد أنه فعل) و <b>can't/couldn't have + p.p</b> (لا يمكن أنه فعل).</p>
+        <div class="table-container">
+          <table>
+            <tr><th>الحالة</th><th>القاعدة</th></tr>
+            <tr><td>معلوم (Active)</td><td>Subject + <strong>must/can't/couldn't have</strong> + p.p.</td></tr>
+            <tr><td>مجهول (Passive)</td><td>Object + <strong>must/can't/couldn't have been</strong> + p.p.</td></tr>
+          </table>
+        </div>
+        <div class="example-box">
+          <ul>
+            <li>Zidan was healthy. He <b>must have cared</b> about his fitness.
+              <span class="ar">زيدان كان بصحة جيدة. لابد أنه اهتم بلياقته. (قوي - معلوم)</span>
+            </li>
+            <li>He <b>can't have eaten</b> much food.
+              <span class="ar">لا يمكن أنه أكل الكثير من الطعام. (قوي - معلوم)</span>
+            </li>
+            <li>His health <b>must have been cared</b> about.
+              <span class="ar">لابد أنه تم الاهتمام بصحته. (قوي - مجهول)</span>
+            </li>
+          </ul>
+        </div>
+
+        <h4>ب. استنتاج ضعيف في الماضي:</h4>
+        <p>بنستخدم <b>might/may/could have + p.p</b> (ربما فعل).</p>
+        <div class="example-box">
+          <ul>
+            <li>Nadia <b>may have prepared</b> a big lunch. I'm not sure.
+              <span class="ar">ربما أعدت نادية غداءً كبيراً. لست متأكداً. (ضعيف - معلوم)</span>
+            </li>
+            <li>A big lunch <b>could have been prepared</b> by Nadia.
+              <span class="ar">ربما تم إعداد غداء كبير بواسطة نادية. (ضعيف - مجهول)</span>
+            </li>
+          </ul>
+        </div>
+
+        <h4>ج. استنتاج ضعيف لحدث كان مستمراً في الماضي:</h4>
+        <p>بنستخدم (might/may/could/must + have been + v-ing).</p>
+        <div class="example-box">
+          <ul>
+            <li>She <b>might have been helping</b> her mother at home.
+              <span class="ar">ربما كانت تساعد والدتها في المنزل. (حدث مستمر في الماضي)</span>
+            </li>
+          </ul>
+        </div>
+
+        <h4>د. استخدام (could have + p.p) للوم أو القدرة:</h4>
+        <p>بنستخدمها عشان نعبر عن حاجة كان ممكن تحصل بس محصلتش (لوم)، أو كان عنده القدرة يعملها ومعملهاش.</p>
+        <div class="example-box">
+          <ul>
+            <li>He hasn't visited us for a long time. He <b>could have been</b> busy.
+              <span class="ar">لم يزرنا منذ فترة طويلة. ربما كان مشغولاً. (استنتاج ضعيف)</span>
+            </li>
+            <li>He had the ability to fix the computer but he didn't. He <b>could have fixed</b> it.
+              <span class="ar">كان لديه القدرة على إصلاح الكمبيوتر لكنه لم يفعل. كان يمكنه إصلاحه. (كان يستطيع ولم يفعل)</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </details>
+
+    <details>
+      <summary>3. النصيحة (Advice) باستخدام Should / Ought to</summary>
+      <div class="lesson-content">
+        <p>بنستخدم <b>should</b> (ينبغي/يجب) أو <b>ought to</b> عشان ندي نصيحة في المضارع أو المستقبل.</p>
+        <div class="table-container">
+          <table>
+            <tr><th>الإثبات</th><th>النفي</th></tr>
+            <tr><td>Subject + <strong>should / ought to</strong> + inf.</td><td>Subject + <strong>shouldn't / ought not to</strong> + inf.</td></tr>
+          </table>
+        </div>
+        <div class="example-box">
+          <ul>
+            <li>You <b>should work</b> hard to achieve your goal.
+              <span class="ar">يجب أن تعمل بجد لتحقق هدفك.</span>
+            </li>
+            <li>You <b>shouldn't waste</b> your time.
+              <span class="ar">لا يجب أن تضيع وقتك.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </details>
+
+    <details>
+      <summary>4. الندم أو اللوم في الماضي (Regret / Blame)</summary>
+      <div class="lesson-content">
+        <p>بنستخدم <b>should have + p.p</b> عشان نعبر عن الندم على حاجة مكانش المفروض نعملها، أو <b>shouldn't have + p.p</b> للندم على حاجة كان المفروض نعملها.</p>
+        <div class="table-container">
+          <table>
+            <tr><th>الندم على فعل شيء (كان يجب ألا يحدث)</th><th>الندم على عدم فعل شيء (كان يجب أن يحدث)</th></tr>
+            <tr><td>Subject + <strong>shouldn't have</strong> + p.p.</td><td>Subject + <strong>should have</strong> + p.p.</td></tr>
+          </table>
+        </div>
+        <div class="example-box">
+          <ul>
+            <li>I <b>should have taken</b> my medicine on time.
+              <span class="ar">كان يجب أن آخذ دوائي في الوقت المحدد. (ندم على عدم فعله)</span>
+            </li>
+            <li>You <b>shouldn't have added</b> too much salt.
+              <span class="ar">كان يجب ألا تضيف الكثير من الملح. (ندم على فعله)</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </details>
+
+    <details>
+      <summary>5. ملاحظات هامة (للفرق بين الاستنتاج القوي والضعيف)</summary>
+      <div class="lesson-content">
+        <ul>
+          <li><b>كلمات تدل على الاستنتاج القوي:</b> I feel sure / certain (أشعر بالتأكيد)، certainly / surely / definitely (بالتأكيد)، impossible (مستحيل).</li>
+          <li><b>كلمات تدل على الاستنتاج الضعيف:</b> I'm not sure / I'm not certain (لست متأكداً)، Perhaps / maybe (ربما)، It is probable / likely / possible (من المحتمل)، I don't think / I don't believe (لا أظن).</li>
+          <li><b>ملاحظة مهمة في النفي:</b> في الاستنتاج القوي بنستخدم <b>can't</b> مش mustn't. (مثال: He must be ill. He can't be well. لابد أنه مريض. لا يمكن أن يكون بخير).</li>
+        </ul>
+      </div>
+    </details>
+
+  </div>
+</body>
+</html>
