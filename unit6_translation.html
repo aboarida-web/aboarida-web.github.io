@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unit 6 Translation</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Arial, sans-serif; }
+    body { background: #f4f7fb; color: #1a2b3c; padding: 20px; }
+    .container { max-width: 800px; margin: 0 auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+    h1 { color: #1e3a8a; text-align: center; margin-bottom: 20px; border-bottom: 2px solid #e5e7eb; padding-bottom: 10px; font-size: 24px; }
+    h2 { color: #2563eb; margin: 25px 0 15px; font-size: 20px; border-right: 4px solid #2563eb; padding-right: 10px; }
+    
+    .q-box { background: #f8fafc; padding: 20px; border-radius: 8px; margin-bottom: 20px; border: 1px solid #e5e7eb; }
+    .q-text { font-weight: bold; margin-bottom: 10px; font-size: 16px; color: #1e293b; direction: ltr; text-align: left; line-height: 1.5; }
+    .options { list-style-type: none; padding: 0; }
+    .options li { background: white; padding: 12px 15px; margin-bottom: 8px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 15px; cursor: pointer; transition: 0.2s; direction: ltr; text-align: left; line-height: 1.5;}
+    .options li:hover { background: #f1f5f9; }
+    
+    .options li.correct { background: #dcfce7; border-color: #22c55e; font-weight: bold; color: #166534; }
+    .options li.wrong { background: #fee2e2; border-color: #ef4444; color: #991b1b; }
+    
+    .back-btn { display: inline-block; background: #64748b; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; margin-bottom: 20px; font-size: 14px; }
+    .back-btn:hover { background: #475569; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="unit6_trans_writ.html" class="back-btn">← العودة للاختيارات</a>
+    <h1>Unit 6: Translation</h1>
+    
+    <h2>Part 1: Choose the correct Arabic translation</h2>
+
+    <div class="q-box">
+      <p class="q-text">1. Unity and cooperation are the necessary qualities which we need to succeed in our national projects.</p>
+      <ul class="options" onclick="checkAns(this, 'a')">
+        <li data-opt="a">أ. التعاون والتوحد هما الصفتان الضروريتان اللتان نحتاجهما للنجاح في مشروعاتنا القومية.</li>
+        <li data-opt="b">ب. التعاون والوحدة هما الصفتان الضروريتان اللتان نحتاجهما للنجاح في مشروعاتنا الدولية.</li>
+        <li data-opt="c">ج. التعاون والاتحاد هما الصفتان الضروريتان اللتان نحتاجهما للنجاح في مشروعاتنا الدولية.</li>
+        <li data-opt="d">د. التعاون والاتحاد هما الصفتان الضروريتان اللتان نحتاجهما للنجاح في مشروعاتنا القومية.</li>
+      </ul>
+    </div>
+
+    <div class="q-box">
+      <p class="q-text">2. Our educational system is supposed to aim at preparing creative generations. We no longer need those who memorize information, but we are in bad need of innovators.</p>
+      <ul class="options" onclick="checkAns(this, 'a')">
+        <li data-opt="a">أ. من المفترض أن يهدف نظامنا التعليمي إلى إعداد أجيال مبدعة. لم نعد بحاجة إلى من يحفظ المعلومات، بل نحن في حاجة ماسة إلى المبدعين.</li>
+        <li data-opt="b">ب. من المفترض أن يهدف نظامنا التعليمي إلى إعداد أجيال مبدعة. لم نعد بحاجة إلى من يحافظ على المعلومات، بل نحن في حاجة ماسة إلى المبدعين.</li>
+        <li data-opt="c">ج. من الافتراض أن يهدف نظامنا التعليمي إلى إعداد أجيال مبدعة. لم نعد بحاجة إلى من يحفظ المعلومات، بل نحن في حاجة سيئة إلى المبدعين.</li>
+        <li data-opt="d">د. من المفترض أن يهدف نظامنا التعليمي إلى إعداد أجيال مبدعة. لم نعد بحاجة إلى من يحفظ المعلومات، بل نحن في حاجة ماسة إلى المبدعين. (صيغة أفضل)</li>
+      </ul>
+    </div>
+
+    <h2>Part 2: Choose the correct English translation</h2>
+
+    <div class="q-box">
+      <p class="q-text">1. تعمل الحكومة على إقامة مشروعات اقتصادية تهدف إلى القضاء على البطالة وتحسين أحوال الصحة والتعليم في مصر.</p>
+      <ul class="options" onclick="checkAns(this, 'b')">
+        <li data-opt="a">a. The government is working on the establish of economic projects which aim at eliminating unemployment and improving health and education conditions in Egypt.</li>
+        <li data-opt="b">b. The government is working on the establishment of economic projects which aim at eliminating unemployment and improving health and education conditions in Egypt.</li>
+        <li data-opt="c">c. The government is working on the establishment of economics projects which aim at eliminating unemployment and improving health and education conditions in Egypt.</li>
+        <li data-opt="d">d. The government is working on the establishment of economic projects which aim at eliminating unemployment and improving healthy and education conditions in Egypt.</li>
+      </ul>
+    </div>
+
+    <div class="q-box">
+      <p class="q-text">2. إن المشاركة المجتمعية تسهم في حل الكثير من المشكلات، كما أنها تدعم التكامل بين أفراد المجتمع الواحد.</p>
+      <ul class="options" onclick="checkAns(this, 'a')">
+        <li data-opt="a">a. Community participation contributes to solving many problems. It also supports integration among the members of the same community.</li>
+        <li data-opt="b">b. Community participation contributes to solve many problems. It also supports integration among the members of one community.</li>
+        <li data-opt="c">c. Community participation contributes to solving many problems. It also supports integration among the organs of the same community.</li>
+        <li data-opt="d">d. Community participation contributes to solving many problems. It also supports integration among the members of the only community.</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <script>
+    function checkAns(ul, correctOpt) {
+      if (ul.classList.contains('answered')) return;
+      ul.classList.add('answered');
+
+      const lis = ul.querySelectorAll('li');
+      lis.forEach(li => {
+        if (li.getAttribute('data-opt') === correctOpt) {
+          li.classList.add('correct');
+        }
+      });
+    }
+  </script>
+</body>
+</html>
