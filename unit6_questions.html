@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unit 6 Practice Questions</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Arial, sans-serif; }
+    body { background: #f4f7fb; color: #1a2b3c; padding: 20px; }
+    .container { max-width: 800px; margin: 0 auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+    h1 { color: #1e3a8a; text-align: center; margin-bottom: 20px; border-bottom: 2px solid #e5e7eb; padding-bottom: 10px; font-size: 24px; }
+    
+    .q-box { background: #f8fafc; padding: 20px; border-radius: 8px; margin-bottom: 20px; border: 1px solid #e5e7eb; }
+    .q-text { font-weight: bold; margin-bottom: 15px; font-size: 16px; color: #1e293b; direction: ltr; text-align: left; line-height: 1.5;}
+    .options { list-style-type: none; padding: 0; }
+    .options li { background: white; padding: 12px 15px; margin-bottom: 10px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 15px; cursor: pointer; transition: 0.2s; direction: ltr; text-align: left;}
+    .options li:hover { background: #f1f5f9; }
+    
+    .options li.correct { background: #dcfce7; border-color: #22c55e; font-weight: bold; color: #166534; }
+    .options li.wrong { background: #fee2e2; border-color: #ef4444; color: #991b1b; }
+    
+    .back-btn { display: inline-block; background: #64748b; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; margin-bottom: 20px; font-size: 14px; }
+    .back-btn:hover { background: #475569; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="unit6.html" class="back-btn">← العودة للوحدة</a>
+    <h1>Unit 6: Practice Questions</h1>
+    <p style="text-align:center; color:#64748b; margin-bottom:20px;">أهم 20 سؤال على الوحدة السادسة</p>
+
+    <!-- سؤال 1 -->
+    <div class="q-box">
+      <p class="q-text">1. Spending time with friends is essential for our mental and physical .......... .</p>
+      <ul class="options" onclick="checkAns(this, 'c')">
+        <li data-opt="a">a. disaster</li>
+        <li data-opt="b">b. clumsiness</li>
+        <li data-opt="c">c. well-being</li>
+        <li data-opt="d">d. anxiety</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 2 -->
+    <div class="q-box">
+      <p class="q-text">2. When we hang out, our brains release chemicals that .......... our mood.</p>
+      <ul class="options" onclick="checkAns(this, 'b')">
+        <li data-opt="a">a. reduce</li>
+        <li data-opt="b">b. boost</li>
+        <li data-opt="c">c. harm</li>
+        <li data-opt="d">d. ignore</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 3 -->
+    <div class="q-box">
+      <p class="q-text">3. Some people prefer online .......... to face-to-face meetings.</p>
+      <ul class="options" onclick="checkAns(this, 'd')">
+        <li data-opt="a">a. reaction</li>
+        <li data-opt="b">b. promotion</li>
+        <li data-opt="c">c. entertainment</li>
+        <li data-opt="d">d. interaction</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 4 -->
+    <div class="q-box">
+      <p class="q-text">4. Making new friends can be .......... for shy people.</p>
+      <ul class="options" onclick="checkAns(this, 'a')">
+        <li data-opt="a">a. overwhelming</li>
+        <li data-opt="b">b. beneficial</li>
+        <li data-opt="c">c. glamorous</li>
+        <li data-opt="d">d. worth</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 5 -->
+    <div class="q-box">
+      <p class="q-text">5. Sarah was upset when the juice splashed on her .......... white dress.</p>
+      <ul class="options" onclick="checkAns(this, 'c')">
+        <li data-opt="a">a. dull</li>
+        <li data-opt="b">b. pale</li>
+        <li data-opt="c">c. brand-new</li>
+        <li data-opt="d">d. clumsy</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 6 -->
+    <div class="q-box">
+      <p class="q-text">6. I felt completely .......... of the disaster that was about to happen.</p>
+      <ul class="options" onclick="checkAns(this, 'b')">
+        <li data-opt="a">a. aware</li>
+        <li data-opt="b">b. unaware</li>
+        <li data-opt="c">c. immune</li>
+        <li data-opt="d">d. superficial</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 7 -->
+    <div class="q-box">
+      <p class="q-text">7. The restaurant's .......... was lively, and everyone seemed cheerful.</p>
+      <ul class="options" onclick="checkAns(this, 'd')">
+        <li data-opt="a">a. disaster</li>
+        <li data-opt="b">b. hormone</li>
+        <li data-opt="c">c. compromise</li>
+        <li data-opt="d">d. atmosphere</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 8 (قواعد - Reported Questions) -->
+    <div class="q-box">
+      <p class="q-text">8. "Where do you live?" he asked me. -> He asked me where I .......... .</p>
+      <ul class="options" onclick="checkAns(this, 'c')">
+        <li data-opt="a">a. live</li>
+        <li data-opt="b">b. do live</li>
+        <li data-opt="c">c. lived</li>
+        <li data-opt="d">d. am living</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 9 -->
+    <div class="q-box">
+      <p class="q-text">9. "Are you coming to the party?" she asked. -> She asked .......... I was coming to the party.</p>
+      <ul class="options" onclick="checkAns(this, 'a')">
+        <li data-opt="a">a. if</li>
+        <li data-opt="b">b. that</li>
+        <li data-opt="c">c. what</li>
+        <li data-opt="d">d. which</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 10 -->
+    <div class="q-box">
+      <p class="q-text">10. "Did you finish your homework?" he asked. -> He asked if I .......... my homework.</p>
+      <ul class="options" onclick="checkAns(this, 'b')">
+        <li data-opt="a">a. finish</li>
+        <li data-opt="b">b. had finished</li>
+        <li data-opt="c">c. did finish</li>
+        <li data-opt="d">d. have finished</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 11 -->
+    <div class="q-box">
+      <p class="q-text">11. "What time does the train leave?" he asked. -> He asked what time the train .......... .</p>
+      <ul class="options" onclick="checkAns(this, 'd')">
+        <li data-opt="a">a. leave</li>
+        <li data-opt="b">b. leaves</li>
+        <li data-opt="c">c. did leave</li>
+        <li data-opt="d">d. left</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 12 -->
+    <div class="q-box">
+      <p class="q-text">12. "Can you help me?" she asked. -> She asked .......... I could help her.</p>
+      <ul class="options" onclick="checkAns(this, 'c')">
+        <li data-opt="a">a. that</li>
+        <li data-opt="b">b. what</li>
+        <li data-opt="c">c. whether</li>
+        <li data-opt="d">d. which</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 13 -->
+    <div class="q-box">
+      <p class="q-text">13. The teacher asked the students .......... they were ready for the test.</p>
+      <ul class="options" onclick="checkAns(this, 'a')">
+        <li data-opt="a">a. if</li>
+        <li data-opt="b">b. that</li>
+        <li data-opt="c">c. what</li>
+        <li data-opt="d">d. who</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 14 -->
+    <div class="q-box">
+      <p class="q-text">14. "Why are you late?" the manager asked. -> The manager asked why I .......... late.</p>
+      <ul class="options" onclick="checkAns(this, 'b')">
+        <li data-opt="a">a. am</li>
+        <li data-opt="b">b. was</li>
+        <li data-opt="c">c. have been</li>
+        <li data-opt="d">d. will be</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 15 -->
+    <div class="q-box">
+      <p class="q-text">15. She wanted .......... know where he had gone.</p>
+      <ul class="options" onclick="checkAns(this, 'c')">
+        <li data-opt="a">a. at</li>
+        <li data-opt="b">b. for</li>
+        <li data-opt="c">c. to</li>
+        <li data-opt="d">d. on</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 16 -->
+    <div class="q-box">
+      <p class="q-text">16. Let's .......... the town and celebrate your promotion!</p>
+      <ul class="options" onclick="checkAns(this, 'd')">
+        <li data-opt="a">a. hang out</li>
+        <li data-opt="b">b. hit</li>
+        <li data-opt="c">c. boost</li>
+        <li data-opt="d">d. hit</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 17 -->
+    <div class="q-box">
+      <p class="q-text">17. True friends support you .......... thick and thin.</p>
+      <ul class="options" onclick="checkAns(this, 'b')">
+        <li data-opt="a">a. through</li>
+        <li data-opt="b">b. through</li>
+        <li data-opt="c">c. in</li>
+        <li data-opt="d">d. on</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 18 -->
+    <div class="q-box">
+      <p class="q-text">18. The food was excellent, but the service was .......... .</p>
+      <ul class="options" onclick="checkAns(this, 'c')">
+        <li data-opt="a">a. delicious</li>
+        <li data-opt="b">b. lively</li>
+        <li data-opt="c">c. disappointing</li>
+        <li data-opt="d">d. cheerful</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 19 -->
+    <div class="q-box">
+      <p class="q-text">19. Having a few close friends is more .......... than knowing many people superficially.</p>
+      <ul class="options" onclick="checkAns(this, 'a')">
+        <li data-opt="a">a. beneficial</li>
+        <li data-opt="b">b. harmful</li>
+        <li data-opt="c">c. dull</li>
+        <li data-opt="d">d. clumsy</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 20 -->
+    <div class="q-box">
+      <p class="q-text">20. A person who always knocks things over is described as .......... .</p>
+      <ul class="options" onclick="checkAns(this, 'd')">
+        <li data-opt="a">a. pale</li>
+        <li data-opt="b">b. immune</li>
+        <li data-opt="c">c. glamorous</li>
+        <li data-opt="d">d. clumsy</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <script>
+    function checkAns(ul, correctOpt) {
+      if (ul.classList.contains('answered')) return;
+      ul.classList.add('answered');
+
+      const lis = ul.querySelectorAll('li');
+      lis.forEach(li => {
+        if (li.getAttribute('data-opt') === correctOpt) {
+          li.classList.add('correct');
+        }
+      });
+    }
+  </script>
+</body>
+</html>
