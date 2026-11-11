@@ -11,15 +11,18 @@
     h1 { color: #1e3a8a; text-align: center; margin-bottom: 20px; border-bottom: 2px solid #e5e7eb; padding-bottom: 10px; font-size: 24px; }
     h2 { color: #2563eb; margin: 30px 0 15px; font-size: 22px; border-right: 4px solid #2563eb; padding-right: 10px; }
     
-    .lesson-content { background: #f8fafc; padding: 25px; border-radius: 8px; margin-bottom: 20px; border: 1px solid #e5e7eb; line-height: 2; font-size: 16px; text-align: justify; }
+    .lesson-content { background: #f8fafc; padding: 25px; border-radius: 8px; margin-bottom: 20px; border: 1px solid #e5e7eb; line-height: 2; font-size: 17px; text-align: justify; }
     .lesson-content p { margin-bottom: 15px; }
-    .lesson-content ul { margin-right: 20px; margin-bottom: 15px; }
-    .lesson-content li { margin-bottom: 10px; }
-
-    .diagram-box { background: white; border: 1px solid #cbd5e1; border-radius: 12px; padding: 20px; margin: 20px 0; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
-    .diagram-box h4 { color: #1e3a8a; margin-bottom: 15px; font-size: 18px; }
-    .diagram-box svg { max-width: 100%; height: auto; display: block; margin: 0 auto; }
     
+    /* تنسيق الكلمات المهمة */
+    .highlight { color: #b91c1c; font-weight: bold; background-color: #fef2f2; padding: 0 5px; border-radius: 4px; }
+    .term { color: #0369a1; font-weight: bold; background-color: #f0f9ff; padding: 0 5px; border-radius: 4px; }
+
+    /* تنسيق صندوق الصورة */
+    .image-box { background: white; border: 1px solid #cbd5e1; border-radius: 12px; padding: 15px; margin: 25px 0; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.08); }
+    .image-box img { max-width: 100%; height: auto; border-radius: 8px; }
+    .image-caption { color: #64748b; font-size: 14px; margin-top: 10px; font-style: italic; }
+
     .back-btn { display: inline-block; background: #64748b; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; margin-bottom: 20px; font-size: 14px; }
     .back-btn:hover { background: #475569; }
   </style>
@@ -29,53 +32,34 @@
     <a href="biology_ch1.html" class="back-btn">← العودة للفصل</a>
     <h1>الدعامة في النبات</h1>
 
-    <div class="lesson-content">
-      <p>يلجأ النبات إلى وسائل كثيرة لدعمه، منها أن يرسّب بعض المواد في جدر خلاياه، فلكي تحافظ خلايا النبات الخارجية على أنسجة النبات الداخلية وتحول دون فقد الماء، فإن النبات قد يزيد من سمك جدر خلايا البشرة وخاصة الخارجية منها بأن يرسّب عليها مادة <b>الكيوتين</b> غير المنفذة للماء، أو يحيط النبات نفسه بطبقة من خلايا فلينية غير منفذة للماء مرسب فيها مادة <b>السوبرين</b>.</p>
-      <p>وقد يرسّب النبات في جدر خلاياه أو في أجزاء منها مادة <b>السليلوز</b> أو <b>اللجنين</b> ليكسبها صلابة وقوة مثل الخلايا <b>الكولنشيمية</b> وكذلك الخلايا <b>الاسكلرنشيمية</b>.</p>
+    <!-- صندوق الصورة -->
+    <div class="image-box">
+      <!-- هنا حطينا لينك الصورة اللي إنت رفعتها -->
+      <img src="https://i.ibb.co/xqRhwy3F/IMG.jpg" alt="مقطع عرضي في ساق نبات">
+      <div class="image-caption">شكل توضيحي: مقطع عرضي في ساق نبات حديث ذو فلقتين</div>
     </div>
 
-    <!-- رسمة المقطع العرضي -->
-    <div class="diagram-box">
-      <h4>شكل توضيحي: مقطع عرضي في ساق نبات حديث ذو فلقتين</h4>
+    <div class="lesson-content">
+      <p>عشان النبات يقدر يعيش ويقاوم الرياح، ويكبر في طوله، لازم يكون عنده <span class="highlight">دعامة (صلابة)</span> تسنده. طيب النبات مالوش عضم زي الإنسان، يعمل إيه؟ النبات بيلجأ لـ <span class="term">الترسيب</span>!</p>
       
-      <svg width="350" height="300" viewBox="0 0 350 300" xmlns="http://www.w3.org/2000/svg">
-        <!-- خلفية الساق -->
-        <circle cx="150" cy="150" r="120" fill="#f8fafc" stroke="#94a3b8" stroke-width="2"/>
-        
-        <!-- البشرة (طبقة خارجية) -->
-        <circle cx="150" cy="150" r="120" fill="none" stroke="#0ea5e9" stroke-width="6"/>
-        
-        <!-- النسيج الكولنشيمي (طبقات تحت البشرة) -->
-        <circle cx="150" cy="150" r="110" fill="none" stroke="#fde047" stroke-width="15"/>
-        
-        <!-- حزم وعائية (دوائر حمراء) -->
-        <circle cx="100" cy="80" r="18" fill="#fecaca" stroke="#ef4444" stroke-width="2"/>
-        <circle cx="200" cy="80" r="18" fill="#fecaca" stroke="#ef4444" stroke-width="2"/>
-        <circle cx="150" cy="40" r="18" fill="#fecaca" stroke="#ef4444" stroke-width="2"/>
-        
-        <circle cx="80" cy="150" r="18" fill="#fecaca" stroke="#ef4444" stroke-width="2"/>
-        <circle cx="220" cy="150" r="18" fill="#fecaca" stroke="#ef4444" stroke-width="2"/>
-        
-        <circle cx="100" cy="220" r="18" fill="#fecaca" stroke="#ef4444" stroke-width="2"/>
-        <circle cx="200" cy="220" r="18" fill="#fecaca" stroke="#ef4444" stroke-width="2"/>
-        <circle cx="150" cy="260" r="18" fill="#fecaca" stroke="#ef4444" stroke-width="2"/>
+      <p>يعني إيه ترسيب؟ يعني النبات بيحط (بيرسب) مواد معينة في <span class="highlight">جدر خلايا</span>ه عشان يقويها. وبحسب مكان الخلية وإيه اللي إحنا محتاجينه، النبات بيستخدم مواد مختلفة:</p>
 
-        <!-- النخاع (المركز) -->
-        <circle cx="150" cy="150" r="50" fill="#e2e8f0" stroke="#cbd5e1" stroke-width="2"/>
-        
-        <!-- المسميات والأسهم -->
-        <text x="280" y="50" font-size="14" fill="#0ea5e9" text-anchor="start">البشرة</text>
-        <line x1="270" y1="50" x2="260" y2="50" stroke="#0ea5e9" stroke-width="2"/>
-        
-        <text x="280" y="80" font-size="14" fill="#ca8a04" text-anchor="start">نسيج كولنشيمي</text>
-        <line x1="270" y1="80" x2="250" y2="70" stroke="#ca8a04" stroke-width="2"/>
-        
-        <text x="280" y="180" font-size="14" fill="#ef4444" text-anchor="start">حزم وعائية</text>
-        <line x1="270" y1="180" x2="240" y2="180" stroke="#ef4444" stroke-width="2"/>
-        
-        <text x="280" y="230" font-size="14" fill="#475569" text-anchor="start">نخاع</text>
-        <line x1="270" y1="230" x2="210" y2="200" stroke="#475569" stroke-width="2"/>
-      </svg>
+      <ul>
+        <li><b>عشان يحمي نفسه من فقدان الماء:</b> الخلايا اللي على السطح (البشرة) بتقوى بطريقتين:
+          <ul>
+            <li>يا إما يزيد سمك جدر خلايا البشرة ويرسب عليها مادة <span class="term">الكيوتين</span> (مادة شمعية غير منفذة للماء).</li>
+            <li>يا إما يحيط نفسه بطبقة من الخلايا الفلينية اللي بيرسب فيها مادة <span class="term">السوبرين</span> (برضه غير منفذة للماء).</li>
+          </ul>
+        </li>
+        <li><b>عشان يدّي صلابة وقوة للأجزاء الداخلية:</b> هنا النبات بيرسب مواد تانية زي <span class="term">السليلوز</span> أو <span class="term">اللجنين</span> في جدر الخلايا، وده بيحصل في نوعين من الأنسجة:
+          <ul>
+            <li>الخلايا <span class="highlight">الكولنشيمية</span>.</li>
+            <li>الخلايا <span class="highlight">الاسكلرنشيمية</span>.</li>
+          </ul>
+        </li>
+      </ul>
+
+      <p><b>الخلاصة:</b> الدعامة في النبات بتعتمد على ترسيب مواد (زي الكيوتين، السوبرين، السليلوز، واللجنين) في جدر الخلايا، وده اللي بيديها القوة والحماية.</p>
     </div>
 
   </div>
