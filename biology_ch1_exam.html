@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>امتحان الفصل الأول - الأحياء</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Arial, sans-serif; }
+    body { background: #f4f7fb; color: #1a2b3c; padding: 20px; }
+    .container { max-width: 800px; margin: 0 auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+    h1 { color: #1e3a8a; text-align: center; margin-bottom: 20px; border-bottom: 2px solid #e5e7eb; padding-bottom: 10px; font-size: 24px; }
+    h2 { color: #2563eb; margin: 30px 0 15px; font-size: 20px; border-right: 4px solid #2563eb; padding-right: 10px; }
+    
+    .q-box { background: #f8fafc; padding: 20px; border-radius: 8px; margin-bottom: 20px; border: 1px solid #e5e7eb; }
+    .q-text { font-weight: bold; margin-bottom: 15px; font-size: 17px; color: #1e293b; line-height: 1.6;}
+    .options { list-style-type: none; padding: 0; }
+    .options li { background: white; padding: 12px 15px; margin-bottom: 10px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 16px; cursor: pointer; transition: 0.2s; text-align: right;}
+    .options li:hover { background: #f1f5f9; }
+    
+    .options li.correct { background: #dcfce7; border-color: #22c55e; font-weight: bold; color: #166534; }
+    .options li.wrong { background: #fee2e2; border-color: #ef4444; color: #991b1b; }
+    
+    .back-btn { display: inline-block; background: #64748b; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; margin-bottom: 20px; font-size: 14px; }
+    .back-btn:hover { background: #475569; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="biology_ch1.html" class="back-btn">← العودة للفصل</a>
+    <h1>امتحان الفصل الأول الشامل</h1>
+    <p style="text-align:center; color:#64748b; margin-bottom:20px;">الجزء الأول: اختياري (20 سؤال)</p>
+
+    <!-- سؤال 1 -->
+    <div class="q-box">
+      <p class="q-text">1. تحدث الحركة في الإنسان بتآزر مجموعة من الأجهزة وهي:</p>
+      <ul class="options" onclick="checkAns(this, 'c')">
+        <li data-opt="a">أ. الجهاز العضلي والهيكلي والدوري.</li>
+        <li data-opt="b">ب. الجهاز التنفسي والعصبي والهيكلي.</li>
+        <li data-opt="c">ج. الجهاز الهيكلي والعصبي والعضلي.</li>
+        <li data-opt="d">د. الجهاز الهيكلي والتنفسي والدوري.</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 2 -->
+    <div class="q-box">
+      <p class="q-text">2. المخزون المباشر للطاقة في العضلة هو:</p>
+      <ul class="options" onclick="checkAns(this, 'a')">
+        <li data-opt="a">أ. جزيئات ATP</li>
+        <li data-opt="b">ب. الجليكوجين</li>
+        <li data-opt="c">ج. الجلوكوز</li>
+        <li data-opt="d">د. حمض اللاكتيك</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 3 -->
+    <div class="q-box">
+      <p class="q-text">3. يرجع الإجهاد العضلي عند التعب إلى تراكم مركب كيميائي هو:</p>
+      <ul class="options" onclick="checkAns(this, 'c')">
+        <li data-opt="a">أ. ثاني أكسيد الكربون</li>
+        <li data-opt="b">ب. الكحول</li>
+        <li data-opt="c">ج. حمض اللاكتيك</li>
+        <li data-opt="d">د. الأحماض الأمينية</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 4 -->
+    <div class="q-box">
+      <p class="q-text">4. أي مما يلي يعد مثالاً على الحركة الموضعية في النبات؟</p>
+      <ul class="options" onclick="checkAns(this, 'b')">
+        <li data-opt="a">أ. حركة السيتوبلازم.</li>
+        <li data-opt="b">ب. انطباق أوراق نبات المستحية عند لمسها.</li>
+        <li data-opt="c">ج. نمو الجذور باتجاه الماء.</li>
+        <li data-opt="d">د. حركة الأمعاء الدودية في الإنسان.</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 5 -->
+    <div class="q-box">
+      <p class="q-text">5. في تركيب العضلة الهيكلية، المنطقة المضيئة في اللييفة العضلية تتكون من خيوط بروتينية رفيعة تسمى:</p>
+      <ul class="options" onclick="checkAns(this, 'd')">
+        <li data-opt="a">أ. الميوسين</li>
+        <li data-opt="b">ب. الساركوبلازم</li>
+        <li data-opt="c">ج. الكولين استيريز</li>
+        <li data-opt="d">د. الأكتين</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 6 -->
+    <div class="q-box">
+      <p class="q-text">6. الجزء المسؤول عن حماية الحبل الشوكي في الفقرة العظمية هو:</p>
+      <ul class="options" onclick="checkAns(this, 'b')">
+        <li data-opt="a">أ. النتوء الشوكي</li>
+        <li data-opt="b">ب. القناة العصبية</li>
+        <li data-opt="c">ج. النتوء المستعرض</li>
+        <li data-opt="d">د. جسم الفقرة</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 7 -->
+    <div class="q-box">
+      <p class="q-text">7. النسيج الذي يربط العضلات بالعظام هو:</p>
+      <ul class="options" onclick="checkAns(this, 'c')">
+        <li data-opt="a">أ. الأربطة</li>
+        <li data-opt="b">ب. الغضاريف</li>
+        <li data-opt="c">ج. الأوتار</li>
+        <li data-opt="d">د. المفاصل</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 8 -->
+    <div class="q-box">
+      <p class="q-text">8. عدد الفقرات العنقية في العمود الفقري للإنسان هو:</p>
+      <ul class="options" onclick="checkAns(this, 'a')">
+        <li data-opt="a">أ. 7 فقرات</li>
+        <li data-opt="b">ب. 12 فقرة</li>
+        <li data-opt="c">ج. 5 فقرات</li>
+        <li data-opt="d">د. 4 فقرات</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 9 -->
+    <div class="q-box">
+      <p class="q-text">9. أي المواد التالية يرسّبها النبات في جدر خلايا البشرة لمنع فقد الماء؟</p>
+      <ul class="options" onclick="checkAns(this, 'b')">
+        <li data-opt="a">أ. اللجنين</li>
+        <li data-opt="b">ب. الكيوتين</li>
+        <li data-opt="c">ج. السليلوز</li>
+        <li data-opt="d">د. السوبرين</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 10 -->
+    <div class="q-box">
+      <p class="q-text">10. عند نقص جزيئات ATP في العضلة، ماذا يحدث؟</p>
+      <ul class="options" onclick="checkAns(this, 'd')">
+        <li data-opt="a">أ. تنبسط العضلة بسرعة.</li>
+        <li data-opt="b">ب. تزيد سرعة الانقباض.</li>
+        <li data-opt="c">ج. تنفصل خيوط الأكتين والميوسين.</li>
+        <li data-opt="d">د. تظل العضلة في حالة انقباض مستمر (التصلب العضلي).</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 11 -->
+    <div class="q-box">
+      <p class="q-text">11. الجزء من الجهاز الهيكلي الذي يتكون من 8 عظام ويحمي المخ هو:</p>
+      <ul class="options" onclick="checkAns(this, 'c')">
+        <li data-opt="a">أ. الجزء الوجهي من الجمجمة</li>
+        <li data-opt="b">ب. العمود الفقري</li>
+        <li data-opt="c">ج. الجزء المخي من الجمجمة</li>
+        <li data-opt="d">د. القفص الصدري</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 12 -->
+    <div class="q-box">
+      <p class="q-text">12. أي المفاصل التالية يسمح بحركة واسعة ويحتوي على سائل زلالي؟</p>
+      <ul class="options" onclick="checkAns(this, 'd')">
+        <li data-opt="a">أ. المفاصل الليفية</li>
+        <li data-opt="b">ب. المفاصل الغضروفية</li>
+        <li data-opt="c">ج. مفاصل فقرات العمود الفقري</li>
+        <li data-opt="d">د. المفاصل الزلالية</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 13 -->
+    <div class="q-box">
+      <p class="q-text">13. الإنزيم المسؤول عن تحطيم الأسيتيل كولين لترتاح العضلة هو:</p>
+      <ul class="options" onclick="checkAns(this, 'b')">
+        <li data-opt="a">أ. الأميليز</li>
+        <li data-opt="b">ب. الكولين استيريز</li>
+        <li data-opt="c">ج. الببسين</li>
+        <li data-opt="d">د. الليبيز</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 14 -->
+    <div class="q-box">
+      <p class="q-text">14. الحركة التي تحدث داخل الخلية عن طريق دوران السيتوبلازم تسمى:</p>
+      <ul class="options" onclick="checkAns(this, 'a')">
+        <li data-opt="a">أ. الحركة الدورانية للسيتوبلازم</li>
+        <li data-opt="b">ب. حركة النوم</li>
+        <li data-opt="c">ج. حركة الانتحاء</li>
+        <li data-opt="d">د. الحركة الكلية</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 15 -->
+    <div class="q-box">
+      <p class="q-text">15. "الضلوع العائمة" هي:</p>
+      <ul class="options" onclick="checkAns(this, 'c')">
+        <li data-opt="a">أ. أول 7 أزواج من الضلوع.</li>
+        <li data-opt="b">ب. 10 أزواج تتصل بالقص.</li>
+        <li data-opt="c">ج. زوجان قصيران لا يتصلان بعظمة القص.</li>
+        <li data-opt="d">د. الضلوع التي تتصل بالفقرة القطنية.</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 16 -->
+    <div class="q-box">
+      <p class="q-text">16. العضلات الملساء (اللاإرادية) توجد في:</p>
+      <ul class="options" onclick="checkAns(this, 'b')">
+        <li data-opt="a">أ. عضلات الأطراف.</li>
+        <li data-opt="b">ب. جدران الأوعية الدموية والأمعاء.</li>
+        <li data-opt="c">ج. عضلة القلب فقط.</li>
+        <li data-opt="d">د. عضلات الوجه.</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 17 -->
+    <div class="q-box">
+      <p class="q-text">17. في نظرية الخيوط المنزلقة، عند انقباض العضلة:</p>
+      <ul class="options" onclick="checkAns(this, 'c')">
+        <li data-opt="a">أ. تتباعد خيوط الأكتين عن الميوسين.</li>
+        <li data-opt="b">ب. تزيد المسافة بين خطوط Z.</li>
+        <li data-opt="c">ج. تنزلق خيوط الأكتين على خيوط الميوسين وتقصر المسافة بين خطوط Z.</li>
+        <li data-opt="d">د. تختفي خيوط الميوسين.</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 18 -->
+    <div class="q-box">
+      <p class="q-text">18. أي النباتات التالية تتميز بحركة النوم؟</p>
+      <ul class="options" onclick="checkAns(this, 'd')">
+        <li data-opt="a">أ. نبات المستحية.</li>
+        <li data-opt="b">ب. نبات الصبار.</li>
+        <li data-opt="c">ج. نبات الأرز.</li>
+        <li data-opt="d">د. نبات البقوليات.</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 19 -->
+    <div class="q-box">
+      <p class="q-text">19. لتقوية جدر خلاياها وإكسابها صلابة، يرسّب النبات مادة اللجنين في:</p>
+      <ul class="options" onclick="checkAns(this, 'b')">
+        <li data-opt="a">أ. خلايا البشرة.</li>
+        <li data-opt="b">ب. الخلايا الكولنشيمية والاسكلرنشيمية.</li>
+        <li data-opt="c">ج. الخلايا الفلينية.</li>
+        <li data-opt="d">د. خلايا النخاع.</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 20 -->
+    <div class="q-box">
+      <p class="q-text">20. تتصل الأطراف العلوية بالعمود الفقري عن طريق:</p>
+      <ul class="options" onclick="checkAns(this, 'c')">
+        <li data-opt="a">أ. عظم الحوض.</li>
+        <li data-opt="b">ب. عظم الفخذ.</li>
+        <li data-opt="c">ج. عظم الكتف (الحزام الصدري).</li>
+        <li data-opt="d">د. عظمة القص.</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <script>
+    function checkAns(ul, correctOpt) {
+      if (ul.classList.contains('answered')) return;
+      ul.classList.add('answered');
+      const lis = ul.querySelectorAll('li');
+      lis.forEach(li => {
+        if (li.getAttribute('data-opt') === correctOpt) li.classList.add('correct');
+      });
+    }
+  </script>
+    <!-- الجزء التاني: الأسئلة المقالية -->
+    <h2>Part 2: Written Questions (21-30)</h2>
+    
+    <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
+      <p class="q-text" style="color:#1e40af; direction: rtl; text-align: right;">21. علل: يتكفل المحلاق حول الدعامة.</p>
+      <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
+      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:rtl; text-align:right;">لأنه عندما يلامس المحلاق جسم صلب (دعامة) يلتف حوله ويتموج ما بقى من أجزاء المحلاق في حركة لولبية فينقص طوله ويقترب الساق نحو الدعامة فيستقيم الساق رأسيًا، مما يزيد من تدعيمه وتأمين أجزائه الهوائية.</p>
+    </div>
+
+    <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
+      <p class="q-text" style="color:#1e40af; direction: rtl; text-align: right;">22. علل: وجود الأحزمة عند اتصال أطراف الحيوان بهيكله المحوري.</p>
+      <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
+      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:rtl; text-align:right;">لتوفير نقاط اتصال قوية وآمنة للأطراف بالهيكل المحوري، وتعمل كدعامة لهذه الأطراف وتسهل حركتها.</p>
+    </div>
+
+    <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
+      <p class="q-text" style="color:#1e40af; direction: rtl; text-align: right;">23. علل: حدوث إجهاد للعضلة الهيكلية.</p>
+      <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
+      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:rtl; text-align:right;">بسبب الانقباض السريع والمتتالي للعضلة، مما لا يسمح بوصول كمية كافية من الأكسجين، فتلجأ العضلة للتخمر اللاهوائي لإنتاج الطاقة، فيتراكم حمض اللاكتيك ويقل ATP، مما يسبب الشد العضلي والتعب.</p>
+    </div>
+
+    <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
+      <p class="q-text" style="color:#1e40af; direction: rtl; text-align: right;">24. علل: الدم في حركة مستمرة داخل الأوعية الدموية.</p>
+      <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
+      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:rtl; text-align:right;">بسبب الانقباض المستمر للعضلات الملساء (اللاإرادية) الموجودة في جدران هذه الأوعية.</p>
+    </div>
+
+    <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
+      <p class="q-text" style="color:#1e40af; direction: rtl; text-align: right;">25. علل: يتواجد إنزيم الكولين استيريز في نقاط الاتصال العصبي - العضلي.</p>
+      <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
+      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:rtl; text-align:right;">لأنه يعمل على تحطيم مادة الأسيتيل كولين (الناقل العصبي) وتحويلها إلى كولين وحمض خليك، وبالتالي تعود نفاذية غشاء الليفة العضلية لطبيعتها، وتستعيد العضلة حالتها من الانقباض إلى الانبساط (الراحة).</p>
+    </div>
+
+    <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
+      <p class="q-text" style="color:#1e40af; direction: rtl; text-align: right;">26. اشرح كيف يحدث الانقباض العضلي وفقاً لنظرية الخيوط المنزلقة.</p>
+      <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
+      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:rtl; text-align:right;">تنسحب خيوط الأكتين الرفيعة (المناطق المضيئة) على خيوط الميوسين السميكة (المناطق الداكنة)، مما يقلل من المسافة بين خطوط Z (القطعة العضلية تقصر)، وبالتالي تنقبض العضلة. وتحتاج هذه العملية لطاقة من جزيئات ATP وأيونات الكالسيوم.</p>
+    </div>
+
+    <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
+      <p class="q-text" style="color:#1e40af; direction: rtl; text-align: right;">27. قارن بين المفاصل الليفية والمفاصل الزلالية من حيث: (المادة الرابطة - مدى الحركة).</p>
+      <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
+      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:rtl; text-align:right;"><b>المفاصل الليفية:</b> المادة الرابطة: أنسجة ليفية. مدى الحركة: محدودة جداً (مثل عظام الجمجمة).<br><b>المفاصل الزلالية:</b> المادة الرابطة: غضروف شفاف وسائل زلالي. مدى الحركة: واسعة جداً (مثل مفصل الكتف والركبة).</p>
+    </div>
+
+    <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
+      <p class="q-text" style="color:#1e40af; direction: rtl; text-align: right;">28. اذكر أنواع الحركة في النبات مع ذكر مثال لكل نوع.</p>
+      <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
+      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:rtl; text-align:right;">1. <b>حركات موضعية:</b> (استجابة للمس مثل نبات المستحية، أو حركة النوم مثل البقوليات).<br>2. <b>حركة الانتحاء:</b> نمو النبات باتجاه الضوء أو الماء.<br>3. <b>حركة السيتوبلازم:</b> الحركة الدورانية للسيتوبلازم داخل الخلية.</p>
+    </div>
+
+    <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
+      <p class="q-text" style="color:#1e40af; direction: rtl; text-align: right;">29. ما هي أوجه الاختلاف بين العضلات الهيكلية والعضلات الملساء؟</p>
+      <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
+      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:rtl; text-align:right;"><b>العضلات الهيكلية:</b> إرادية (تحت تحكم الإنسان)، ومخططة (بها مناطق داكنة ومضيئة).<br><b>العضلات الملساء:</b> لاإرادية (لا تخضع لتحكم الإنسان)، وغير مخططة (لا تظهر بها الخطوط الداكنة والمضيئة)، وتوجد في جدران الأوعية الدموية والأمعاء.</p>
+    </div>
+
+    <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
+      <p class="q-text" style="color:#1e40af; direction: rtl; text-align: right;">30. اذكر مكونات الهيكل المحوري في الإنسان.</p>
+      <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
+      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:rtl; text-align:right;">يتكون الهيكل المحوري من: 1. العمود الفقري. 2. الجمجمة. 3. القفص الصدري.</p>
+    </div>
+
+  </div> <!-- نهاية الحاوية -->
+</body>
+</html>
