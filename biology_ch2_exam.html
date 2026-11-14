@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>امتحان الفصل الثاني - الأحياء</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Arial, sans-serif; }
+    body { background: #f4f7fb; color: #1a2b3c; padding: 20px; }
+    .container { max-width: 800px; margin: 0 auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+    h1 { color: #1e3a8a; text-align: center; margin-bottom: 20px; border-bottom: 2px solid #e5e7eb; padding-bottom: 10px; font-size: 24px; }
+    h2 { color: #2563eb; margin: 30px 0 15px; font-size: 20px; border-right: 4px solid #2563eb; padding-right: 10px; }
+    
+    .q-box { background: #f8fafc; padding: 20px; border-radius: 8px; margin-bottom: 20px; border: 1px solid #e5e7eb; }
+    .q-text { font-weight: bold; margin-bottom: 15px; font-size: 17px; color: #1e293b; line-height: 1.6;}
+    .options { list-style-type: none; padding: 0; }
+    .options li { background: white; padding: 12px 15px; margin-bottom: 10px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 16px; cursor: pointer; transition: 0.2s; text-align: right;}
+    .options li:hover { background: #f1f5f9; }
+    
+    .options li.correct { background: #dcfce7; border-color: #22c55e; font-weight: bold; color: #166534; }
+    .options li.wrong { background: #fee2e2; border-color: #ef4444; color: #991b1b; }
+    
+    .back-btn { display: inline-block; background: #64748b; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; margin-bottom: 20px; font-size: 14px; }
+    .back-btn:hover { background: #475569; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="biology_ch2.html" class="back-btn">← العودة للفصل</a>
+    <h1>امتحان الفصل الثاني الشامل</h1>
+    <p style="text-align:center; color:#64748b; margin-bottom:20px;">الجزء الأول: اختياري (20 سؤال) - من السهل للصعب</p>
+
+    <!-- سؤال 1 -->
+    <div class="q-box">
+      <p class="q-text">1. الغدة التي تفرز هرمون الثيروكسين هي:</p>
+      <ul class="options" onclick="checkAns(this, 'b')">
+        <li data-opt="a">أ. الغدة النخامية.</li>
+        <li data-opt="b">ب. الغدة الدرقية.</li>
+        <li data-opt="c">ج. الغدة الكظرية.</li>
+        <li data-opt="d">د. الغدد جارات الدرقية.</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 2 -->
+    <div class="q-box">
+      <p class="q-text">2. تفرز الغدة النخامية هرمون النمو (GH) من:</p>
+      <ul class="options" onclick="checkAns(this, 'a')">
+        <li data-opt="a">أ. الجزء الغدي (الأمامي).</li>
+        <li data-opt="b">ب. الجزء العصبي (الخلفي).</li>
+        <li data-opt="c">ج. الغدة الدرقية.</li>
+        <li data-opt="d">د. الغدة الكظرية.</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 3 -->
+    <div class="q-box">
+      <p class="q-text">3. هرمون الأنسولين يفرز من خلايا:</p>
+      <ul class="options" onclick="checkAns(this, 'd')">
+        <li data-opt="a">أ. ألفا في جزر لانجرهانز.</li>
+        <li data-opt="b">ب. دلتا في جزر لانجرهانز.</li>
+        <li data-opt="c">ج. البنكرياسية القنوية.</li>
+        <li data-opt="d">د. بيتا في جزر لانجرهانز.</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 4 -->
+    <div class="q-box">
+      <p class="q-text">4. هرمون الأدرينالين يفرز من:</p>
+      <ul class="options" onclick="checkAns(this, 'c')">
+        <li data-opt="a">أ. قشرة الغدة الكظرية.</li>
+        <li data-opt="b">ب. الغدة الدرقية.</li>
+        <li data-opt="c">ج. نخاع الغدة الكظرية.</li>
+        <li data-opt="d">د. الغدة النخامية.</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 5 -->
+    <div class="q-box">
+      <p class="q-text">5. يطلق على الغدة النخامية لقب:</p>
+      <ul class="options" onclick="checkAns(this, 'b')">
+        <li data-opt="a">أ. الغدة الكبرى.</li>
+        <li data-opt="b">ب. سيدة الغدد.</li>
+        <li data-opt="c">ج. الغدة الرئيسية.</li>
+        <li data-opt="d">د. الغدة المتخصصة.</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 6 -->
+    <div class="q-box">
+      <p class="q-text">6. الهرمون المسؤول عن إدرار البول هو:</p>
+      <ul class="options" onclick="checkAns(this, 'a')">
+        <li data-opt="a">أ. الأوكسيتوسين.</li>
+        <li data-opt="b">ب. الأنسولين.</li>
+        <li data-opt="c">ج. الألدوستيرون.</li>
+        <li data-opt="d">د. هرمون النمو.</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 7 -->
+    <div class="q-box">
+      <p class="q-text">7. الهرمونات التي تفرزها قشرة الغدة الكظرية تنتمي لمجموعة:</p>
+      <ul class="options" onclick="checkAns(this, 'd')">
+        <li data-opt="a">أ. البروتينات.</li>
+        <li data-opt="b">ب. الكربوهيدرات.</li>
+        <li data-opt="c">ج. الأمينات.</li>
+        <li data-opt="d">د. الستيرويدات.</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 8 -->
+    <div class="q-box">
+      <p class="q-text">8. هرمون يعمل على رفع نسبة الجلوكوز في الدم عن طريق تحويل الجليكوجين:</p>
+      <ul class="options" onclick="checkAns(this, 'c')">
+        <li data-opt="a">أ. الأنسولين.</li>
+        <li data-opt="b">ب. الثيروكسين.</li>
+        <li data-opt="c">ج. الجلوكاجون.</li>
+        <li data-opt="d">د. الأوكسيتوسين.</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 9 -->
+    <div class="q-box">
+      <p class="q-text">9. هرمون يفرز من الجزء العصبي للغدة النخامية ويساعد في عملية الولادة:</p>
+      <ul class="options" onclick="checkAns(this, 'a')">
+        <li data-opt="a">أ. الأوكسيتوسين.</li>
+        <li data-opt="b">ب. البرولاكتين.</li>
+        <li data-opt="c">ج. TSH.</li>
+        <li data-opt="d">د. FSH.</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 10 -->
+    <div class="q-box">
+      <p class="q-text">10. زيادة إفراز هرمون النمو في البالغين تؤدي إلى:</p>
+      <ul class="options" onclick="checkAns(this, 'b')">
+        <li data-opt="a">أ. العملقة.</li>
+        <li data-opt="b">ب. الأكروميجالي (تضخم الأطراف).</li>
+        <li data-opt="c">ج. القزامة.</li>
+        <li data-opt="d">د. الميكسوديما.</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 11 -->
+    <div class="q-box">
+      <p class="q-text">11. إصابة بعض الأفراد بالتضخم الجحوظي ترجع إلى زيادة إفراز هرمون:</p>
+      <ul class="options" onclick="checkAns(this, 'c')">
+        <li data-opt="a">أ. النمو.</li>
+        <li data-opt="b">ب. الكورتيزون.</li>
+        <li data-opt="c">ج. الثيروكسين.</li>
+        <li data-opt="d">د. الباراثورمون.</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 12 -->
+    <div class="q-box">
+      <p class="q-text">12. هرمون الباراثورمون يعمل على:</p>
+      <ul class="options" onclick="checkAns(this, 'd')">
+        <li data-opt="a">أ. تقليل نسبة الكالسيوم في الدم.</li>
+        <li data-opt="b">ب. زيادة نسبة السكر في الدم.</li>
+        <li data-opt="c">ج. تقليل إدرار البول.</li>
+        <li data-opt="d">د. رفع نسبة الكالسيوم في الدم.</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 13 -->
+    <div class="q-box">
+      <p class="q-text">13. الهرمون المسؤول عن إنتاج اللبن من الغدد اللبنية:</p>
+      <ul class="options" onclick="checkAns(this, 'b')">
+        <li data-opt="a">أ. FSH.</li>
+        <li data-opt="b">ب. البرولاكتين.</li>
+        <li data-opt="c">ج. LH.</li>
+        <li data-opt="d">د. الأوكسيتوسين.</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 14 -->
+    <div class="q-box">
+      <p class="q-text">14. نقص هرمون الثيروكسين في الأطفال يؤدي إلى مرض:</p>
+      <ul class="options" onclick="checkAns(this, 'a')">
+        <li data-opt="a">أ. القماءة (Cretinism).</li>
+        <li data-opt="b">ب. الميكسوديما.</li>
+        <li data-opt="c">ج. العملقة.</li>
+        <li data-opt="d">د. السكري.</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 15 -->
+    <div class="q-box">
+      <p class="q-text">15. أي الغدد التالية تعتبر غدة مشتركة (مختلطة)؟</p>
+      <ul class="options" onclick="checkAns(this, 'c')">
+        <li data-opt="a">أ. الغدة الدرقية.</li>
+        <li data-opt="b">ب. الغدة النخامية.</li>
+        <li data-opt="c">ج. البنكرياس.</li>
+        <li data-opt="d">د. الغدة الكظرية.</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 16 -->
+    <div class="q-box">
+      <p class="q-text">16. الهرمون المسؤول عن انقباض الحويصلة الصفراوية:</p>
+      <ul class="options" onclick="checkAns(this, 'd')">
+        <li data-opt="a">أ. السيكريتين.</li>
+        <li data-opt="b">ب. الجاسترين.</li>
+        <li data-opt="c">ج. الأنسولين.</li>
+        <li data-opt="d">د. الكوليسيستوكينين.</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 17 -->
+    <div class="q-box">
+      <p class="q-text">17. إفراز هرمون الأدرينالين يهيئ الجسم لمواجهة:</p>
+      <ul class="options" onclick="checkAns(this, 'b')">
+        <li data-opt="a">أ. النوم العميق.</li>
+        <li data-opt="b">ب. حالات الخطر والانفعال والهجوم.</li>
+        <li data-opt="c">ج. الهضم البطيء.</li>
+        <li data-opt="d">د. نقص السكر في الدم.</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 18 -->
+    <div class="q-box">
+      <p class="q-text">18. يعتبر هرمون الأنسولين هرموناً:</p>
+      <ul class="options" onclick="checkAns(this, 'a')">
+        <li data-opt="a">أ. خافضاً لسكر الدم.</li>
+        <li data-opt="b">ب. رافعاً لسكر الدم.</li>
+        <li data-opt="c">ج. رافعاً لضغط الدم.</li>
+        <li data-opt="d">د. خافضاً لضغط الدم.</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 19 -->
+    <div class="q-box">
+      <p class="q-text">19. الهرمون الذي يفرز من الخلايا البينية في الخصية هو:</p>
+      <ul class="options" onclick="checkAns(this, 'c')">
+        <li data-opt="a">أ. البروجسترون.</li>
+        <li data-opt="b">ب. الإستروجين.</li>
+        <li data-opt="c">ج. التستوستيرون.</li>
+        <li data-opt="d">د. الريلاكسين.</li>
+      </ul>
+    </div>
+
+    <!-- سؤال 20 -->
+    <div class="q-box">
+      <p class="q-text">20. عند زيادة إفراز هرمون الباراثورمون، تصبح العظام:</p>
+      <ul class="options" onclick="checkAns(this, 'd')">
+        <li data-opt="a">أ. أكثر صلابة.</li>
+        <li data-opt="b">ب. أكثر كثافة.</li>
+        <li data-opt="c">ج. أطول.</li>
+        <li data-opt="d">د. هشة ومعرضة للكسر.</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <script>
+    function checkAns(ul, correctOpt) {
+      if (ul.classList.contains('answered')) return;
+      ul.classList.add('answered');
+      const lis = ul.querySelectorAll('li');
+      lis.forEach(li => {
+        if (li.getAttribute('data-opt') === correctOpt) li.classList.add('correct');
+      });
+    }
+  </script>
+    <!-- الجزء التاني: الأسئلة المقالية -->
+    <h2>Part 2: Written Questions (21-30) - From Easy to Hard</h2>
+    
+    <!-- سؤال 21 (سهل) -->
+    <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
+      <p class="q-text" style="color:#1e40af; direction: rtl; text-align: right;">21. اذكر خصائص الهرمونات.</p>
+      <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
+      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:rtl; text-align:right;">1. مواد كيميائية عضوية (بروتينية أو أحماض أمينية أو ستيرويدية).<br>2. تفرز بكميات قليلة جداً (تقدير بالميكروجرام).<br>3. لها أهمية كبيرة في حياة الإنسان (تنظيم الوضع الداخلي، النمو، النضوج الجنسي، إلخ).</p>
+    </div>
+
+    <!-- سؤال 22 (سهل) -->
+    <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
+      <p class="q-text" style="color:#1e40af; direction: rtl; text-align: right;">22. علل: يطلق على الغدة النخامية "رئيسة الغدد الصماء".</p>
+      <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
+      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:rtl; text-align:right;">لأنها تتحكم في جهاز الغدد الصماء بالكامل، حيث تفرز هرمونات تؤثر على نشاط وإفراز معظم الغدد الصماء الأخرى في الجسم.</p>
+    </div>
+
+    <!-- سؤال 23 (سهل-متوسط) -->
+    <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
+      <p class="q-text" style="color:#1e40af; direction: rtl; text-align: right;">23. علل: حدوث العملقة في الأطفال.</p>
+      <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
+      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:rtl; text-align:right;">بسبب زيادة إفراز هرمون النمو (GH) من الغدة النخامية في مرحلة الطفولة (قبل البلوغ وإغلاق مراكز نمو العظام).</p>
+    </div>
+
+    <!-- سؤال 24 (متوسط) -->
+    <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
+      <p class="q-text" style="color:#1e40af; direction: rtl; text-align: right;">24. علل: البنكرياس غدة مزدوجة (مختلطة).</p>
+      <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
+      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:rtl; text-align:right;">لأنه يجمع بين الإفراز الخارجي (القنوي) بإفراز الإنزيمات الهاضمة عبر القناة البنكرياسية، والإفراز الداخلي (الصماء) بإفراز هرموني الأنسولين والجلوكاجون مباشرة في الدم.</p>
+    </div>
+
+    <!-- سؤال 25 (متوسط) -->
+    <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
+      <p class="q-text" style="color:#1e40af; direction: rtl; text-align: right;">25. ما دور كل من العالمين: ستارلنج، وبويسن جنسن في اكتشاف الهرمونات؟</p>
+      <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
+      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:rtl; text-align:right;"><b>ستارلنج (1905):</b> اكتشف الهرمونات في الحيوان، عندما لاحظ إفراز البنكرياس لعصارته الهاضمة في الإثني عشر حتى بعد قطع الاتصال العصبي، واستنتج وجود تنبيه كيميائي (غير عصبي) عن طريق الدم.<br><b>بويسن جنسن (1913):</b> اكتشف هرمونات النبات (الأوكسينات)، عندما أثبت أن انتحاء الساق نحو الضوء يحدث بسبب مادة كيميائية تفرزها القمة النامية وتنتقل لمنطقة الاستجابة.</p>
+    </div>
+
+    <!-- سؤال 26 (متوسط-صعب) -->
+    <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
+      <p class="q-text" style="color:#1e40af; direction: rtl; text-align: right;">26. علل: يستخدم خلاصة الفص الخلفي للغدة النخامية للماشية في عمليات الولادة المتعسرة.</p>
+      <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
+      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:rtl; text-align:right;">لأن الفص الخلفي للغدة النخامية يفرز هرمون الأوكسيتوسين، الذي يعمل على تنبيه عضلات الرحم وتنظيم تقلصاتها، مما يسهل ويسرع عملية الولادة.</p>
+    </div>
+
+    <!-- سؤال 27 (صعب) -->
+    <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
+      <p class="q-text" style="color:#1e40af; direction: rtl; text-align: right;">27. تنقسم الغدة النخامية إلى جزء غدي وجزء عصبي. وضح هرمونات كل جزء وأهميته للإنسان.</p>
+      <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
+      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:rtl; text-align:right;"><b>الجزء الغدي:</b> يفرز هرمون النمو (GH) المسؤول عن نمو الجسم، والهرمونات المنبهة للغدد (TSH للدرقية، ACTH للكظرية، FSH و LH للمناسل) لتنشيطها، وهرمون البرولاكتين لإنتاج اللبن.<br><b>الجزء العصبي:</b> يفرز هرمون ADH الذي يقلل إدرار البول ويحافظ على الماء، وهرمون الأوكسيتوسين الذي ينبه عضلات الرحم أثناء الولادة وإدرار اللبن.</p>
+    </div>
+
+    <!-- سؤال 28 (صعب) -->
+    <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
+      <p class="q-text" style="color:#1e40af; direction: rtl; text-align: right;">28. علل: ظهور علامات الذكورة على بعض الإناث البالغة نتيجة للاختلال الهرموني.</p>
+      <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
+      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:rtl; text-align:right;">لأن قشرة الغدة الكظرية تفرز كميات بسيطة من الهرمونات الجنسية (مثل التستوستيرون). إذا حدث خلل أدى إلى زيادة إفراز هذه الهرمونات الذكرية، تظهر صفات ذكورية ثانوية على الإناث (مثل خشونة الصوت ونمو الشعر)، وقد يحدث العكس في الرجال (تأنيث) إذا زادت الهرمونات الأنثوية.</p>
+    </div>
+
+    <!-- سؤال 29 (صعب) -->
+    <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
+      <p class="q-text" style="color:#1e40af; direction: rtl; text-align: right;">29. اشرح العبارة: "يؤدي تضخم الغدة الدرقية إلى ظهور أعراض مرضية واضحة تختلف باختلاف نشاط الغدة والمرحلة التي يحدث فيها التضخم".</p>
+      <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
+      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:rtl; text-align:right;">تقع الغدة الدرقية في مقدمة الرقبة وتفرز الثيروكسين (لتنظيم الأيض والنمو).<br>إذا حدث <b>نقص</b> في إفرازها (نقص اليود) يحدث تضخم بسيط، وفي الطفولة يسبب القماءة (تأخر عقلي وجسمي)، وفي البالغين يسبب الميكسوديما (سمنة وجفاف).<br>أما إذا حدث <b>زيادة</b> في إفرازها (Hyperthyroidism) فيسبب التضخم الجحوظي (جحوظ العينين وزيادة ضربات القلب).</p>
+    </div>
+
+    <!-- سؤال 30 (صعب جداً) -->
+    <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
+      <p class="q-text" style="color:#1e40af; direction: rtl; text-align: right;">30. قارن بين هرموني الأنسولين والجلوكاجون من حيث (مكان الإفراز - الوظيفة - التأثير على مستوى السكر في الدم).</p>
+      <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
+      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:rtl; text-align:right;"><b>الأنسولين:</b> يفرز من خلايا بيتا (جزر لانجرهانز). وظيفته: يحفز أكسدة الجلوكوز ويحوله لجليكوجين. تأثيره: يقلل مستوى السكر في الدم.<br><b>الجلوكاجون:</b> يفرز من خلايا ألفا (جزر لانجرهانز). وظيفته: يحلل الجليكوجين في الكبد ويحوله لجلوكوز. تأثيره: يرفع مستوى السكر في الدم.</p>
+    </div>
+
+  </div> <!-- نهاية الحاوية -->
+</body>
+</html>
