@@ -69,6 +69,18 @@
   </style>
 </head>
 <body>
+  <!-- الشريط العلوي -->
+  <nav class="aa-topbar" aria-label="التنقل الرئيسي">
+    <a class="aa-brand" href="index.html">
+      <span class="aa-logo">📚</span>
+      <span>أبو عريضة أكاديمي<small>ABO ARIDA ACADEMY</small></span>
+    </a>
+    <div class="aa-actions">
+      <a class="aa-action" href="index.html">الرئيسية</a>
+      <button class="aa-action" type="button" id="aaTheme">☀️ / 🌙</button>
+    </div>
+  </nav>
+
   <div class="container">
     <a href="biology_ch1.html" class="back-btn">← العودة للفصل</a>
     <h1>امتحان الفصل الأول الشامل</h1>
@@ -364,17 +376,14 @@
   <!-- 3. السكريبت اللي بيخلي الإجابات تشتغل -->
   <script>
     function checkAns(ul, correctOpt) {
-      // إيقاف الضغط التاني لو الإجابة اتجاوبت
       if (ul.classList.contains('answered')) return;
       ul.classList.add('answered');
 
       const lis = ul.querySelectorAll('li');
       lis.forEach(li => {
-        // تلوين الإجابة الصح دايماً بالأخضر
         if (li.getAttribute('data-opt') === correctOpt) {
           li.classList.add('correct');
         }
-        // لو اليوزر دوس على إجابة غلط، لونها أحمر
         if (li === event.target && !li.classList.contains('correct')) {
           li.classList.add('wrong');
         }
@@ -387,6 +396,4 @@
  const bar=document.createElement('nav');bar.className='aa-topbar';bar.setAttribute('aria-label','التنقل الرئيسي');
  bar.innerHTML='<a class="aa-brand" href="index.html"><span class="aa-logo">📚</span><span>أبو عريضة أكاديمي<small>ABO ARIDA ACADEMY</small></span></a><div class="aa-actions"><a class="aa-action" href="index.html">الرئيسية</a><button class="aa-action" type="button" id="aaTheme">☀️ / 🌙</button></div>';
  document.body.insertBefore(bar,document.body.firstChild);
- const key='aboAridaTheme';function apply(v){document.body.classList.toggle('aa-light',v==='light');}
- let saved='dark';try{saved=localStorage.getItem(key)||'dark'}catch(e){}apply(saved);
- const btn=document.getElementById('aaTheme');btn.addEventListener('click',function(){const next=document.body.classList.contains('aa-light')?'dark':'light';apply(next);try{localStorage.setItem(key,next)}catch(e){}});
+ const key='aboAridaTheme';function apply(v){document.body.classList.t
