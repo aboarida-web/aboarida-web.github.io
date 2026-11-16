@@ -40,6 +40,64 @@ body.aa-light .aa-topbar,body.aa-light .container,body.aa-light .card,body.aa-li
 @media(max-width:640px){.aa-topbar{width:calc(100% - 20px);margin:10px auto 15px;padding:10px 11px;border-radius:15px}.aa-brand{font-size:14px;gap:8px}.aa-logo{width:36px;height:36px;font-size:20px}.aa-brand small{font-size:9px}.aa-action{font-size:11px;padding:8px 9px}.container,.courses,.hero{width:calc(100% - 20px);margin-bottom:14px!important}.container{padding:16px!important;border-radius:17px!important}.hero{padding:27px 15px!important;border-radius:18px!important}.hero h2{font-size:clamp(21px,6vw,28px)!important}.hero p{font-size:14px!important}.courses{padding:18px 0!important}.grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}.card{padding:14px 10px!important}.card .icon{font-size:30px!important}.card h3{font-size:16px!important}.card p{font-size:12px!important}.menu-grid{grid-template-columns:1fr!important;gap:10px!important}.menu-card{padding:14px!important}.menu-card h3{font-size:15px!important}.menu-card .info{gap:9px!important;min-width:0}.menu-card .icon{font-size:25px!important}.back-btn{padding:9px 13px!important;font-size:13px!important}.lesson-content{font-size:15px!important;line-height:1.9!important}.section-title{font-size:16px!important;padding:10px 12px!important}.image-box{margin:17px 0!important}.image-caption{font-size:13px!important}h1{font-size:22px!important}h2{font-size:19px!important}footer{font-size:12px!important;padding:18px 12px!important}}
 @media(max-width:360px){.aa-brand{font-size:12px}.aa-actions{gap:5px}.aa-action{font-size:10px;padding:7px}.grid{grid-template-columns:1fr!important}}
 </style>
+
+
+<style id="aboarida-full-dark-readability-fix">
+/* Dark mode: make lesson explanations, passages, notes and question text readable. */
+body:not(.aa-light) .container,
+body:not(.aa-light) .q-box,
+body:not(.aa-light) .lesson-content,
+body:not(.aa-light) .content-box,
+body:not(.aa-light) .explanation,
+body:not(.aa-light) .passage,
+body:not(.aa-light) .note,
+body:not(.aa-light) .info-box,
+body:not(.aa-light) .lesson-card,
+body:not(.aa-light) .topic-card,
+body:not(.aa-light) .section-card {
+  color: #e8eef8 !important;
+}
+body:not(.aa-light) .container :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
+body:not(.aa-light) .q-box :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
+body:not(.aa-light) .lesson-content :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
+body:not(.aa-light) .content-box :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
+body:not(.aa-light) .explanation :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
+body:not(.aa-light) .passage :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
+body:not(.aa-light) .note :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
+body:not(.aa-light) .info-box :is(p, li, span, strong, b, em, td, th, label, small, blockquote) {
+  color: #e8eef8 !important;
+}
+/* Keep answer choices readable in dark mode. */
+body:not(.aa-light) .options li,
+body:not(.aa-light) .options button,
+body:not(.aa-light) .options label,
+body:not(.aa-light) .option,
+body:not(.aa-light) .answer-option,
+body:not(.aa-light) .choice,
+body:not(.aa-light) .choices li,
+body:not(.aa-light) .choices button,
+body:not(.aa-light) .choices label {
+  color: #1e293b !important;
+  background: #f8fafc !important;
+  border-color: #cbd5e1 !important;
+}
+/* Feedback colors must remain visible and override generic dark-mode text rules. */
+.options li.correct,
+.options .correct {
+  color: #14532d !important;
+  background: #bbf7d0 !important;
+  border: 1px solid #22c55e !important;
+  font-weight: 700 !important;
+}
+.options li.wrong,
+.options .wrong {
+  color: #7f1d1d !important;
+  background: #fecaca !important;
+  border: 1px solid #ef4444 !important;
+  font-weight: 700 !important;
+}
+</style>
+
 </head>
 <body>
   <div class="container">

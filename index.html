@@ -5,7 +5,65 @@
 @media(max-width:900px){.subjects{grid-template-columns:repeat(3,1fr)}.dash{grid-template-columns:1fr 1fr}.dash .panel:nth-child(2){grid-column:span 2}.quick{grid-template-columns:1fr 1fr}.hero{grid-template-columns:1fr  .8fr}.links{gap:12px}}
 @media(max-width:620px){.wrap{width:calc(100% - 24px)}.nav{min-height:65px}.brand{font-size:15px}.logo{width:40px;height:40px;font-size:22px}.links{display:none}.navbtn{padding:8px 10px;font-size:12px}.hero{display:flex;flex-direction:column;padding:24px 0 12px;gap:14px}.hero-copy{padding:8px 4px;text-align:center}.hero h1{font-size:35px;margin:12px 0}.hero p{font-size:15px;margin:0 auto}.hero-art{width:100%;min-height:165px;border-radius:20px}.student{font-size:72px}.art-caption{bottom:10px;font-size:12px;padding:5px 12px}.section{padding:20px 0}.section h2{font-size:20px}.section-head{align-items:start;flex-direction:column}.subjects{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.subject{min-height:120px;padding:12px 7px;border-radius:15px}.subject .ico{font-size:30px}.subject h3{font-size:15px}.dash{grid-template-columns:1fr;gap:10px}.dash .panel:nth-child(2){grid-column:auto}.panel{padding:15px;border-radius:16px}.panel h3{font-size:17px}.quick{grid-template-columns:1fr;gap:10px}.quick .panel{padding:13px}.quick .ico{font-size:35px}.footer{font-size:11px}}
 @media(max-width:350px){.hero h1{font-size:29px}.subjects{grid-template-columns:1fr}.subject{min-height:100px}}
-</style></head><body>
+</style>
+
+<style id="aboarida-full-dark-readability-fix">
+/* Dark mode: make lesson explanations, passages, notes and question text readable. */
+body:not(.aa-light) .container,
+body:not(.aa-light) .q-box,
+body:not(.aa-light) .lesson-content,
+body:not(.aa-light) .content-box,
+body:not(.aa-light) .explanation,
+body:not(.aa-light) .passage,
+body:not(.aa-light) .note,
+body:not(.aa-light) .info-box,
+body:not(.aa-light) .lesson-card,
+body:not(.aa-light) .topic-card,
+body:not(.aa-light) .section-card {
+  color: #e8eef8 !important;
+}
+body:not(.aa-light) .container :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
+body:not(.aa-light) .q-box :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
+body:not(.aa-light) .lesson-content :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
+body:not(.aa-light) .content-box :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
+body:not(.aa-light) .explanation :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
+body:not(.aa-light) .passage :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
+body:not(.aa-light) .note :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
+body:not(.aa-light) .info-box :is(p, li, span, strong, b, em, td, th, label, small, blockquote) {
+  color: #e8eef8 !important;
+}
+/* Keep answer choices readable in dark mode. */
+body:not(.aa-light) .options li,
+body:not(.aa-light) .options button,
+body:not(.aa-light) .options label,
+body:not(.aa-light) .option,
+body:not(.aa-light) .answer-option,
+body:not(.aa-light) .choice,
+body:not(.aa-light) .choices li,
+body:not(.aa-light) .choices button,
+body:not(.aa-light) .choices label {
+  color: #1e293b !important;
+  background: #f8fafc !important;
+  border-color: #cbd5e1 !important;
+}
+/* Feedback colors must remain visible and override generic dark-mode text rules. */
+.options li.correct,
+.options .correct {
+  color: #14532d !important;
+  background: #bbf7d0 !important;
+  border: 1px solid #22c55e !important;
+  font-weight: 700 !important;
+}
+.options li.wrong,
+.options .wrong {
+  color: #7f1d1d !important;
+  background: #fecaca !important;
+  border: 1px solid #ef4444 !important;
+  font-weight: 700 !important;
+}
+</style>
+
+</head><body>
 <div class="top"><div class="wrap nav"><a class="brand" href="index.html"><span class="logo">🎓</span><span>أبو عريضة أكاديمي<small>ABO ARIDA ACADEMY</small></span></a><nav class="links"><a href="index.html">الرئيسية</a><a href="#subjects">المواد الدراسية</a><a href="#tools">الأدوات</a><a href="biology.html">الأحياء</a><a href="english.html">الإنجليزية</a></nav><button class="navbtn" id="themeBtn">☀️ الوضع النهاري</button></div></div>
 <main class="wrap"><section class="hero"><div class="hero-copy"><span class="eyebrow">منصتك التعليمية المتكاملة</span><h1>مستقبلك يبدأ <em>من هنا</em></h1><p>اتعلم، تدرب، اختبر نفسك، وحقق هدفك. كل أدوات المذاكرة اللي تحتاجها في مكان واحد.</p><a class="primary" href="#subjects">ابدأ رحلتك التعليمية　←</a></div><div class="hero-art"><div class="student">👨🏻‍🎓📚</div><div class="art-caption">معاً نحو النجاح ✨</div></div></section>
 <section class="section" id="subjects"><div class="section-head"><div><h2>⭐ ماذا تريد أن تدرس اليوم؟</h2><p>اختر المادة وانتقل مباشرة إلى محتواها</p></div></div><div class="subjects"><a class="subject bio" href="biology.html"><div class="ico">🌿</div><h3>الأحياء</h3><small>استكشف الدروس ←</small></a><a class="subject chem" href="#tools"><div class="ico">🧪</div><h3>الكيمياء</h3><small>قريباً</small></a><a class="subject phys" href="#tools"><div class="ico">⚛️</div><h3>الفيزياء</h3><small>قريباً</small></a><a class="subject math" href="#tools"><div class="ico">📐</div><h3>الرياضيات</h3><small>قريباً</small></a><a class="subject arab" href="arabic.html"><div class="ico">📖</div><h3>اللغة العربية</h3><small>استكشف الدروس ←</small></a><a class="subject eng" href="english.html"><div class="ico">🌍</div><h3>الإنجليزية</h3><small>استكشف الوحدات ←</small></a></div></section>
