@@ -39,59 +39,36 @@ body.aa-light .aa-topbar,body.aa-light .container,body.aa-light .card,body.aa-li
 @media(max-width:360px){.aa-brand{font-size:12px}.aa-actions{gap:5px}.aa-action{font-size:10px;padding:7px}.grid{grid-template-columns:1fr!important}}
 </style>
 
-
-<style id="aboarida-full-dark-readability-fix">
-/* Dark mode: make lesson explanations, passages, notes and question text readable. */
-body:not(.aa-light) .container,
-body:not(.aa-light) .q-box,
-body:not(.aa-light) .lesson-content,
-body:not(.aa-light) .content-box,
-body:not(.aa-light) .explanation,
-body:not(.aa-light) .passage,
-body:not(.aa-light) .note,
-body:not(.aa-light) .info-box,
-body:not(.aa-light) .lesson-card,
-body:not(.aa-light) .topic-card,
-body:not(.aa-light) .section-card {
-  color: #e8eef8 !important;
-}
-body:not(.aa-light) .container :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
-body:not(.aa-light) .q-box :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
-body:not(.aa-light) .lesson-content :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
-body:not(.aa-light) .content-box :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
-body:not(.aa-light) .explanation :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
-body:not(.aa-light) .passage :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
-body:not(.aa-light) .note :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
-body:not(.aa-light) .info-box :is(p, li, span, strong, b, em, td, th, label, small, blockquote) {
-  color: #e8eef8 !important;
-}
-/* Keep answer choices readable in dark mode. */
-body:not(.aa-light) .options li,
-body:not(.aa-light) .options button,
-body:not(.aa-light) .options label,
-body:not(.aa-light) .option,
-body:not(.aa-light) .answer-option,
-body:not(.aa-light) .choice,
-body:not(.aa-light) .choices li,
-body:not(.aa-light) .choices button,
-body:not(.aa-light) .choices label {
-  color: #1e293b !important;
+<style id="aboarida-readable-panels-fix">
+/* Dark theme: keep lesson and question panels readable without whitening the whole page. */
+body:not(.aa-light) :is(.q-box,.lesson-content,.example-box,.text-box,.translation-box,.vocab-box,.questions-box,.definition,.example,.idiom-card,.info,.info-box,.content-box,.passage,.note,.highlight,.tree-diagram,.image-box) {
   background: #f8fafc !important;
+  color: #1e293b !important;
   border-color: #cbd5e1 !important;
 }
-/* Feedback colors must remain visible and override generic dark-mode text rules. */
-.options li.correct,
-.options .correct {
+body:not(.aa-light) :is(.q-box,.lesson-content,.example-box,.text-box,.translation-box,.vocab-box,.questions-box,.definition,.example,.idiom-card,.info,.info-box,.content-box,.passage,.note,.highlight,.tree-diagram,.image-box) :is(p,li,span,strong,b,em,small,label,td,th,h1,h2,h3,h4,summary,blockquote) {
+  color: #1e293b !important;
+}
+/* Preserve blue headings and colored callouts where they are intentionally used. */
+body:not(.aa-light) :is(.q-box,.lesson-content,.example-box,.text-box,.translation-box,.vocab-box,.questions-box,.definition,.example,.idiom-card,.info,.info-box,.content-box,.passage,.note,.highlight,.tree-diagram,.image-box) a {
+  color: #1d4ed8 !important;
+}
+/* Multiple-choice answers stay readable and retain clear result feedback. */
+body:not(.aa-light) .options li {
+  color: #1e293b !important;
+  background: #ffffff !important;
+  border-color: #cbd5e1 !important;
+}
+.options li.correct {
   color: #14532d !important;
   background: #bbf7d0 !important;
-  border: 1px solid #22c55e !important;
+  border: 2px solid #22c55e !important;
   font-weight: 700 !important;
 }
-.options li.wrong,
-.options .wrong {
+.options li.wrong {
   color: #7f1d1d !important;
   background: #fecaca !important;
-  border: 1px solid #ef4444 !important;
+  border: 2px solid #ef4444 !important;
   font-weight: 700 !important;
 }
 </style>
@@ -106,7 +83,7 @@ body:not(.aa-light) .choices label {
     <!-- سؤال 1 -->
     <div class="q-box">
       <p class="q-text">1. The marine ecosystem is incredibly .........., with thousands of different species.</p>
-      <ul class="options" onclick="checkAns(this, 'b')">
+      <ul class="options" onclick="checkAns(this, 'b', event)">
         <li data-opt="a">a. fragile</li>
         <li data-opt="b">b. diverse</li>
         <li data-opt="c">c. hazardous</li>
@@ -117,7 +94,7 @@ body:not(.aa-light) .choices label {
     <!-- سؤال 2 -->
     <div class="q-box">
       <p class="q-text">2. Pollution and climate change .......... a serious threat to coral reefs.</p>
-      <ul class="options" onclick="checkAns(this, 'c')">
+      <ul class="options" onclick="checkAns(this, 'c', event)">
         <li data-opt="a">a. disrupt</li>
         <li data-opt="b">b. underestimate</li>
         <li data-opt="c">c. pose</li>
@@ -128,7 +105,7 @@ body:not(.aa-light) .choices label {
     <!-- سؤال 3 -->
     <div class="q-box">
       <p class="q-text">3. Some people .......... the importance of sleep, but it is essential for health.</p>
-      <ul class="options" onclick="checkAns(this, 'd')">
+      <ul class="options" onclick="checkAns(this, 'd', event)">
         <li data-opt="a">a. dedicate</li>
         <li data-opt="b">b. detect</li>
         <li data-opt="c">c. preserve</li>
@@ -139,7 +116,7 @@ body:not(.aa-light) .choices label {
     <!-- سؤال 4 -->
     <div class="q-box">
       <p class="q-text">4. The sea turtle is an .......... species and needs protection.</p>
-      <ul class="options" onclick="checkAns(this, 'a')">
+      <ul class="options" onclick="checkAns(this, 'a', event)">
         <li data-opt="a">a. endangered</li>
         <li data-opt="b">b. amazing</li>
         <li data-opt="c">c. glowing</li>
@@ -150,7 +127,7 @@ body:not(.aa-light) .choices label {
     <!-- سؤال 5 -->
     <div class="q-box">
       <p class="q-text">5. The scientist used a .......... drone to observe the whales without disturbing them.</p>
-      <ul class="options" onclick="checkAns(this, 'b')">
+      <ul class="options" onclick="checkAns(this, 'b', event)">
         <li data-opt="a">a. hazardous</li>
         <li data-opt="b">b. non-invasive</li>
         <li data-opt="c">c. fragile</li>
@@ -161,7 +138,7 @@ body:not(.aa-light) .choices label {
     <!-- سؤال 6 -->
     <div class="q-box">
       <p class="q-text">6. The .......... beauty of the coral reef left the divers speechless.</p>
-      <ul class="options" onclick="checkAns(this, 'c')">
+      <ul class="options" onclick="checkAns(this, 'c', event)">
         <li data-opt="a">a. risky</li>
         <li data-opt="b">b. fussy</li>
         <li data-opt="c">c. breathtaking</li>
@@ -172,7 +149,7 @@ body:not(.aa-light) .choices label {
     <!-- سؤال 7 -->
     <div class="q-box">
       <p class="q-text">7. A .......... animal is one that is likely to become extinct.</p>
-      <ul class="options" onclick="checkAns(this, 'a')">
+      <ul class="options" onclick="checkAns(this, 'a', event)">
         <li data-opt="a">a. endangered</li>
         <li data-opt="b">b. magnificent</li>
         <li data-opt="c">c. graceful</li>
@@ -183,7 +160,7 @@ body:not(.aa-light) .choices label {
     <!-- سؤال 8 (قواعد - الصفات المركبة) -->
     <div class="q-box">
       <p class="q-text">8. My son is a .......... child.</p>
-      <ul class="options" onclick="checkAns(this, 'b')">
+      <ul class="options" onclick="checkAns(this, 'b', event)">
         <li data-opt="a">a. ten-years-old</li>
         <li data-opt="b">b. ten-year-old</li>
         <li data-opt="c">c. ten years old</li>
@@ -194,7 +171,7 @@ body:not(.aa-light) .choices label {
     <!-- سؤال 9 -->
     <div class="q-box">
       <p class="q-text">9. Mohammed Salah is a .......... footballer.</p>
-      <ul class="options" onclick="checkAns(this, 'c')">
+      <ul class="options" onclick="checkAns(this, 'c', event)">
         <li data-opt="a">a. well known</li>
         <li data-opt="b">b. wellknown</li>
         <li data-opt="c">c. well-known</li>
@@ -205,7 +182,7 @@ body:not(.aa-light) .choices label {
     <!-- سؤال 10 -->
     <div class="q-box">
       <p class="q-text">10. My house is in a .......... street.</p>
-      <ul class="options" onclick="checkAns(this, 'd')">
+      <ul class="options" onclick="checkAns(this, 'd', event)">
         <li data-opt="a">a. ten-metres-wide</li>
         <li data-opt="b">b. ten-metre-wide</li>
         <li data-opt="c">c. ten metres wide</li>
@@ -216,7 +193,7 @@ body:not(.aa-light) .choices label {
     <!-- سؤال 11 -->
     <div class="q-box">
       <p class="q-text">11. She has an .......... smile.</p>
-      <ul class="options" onclick="checkAns(this, 'b')">
+      <ul class="options" onclick="checkAns(this, 'b', event)">
         <li data-opt="a">a. ever-lasting</li>
         <li data-opt="b">b. ever-lasting</li>
         <li data-opt="c">c. ever lasting</li>
@@ -227,7 +204,7 @@ body:not(.aa-light) .choices label {
     <!-- سؤال 12 -->
     <div class="q-box">
       <p class="q-text">12. I prefer .......... food to avoid gaining weight.</p>
-      <ul class="options" onclick="checkAns(this, 'a')">
+      <ul class="options" onclick="checkAns(this, 'a', event)">
         <li data-opt="a">a. fat-free</li>
         <li data-opt="b">b. fat free</li>
         <li data-opt="c">c. free-fat</li>
@@ -238,7 +215,7 @@ body:not(.aa-light) .choices label {
     <!-- سؤال 13 -->
     <div class="q-box">
       <p class="q-text">13. He is a .......... student; he always achieves his goals.</p>
-      <ul class="options" onclick="checkAns(this, 'c')">
+      <ul class="options" onclick="checkAns(this, 'c', event)">
         <li data-opt="a">a. strong willed</li>
         <li data-opt="b">b. strong-will</li>
         <li data-opt="c">c. strong-willed</li>
@@ -249,7 +226,7 @@ body:not(.aa-light) .choices label {
     <!-- سؤال 14 -->
     <div class="q-box">
       <p class="q-text">14. We need to .......... the environment for future generations.</p>
-      <ul class="options" onclick="checkAns(this, 'd')">
+      <ul class="options" onclick="checkAns(this, 'd', event)">
         <li data-opt="a">a. extinct</li>
         <li data-opt="b">b. pollute</li>
         <li data-opt="c">c. disrupt</li>
@@ -260,7 +237,7 @@ body:not(.aa-light) .choices label {
     <!-- سؤال 15 -->
     <div class="q-box">
       <p class="q-text">15. The .......... of the ocean is home to many strange creatures.</p>
-      <ul class="options" onclick="checkAns(this, 'a')">
+      <ul class="options" onclick="checkAns(this, 'a', event)">
         <li data-opt="a">a. depth</li>
         <li data-opt="b">b. current</li>
         <li data-opt="c">c. habitat</li>
@@ -271,32 +248,25 @@ body:not(.aa-light) .choices label {
   </div>
 
   <script>
-    function checkAns(ul, correctOpt) {
-  if (ul.classList.contains('answered')) return;
-  ul.classList.add('answered');
-
-  const clicked = (typeof event !== 'undefined' && event.target)
-    ? event.target.closest('li[data-opt]')
-    : null;
-
-  const lis = ul.querySelectorAll('li[data-opt]');
-  lis.forEach(li => {
-    if (li.getAttribute('data-opt') === correctOpt) {
-      li.classList.add('correct');
+    function checkAns(ul, correctOpt, evt) {
+      if (ul.classList.contains('answered')) return;
+      ul.classList.add('answered');
+      const clicked = evt && evt.target ? evt.target.closest('li[data-opt]') : null;
+      const lis = ul.querySelectorAll('li[data-opt]');
+      lis.forEach(li => {
+        if (li.getAttribute('data-opt') === correctOpt) li.classList.add('correct');
+      });
+      if (clicked && clicked.getAttribute('data-opt') !== correctOpt) {
+        clicked.classList.add('wrong');
+      }
     }
-  });
-
-  if (clicked && clicked.getAttribute('data-opt') !== correctOpt) {
-    clicked.classList.add('wrong');
-  }
-}
       });
     }
   </script>
     <!-- أسئلة 16 إلى 20 -->
     <div class="q-box">
       <p class="q-text">16. The company hired a .......... to fix the computer network.</p>
-      <ul class="options" onclick="checkAns(this, 'b')">
+      <ul class="options" onclick="checkAns(this, 'b', event)">
         <li data-opt="a">a. biologist</li>
         <li data-opt="b">b. technician</li>
         <li data-opt="c">c. predator</li>
@@ -306,7 +276,7 @@ body:not(.aa-light) .choices label {
 
     <div class="q-box">
       <p class="q-text">17. The police were able to .......... the thief using security cameras.</p>
-      <ul class="options" onclick="checkAns(this, 'a')">
+      <ul class="options" onclick="checkAns(this, 'a', event)">
         <li data-opt="a">a. detect</li>
         <li data-opt="b">b. hatch</li>
         <li data-opt="c">c. scramble</li>
@@ -316,7 +286,7 @@ body:not(.aa-light) .choices label {
 
     <div class="q-box">
       <p class="q-text">18. The bird built a nest to .......... its eggs.</p>
-      <ul class="options" onclick="checkAns(this, 'c')">
+      <ul class="options" onclick="checkAns(this, 'c', event)">
         <li data-opt="a">a. disrupt</li>
         <li data-opt="b">b. underestimate</li>
         <li data-opt="c">c. hatch</li>
@@ -326,7 +296,7 @@ body:not(.aa-light) .choices label {
 
     <div class="q-box">
       <p class="q-text">19. The Titanic was a .......... ship, but it sank on its first voyage.</p>
-      <ul class="options" onclick="checkAns(this, 'd')">
+      <ul class="options" onclick="checkAns(this, 'd', event)">
         <li data-opt="a">a. fragile</li>
         <li data-opt="b">b. hazardous</li>
         <li data-opt="c">c. risky</li>
@@ -336,7 +306,7 @@ body:not(.aa-light) .choices label {
 
     <div class="q-box">
       <p class="q-text">20. She was .......... from the boat and struggled to swim to the shore.</p>
-      <ul class="options" onclick="checkAns(this, 'b')">
+      <ul class="options" onclick="checkAns(this, 'b', event)">
         <li data-opt="a">a. entangled</li>
         <li data-opt="b">b. separated</li>
         <li data-opt="c">c. exposed</li>

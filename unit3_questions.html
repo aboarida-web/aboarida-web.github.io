@@ -39,59 +39,36 @@ body.aa-light .aa-topbar,body.aa-light .container,body.aa-light .card,body.aa-li
 @media(max-width:360px){.aa-brand{font-size:12px}.aa-actions{gap:5px}.aa-action{font-size:10px;padding:7px}.grid{grid-template-columns:1fr!important}}
 </style>
 
-
-<style id="aboarida-full-dark-readability-fix">
-/* Dark mode: make lesson explanations, passages, notes and question text readable. */
-body:not(.aa-light) .container,
-body:not(.aa-light) .q-box,
-body:not(.aa-light) .lesson-content,
-body:not(.aa-light) .content-box,
-body:not(.aa-light) .explanation,
-body:not(.aa-light) .passage,
-body:not(.aa-light) .note,
-body:not(.aa-light) .info-box,
-body:not(.aa-light) .lesson-card,
-body:not(.aa-light) .topic-card,
-body:not(.aa-light) .section-card {
-  color: #e8eef8 !important;
-}
-body:not(.aa-light) .container :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
-body:not(.aa-light) .q-box :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
-body:not(.aa-light) .lesson-content :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
-body:not(.aa-light) .content-box :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
-body:not(.aa-light) .explanation :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
-body:not(.aa-light) .passage :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
-body:not(.aa-light) .note :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
-body:not(.aa-light) .info-box :is(p, li, span, strong, b, em, td, th, label, small, blockquote) {
-  color: #e8eef8 !important;
-}
-/* Keep answer choices readable in dark mode. */
-body:not(.aa-light) .options li,
-body:not(.aa-light) .options button,
-body:not(.aa-light) .options label,
-body:not(.aa-light) .option,
-body:not(.aa-light) .answer-option,
-body:not(.aa-light) .choice,
-body:not(.aa-light) .choices li,
-body:not(.aa-light) .choices button,
-body:not(.aa-light) .choices label {
-  color: #1e293b !important;
+<style id="aboarida-readable-panels-fix">
+/* Dark theme: keep lesson and question panels readable without whitening the whole page. */
+body:not(.aa-light) :is(.q-box,.lesson-content,.example-box,.text-box,.translation-box,.vocab-box,.questions-box,.definition,.example,.idiom-card,.info,.info-box,.content-box,.passage,.note,.highlight,.tree-diagram,.image-box) {
   background: #f8fafc !important;
+  color: #1e293b !important;
   border-color: #cbd5e1 !important;
 }
-/* Feedback colors must remain visible and override generic dark-mode text rules. */
-.options li.correct,
-.options .correct {
+body:not(.aa-light) :is(.q-box,.lesson-content,.example-box,.text-box,.translation-box,.vocab-box,.questions-box,.definition,.example,.idiom-card,.info,.info-box,.content-box,.passage,.note,.highlight,.tree-diagram,.image-box) :is(p,li,span,strong,b,em,small,label,td,th,h1,h2,h3,h4,summary,blockquote) {
+  color: #1e293b !important;
+}
+/* Preserve blue headings and colored callouts where they are intentionally used. */
+body:not(.aa-light) :is(.q-box,.lesson-content,.example-box,.text-box,.translation-box,.vocab-box,.questions-box,.definition,.example,.idiom-card,.info,.info-box,.content-box,.passage,.note,.highlight,.tree-diagram,.image-box) a {
+  color: #1d4ed8 !important;
+}
+/* Multiple-choice answers stay readable and retain clear result feedback. */
+body:not(.aa-light) .options li {
+  color: #1e293b !important;
+  background: #ffffff !important;
+  border-color: #cbd5e1 !important;
+}
+.options li.correct {
   color: #14532d !important;
   background: #bbf7d0 !important;
-  border: 1px solid #22c55e !important;
+  border: 2px solid #22c55e !important;
   font-weight: 700 !important;
 }
-.options li.wrong,
-.options .wrong {
+.options li.wrong {
   color: #7f1d1d !important;
   background: #fecaca !important;
-  border: 1px solid #ef4444 !important;
+  border: 2px solid #ef4444 !important;
   font-weight: 700 !important;
 }
 </style>
@@ -106,7 +83,7 @@ body:not(.aa-light) .choices label {
     <!-- سؤال 1 -->
     <div class="q-box">
       <p class="q-text">1. Communities pushed to the edge of society and given limited opportunities are called .......... .</p>
-      <ul class="options" onclick="checkAns(this, 'a')">
+      <ul class="options" onclick="checkAns(this, 'a', event)">
         <li data-opt="a">a. marginalized communities</li>
         <li data-opt="b">b. climate resilience</li>
         <li data-opt="c">c. greenhouse gas emissions</li>
@@ -117,7 +94,7 @@ body:not(.aa-light) .choices label {
     <!-- سؤال 2 -->
     <div class="q-box">
       <p class="q-text">2. Farmers faced a .......... drought that lasted nearly eight months and destroyed most of the crops.</p>
-      <ul class="options" onclick="checkAns(this, 'c')">
+      <ul class="options" onclick="checkAns(this, 'c', event)">
         <li data-opt="a">a. profound</li>
         <li data-opt="b">b. sustainable</li>
         <li data-opt="c">c. prolonged</li>
@@ -128,7 +105,7 @@ body:not(.aa-light) .choices label {
     <!-- سؤال 3 -->
     <div class="q-box">
       <p class="q-text">3. Infants and the elderly are especially .......... during severe weather events.</p>
-      <ul class="options" onclick="checkAns(this, 'd')">
+      <ul class="options" onclick="checkAns(this, 'd', event)">
         <li data-opt="a">a. prolonged</li>
         <li data-opt="b">b. scorching</li>
         <li data-opt="c">c. marginalized</li>
@@ -139,7 +116,7 @@ body:not(.aa-light) .choices label {
     <!-- سؤال 4 -->
     <div class="q-box">
       <p class="q-text">4. Good education helps to .......... people to make informed decisions.</p>
-      <ul class="options" onclick="checkAns(this, 'b')">
+      <ul class="options" onclick="checkAns(this, 'b', event)">
         <li data-opt="a">a. empowerment</li>
         <li data-opt="b">b. empower</li>
         <li data-opt="c">c. empowered</li>
@@ -150,7 +127,7 @@ body:not(.aa-light) .choices label {
     <!-- سؤال 5 -->
     <div class="q-box">
       <p class="q-text">5. "The activists demand equal rights." The word 'activists' here is a synonym of .......... .</p>
-      <ul class="options" onclick="checkAns(this, 'c')">
+      <ul class="options" onclick="checkAns(this, 'c', event)">
         <li data-opt="a">a. bystanders</li>
         <li data-opt="b">b. volunteers</li>
         <li data-opt="c">c. campaigners</li>
@@ -161,7 +138,7 @@ body:not(.aa-light) .choices label {
     <!-- سؤال 6 -->
     <div class="q-box">
       <p class="q-text">6. To .......... is to show, point out, or make something clear or known.</p>
-      <ul class="options" onclick="checkAns(this, 'c')">
+      <ul class="options" onclick="checkAns(this, 'c', event)">
         <li data-opt="a">a. accompany</li>
         <li data-opt="b">b. mitigate</li>
         <li data-opt="c">c. indicate</li>
@@ -172,7 +149,7 @@ body:not(.aa-light) .choices label {
     <!-- سؤال 7 -->
     <div class="q-box">
       <p class="q-text">7. "Lack of commitment among workers reduced the company's success." "Commitment" here is an antonym of .......... .</p>
-      <ul class="options" onclick="checkAns(this, 'c')">
+      <ul class="options" onclick="checkAns(this, 'c', event)">
         <li data-opt="a">a. devotion</li>
         <li data-opt="b">b. focus</li>
         <li data-opt="c">c. indifference</li>
@@ -183,7 +160,7 @@ body:not(.aa-light) .choices label {
     <!-- سؤال 8 -->
     <div class="q-box">
       <p class="q-text">8. Ahmed .......... his classmates to plant more trees around the school.</p>
-      <ul class="options" onclick="checkAns(this, 'c')">
+      <ul class="options" onclick="checkAns(this, 'c', event)">
         <li data-opt="a">a. innovated</li>
         <li data-opt="b">b. melted</li>
         <li data-opt="c">c. persuaded</li>
@@ -194,7 +171,7 @@ body:not(.aa-light) .choices label {
     <!-- سؤال 9 -->
     <div class="q-box">
       <p class="q-text">9. Zein always submits homework on time. He .......... late with it today.</p>
-      <ul class="options" onclick="checkAns(this, 'a')">
+      <ul class="options" onclick="checkAns(this, 'a', event)">
         <li data-opt="a">a. can't be</li>
         <li data-opt="b">b. must be</li>
         <li data-opt="c">c. might have</li>
@@ -205,7 +182,7 @@ body:not(.aa-light) .choices label {
     <!-- سؤال 10 -->
     <div class="q-box">
       <p class="q-text">10. A: Where's Rodayna? Her coffee is still hot. B: She .......... far.</p>
-      <ul class="options" onclick="checkAns(this, 'b')">
+      <ul class="options" onclick="checkAns(this, 'b', event)">
         <li data-opt="a">a. must have gone</li>
         <li data-opt="b">b. can't be</li>
         <li data-opt="c">c. might have</li>
@@ -216,7 +193,7 @@ body:not(.aa-light) .choices label {
     <!-- سؤال 11 -->
     <div class="q-box">
       <p class="q-text">11. They .......... about the event. No one told them.</p>
-      <ul class="options" onclick="checkAns(this, 'b')">
+      <ul class="options" onclick="checkAns(this, 'b', event)">
         <li data-opt="a">a. must have known</li>
         <li data-opt="b">b. can't have known</li>
         <li data-opt="c">c. might be</li>
@@ -227,7 +204,7 @@ body:not(.aa-light) .choices label {
     <!-- سؤال 12 -->
     <div class="q-box">
       <p class="q-text">12. You look tired. You .......... have stayed up so late last night.</p>
-      <ul class="options" onclick="checkAns(this, 'c')">
+      <ul class="options" onclick="checkAns(this, 'c', event)">
         <li data-opt="a">a. mustn't</li>
         <li data-opt="b">b. can't</li>
         <li data-opt="c">c. shouldn't</li>
@@ -238,7 +215,7 @@ body:not(.aa-light) .choices label {
     <!-- سؤال 13 -->
     <div class="q-box">
       <p class="q-text">13. Rodayna looks unusually confident. She .......... passed her driving test this morning.</p>
-      <ul class="options" onclick="checkAns(this, 'a')">
+      <ul class="options" onclick="checkAns(this, 'a', event)">
         <li data-opt="a">a. must have</li>
         <li data-opt="b">b. can't have</li>
         <li data-opt="c">c. could</li>
@@ -249,7 +226,7 @@ body:not(.aa-light) .choices label {
     <!-- سؤال 14 -->
     <div class="q-box">
       <p class="q-text">14. We got lost; we .......... have used the GPS instead of guessing.</p>
-      <ul class="options" onclick="checkAns(this, 'a')">
+      <ul class="options" onclick="checkAns(this, 'a', event)">
         <li data-opt="a">a. should</li>
         <li data-opt="b">b. shouldn't</li>
         <li data-opt="c">c. could</li>
@@ -260,7 +237,7 @@ body:not(.aa-light) .choices label {
     <!-- سؤال 15 -->
     <div class="q-box">
       <p class="q-text">15. She failed the test. She .......... studied harder for it.</p>
-      <ul class="options" onclick="checkAns(this, 'a')">
+      <ul class="options" onclick="checkAns(this, 'a', event)">
         <li data-opt="a">a. should have</li>
         <li data-opt="b">b. must have</li>
         <li data-opt="c">c. can't have</li>
@@ -271,7 +248,7 @@ body:not(.aa-light) .choices label {
     <!-- سؤال 16 -->
     <div class="q-box">
       <p class="q-text">16. We heard the door slam, but nobody came in. It .......... been the wind.</p>
-      <ul class="options" onclick="checkAns(this, 'b')">
+      <ul class="options" onclick="checkAns(this, 'b', event)">
         <li data-opt="a">a. must</li>
         <li data-opt="b">b. could have</li>
         <li data-opt="c">c. can't</li>
@@ -282,7 +259,7 @@ body:not(.aa-light) .choices label {
     <!-- سؤال 17 -->
     <div class="q-box">
       <p class="q-text">17. The professor's office light is still on at midnight. He .......... the research paper.</p>
-      <ul class="options" onclick="checkAns(this, 'b')">
+      <ul class="options" onclick="checkAns(this, 'b', event)">
         <li data-opt="a">a. can't be finishing</li>
         <li data-opt="b">b. might be finishing</li>
         <li data-opt="c">c. must have finished</li>
@@ -293,7 +270,7 @@ body:not(.aa-light) .choices label {
     <!-- سؤال 18 -->
     <div class="q-box">
       <p class="q-text">18. The museum was closed yesterday; you .......... have seen the new exhibit then.</p>
-      <ul class="options" onclick="checkAns(this, 'a')">
+      <ul class="options" onclick="checkAns(this, 'a', event)">
         <li data-opt="a">a. can't</li>
         <li data-opt="b">b. might</li>
         <li data-opt="c">c. must</li>
@@ -304,7 +281,7 @@ body:not(.aa-light) .choices label {
     <!-- سؤال 19 -->
     <div class="q-box">
       <p class="q-text">19. The museum was open yesterday; you .......... have seen the new exhibit if you'd wanted to.</p>
-      <ul class="options" onclick="checkAns(this, 'd')">
+      <ul class="options" onclick="checkAns(this, 'd', event)">
         <li data-opt="a">a. can't</li>
         <li data-opt="b">b. might</li>
         <li data-opt="c">c. must</li>
@@ -315,7 +292,7 @@ body:not(.aa-light) .choices label {
     <!-- سؤال 20 -->
     <div class="q-box">
       <p class="q-text">20. A successful persuasive essay combines logical evidence with .......... .</p>
-      <ul class="options" onclick="checkAns(this, 'c')">
+      <ul class="options" onclick="checkAns(this, 'c', event)">
         <li data-opt="a">a. jokes and stories</li>
         <li data-opt="b">b. personal memories</li>
         <li data-opt="c">c. powerful emotional language</li>
@@ -326,25 +303,18 @@ body:not(.aa-light) .choices label {
   </div>
 
   <script>
-    function checkAns(ul, correctOpt) {
-  if (ul.classList.contains('answered')) return;
-  ul.classList.add('answered');
-
-  const clicked = (typeof event !== 'undefined' && event.target)
-    ? event.target.closest('li[data-opt]')
-    : null;
-
-  const lis = ul.querySelectorAll('li[data-opt]');
-  lis.forEach(li => {
-    if (li.getAttribute('data-opt') === correctOpt) {
-      li.classList.add('correct');
+    function checkAns(ul, correctOpt, evt) {
+      if (ul.classList.contains('answered')) return;
+      ul.classList.add('answered');
+      const clicked = evt && evt.target ? evt.target.closest('li[data-opt]') : null;
+      const lis = ul.querySelectorAll('li[data-opt]');
+      lis.forEach(li => {
+        if (li.getAttribute('data-opt') === correctOpt) li.classList.add('correct');
+      });
+      if (clicked && clicked.getAttribute('data-opt') !== correctOpt) {
+        clicked.classList.add('wrong');
+      }
     }
-  });
-
-  if (clicked && clicked.getAttribute('data-opt') !== correctOpt) {
-    clicked.classList.add('wrong');
-  }
-}
       });
     }
   </script>

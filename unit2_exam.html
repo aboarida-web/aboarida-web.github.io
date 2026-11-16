@@ -39,59 +39,36 @@ body.aa-light .aa-topbar,body.aa-light .container,body.aa-light .card,body.aa-li
 @media(max-width:360px){.aa-brand{font-size:12px}.aa-actions{gap:5px}.aa-action{font-size:10px;padding:7px}.grid{grid-template-columns:1fr!important}}
 </style>
 
-
-<style id="aboarida-full-dark-readability-fix">
-/* Dark mode: make lesson explanations, passages, notes and question text readable. */
-body:not(.aa-light) .container,
-body:not(.aa-light) .q-box,
-body:not(.aa-light) .lesson-content,
-body:not(.aa-light) .content-box,
-body:not(.aa-light) .explanation,
-body:not(.aa-light) .passage,
-body:not(.aa-light) .note,
-body:not(.aa-light) .info-box,
-body:not(.aa-light) .lesson-card,
-body:not(.aa-light) .topic-card,
-body:not(.aa-light) .section-card {
-  color: #e8eef8 !important;
-}
-body:not(.aa-light) .container :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
-body:not(.aa-light) .q-box :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
-body:not(.aa-light) .lesson-content :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
-body:not(.aa-light) .content-box :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
-body:not(.aa-light) .explanation :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
-body:not(.aa-light) .passage :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
-body:not(.aa-light) .note :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
-body:not(.aa-light) .info-box :is(p, li, span, strong, b, em, td, th, label, small, blockquote) {
-  color: #e8eef8 !important;
-}
-/* Keep answer choices readable in dark mode. */
-body:not(.aa-light) .options li,
-body:not(.aa-light) .options button,
-body:not(.aa-light) .options label,
-body:not(.aa-light) .option,
-body:not(.aa-light) .answer-option,
-body:not(.aa-light) .choice,
-body:not(.aa-light) .choices li,
-body:not(.aa-light) .choices button,
-body:not(.aa-light) .choices label {
-  color: #1e293b !important;
+<style id="aboarida-readable-panels-fix">
+/* Dark theme: keep lesson and question panels readable without whitening the whole page. */
+body:not(.aa-light) :is(.q-box,.lesson-content,.example-box,.text-box,.translation-box,.vocab-box,.questions-box,.definition,.example,.idiom-card,.info,.info-box,.content-box,.passage,.note,.highlight,.tree-diagram,.image-box) {
   background: #f8fafc !important;
+  color: #1e293b !important;
   border-color: #cbd5e1 !important;
 }
-/* Feedback colors must remain visible and override generic dark-mode text rules. */
-.options li.correct,
-.options .correct {
+body:not(.aa-light) :is(.q-box,.lesson-content,.example-box,.text-box,.translation-box,.vocab-box,.questions-box,.definition,.example,.idiom-card,.info,.info-box,.content-box,.passage,.note,.highlight,.tree-diagram,.image-box) :is(p,li,span,strong,b,em,small,label,td,th,h1,h2,h3,h4,summary,blockquote) {
+  color: #1e293b !important;
+}
+/* Preserve blue headings and colored callouts where they are intentionally used. */
+body:not(.aa-light) :is(.q-box,.lesson-content,.example-box,.text-box,.translation-box,.vocab-box,.questions-box,.definition,.example,.idiom-card,.info,.info-box,.content-box,.passage,.note,.highlight,.tree-diagram,.image-box) a {
+  color: #1d4ed8 !important;
+}
+/* Multiple-choice answers stay readable and retain clear result feedback. */
+body:not(.aa-light) .options li {
+  color: #1e293b !important;
+  background: #ffffff !important;
+  border-color: #cbd5e1 !important;
+}
+.options li.correct {
   color: #14532d !important;
   background: #bbf7d0 !important;
-  border: 1px solid #22c55e !important;
+  border: 2px solid #22c55e !important;
   font-weight: 700 !important;
 }
-.options li.wrong,
-.options .wrong {
+.options li.wrong {
   color: #7f1d1d !important;
   background: #fecaca !important;
-  border: 1px solid #ef4444 !important;
+  border: 2px solid #ef4444 !important;
   font-weight: 700 !important;
 }
 </style>
@@ -108,7 +85,7 @@ body:not(.aa-light) .choices label {
     <!-- أسئلة الكلمات (1-7) -->
     <div class="q-box">
       <p class="q-text">1. The invention of the internet has .......... the way we communicate.</p>
-      <ul class="options" onclick="checkAns(this, 'c')">
+      <ul class="options" onclick="checkAns(this, 'c', event)">
         <li data-opt="a">a. adopted</li>
         <li data-opt="b">b. packed</li>
         <li data-opt="c">c. revolutionized</li>
@@ -117,7 +94,7 @@ body:not(.aa-light) .choices label {
     </div>
     <div class="q-box">
       <p class="q-text">2. The country needs to improve its .......... like roads and bridges to attract more investors.</p>
-      <ul class="options" onclick="checkAns(this, 'b')">
+      <ul class="options" onclick="checkAns(this, 'b', event)">
         <li data-opt="a">a. initiative</li>
         <li data-opt="b">b. infrastructure</li>
         <li data-opt="c">c. dynasty</li>
@@ -126,7 +103,7 @@ body:not(.aa-light) .choices label {
     </div>
     <div class="q-box">
       <p class="q-text">3. A .......... is a person whose job is to check and fix technical equipment.</p>
-      <ul class="options" onclick="checkAns(this, 'd')">
+      <ul class="options" onclick="checkAns(this, 'd', event)">
         <li data-opt="a">a. household</li>
         <li data-opt="b">b. cable</li>
         <li data-opt="c">c. driver</li>
@@ -135,7 +112,7 @@ body:not(.aa-light) .choices label {
     </div>
     <div class="q-box">
       <p class="q-text">4. The software is very ..........; it has many advanced features that are easy to use.</p>
-      <ul class="options" onclick="checkAns(this, 'a')">
+      <ul class="options" onclick="checkAns(this, 'a', event)">
         <li data-opt="a">a. sophisticated</li>
         <li data-opt="b">b. offline</li>
         <li data-opt="c">c. urgent</li>
@@ -144,7 +121,7 @@ body:not(.aa-light) .choices label {
     </div>
     <div class="q-box">
       <p class="q-text">5. He called the IT support to help him .......... the problem with his email.</p>
-      <ul class="options" onclick="checkAns(this, 'c')">
+      <ul class="options" onclick="checkAns(this, 'c', event)">
         <li data-opt="a">a. adopt</li>
         <li data-opt="b">b. track</li>
         <li data-opt="c">c. troubleshoot</li>
@@ -153,7 +130,7 @@ body:not(.aa-light) .choices label {
     </div>
     <div class="q-box">
       <p class="q-text">6. The .......... of the old factory caused many workers to lose their jobs.</p>
-      <ul class="options" onclick="checkAns(this, 'd')">
+      <ul class="options" onclick="checkAns(this, 'd', event)">
         <li data-opt="a">a. version</li>
         <li data-opt="b">b. partnership</li>
         <li data-opt="c">c. efficiency</li>
@@ -162,7 +139,7 @@ body:not(.aa-light) .choices label {
     </div>
     <div class="q-box">
       <p class="q-text">7. Let's .......... the groundwork for the new project by gathering all the data first.</p>
-      <ul class="options" onclick="checkAns(this, 'a')">
+      <ul class="options" onclick="checkAns(this, 'a', event)">
         <li data-opt="a">a. lay</li>
         <li data-opt="b">b. charge</li>
         <li data-opt="c">c. come</li>
@@ -173,7 +150,7 @@ body:not(.aa-light) .choices label {
     <!-- أسئلة الجرامر (8-21) -->
     <div class="q-box">
       <p class="q-text">8. "I am tired," said Ahmed. -> Ahmed said that he .......... tired.</p>
-      <ul class="options" onclick="checkAns(this, 'b')">
+      <ul class="options" onclick="checkAns(this, 'b', event)">
         <li data-opt="a">a. is</li>
         <li data-opt="b">b. was</li>
         <li data-opt="c">c. has been</li>
@@ -182,7 +159,7 @@ body:not(.aa-light) .choices label {
     </div>
     <div class="q-box">
       <p class="q-text">9. "I will help you," said my brother. -> My brother said that he .......... help me.</p>
-      <ul class="options" onclick="checkAns(this, 'c')">
+      <ul class="options" onclick="checkAns(this, 'c', event)">
         <li data-opt="a">a. will</li>
         <li data-opt="b">b. can</li>
         <li data-opt="c">c. would</li>
@@ -191,7 +168,7 @@ body:not(.aa-light) .choices label {
     </div>
     <div class="q-box">
       <p class="q-text">10. "We bought a new house yesterday," they said. -> They said that they .......... a new house the day before.</p>
-      <ul class="options" onclick="checkAns(this, 'b')">
+      <ul class="options" onclick="checkAns(this, 'b', event)">
         <li data-opt="a">a. bought</li>
         <li data-opt="b">b. had bought</li>
         <li data-opt="c">c. have bought</li>
@@ -200,7 +177,7 @@ body:not(.aa-light) .choices label {
     </div>
     <div class="q-box">
       <p class="q-text">11. The teacher told us .......... noise in the class.</p>
-      <ul class="options" onclick="checkAns(this, 'd')">
+      <ul class="options" onclick="checkAns(this, 'd', event)">
         <li data-opt="a">a. don't make</li>
         <li data-opt="b">b. not make</li>
         <li data-opt="c">c. to not make</li>
@@ -209,7 +186,7 @@ body:not(.aa-light) .choices label {
     </div>
     <div class="q-box">
       <p class="q-text">12. "Open the window, Ali," said his father. -> His father asked Ali .......... the window.</p>
-      <ul class="options" onclick="checkAns(this, 'a')">
+      <ul class="options" onclick="checkAns(this, 'a', event)">
         <li data-opt="a">a. to open</li>
         <li data-opt="b">b. open</li>
         <li data-opt="c">c. opening</li>
@@ -218,7 +195,7 @@ body:not(.aa-light) .choices label {
     </div>
     <div class="q-box">
       <p class="q-text">13. "Where do you live?" she asked me. -> She asked me where I ..........</p>
-      <ul class="options" onclick="checkAns(this, 'b')">
+      <ul class="options" onclick="checkAns(this, 'b', event)">
         <li data-opt="a">a. live</li>
         <li data-opt="b">b. lived</li>
         <li data-opt="c">c. do live</li>
@@ -227,7 +204,7 @@ body:not(.aa-light) .choices label {
     </div>
     <div class="q-box">
       <p class="q-text">14. "Did you finish your homework?" he asked. -> He asked if I .......... my homework.</p>
-      <ul class="options" onclick="checkAns(this, 'c')">
+      <ul class="options" onclick="checkAns(this, 'c', event)">
         <li data-opt="a">a. finish</li>
         <li data-opt="b">b. did finish</li>
         <li data-opt="c">c. had finished</li>
@@ -236,7 +213,7 @@ body:not(.aa-light) .choices label {
     </div>
     <div class="q-box">
       <p class="q-text">15. "I can speak three languages," she said. -> She said that she .......... speak three languages.</p>
-      <ul class="options" onclick="checkAns(this, 'a')">
+      <ul class="options" onclick="checkAns(this, 'a', event)">
         <li data-opt="a">a. could</li>
         <li data-opt="b">b. can</li>
         <li data-opt="c">c. will</li>
@@ -245,7 +222,7 @@ body:not(.aa-light) .choices label {
     </div>
     <div class="q-box">
       <p class="q-text">16. "I am going to the club now," said Omar. -> Omar said that he .......... to the club then.</p>
-      <ul class="options" onclick="checkAns(this, 'c')">
+      <ul class="options" onclick="checkAns(this, 'c', event)">
         <li data-opt="a">a. is going</li>
         <li data-opt="b">b. was going</li>
         <li data-opt="c">c. would go</li>
@@ -254,7 +231,7 @@ body:not(.aa-light) .choices label {
     </div>
     <div class="q-box">
       <p class="q-text">17. She said, "I have lost my keys." -> She said that she .......... her keys.</p>
-      <ul class="options" onclick="checkAns(this, 'b')">
+      <ul class="options" onclick="checkAns(this, 'b', event)">
         <li data-opt="a">a. lost</li>
         <li data-opt="b">b. had lost</li>
         <li data-opt="c">c. has lost</li>
@@ -263,7 +240,7 @@ body:not(.aa-light) .choices label {
     </div>
     <div class="q-box">
       <p class="q-text">18. "Don't touch that wire!" the technician warned us. -> The technician warned us .......... that wire.</p>
-      <ul class="options" onclick="checkAns(this, 'd')">
+      <ul class="options" onclick="checkAns(this, 'd', event)">
         <li data-opt="a">a. don't touch</li>
         <li data-opt="b">b. to not touch</li>
         <li data-opt="c">c. not touch</li>
@@ -272,7 +249,7 @@ body:not(.aa-light) .choices label {
     </div>
     <div class="q-box">
       <p class="q-text">19. "Can you help me?" she asked him. -> She asked him .......... her.</p>
-      <ul class="options" onclick="checkAns(this, 'b')">
+      <ul class="options" onclick="checkAns(this, 'b', event)">
         <li data-opt="a">a. help</li>
         <li data-opt="b">b. to help</li>
         <li data-opt="c">c. helping</li>
@@ -281,7 +258,7 @@ body:not(.aa-light) .choices label {
     </div>
     <div class="q-box">
       <p class="q-text">20. He said, "I will call you tomorrow." -> He said that he would call me ..........</p>
-      <ul class="options" onclick="checkAns(this, 'c')">
+      <ul class="options" onclick="checkAns(this, 'c', event)">
         <li data-opt="a">a. tomorrow</li>
         <li data-opt="b">b. the next day</li>
         <li data-opt="c">c. the following day</li>
@@ -290,7 +267,7 @@ body:not(.aa-light) .choices label {
     </div>
     <div class="q-box">
       <p class="q-text">21. "You should study hard," my father told me. -> My father advised me .......... hard.</p>
-      <ul class="options" onclick="checkAns(this, 'a')">
+      <ul class="options" onclick="checkAns(this, 'a', event)">
         <li data-opt="a">a. to study</li>
         <li data-opt="b">b. study</li>
         <li data-opt="c">c. studying</li>
@@ -301,25 +278,18 @@ body:not(.aa-light) .choices label {
   </div>
 
   <script>
-    function checkAns(ul, correctOpt) {
-  if (ul.classList.contains('answered')) return;
-  ul.classList.add('answered');
-
-  const clicked = (typeof event !== 'undefined' && event.target)
-    ? event.target.closest('li[data-opt]')
-    : null;
-
-  const lis = ul.querySelectorAll('li[data-opt]');
-  lis.forEach(li => {
-    if (li.getAttribute('data-opt') === correctOpt) {
-      li.classList.add('correct');
-    }
-  });
-
-  if (clicked && clicked.getAttribute('data-opt') !== correctOpt) {
-    clicked.classList.add('wrong');
-  }
-});
+    function checkAns(ul, correctOpt, evt) {
+      if (ul.classList.contains('answered')) return;
+      ul.classList.add('answered');
+      const clicked = evt && evt.target ? evt.target.closest('li[data-opt]') : null;
+      const lis = ul.querySelectorAll('li[data-opt]');
+      lis.forEach(li => {
+        if (li.getAttribute('data-opt') === correctOpt) li.classList.add('correct');
+      });
+      if (clicked && clicked.getAttribute('data-opt') !== correctOpt) {
+        clicked.classList.add('wrong');
+      }
+    });
     }
   </script>
     <!-- الجزء التاني: قراءة وترجمة وأسئلة مقالية -->
@@ -334,7 +304,7 @@ body:not(.aa-light) .choices label {
 
     <div class="q-box">
       <p class="q-text">22. What did ancient Egyptians use to build the pyramids?</p>
-      <ul class="options" onclick="checkAns(this, 'a')">
+      <ul class="options" onclick="checkAns(this, 'a', event)">
         <li data-opt="a">a. Simple machines like levers and ramps.</li>
         <li data-opt="b">b. Advanced machinery from Europe.</li>
         <li data-opt="c">c. Artificial intelligence.</li>
@@ -343,7 +313,7 @@ body:not(.aa-light) .choices label {
     </div>
     <div class="q-box">
       <p class="q-text">23. What revolutionized agriculture during the Industrial Revolution?</p>
-      <ul class="options" onclick="checkAns(this, 'b')">
+      <ul class="options" onclick="checkAns(this, 'b', event)">
         <li data-opt="a">a. 3D scanning</li>
         <li data-opt="b">b. Cotton gins and steam engines</li>
         <li data-opt="c">c. Robots</li>
@@ -352,7 +322,7 @@ body:not(.aa-light) .choices label {
     </div>
     <div class="q-box">
       <p class="q-text">24. The phrase "charging full steam ahead" means ..........</p>
-      <ul class="options" onclick="checkAns(this, 'c')">
+      <ul class="options" onclick="checkAns(this, 'c', event)">
         <li data-opt="a">a. stopping completely</li>
         <li data-opt="b">b. going backward</li>
         <li data-opt="c">c. moving forward with a lot of energy</li>
@@ -362,7 +332,7 @@ body:not(.aa-light) .choices label {
 
     <div class="q-box">
       <p class="q-text">25. Choose the correct Arabic translation: "Machines have played an important role in shaping the nation."</p>
-      <ul class="options" onclick="checkAns(this, 'a')">
+      <ul class="options" onclick="checkAns(this, 'a', event)">
         <li data-opt="a">أ. لعبت الآلات دوراً مهماً في تشكيل الأمة.</li>
         <li data-opt="b">ب. الآلات ساهمت في تدمير الأمة.</li>
         <li data-opt="c">ج. كان للآلات دور بسيط في تشكيل الأمة.</li>
@@ -371,7 +341,7 @@ body:not(.aa-light) .choices label {
     </div>
     <div class="q-box">
       <p class="q-text">26. Choose the correct Arabic translation: "We need enough time to lay the groundwork for the meeting."</p>
-      <ul class="options" onclick="checkAns(this, 'b')">
+      <ul class="options" onclick="checkAns(this, 'b', event)">
         <li data-opt="a">أ. نحتاج لوقت طويل لإنهاء الاجتماع.</li>
         <li data-opt="b">ب. نحتاج إلى وقت كافٍ لتهيئة الأوضاع للاجتماع.</li>
         <li data-opt="c">ج. لا نحتاج وقتاً للتحضير للاجتماع.</li>
@@ -381,7 +351,7 @@ body:not(.aa-light) .choices label {
 
     <div class="q-box">
       <p class="q-text">27. Choose the correct English translation: "مصر تندفع بقوة نحو العصر الرقمي."</p>
-      <ul class="options" onclick="checkAns(this, 'd')">
+      <ul class="options" onclick="checkAns(this, 'd', event)">
         <li data-opt="a">a. Egypt is stopping in the digital age.</li>
         <li data-opt="b">b. Egypt is going backward in the digital age.</li>
         <li data-opt="c">c. Egypt fears the digital age.</li>
@@ -391,7 +361,7 @@ body:not(.aa-light) .choices label {
     
     <div class="q-box">
       <p class="q-text">28. Choose the correct English translation: "تُستخدم التكنولوجيا الحديثة لتحسين الإنتاجية."</p>
-      <ul class="options" onclick="checkAns(this, 'a')">
+      <ul class="options" onclick="checkAns(this, 'a', event)">
         <li data-opt="a">a. Modern technology is used to enhance productivity.</li>
         <li data-opt="b">b. Modern technology destroys productivity.</li>
         <li data-opt="c">c. Modern technology is not used in factories.</li>
@@ -401,7 +371,7 @@ body:not(.aa-light) .choices label {
     
     <div class="q-box">
       <p class="q-text">29. "I am working on a new project," she said. -> She said that she .......... on a new project.</p>
-      <ul class="options" onclick="checkAns(this, 'b')">
+      <ul class="options" onclick="checkAns(this, 'b', event)">
         <li data-opt="a">a. is working</li>
         <li data-opt="b">b. was working</li>
         <li data-opt="c">c. has worked</li>
@@ -411,7 +381,7 @@ body:not(.aa-light) .choices label {
     
     <div class="q-box">
       <p class="q-text">30. "Don't play with matches," my mother said. -> My mother warned me .......... with matches.</p>
-      <ul class="options" onclick="checkAns(this, 'd')">
+      <ul class="options" onclick="checkAns(this, 'd', event)">
         <li data-opt="a">a. to not play</li>
         <li data-opt="b">b. not play</li>
         <li data-opt="c">c. don't play</li>
@@ -421,7 +391,7 @@ body:not(.aa-light) .choices label {
     
     <div class="q-box">
       <p class="q-text">31. "Can you help me?" she asked me. -> She asked me .......... her.</p>
-      <ul class="options" onclick="checkAns(this, 'a')">
+      <ul class="options" onclick="checkAns(this, 'a', event)">
         <li data-opt="a">a. to help</li>
         <li data-opt="b">b. help</li>
         <li data-opt="c">c. helping</li>

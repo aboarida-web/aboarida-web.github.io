@@ -6,59 +6,36 @@
 @media(max-width:620px){.wrap{width:calc(100% - 24px)}.nav{min-height:65px}.brand{font-size:15px}.logo{width:40px;height:40px;font-size:22px}.links{display:none}.navbtn{padding:8px 10px;font-size:12px}.hero{display:flex;flex-direction:column;padding:24px 0 12px;gap:14px}.hero-copy{padding:8px 4px;text-align:center}.hero h1{font-size:35px;margin:12px 0}.hero p{font-size:15px;margin:0 auto}.hero-art{width:100%;min-height:165px;border-radius:20px}.student{font-size:72px}.art-caption{bottom:10px;font-size:12px;padding:5px 12px}.section{padding:20px 0}.section h2{font-size:20px}.section-head{align-items:start;flex-direction:column}.subjects{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.subject{min-height:120px;padding:12px 7px;border-radius:15px}.subject .ico{font-size:30px}.subject h3{font-size:15px}.dash{grid-template-columns:1fr;gap:10px}.dash .panel:nth-child(2){grid-column:auto}.panel{padding:15px;border-radius:16px}.panel h3{font-size:17px}.quick{grid-template-columns:1fr;gap:10px}.quick .panel{padding:13px}.quick .ico{font-size:35px}.footer{font-size:11px}}
 @media(max-width:350px){.hero h1{font-size:29px}.subjects{grid-template-columns:1fr}.subject{min-height:100px}}
 </style>
-
-<style id="aboarida-full-dark-readability-fix">
-/* Dark mode: make lesson explanations, passages, notes and question text readable. */
-body:not(.aa-light) .container,
-body:not(.aa-light) .q-box,
-body:not(.aa-light) .lesson-content,
-body:not(.aa-light) .content-box,
-body:not(.aa-light) .explanation,
-body:not(.aa-light) .passage,
-body:not(.aa-light) .note,
-body:not(.aa-light) .info-box,
-body:not(.aa-light) .lesson-card,
-body:not(.aa-light) .topic-card,
-body:not(.aa-light) .section-card {
-  color: #e8eef8 !important;
-}
-body:not(.aa-light) .container :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
-body:not(.aa-light) .q-box :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
-body:not(.aa-light) .lesson-content :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
-body:not(.aa-light) .content-box :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
-body:not(.aa-light) .explanation :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
-body:not(.aa-light) .passage :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
-body:not(.aa-light) .note :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
-body:not(.aa-light) .info-box :is(p, li, span, strong, b, em, td, th, label, small, blockquote) {
-  color: #e8eef8 !important;
-}
-/* Keep answer choices readable in dark mode. */
-body:not(.aa-light) .options li,
-body:not(.aa-light) .options button,
-body:not(.aa-light) .options label,
-body:not(.aa-light) .option,
-body:not(.aa-light) .answer-option,
-body:not(.aa-light) .choice,
-body:not(.aa-light) .choices li,
-body:not(.aa-light) .choices button,
-body:not(.aa-light) .choices label {
-  color: #1e293b !important;
+<style id="aboarida-readable-panels-fix">
+/* Dark theme: keep lesson and question panels readable without whitening the whole page. */
+body:not(.aa-light) :is(.q-box,.lesson-content,.example-box,.text-box,.translation-box,.vocab-box,.questions-box,.definition,.example,.idiom-card,.info,.info-box,.content-box,.passage,.note,.highlight,.tree-diagram,.image-box) {
   background: #f8fafc !important;
+  color: #1e293b !important;
   border-color: #cbd5e1 !important;
 }
-/* Feedback colors must remain visible and override generic dark-mode text rules. */
-.options li.correct,
-.options .correct {
+body:not(.aa-light) :is(.q-box,.lesson-content,.example-box,.text-box,.translation-box,.vocab-box,.questions-box,.definition,.example,.idiom-card,.info,.info-box,.content-box,.passage,.note,.highlight,.tree-diagram,.image-box) :is(p,li,span,strong,b,em,small,label,td,th,h1,h2,h3,h4,summary,blockquote) {
+  color: #1e293b !important;
+}
+/* Preserve blue headings and colored callouts where they are intentionally used. */
+body:not(.aa-light) :is(.q-box,.lesson-content,.example-box,.text-box,.translation-box,.vocab-box,.questions-box,.definition,.example,.idiom-card,.info,.info-box,.content-box,.passage,.note,.highlight,.tree-diagram,.image-box) a {
+  color: #1d4ed8 !important;
+}
+/* Multiple-choice answers stay readable and retain clear result feedback. */
+body:not(.aa-light) .options li {
+  color: #1e293b !important;
+  background: #ffffff !important;
+  border-color: #cbd5e1 !important;
+}
+.options li.correct {
   color: #14532d !important;
   background: #bbf7d0 !important;
-  border: 1px solid #22c55e !important;
+  border: 2px solid #22c55e !important;
   font-weight: 700 !important;
 }
-.options li.wrong,
-.options .wrong {
+.options li.wrong {
   color: #7f1d1d !important;
   background: #fecaca !important;
-  border: 1px solid #ef4444 !important;
+  border: 2px solid #ef4444 !important;
   font-weight: 700 !important;
 }
 </style>

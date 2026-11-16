@@ -40,59 +40,36 @@ body.aa-light .aa-topbar,body.aa-light .container,body.aa-light .card,body.aa-li
 @media(max-width:360px){.aa-brand{font-size:12px}.aa-actions{gap:5px}.aa-action{font-size:10px;padding:7px}.grid{grid-template-columns:1fr!important}}
 </style>
 
-
-<style id="aboarida-full-dark-readability-fix">
-/* Dark mode: make lesson explanations, passages, notes and question text readable. */
-body:not(.aa-light) .container,
-body:not(.aa-light) .q-box,
-body:not(.aa-light) .lesson-content,
-body:not(.aa-light) .content-box,
-body:not(.aa-light) .explanation,
-body:not(.aa-light) .passage,
-body:not(.aa-light) .note,
-body:not(.aa-light) .info-box,
-body:not(.aa-light) .lesson-card,
-body:not(.aa-light) .topic-card,
-body:not(.aa-light) .section-card {
-  color: #e8eef8 !important;
-}
-body:not(.aa-light) .container :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
-body:not(.aa-light) .q-box :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
-body:not(.aa-light) .lesson-content :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
-body:not(.aa-light) .content-box :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
-body:not(.aa-light) .explanation :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
-body:not(.aa-light) .passage :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
-body:not(.aa-light) .note :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
-body:not(.aa-light) .info-box :is(p, li, span, strong, b, em, td, th, label, small, blockquote) {
-  color: #e8eef8 !important;
-}
-/* Keep answer choices readable in dark mode. */
-body:not(.aa-light) .options li,
-body:not(.aa-light) .options button,
-body:not(.aa-light) .options label,
-body:not(.aa-light) .option,
-body:not(.aa-light) .answer-option,
-body:not(.aa-light) .choice,
-body:not(.aa-light) .choices li,
-body:not(.aa-light) .choices button,
-body:not(.aa-light) .choices label {
-  color: #1e293b !important;
+<style id="aboarida-readable-panels-fix">
+/* Dark theme: keep lesson and question panels readable without whitening the whole page. */
+body:not(.aa-light) :is(.q-box,.lesson-content,.example-box,.text-box,.translation-box,.vocab-box,.questions-box,.definition,.example,.idiom-card,.info,.info-box,.content-box,.passage,.note,.highlight,.tree-diagram,.image-box) {
   background: #f8fafc !important;
+  color: #1e293b !important;
   border-color: #cbd5e1 !important;
 }
-/* Feedback colors must remain visible and override generic dark-mode text rules. */
-.options li.correct,
-.options .correct {
+body:not(.aa-light) :is(.q-box,.lesson-content,.example-box,.text-box,.translation-box,.vocab-box,.questions-box,.definition,.example,.idiom-card,.info,.info-box,.content-box,.passage,.note,.highlight,.tree-diagram,.image-box) :is(p,li,span,strong,b,em,small,label,td,th,h1,h2,h3,h4,summary,blockquote) {
+  color: #1e293b !important;
+}
+/* Preserve blue headings and colored callouts where they are intentionally used. */
+body:not(.aa-light) :is(.q-box,.lesson-content,.example-box,.text-box,.translation-box,.vocab-box,.questions-box,.definition,.example,.idiom-card,.info,.info-box,.content-box,.passage,.note,.highlight,.tree-diagram,.image-box) a {
+  color: #1d4ed8 !important;
+}
+/* Multiple-choice answers stay readable and retain clear result feedback. */
+body:not(.aa-light) .options li {
+  color: #1e293b !important;
+  background: #ffffff !important;
+  border-color: #cbd5e1 !important;
+}
+.options li.correct {
   color: #14532d !important;
   background: #bbf7d0 !important;
-  border: 1px solid #22c55e !important;
+  border: 2px solid #22c55e !important;
   font-weight: 700 !important;
 }
-.options li.wrong,
-.options .wrong {
+.options li.wrong {
   color: #7f1d1d !important;
   background: #fecaca !important;
-  border: 1px solid #ef4444 !important;
+  border: 2px solid #ef4444 !important;
   font-weight: 700 !important;
 }
 </style>
@@ -108,43 +85,43 @@ body:not(.aa-light) .choices label {
     <!-- MCQ 1-7: Vocabulary -->
     <div class="q-box">
       <p class="q-text">1. The doctor had to .......... the correct dose of medicine to the patient.</p>
-      <ul class="options" onclick="checkAns(this, 'b')">
+      <ul class="options" onclick="checkAns(this, 'b', event)">
         <li data-opt="a">a. swallow</li><li data-opt="b">b. administer</li><li data-opt="c">c. stitch</li><li data-opt="d">d. groan</li>
       </ul>
     </div>
     <div class="q-box">
       <p class="q-text">2. The car crash caused a lot of .......... on the main road.</p>
-      <ul class="options" onclick="checkAns(this, 'd')">
+      <ul class="options" onclick="checkAns(this, 'd', event)">
         <li data-opt="a">a. pulse</li><li data-opt="b">b. forehead</li><li data-opt="c">c. scope</li><li data-opt="d">d. chaos</li>
       </ul>
     </div>
     <div class="q-box">
       <p class="q-text">3. She felt a sharp pain in her .......... and found it hard to breathe.</p>
-      <ul class="options" onclick="checkAns(this, 'a')">
+      <ul class="options" onclick="checkAns(this, 'a', event)">
         <li data-opt="a">a. chest</li><li data-opt="b">b. victim</li><li data-opt="c">c. shift</li><li data-opt="d">d. paramedic</li>
       </ul>
     </div>
     <div class="q-box">
       <p class="q-text">4. After the accident, the driver lost .......... for a few minutes.</p>
-      <ul class="options" onclick="checkAns(this, 'c')">
+      <ul class="options" onclick="checkAns(this, 'c', event)">
         <li data-opt="a">a. urgency</li><li data-opt="b">b. medication</li><li data-opt="c">c. consciousness</li><li data-opt="d">d. attention</li>
       </ul>
     </div>
     <div class="q-box">
       <p class="q-text">5. It was .......... to see the little child crying in pain.</p>
-      <ul class="options" onclick="checkAns(this, 'b')">
+      <ul class="options" onclick="checkAns(this, 'b', event)">
         <li data-opt="a">a. rewarding</li><li data-opt="b">b. heartbreaking</li><li data-opt="c">c. emergent</li><li data-opt="d">d. sterile</li>
       </ul>
     </div>
     <div class="q-box">
       <p class="q-text">6. The nurse checked the patient's .......... to make sure his heart was beating.</p>
-      <ul class="options" onclick="checkAns(this, 'a')">
+      <ul class="options" onclick="checkAns(this, 'a', event)">
         <li data-opt="a">a. pulse</li><li data-opt="b">b. wound</li><li data-opt="c">c. bruise</li><li data-opt="d">d. rash</li>
       </ul>
     </div>
     <div class="q-box">
       <p class="q-text">7. Working as a paramedic is very .......... because you save lives.</p>
-      <ul class="options" onclick="checkAns(this, 'c')">
+      <ul class="options" onclick="checkAns(this, 'c', event)">
         <li data-opt="a">a. panicky</li><li data-opt="b">b. chaotic</li><li data-opt="c">c. rewarding</li><li data-opt="d">d. urgent</li>
       </ul>
     </div>
@@ -156,37 +133,37 @@ body:not(.aa-light) .choices label {
     </div>
     <div class="q-box">
       <p class="q-text">8. What happened to the man at the beginning of the passage?</p>
-      <ul class="options" onclick="checkAns(this, 'b')">
+      <ul class="options" onclick="checkAns(this, 'b', event)">
         <li data-opt="a">a. He swallowed a coin.</li><li data-opt="b">b. He had a deep cut on his forehead.</li><li data-opt="c">c. He broke his leg.</li><li data-opt="d">d. He had a viral cold.</li>
       </ul>
     </div>
     <div class="q-box">
       <p class="q-text">9. The phrase "raining cats and dogs" means ..........</p>
-      <ul class="options" onclick="checkAns(this, 'c')">
+      <ul class="options" onclick="checkAns(this, 'c', event)">
         <li data-opt="a">a. raining lightly</li><li data-opt="b">b. animals falling from the sky</li><li data-opt="c">c. raining very heavily</li><li data-opt="d">d. stopping raining</li>
       </ul>
     </div>
     <div class="q-box">
       <p class="q-text">10. What was the emergency room like inside?</p>
-      <ul class="options" onclick="checkAns(this, 'a')">
+      <ul class="options" onclick="checkAns(this, 'a', event)">
         <li data-opt="a">a. In full chaos</li><li data-opt="b">b. Very quiet</li><li data-opt="c">c. Empty</li><li data-opt="d">d. Closed</li>
       </ul>
     </div>
     <div class="q-box">
       <p class="q-text">11. Why did the mother rush into the ER?</p>
-      <ul class="options" onclick="checkAns(this, 'd')">
+      <ul class="options" onclick="checkAns(this, 'd', event)">
         <li data-opt="a">a. She was injured.</li><li data-opt="b">b. She was looking for the doctor.</li><li data-opt="c">c. She was sick.</li><li data-opt="d">d. Her child had swallowed a coin.</li>
       </ul>
     </div>
     <div class="q-box">
       <p class="q-text">12. How did the team remove the coin?</p>
-      <ul class="options" onclick="checkAns(this, 'b')">
+      <ul class="options" onclick="checkAns(this, 'b', event)">
         <li data-opt="a">a. Using their hands</li><li data-opt="b">b. Using a flexible scope</li><li data-opt="c">c. Using a stethoscope</li><li data-opt="d">d. Using a bandage</li>
       </ul>
     </div>
     <div class="q-box">
       <p class="q-text">13. The word "relief" in the passage is closest in meaning to ..........</p>
-      <ul class="options" onclick="checkAns(this, 'c')">
+      <ul class="options" onclick="checkAns(this, 'c', event)">
         <li data-opt="a">a. fear</li><li data-opt="b">b. pain</li><li data-opt="c">c. comfort</li><li data-opt="d">d. anger</li>
       </ul>
     </div>
@@ -195,49 +172,49 @@ body:not(.aa-light) .choices label {
     <h2>Grammar (14-21)</h2>
     <div class="q-box">
       <p class="q-text">14. I have been living in this city .......... 2015.</p>
-      <ul class="options" onclick="checkAns(this, 'c')">
+      <ul class="options" onclick="checkAns(this, 'c', event)">
         <li data-opt="a">a. for</li><li data-opt="b">b. ago</li><li data-opt="c">c. since</li><li data-opt="d">d. yet</li>
       </ul>
     </div>
     <div class="q-box">
       <p class="q-text">15. They .......... to Paris last summer.</p>
-      <ul class="options" onclick="checkAns(this, 'b')">
+      <ul class="options" onclick="checkAns(this, 'b', event)">
         <li data-opt="a">a. have gone</li><li data-opt="b">b. went</li><li data-opt="c">c. have been going</li><li data-opt="d">d. go</li>
       </ul>
     </div>
     <div class="q-box">
       <p class="q-text">16. She .......... her homework already.</p>
-      <ul class="options" onclick="checkAns(this, 'a')">
+      <ul class="options" onclick="checkAns(this, 'a', event)">
         <li data-opt="a">a. has finished</li><li data-opt="b">b. finished</li><li data-opt="c">c. was finishing</li><li data-opt="d">d. finishes</li>
       </ul>
     </div>
     <div class="q-box">
       <p class="q-text">17. The thief .......... by the police yesterday.</p>
-      <ul class="options" onclick="checkAns(this, 'c')">
+      <ul class="options" onclick="checkAns(this, 'c', event)">
         <li data-opt="a">a. arrested</li><li data-opt="b">b. has arrested</li><li data-opt="c">c. was arrested</li><li data-opt="d">d. is arrested</li>
       </ul>
     </div>
     <div class="q-box">
       <p class="q-text">18. When I was young, I .......... play football every day.</p>
-      <ul class="options" onclick="checkAns(this, 'a')">
+      <ul class="options" onclick="checkAns(this, 'a', event)">
         <li data-opt="a">a. used to</li><li data-opt="b">b. use to</li><li data-opt="c">c. am used to</li><li data-opt="d">d. was used to</li>
       </ul>
     </div>
     <div class="q-box">
       <p class="q-text">19. He asked me where I .......... the day before.</p>
-      <ul class="options" onclick="checkAns(this, 'c')">
+      <ul class="options" onclick="checkAns(this, 'c', event)">
         <li data-opt="a">a. go</li><li data-opt="b">b. have gone</li><li data-opt="c">c. had gone</li><li data-opt="d">d. will go</li>
       </ul>
     </div>
     <div class="q-box">
       <p class="q-text">20. She is a doctor, ..........?</p>
-      <ul class="options" onclick="checkAns(this, 'b')">
+      <ul class="options" onclick="checkAns(this, 'b', event)">
         <li data-opt="a">a. is she</li><li data-opt="b">b. isn't she</li><li data-opt="c">c. doesn't she</li><li data-opt="d">d. does she</li>
       </ul>
     </div>
     <div class="q-box">
       <p class="q-text">21. The building .......... next year.</p>
-      <ul class="options" onclick="checkAns(this, 'd')">
+      <ul class="options" onclick="checkAns(this, 'd', event)">
         <li data-opt="a">a. will build</li><li data-opt="b">b. is building</li><li data-opt="c">c. built</li><li data-opt="d">d. will be built</li>
       </ul>
     </div>
@@ -245,25 +222,18 @@ body:not(.aa-light) .choices label {
   </div>
 
   <script>
-    function checkAns(ul, correctOpt) {
-  if (ul.classList.contains('answered')) return;
-  ul.classList.add('answered');
-
-  const clicked = (typeof event !== 'undefined' && event.target)
-    ? event.target.closest('li[data-opt]')
-    : null;
-
-  const lis = ul.querySelectorAll('li[data-opt]');
-  lis.forEach(li => {
-    if (li.getAttribute('data-opt') === correctOpt) {
-      li.classList.add('correct');
-    }
-  });
-
-  if (clicked && clicked.getAttribute('data-opt') !== correctOpt) {
-    clicked.classList.add('wrong');
-  }
-});
+    function checkAns(ul, correctOpt, evt) {
+      if (ul.classList.contains('answered')) return;
+      ul.classList.add('answered');
+      const clicked = evt && evt.target ? evt.target.closest('li[data-opt]') : null;
+      const lis = ul.querySelectorAll('li[data-opt]');
+      lis.forEach(li => {
+        if (li.getAttribute('data-opt') === correctOpt) li.classList.add('correct');
+      });
+      if (clicked && clicked.getAttribute('data-opt') !== correctOpt) {
+        clicked.classList.add('wrong');
+      }
+    });
     }
   </script>
 <!-- MCQ 22-28: Second Reading Passage -->
@@ -273,43 +243,43 @@ body:not(.aa-light) .choices label {
 </div>
 <div class="q-box">
   <p class="q-text">22. What was the writer's first symptom?</p>
-  <ul class="options" onclick="checkAns(this, 'a')">
+  <ul class="options" onclick="checkAns(this, 'a', event)">
     <li data-opt="a">a. Feeling tired and a small cough</li><li data-opt="b">b. A bad headache</li><li data-opt="c">c. A sore throat</li><li data-opt="d">d. A high temperature</li>
   </ul>
 </div>
 <div class="q-box">
   <p class="q-text">23. How did the writer feel after a few days?</p>
-  <ul class="options" onclick="checkAns(this, 'b')">
+  <ul class="options" onclick="checkAns(this, 'b', event)">
     <li data-opt="a">a. Much better</li><li data-opt="b">b. Miserable and uncomfortable</li><li data-opt="c">c. Energetic</li><li data-opt="d">d. Hungry</li>
   </ul>
 </div>
 <div class="q-box">
   <p class="q-text">24. What did the doctor use to listen to the writer's chest?</p>
-  <ul class="options" onclick="checkAns(this, 'c')">
+  <ul class="options" onclick="checkAns(this, 'c', event)">
     <li data-opt="a">a. A scope</li><li data-opt="b">b. A bandage</li><li data-opt="c">c. A stethoscope</li><li data-opt="d">d. A prescription</li>
   </ul>
 </div>
 <div class="q-box">
   <p class="q-text">25. What was the doctor's diagnosis?</p>
-  <ul class="options" onclick="checkAns(this, 'd')">
+  <ul class="options" onclick="checkAns(this, 'd', event)">
     <li data-opt="a">a. A broken leg</li><li data-opt="b">b. A headache</li><li data-opt="c">c. A stomach ache</li><li data-opt="d">d. A severe viral cold</li>
   </ul>
 </div>
 <div class="q-box">
   <p class="q-text">26. What did the doctor advise the writer to do?</p>
-  <ul class="options" onclick="checkAns(this, 'a')">
+  <ul class="options" onclick="checkAns(this, 'a', event)">
     <li data-opt="a">a. Rest and drink warm liquids</li><li data-opt="b">b. Go to work</li><li data-opt="c">c. Do exercise</li><li data-opt="d">d. Eat cold food</li>
   </ul>
 </div>
 <div class="q-box">
   <p class="q-text">27. The word "severe" in the passage means ..........</p>
-  <ul class="options" onclick="checkAns(this, 'b')">
+  <ul class="options" onclick="checkAns(this, 'b', event)">
     <li data-opt="a">a. mild</li><li data-opt="b">b. very bad</li><li data-opt="c">c. short</li><li data-opt="d">d. easy</li>
   </ul>
 </div>
 <div class="q-box">
   <p class="q-text">28. How long did it take the writer to feel better?</p>
-  <ul class="options" onclick="checkAns(this, 'c')">
+  <ul class="options" onclick="checkAns(this, 'c', event)">
     <li data-opt="a">a. One day</li><li data-opt="b">b. Two weeks</li><li data-opt="c">c. Three or four days</li><li data-opt="d">d. One month</li>
   </ul>
 </div>

@@ -40,59 +40,36 @@ body.aa-light .aa-topbar,body.aa-light .container,body.aa-light .card,body.aa-li
 @media(max-width:360px){.aa-brand{font-size:12px}.aa-actions{gap:5px}.aa-action{font-size:10px;padding:7px}.grid{grid-template-columns:1fr!important}}
 </style>
 
-
-<style id="aboarida-full-dark-readability-fix">
-/* Dark mode: make lesson explanations, passages, notes and question text readable. */
-body:not(.aa-light) .container,
-body:not(.aa-light) .q-box,
-body:not(.aa-light) .lesson-content,
-body:not(.aa-light) .content-box,
-body:not(.aa-light) .explanation,
-body:not(.aa-light) .passage,
-body:not(.aa-light) .note,
-body:not(.aa-light) .info-box,
-body:not(.aa-light) .lesson-card,
-body:not(.aa-light) .topic-card,
-body:not(.aa-light) .section-card {
-  color: #e8eef8 !important;
-}
-body:not(.aa-light) .container :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
-body:not(.aa-light) .q-box :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
-body:not(.aa-light) .lesson-content :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
-body:not(.aa-light) .content-box :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
-body:not(.aa-light) .explanation :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
-body:not(.aa-light) .passage :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
-body:not(.aa-light) .note :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
-body:not(.aa-light) .info-box :is(p, li, span, strong, b, em, td, th, label, small, blockquote) {
-  color: #e8eef8 !important;
-}
-/* Keep answer choices readable in dark mode. */
-body:not(.aa-light) .options li,
-body:not(.aa-light) .options button,
-body:not(.aa-light) .options label,
-body:not(.aa-light) .option,
-body:not(.aa-light) .answer-option,
-body:not(.aa-light) .choice,
-body:not(.aa-light) .choices li,
-body:not(.aa-light) .choices button,
-body:not(.aa-light) .choices label {
-  color: #1e293b !important;
+<style id="aboarida-readable-panels-fix">
+/* Dark theme: keep lesson and question panels readable without whitening the whole page. */
+body:not(.aa-light) :is(.q-box,.lesson-content,.example-box,.text-box,.translation-box,.vocab-box,.questions-box,.definition,.example,.idiom-card,.info,.info-box,.content-box,.passage,.note,.highlight,.tree-diagram,.image-box) {
   background: #f8fafc !important;
+  color: #1e293b !important;
   border-color: #cbd5e1 !important;
 }
-/* Feedback colors must remain visible and override generic dark-mode text rules. */
-.options li.correct,
-.options .correct {
+body:not(.aa-light) :is(.q-box,.lesson-content,.example-box,.text-box,.translation-box,.vocab-box,.questions-box,.definition,.example,.idiom-card,.info,.info-box,.content-box,.passage,.note,.highlight,.tree-diagram,.image-box) :is(p,li,span,strong,b,em,small,label,td,th,h1,h2,h3,h4,summary,blockquote) {
+  color: #1e293b !important;
+}
+/* Preserve blue headings and colored callouts where they are intentionally used. */
+body:not(.aa-light) :is(.q-box,.lesson-content,.example-box,.text-box,.translation-box,.vocab-box,.questions-box,.definition,.example,.idiom-card,.info,.info-box,.content-box,.passage,.note,.highlight,.tree-diagram,.image-box) a {
+  color: #1d4ed8 !important;
+}
+/* Multiple-choice answers stay readable and retain clear result feedback. */
+body:not(.aa-light) .options li {
+  color: #1e293b !important;
+  background: #ffffff !important;
+  border-color: #cbd5e1 !important;
+}
+.options li.correct {
   color: #14532d !important;
   background: #bbf7d0 !important;
-  border: 1px solid #22c55e !important;
+  border: 2px solid #22c55e !important;
   font-weight: 700 !important;
 }
-.options li.wrong,
-.options .wrong {
+.options li.wrong {
   color: #7f1d1d !important;
   background: #fecaca !important;
-  border: 1px solid #ef4444 !important;
+  border: 2px solid #ef4444 !important;
   font-weight: 700 !important;
 }
 </style>
@@ -108,7 +85,7 @@ body:not(.aa-light) .choices label {
 
     <div class="q-box">
       <p class="q-text">1. Modern culture and civilization greatly depend on science and technology. They have become an essential part of life according to the requirements of people and their needs.</p>
-      <ul class="options" onclick="checkAns(this, 'a')">
+      <ul class="options" onclick="checkAns(this, 'a', event)">
         <li data-opt="a">أ. تعتمد الثقافة والحضارة الحديثة بشكل كبير على العلوم والتكنولوجيا، فقد أصبحت جزءاً أساسياً من الحياة وفقاً لمتطلبات الناس واحتياجاتهم.</li>
         <li data-opt="b">ب. تعتمد الثقافة والحضارة القديمة بشكل كبير على العلوم والتكنولوجيا، فقد أصبحت جزءاً أساسياً من الحياة وفقاً لمتطلبات الناس.</li>
         <li data-opt="c">ج. تعتمد التكنولوجيا الحديثة فقط على العلوم، فقد أصبحت جزءاً من الحياة.</li>
@@ -118,7 +95,7 @@ body:not(.aa-light) .choices label {
 
     <div class="q-box">
       <p class="q-text">2. The importance of charitable organisations lies in helping poor and needy people. Charities do an excellent job as they work all over the world.</p>
-      <ul class="options" onclick="checkAns(this, 'a')">
+      <ul class="options" onclick="checkAns(this, 'a', event)">
         <li data-opt="a">أ. يكمن أهمية الجمعيات الخيرية في مساعدة الفقراء والمحتاجين، فتقوم الجمعيات الخيرية بعمل ممتاز لأنها تعمل في كل أنحاء العالم.</li>
         <li data-opt="b">ب. يكمن اهتمام الجمعيات الخيرية في مساعدة الفقراء والمشردين، فتقوم الجمعيات بعمل ممتاز لأنها تعمل في كل أنحاء العالم.</li>
         <li data-opt="c">ج. الجمعيات الخيرية تساعد الأغنياء فقط، وتعمل في بعض الدول.</li>
@@ -130,7 +107,7 @@ body:not(.aa-light) .choices label {
 
     <div class="q-box">
       <p class="q-text">1. يمتلك العديد من الناس قدرات هائلة، ولو استخدموها في مكانها الصحيح لتغيرت أمور كثيرة وعلت شأن وطننا وسرنا نحو التقدم الحقيقي الذي نسعى إليه.</p>
-      <ul class="options" onclick="checkAns(this, 'b')">
+      <ul class="options" onclick="checkAns(this, 'b', event)">
         <li data-opt="a">a. A lot of people have great disabilities. If they had used them in their proper place...</li>
         <li data-opt="b">b. A lot of people have great abilities. If they had used them in their proper place, our homeland would have risen, and we would have moved towards the real progress that we seek.</li>
         <li data-opt="c">c. Many people have great abilities. If we had used them in their write place...</li>
@@ -140,7 +117,7 @@ body:not(.aa-light) .choices label {
 
     <div class="q-box">
       <p class="q-text">2. يجب على الدول التعاون من أجل تطوير صور جديدة من الطاقة، فعليهم أن يتحدوا لكي يجدوا حلولاً للحد من الآثار الضارة مثل الاحتباس الحراري وكذلك التغلب على نقص الوقود.</p>
-      <ul class="options" onclick="checkAns(this, 'd')">
+      <ul class="options" onclick="checkAns(this, 'd', event)">
         <li data-opt="a">a. Countries must cooperate to evolve new images of energy...</li>
         <li data-opt="b">b. Countries must cooperate to evolve new forms of energy. They must unit to find solution...</li>
         <li data-opt="c">c. Countries need to cooperate to develop new images of energy...</li>
@@ -151,25 +128,18 @@ body:not(.aa-light) .choices label {
   </div>
 
   <script>
-    function checkAns(ul, correctOpt) {
-  if (ul.classList.contains('answered')) return;
-  ul.classList.add('answered');
-
-  const clicked = (typeof event !== 'undefined' && event.target)
-    ? event.target.closest('li[data-opt]')
-    : null;
-
-  const lis = ul.querySelectorAll('li[data-opt]');
-  lis.forEach(li => {
-    if (li.getAttribute('data-opt') === correctOpt) {
-      li.classList.add('correct');
+    function checkAns(ul, correctOpt, evt) {
+      if (ul.classList.contains('answered')) return;
+      ul.classList.add('answered');
+      const clicked = evt && evt.target ? evt.target.closest('li[data-opt]') : null;
+      const lis = ul.querySelectorAll('li[data-opt]');
+      lis.forEach(li => {
+        if (li.getAttribute('data-opt') === correctOpt) li.classList.add('correct');
+      });
+      if (clicked && clicked.getAttribute('data-opt') !== correctOpt) {
+        clicked.classList.add('wrong');
+      }
     }
-  });
-
-  if (clicked && clicked.getAttribute('data-opt') !== correctOpt) {
-    clicked.classList.add('wrong');
-  }
-}
       });
     }
   </script>

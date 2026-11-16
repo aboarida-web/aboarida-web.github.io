@@ -40,59 +40,36 @@ body.aa-light .aa-topbar,body.aa-light .container,body.aa-light .card,body.aa-li
 @media(max-width:360px){.aa-brand{font-size:12px}.aa-actions{gap:5px}.aa-action{font-size:10px;padding:7px}.grid{grid-template-columns:1fr!important}}
 </style>
 
-
-<style id="aboarida-full-dark-readability-fix">
-/* Dark mode: make lesson explanations, passages, notes and question text readable. */
-body:not(.aa-light) .container,
-body:not(.aa-light) .q-box,
-body:not(.aa-light) .lesson-content,
-body:not(.aa-light) .content-box,
-body:not(.aa-light) .explanation,
-body:not(.aa-light) .passage,
-body:not(.aa-light) .note,
-body:not(.aa-light) .info-box,
-body:not(.aa-light) .lesson-card,
-body:not(.aa-light) .topic-card,
-body:not(.aa-light) .section-card {
-  color: #e8eef8 !important;
-}
-body:not(.aa-light) .container :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
-body:not(.aa-light) .q-box :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
-body:not(.aa-light) .lesson-content :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
-body:not(.aa-light) .content-box :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
-body:not(.aa-light) .explanation :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
-body:not(.aa-light) .passage :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
-body:not(.aa-light) .note :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
-body:not(.aa-light) .info-box :is(p, li, span, strong, b, em, td, th, label, small, blockquote) {
-  color: #e8eef8 !important;
-}
-/* Keep answer choices readable in dark mode. */
-body:not(.aa-light) .options li,
-body:not(.aa-light) .options button,
-body:not(.aa-light) .options label,
-body:not(.aa-light) .option,
-body:not(.aa-light) .answer-option,
-body:not(.aa-light) .choice,
-body:not(.aa-light) .choices li,
-body:not(.aa-light) .choices button,
-body:not(.aa-light) .choices label {
-  color: #1e293b !important;
+<style id="aboarida-readable-panels-fix">
+/* Dark theme: keep lesson and question panels readable without whitening the whole page. */
+body:not(.aa-light) :is(.q-box,.lesson-content,.example-box,.text-box,.translation-box,.vocab-box,.questions-box,.definition,.example,.idiom-card,.info,.info-box,.content-box,.passage,.note,.highlight,.tree-diagram,.image-box) {
   background: #f8fafc !important;
+  color: #1e293b !important;
   border-color: #cbd5e1 !important;
 }
-/* Feedback colors must remain visible and override generic dark-mode text rules. */
-.options li.correct,
-.options .correct {
+body:not(.aa-light) :is(.q-box,.lesson-content,.example-box,.text-box,.translation-box,.vocab-box,.questions-box,.definition,.example,.idiom-card,.info,.info-box,.content-box,.passage,.note,.highlight,.tree-diagram,.image-box) :is(p,li,span,strong,b,em,small,label,td,th,h1,h2,h3,h4,summary,blockquote) {
+  color: #1e293b !important;
+}
+/* Preserve blue headings and colored callouts where they are intentionally used. */
+body:not(.aa-light) :is(.q-box,.lesson-content,.example-box,.text-box,.translation-box,.vocab-box,.questions-box,.definition,.example,.idiom-card,.info,.info-box,.content-box,.passage,.note,.highlight,.tree-diagram,.image-box) a {
+  color: #1d4ed8 !important;
+}
+/* Multiple-choice answers stay readable and retain clear result feedback. */
+body:not(.aa-light) .options li {
+  color: #1e293b !important;
+  background: #ffffff !important;
+  border-color: #cbd5e1 !important;
+}
+.options li.correct {
   color: #14532d !important;
   background: #bbf7d0 !important;
-  border: 1px solid #22c55e !important;
+  border: 2px solid #22c55e !important;
   font-weight: 700 !important;
 }
-.options li.wrong,
-.options .wrong {
+.options li.wrong {
   color: #7f1d1d !important;
   background: #fecaca !important;
-  border: 1px solid #ef4444 !important;
+  border: 2px solid #ef4444 !important;
   font-weight: 700 !important;
 }
 </style>
@@ -107,7 +84,7 @@ body:not(.aa-light) .choices label {
     <!-- الأسئلة من 1 إلى 10 (سهلة) -->
     <div class="q-box">
       <p class="q-text">1. التكاثر الذي يضمن استمرار النوع وليس الفرد هو:</p>
-      <ul class="options" onclick="checkAns(this, 'b')">
+      <ul class="options" onclick="checkAns(this, 'b', event)">
         <li data-opt="a">أ. النمو.</li>
         <li data-opt="b">ب. التكاثر.</li>
         <li data-opt="c">ج. الحركة.</li>
@@ -116,7 +93,7 @@ body:not(.aa-light) .choices label {
     </div>
     <div class="q-box">
       <p class="q-text">2. في التكاثر اللاجنسي، يكون النسل الناتج:</p>
-      <ul class="options" onclick="checkAns(this, 'a')">
+      <ul class="options" onclick="checkAns(this, 'a', event)">
         <li data-opt="a">أ. مشابهاً للأب تماماً.</li>
         <li data-opt="b">ب. مختلفاً وراثياً.</li>
         <li data-opt="c">ج. خليطاً بين الأب والأم.</li>
@@ -125,7 +102,7 @@ body:not(.aa-light) .choices label {
     </div>
     <div class="q-box">
       <p class="q-text">3. الأميبا تتكاثر بطريقة:</p>
-      <ul class="options" onclick="checkAns(this, 'c')">
+      <ul class="options" onclick="checkAns(this, 'c', event)">
         <li data-opt="a">أ. التبرعم.</li>
         <li data-opt="b">ب. التجدد.</li>
         <li data-opt="c">ج. الانشطار الثنائي.</li>
@@ -134,7 +111,7 @@ body:not(.aa-light) .choices label {
     </div>
     <div class="q-box">
       <p class="q-text">4. فطر الخميرة يتكاثر عن طريق:</p>
-      <ul class="options" onclick="checkAns(this, 'b')">
+      <ul class="options" onclick="checkAns(this, 'b', event)">
         <li data-opt="a">أ. الانشطار.</li>
         <li data-opt="b">ب. التبرعم.</li>
         <li data-opt="c">ج. التجدد.</li>
@@ -143,7 +120,7 @@ body:not(.aa-light) .choices label {
     </div>
     <div class="q-box">
       <p class="q-text">5. قدرة نجم البحر على تعويض الذراع المفقودة تسمى:</p>
-      <ul class="options" onclick="checkAns(this, 'd')">
+      <ul class="options" onclick="checkAns(this, 'd', event)">
         <li data-opt="a">أ. التبرعم.</li>
         <li data-opt="b">ب. الانشطار.</li>
         <li data-opt="c">ج. الإخصاب.</li>
@@ -152,7 +129,7 @@ body:not(.aa-light) .choices label {
     </div>
     <div class="q-box">
       <p class="q-text">6. التكاثر الذي يحتاج إلى فردين (ذكر وأنثى) هو:</p>
-      <ul class="options" onclick="checkAns(this, 'c')">
+      <ul class="options" onclick="checkAns(this, 'c', event)">
         <li data-opt="a">أ. اللاجنسي.</li>
         <li data-opt="b">ب. التبرعم.</li>
         <li data-opt="c">ج. الجنسي.</li>
@@ -161,7 +138,7 @@ body:not(.aa-light) .choices label {
     </div>
     <div class="q-box">
       <p class="q-text">7. الاقتران السلمي يحدث في طحلب:</p>
-      <ul class="options" onclick="checkAns(this, 'a')">
+      <ul class="options" onclick="checkAns(this, 'a', event)">
         <li data-opt="a">أ. الإسبيروجيرا.</li>
         <li data-opt="b">ب. الخميرة.</li>
         <li data-opt="c">ج. عفن الخبز.</li>
@@ -170,7 +147,7 @@ body:not(.aa-light) .choices label {
     </div>
     <div class="q-box">
       <p class="q-text">8. العضو المتخصص في التكاثر في النباتات الزهرية هو:</p>
-      <ul class="options" onclick="checkAns(this, 'b')">
+      <ul class="options" onclick="checkAns(this, 'b', event)">
         <li data-opt="a">أ. الجذر.</li>
         <li data-opt="b">ب. الزهرة.</li>
         <li data-opt="c">ج. الساق.</li>
@@ -179,7 +156,7 @@ body:not(.aa-light) .choices label {
     </div>
     <div class="q-box">
       <p class="q-text">9. الأوراق الخضراء التي تحمي الزهرة من الجفاف هي:</p>
-      <ul class="options" onclick="checkAns(this, 'c')">
+      <ul class="options" onclick="checkAns(this, 'c', event)">
         <li data-opt="a">أ. البتلات.</li>
         <li data-opt="b">ب. الأسدية.</li>
         <li data-opt="c">ج. السبلات.</li>
@@ -188,7 +165,7 @@ body:not(.aa-light) .choices label {
     </div>
     <div class="q-box">
       <p class="q-text">10. عضو التذكير في الزهرة هو:</p>
-      <ul class="options" onclick="checkAns(this, 'd')">
+      <ul class="options" onclick="checkAns(this, 'd', event)">
         <li data-opt="a">أ. المتاع.</li>
         <li data-opt="b">ب. المبيض.</li>
         <li data-opt="c">ج. الميسم.</li>
@@ -199,7 +176,7 @@ body:not(.aa-light) .choices label {
     <!-- الأسئلة من 11 إلى 20 (متوسطة) -->
     <div class="q-box">
       <p class="q-text">11. تكوين حبوب اللقاح يحدث داخل:</p>
-      <ul class="options" onclick="checkAns(this, 'b')">
+      <ul class="options" onclick="checkAns(this, 'b', event)">
         <li data-opt="a">أ. المبيض.</li>
         <li data-opt="b">ب. المتك.</li>
         <li data-opt="c">ج. الميسم.</li>
@@ -208,7 +185,7 @@ body:not(.aa-light) .choices label {
     </div>
     <div class="q-box">
       <p class="q-text">12. الخلايا الناتجة من الانقسام الميوزي للخلية الجرثومية الأمية في المتك هي:</p>
-      <ul class="options" onclick="checkAns(this, 'c')">
+      <ul class="options" onclick="checkAns(this, 'c', event)">
         <li data-opt="a">أ. 2 خلية (2ن).</li>
         <li data-opt="b">ب. 4 خلايا (2ن).</li>
         <li data-opt="c">ج. 4 خلايا (ن).</li>
@@ -217,7 +194,7 @@ body:not(.aa-light) .choices label {
     </div>
     <div class="q-box">
       <p class="q-text">13. النواة المولدة في حبة اللقاح تنقسم لتكوين:</p>
-      <ul class="options" onclick="checkAns(this, 'a')">
+      <ul class="options" onclick="checkAns(this, 'a', event)">
         <li data-opt="a">أ. نواتين ذكريتين.</li>
         <li data-opt="b">ب. نواة أنبوبية.</li>
         <li data-opt="c">ج. نواتين قطبيتين.</li>
@@ -226,7 +203,7 @@ body:not(.aa-light) .choices label {
     </div>
     <div class="q-box">
       <p class="q-text">14. عدد الأنوية في الكيس الجنيني الناضج:</p>
-      <ul class="options" onclick="checkAns(this, 'd')">
+      <ul class="options" onclick="checkAns(this, 'd', event)">
         <li data-opt="a">أ. 2</li>
         <li data-opt="b">ب. 4</li>
         <li data-opt="c">ج. 6</li>
@@ -235,7 +212,7 @@ body:not(.aa-light) .choices label {
     </div>
     <div class="q-box">
       <p class="q-text">15. انتقال حبوب اللقاح من المتك إلى الميسم يسمى:</p>
-      <ul class="options" onclick="checkAns(this, 'b')">
+      <ul class="options" onclick="checkAns(this, 'b', event)">
         <li data-opt="a">أ. الإخصاب.</li>
         <li data-opt="b">ب. التلقيح.</li>
         <li data-opt="c">ج. الإنبات.</li>
@@ -244,7 +221,7 @@ body:not(.aa-light) .choices label {
     </div>
     <div class="q-box">
       <p class="q-text">16. الثمرة التي تتكون بدون بذور وبدون إخصاب تسمى:</p>
-      <ul class="options" onclick="checkAns(this, 'c')">
+      <ul class="options" onclick="checkAns(this, 'c', event)">
         <li data-opt="a">أ. ثمرة كاذبة.</li>
         <li data-opt="b">ب. ثمرة حقيقية.</li>
         <li data-opt="c">ج. إثمار عذري.</li>
@@ -253,7 +230,7 @@ body:not(.aa-light) .choices label {
     </div>
     <div class="q-box">
       <p class="q-text">17. الجهاز التناسلي الذكري يتكون من:</p>
-      <ul class="options" onclick="checkAns(this, 'a')">
+      <ul class="options" onclick="checkAns(this, 'a', event)">
         <li data-opt="a">أ. خصيتين وقنوات وغدد.</li>
         <li data-opt="b">ب. مبيضين وقناتي فالوب.</li>
         <li data-opt="c">ج. رحم ومهبل.</li>
@@ -262,7 +239,7 @@ body:not(.aa-light) .choices label {
     </div>
     <div class="q-box">
       <p class="q-text">18. الخلايا المسؤولة عن إفراز التستوستيرون في الخصية:</p>
-      <ul class="options" onclick="checkAns(this, 'c')">
+      <ul class="options" onclick="checkAns(this, 'c', event)">
         <li data-opt="a">أ. خلايا سرتولي.</li>
         <li data-opt="b">ب. خلايا جرثومية.</li>
         <li data-opt="c">ج. الخلايا البينية.</li>
@@ -271,7 +248,7 @@ body:not(.aa-light) .choices label {
     </div>
     <div class="q-box">
       <p class="q-text">19. جزء الحيوان المنوي الذي يمد بالطاقة:</p>
-      <ul class="options" onclick="checkAns(this, 'b')">
+      <ul class="options" onclick="checkAns(this, 'b', event)">
         <li data-opt="a">أ. الرأس.</li>
         <li data-opt="b">ب. القطعة الوسطى.</li>
         <li data-opt="c">ج. الذيل.</li>
@@ -280,7 +257,7 @@ body:not(.aa-light) .choices label {
     </div>
     <div class="q-box">
       <p class="q-text">20. العضو الذي يفرز هرموني الإستروجين والبروجسترون:</p>
-      <ul class="options" onclick="checkAns(this, 'd')">
+      <ul class="options" onclick="checkAns(this, 'd', event)">
         <li data-opt="a">أ. الرحم.</li>
         <li data-opt="b">ب. المهبل.</li>
         <li data-opt="c">ج. قناة فالوب.</li>
@@ -291,7 +268,7 @@ body:not(.aa-light) .choices label {
     <!-- الأسئلة من 21 إلى 30 (متوسطة - صعبة) -->
     <div class="q-box">
       <p class="q-text">21. تبدأ دورة الطمث عادة في سن:</p>
-      <ul class="options" onclick="checkAns(this, 'c')">
+      <ul class="options" onclick="checkAns(this, 'c', event)">
         <li data-opt="a">أ. 5 سنوات.</li>
         <li data-opt="b">ب. 20 سنة.</li>
         <li data-opt="c">ج. 12-15 سنة.</li>
@@ -300,7 +277,7 @@ body:not(.aa-light) .choices label {
     </div>
     <div class="q-box">
       <p class="q-text">22. الهرمون الذي يسبب انفجار حويصلة جراف وخروج البويضة:</p>
-      <ul class="options" onclick="checkAns(this, 'b')">
+      <ul class="options" onclick="checkAns(this, 'b', event)">
         <li data-opt="a">أ. FSH.</li>
         <li data-opt="b">ب. LH.</li>
         <li data-opt="c">ج. الإستروجين.</li>
@@ -309,7 +286,7 @@ body:not(.aa-light) .choices label {
     </div>
     <div class="q-box">
       <p class="q-text">23. إذا لم تلقح البويضة، يضمحل الجسم الأصفر ويقل إفراز:</p>
-      <ul class="options" onclick="checkAns(this, 'a')">
+      <ul class="options" onclick="checkAns(this, 'a', event)">
         <li data-opt="a">أ. البروجسترون والإستروجين.</li>
         <li data-opt="b">ب. LH و FSH.</li>
         <li data-opt="c">ج. التستوستيرون.</li>
@@ -318,7 +295,7 @@ body:not(.aa-light) .choices label {
     </div>
     <div class="q-box">
       <p class="q-text">24. يتم إخصاب البويضة عادة في:</p>
-      <ul class="options" onclick="checkAns(this, 'c')">
+      <ul class="options" onclick="checkAns(this, 'c', event)">
         <li data-opt="a">أ. الرحم.</li>
         <li data-opt="b">ب. المبيض.</li>
         <li data-opt="c">ج. الثلث الأول من قناة فالوب.</li>
@@ -327,7 +304,7 @@ body:not(.aa-light) .choices label {
     </div>
     <div class="q-box">
       <p class="q-text">25. الإنزيم الذي يفرزه الحيوان المنوي لاختراق البويضة:</p>
-      <ul class="options" onclick="checkAns(this, 'd')">
+      <ul class="options" onclick="checkAns(this, 'd', event)">
         <li data-opt="a">أ. الأميليز.</li>
         <li data-opt="b">ب. الليباز.</li>
         <li data-opt="c">ج. الكولين استيريز.</li>
@@ -336,7 +313,7 @@ body:not(.aa-light) .choices label {
     </div>
     <div class="q-box">
       <p class="q-text">26. عدد الحيوانات المنوية في المرة الواحدة للرجل السليم:</p>
-      <ul class="options" onclick="checkAns(this, 'b')">
+      <ul class="options" onclick="checkAns(this, 'b', event)">
         <li data-opt="a">أ. 20 مليون.</li>
         <li data-opt="b">ب. 300 إلى 500 مليون.</li>
         <li data-opt="c">ج. 1000 فقط.</li>
@@ -345,7 +322,7 @@ body:not(.aa-light) .choices label {
     </div>
     <div class="q-box">
       <p class="q-text">27. الغشاء الذي يحيط بالجنين من الداخل ويحتوي على سائل واقٍ:</p>
-      <ul class="options" onclick="checkAns(this, 'a')">
+      <ul class="options" onclick="checkAns(this, 'a', event)">
         <li data-opt="a">أ. الرهل (Amnion).</li>
         <li data-opt="b">ب. السلى (Chorion).</li>
         <li data-opt="c">ج. المشيمة.</li>
@@ -354,7 +331,7 @@ body:not(.aa-light) .choices label {
     </div>
     <div class="q-box">
       <p class="q-text">28. التوائم التي تنتج من بويضة واحدة وحيوان منوي واحد هي:</p>
-      <ul class="options" onclick="checkAns(this, 'c')">
+      <ul class="options" onclick="checkAns(this, 'c', event)">
         <li data-opt="a">أ. غير متماثلة.</li>
         <li data-opt="b">ب. ثنائية اللاقحة.</li>
         <li data-opt="c">ج. متماثلة.</li>
@@ -363,7 +340,7 @@ body:not(.aa-light) .choices label {
     </div>
     <div class="q-box">
       <p class="q-text">29. وسيلة منع الحمل التي تمنع انغراس البويضة في الرحم:</p>
-      <ul class="options" onclick="checkAns(this, 'b')">
+      <ul class="options" onclick="checkAns(this, 'b', event)">
         <li data-opt="a">أ. الأقراص.</li>
         <li data-opt="b">ب. اللولب.</li>
         <li data-opt="c">ج. الواقي الذكري.</li>
@@ -372,7 +349,7 @@ body:not(.aa-light) .choices label {
     </div>
     <div class="q-box">
       <p class="q-text">30. النعجة دوللي تم استنساخها باستخدام:</p>
-      <ul class="options" onclick="checkAns(this, 'd')">
+      <ul class="options" onclick="checkAns(this, 'd', event)">
         <li data-opt="a">أ. خلية جنينية فقط.</li>
         <li data-opt="b">ب. بويضة مخصبة.</li>
         <li data-opt="c">ج. حيوان منوي.</li>
@@ -383,7 +360,7 @@ body:not(.aa-light) .choices label {
     <!-- الأسئلة من 31 إلى 40 (صعبة) -->
     <div class="q-box">
       <p class="q-text">31. تفرز الغدة النخامية هرمون FSH الذي يحفز:</p>
-      <ul class="options" onclick="checkAns(this, 'a')">
+      <ul class="options" onclick="checkAns(this, 'a', event)">
         <li data-opt="a">أ. نمو حويصلة جراف في المبيض.</li>
         <li data-opt="b">ب. انفجار حويصلة جراف.</li>
         <li data-opt="c">ج. إفراز البروجسترون.</li>
@@ -392,7 +369,7 @@ body:not(.aa-light) .choices label {
     </div>
     <div class="q-box">
       <p class="q-text">32. الخلايا التي تتحد لتكوين نواة الإندوسبيرم هي:</p>
-      <ul class="options" onclick="checkAns(this, 'c')">
+      <ul class="options" onclick="checkAns(this, 'c', event)">
         <li data-opt="a">أ. نواتين ذكريتين.</li>
         <li data-opt="b">ب. نواة ذكرية ونواة بويضة.</li>
         <li data-opt="c">ج. نواة ذكرية والنواتين القطبيتين.</li>
@@ -401,7 +378,7 @@ body:not(.aa-light) .choices label {
     </div>
     <div class="q-box">
       <p class="q-text">33. الأزهار وحيدة الجنس تلجأ إلى:</p>
-      <ul class="options" onclick="checkAns(this, 'b')">
+      <ul class="options" onclick="checkAns(this, 'b', event)">
         <li data-opt="a">أ. التلقيح الذاتي.</li>
         <li data-opt="b">ب. التلقيح الخلطي.</li>
         <li data-opt="c">ج. الإثمار العذري.</li>
@@ -410,7 +387,7 @@ body:not(.aa-light) .choices label {
     </div>
     <div class="q-box">
       <p class="q-text">34. الثمرة التي يتشحم فيها جزء غير المبيض تسمى:</p>
-      <ul class="options" onclick="checkAns(this, 'd')">
+      <ul class="options" onclick="checkAns(this, 'd', event)">
         <li data-opt="a">أ. ثمرة عذرية.</li>
         <li data-opt="b">ب. ثمرة حقيقية.</li>
         <li data-opt="c">ج. بذرة.</li>
@@ -419,7 +396,7 @@ body:not(.aa-light) .choices label {
     </div>
     <div class="q-box">
       <p class="q-text">35. يتكون الجنين في النبات من:</p>
-      <ul class="options" onclick="checkAns(this, 'a')">
+      <ul class="options" onclick="checkAns(this, 'a', event)">
         <li data-opt="a">أ. الزيجوت (2ن).</li>
         <li data-opt="b">ب. نواة الإندوسبيرم (3ن).</li>
         <li data-opt="c">ج. النواتين القطبيتين.</li>
@@ -428,7 +405,7 @@ body:not(.aa-light) .choices label {
     </div>
     <div class="q-box">
       <p class="q-text">36. تتكون نواة الإندوسبيرم في عملية الإخصاب المزدوج لتكون:</p>
-      <ul class="options" onclick="checkAns(this, 'c')">
+      <ul class="options" onclick="checkAns(this, 'c', event)">
         <li data-opt="a">أ. 2ن</li>
         <li data-opt="b">ب. 1ن</li>
         <li data-opt="c">ج. 3ن</li>
@@ -437,7 +414,7 @@ body:not(.aa-light) .choices label {
     </div>
     <div class="q-box">
       <p class="q-text">37. لتكوين حيوان منوي واحد سليم، يجب أن تنقسم الخلية المنوية الأولية بـ:</p>
-      <ul class="options" onclick="checkAns(this, 'b')">
+      <ul class="options" onclick="checkAns(this, 'b', event)">
         <li data-opt="a">أ. انقسام ميتوزي واحد.</li>
         <li data-opt="b">ب. انقسام ميتوزي أول ثم انقسام ميتوزي ثانٍ.</li>
         <li data-opt="c">ج. انقسام ميتوزي فقط.</li>
@@ -446,7 +423,7 @@ body:not(.aa-light) .choices label {
     </div>
     <div class="q-box">
       <p class="q-text">38. للوصول إلى بويضة ناضجة، تنتج الخلية البيضية الأولية:</p>
-      <ul class="options" onclick="checkAns(this, 'd')">
+      <ul class="options" onclick="checkAns(this, 'd', event)">
         <li data-opt="a">أ. 4 بويضات ناضجة.</li>
         <li data-opt="b">ب. 2 بويضة ناضجة.</li>
         <li data-opt="c">ج. 1 بويضة و3 أجسام قطبية.</li>
@@ -455,7 +432,7 @@ body:not(.aa-light) .choices label {
     </div>
     <div class="q-box">
       <p class="q-text">39. في دورة الطمث، يكون اليوم 14 هو وقت:</p>
-      <ul class="options" onclick="checkAns(this, 'a')">
+      <ul class="options" onclick="checkAns(this, 'a', event)">
         <li data-opt="a">أ. التبويض.</li>
         <li data-opt="b">ب. بداية الطمث.</li>
         <li data-opt="c">ج. نضج حويصلة جراف.</li>
@@ -464,7 +441,7 @@ body:not(.aa-light) .choices label {
     </div>
     <div class="q-box">
       <p class="q-text">40. التوائم المتماثلة تكون دائماً:</p>
-      <ul class="options" onclick="checkAns(this, 'b')">
+      <ul class="options" onclick="checkAns(this, 'b', event)">
         <li data-opt="a">أ. من جنسين مختلفين.</li>
         <li data-opt="b">ب. من نفس الجنس ومتطابقة وراثياً.</li>
         <li data-opt="c">ج. مختلفة وراثياً.</li>
@@ -475,25 +452,18 @@ body:not(.aa-light) .choices label {
   </div>
 
   <script>
-    function checkAns(ul, correctOpt) {
-  if (ul.classList.contains('answered')) return;
-  ul.classList.add('answered');
-
-  const clicked = (typeof event !== 'undefined' && event.target)
-    ? event.target.closest('li[data-opt]')
-    : null;
-
-  const lis = ul.querySelectorAll('li[data-opt]');
-  lis.forEach(li => {
-    if (li.getAttribute('data-opt') === correctOpt) {
-      li.classList.add('correct');
-    }
-  });
-
-  if (clicked && clicked.getAttribute('data-opt') !== correctOpt) {
-    clicked.classList.add('wrong');
-  }
-});
+    function checkAns(ul, correctOpt, evt) {
+      if (ul.classList.contains('answered')) return;
+      ul.classList.add('answered');
+      const clicked = evt && evt.target ? evt.target.closest('li[data-opt]') : null;
+      const lis = ul.querySelectorAll('li[data-opt]');
+      lis.forEach(li => {
+        if (li.getAttribute('data-opt') === correctOpt) li.classList.add('correct');
+      });
+      if (clicked && clicked.getAttribute('data-opt') !== correctOpt) {
+        clicked.classList.add('wrong');
+      }
+    });
     }
   </script>
     <!-- الجزء التاني: الأسئلة المقالية -->

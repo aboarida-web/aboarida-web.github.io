@@ -40,59 +40,36 @@ body.aa-light .aa-topbar,body.aa-light .container,body.aa-light .card,body.aa-li
 @media(max-width:360px){.aa-brand{font-size:12px}.aa-actions{gap:5px}.aa-action{font-size:10px;padding:7px}.grid{grid-template-columns:1fr!important}}
 </style>
 
-
-<style id="aboarida-full-dark-readability-fix">
-/* Dark mode: make lesson explanations, passages, notes and question text readable. */
-body:not(.aa-light) .container,
-body:not(.aa-light) .q-box,
-body:not(.aa-light) .lesson-content,
-body:not(.aa-light) .content-box,
-body:not(.aa-light) .explanation,
-body:not(.aa-light) .passage,
-body:not(.aa-light) .note,
-body:not(.aa-light) .info-box,
-body:not(.aa-light) .lesson-card,
-body:not(.aa-light) .topic-card,
-body:not(.aa-light) .section-card {
-  color: #e8eef8 !important;
-}
-body:not(.aa-light) .container :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
-body:not(.aa-light) .q-box :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
-body:not(.aa-light) .lesson-content :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
-body:not(.aa-light) .content-box :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
-body:not(.aa-light) .explanation :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
-body:not(.aa-light) .passage :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
-body:not(.aa-light) .note :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
-body:not(.aa-light) .info-box :is(p, li, span, strong, b, em, td, th, label, small, blockquote) {
-  color: #e8eef8 !important;
-}
-/* Keep answer choices readable in dark mode. */
-body:not(.aa-light) .options li,
-body:not(.aa-light) .options button,
-body:not(.aa-light) .options label,
-body:not(.aa-light) .option,
-body:not(.aa-light) .answer-option,
-body:not(.aa-light) .choice,
-body:not(.aa-light) .choices li,
-body:not(.aa-light) .choices button,
-body:not(.aa-light) .choices label {
-  color: #1e293b !important;
+<style id="aboarida-readable-panels-fix">
+/* Dark theme: keep lesson and question panels readable without whitening the whole page. */
+body:not(.aa-light) :is(.q-box,.lesson-content,.example-box,.text-box,.translation-box,.vocab-box,.questions-box,.definition,.example,.idiom-card,.info,.info-box,.content-box,.passage,.note,.highlight,.tree-diagram,.image-box) {
   background: #f8fafc !important;
+  color: #1e293b !important;
   border-color: #cbd5e1 !important;
 }
-/* Feedback colors must remain visible and override generic dark-mode text rules. */
-.options li.correct,
-.options .correct {
+body:not(.aa-light) :is(.q-box,.lesson-content,.example-box,.text-box,.translation-box,.vocab-box,.questions-box,.definition,.example,.idiom-card,.info,.info-box,.content-box,.passage,.note,.highlight,.tree-diagram,.image-box) :is(p,li,span,strong,b,em,small,label,td,th,h1,h2,h3,h4,summary,blockquote) {
+  color: #1e293b !important;
+}
+/* Preserve blue headings and colored callouts where they are intentionally used. */
+body:not(.aa-light) :is(.q-box,.lesson-content,.example-box,.text-box,.translation-box,.vocab-box,.questions-box,.definition,.example,.idiom-card,.info,.info-box,.content-box,.passage,.note,.highlight,.tree-diagram,.image-box) a {
+  color: #1d4ed8 !important;
+}
+/* Multiple-choice answers stay readable and retain clear result feedback. */
+body:not(.aa-light) .options li {
+  color: #1e293b !important;
+  background: #ffffff !important;
+  border-color: #cbd5e1 !important;
+}
+.options li.correct {
   color: #14532d !important;
   background: #bbf7d0 !important;
-  border: 1px solid #22c55e !important;
+  border: 2px solid #22c55e !important;
   font-weight: 700 !important;
 }
-.options li.wrong,
-.options .wrong {
+.options li.wrong {
   color: #7f1d1d !important;
   background: #fecaca !important;
-  border: 1px solid #ef4444 !important;
+  border: 2px solid #ef4444 !important;
   font-weight: 700 !important;
 }
 </style>
@@ -107,7 +84,7 @@ body:not(.aa-light) .choices label {
     <!-- سؤال 1 -->
     <div class="q-box">
       <p class="q-text">1. تحدث الحركة في الإنسان بتآزر مجموعة من الأجهزة وهي:</p>
-      <ul class="options" onclick="checkAns(this, 'c')">
+      <ul class="options" onclick="checkAns(this, 'c', event)">
         <li data-opt="a">أ. الجهاز العضلي والهيكلي والدوري.</li>
         <li data-opt="b">ب. الجهاز التنفسي والعصبي والهيكلي.</li>
         <li data-opt="c">ج. الجهاز الهيكلي والعصبي والعضلي.</li>
@@ -118,7 +95,7 @@ body:not(.aa-light) .choices label {
     <!-- سؤال 2 -->
     <div class="q-box">
       <p class="q-text">2. المخزون المباشر للطاقة في العضلة هو:</p>
-      <ul class="options" onclick="checkAns(this, 'a')">
+      <ul class="options" onclick="checkAns(this, 'a', event)">
         <li data-opt="a">أ. جزيئات ATP</li>
         <li data-opt="b">ب. الجليكوجين</li>
         <li data-opt="c">ج. الجلوكوز</li>
@@ -129,7 +106,7 @@ body:not(.aa-light) .choices label {
     <!-- سؤال 3 -->
     <div class="q-box">
       <p class="q-text">3. يرجع الإجهاد العضلي عند التعب إلى تراكم مركب كيميائي هو:</p>
-      <ul class="options" onclick="checkAns(this, 'c')">
+      <ul class="options" onclick="checkAns(this, 'c', event)">
         <li data-opt="a">أ. ثاني أكسيد الكربون</li>
         <li data-opt="b">ب. الكحول</li>
         <li data-opt="c">ج. حمض اللاكتيك</li>
@@ -140,7 +117,7 @@ body:not(.aa-light) .choices label {
     <!-- سؤال 4 -->
     <div class="q-box">
       <p class="q-text">4. أي مما يلي يعد مثالاً على الحركة الموضعية في النبات؟</p>
-      <ul class="options" onclick="checkAns(this, 'b')">
+      <ul class="options" onclick="checkAns(this, 'b', event)">
         <li data-opt="a">أ. حركة السيتوبلازم.</li>
         <li data-opt="b">ب. انطباق أوراق نبات المستحية عند لمسها.</li>
         <li data-opt="c">ج. نمو الجذور باتجاه الماء.</li>
@@ -151,7 +128,7 @@ body:not(.aa-light) .choices label {
     <!-- سؤال 5 -->
     <div class="q-box">
       <p class="q-text">5. في تركيب العضلة الهيكلية، المنطقة المضيئة في اللييفة العضلية تتكون من خيوط بروتينية رفيعة تسمى:</p>
-      <ul class="options" onclick="checkAns(this, 'd')">
+      <ul class="options" onclick="checkAns(this, 'd', event)">
         <li data-opt="a">أ. الميوسين</li>
         <li data-opt="b">ب. الساركوبلازم</li>
         <li data-opt="c">ج. الكولين استيريز</li>
@@ -162,7 +139,7 @@ body:not(.aa-light) .choices label {
     <!-- سؤال 6 -->
     <div class="q-box">
       <p class="q-text">6. الجزء المسؤول عن حماية الحبل الشوكي في الفقرة العظمية هو:</p>
-      <ul class="options" onclick="checkAns(this, 'b')">
+      <ul class="options" onclick="checkAns(this, 'b', event)">
         <li data-opt="a">أ. النتوء الشوكي</li>
         <li data-opt="b">ب. القناة العصبية</li>
         <li data-opt="c">ج. النتوء المستعرض</li>
@@ -173,7 +150,7 @@ body:not(.aa-light) .choices label {
     <!-- سؤال 7 -->
     <div class="q-box">
       <p class="q-text">7. النسيج الذي يربط العضلات بالعظام هو:</p>
-      <ul class="options" onclick="checkAns(this, 'c')">
+      <ul class="options" onclick="checkAns(this, 'c', event)">
         <li data-opt="a">أ. الأربطة</li>
         <li data-opt="b">ب. الغضاريف</li>
         <li data-opt="c">ج. الأوتار</li>
@@ -184,7 +161,7 @@ body:not(.aa-light) .choices label {
     <!-- سؤال 8 -->
     <div class="q-box">
       <p class="q-text">8. عدد الفقرات العنقية في العمود الفقري للإنسان هو:</p>
-      <ul class="options" onclick="checkAns(this, 'a')">
+      <ul class="options" onclick="checkAns(this, 'a', event)">
         <li data-opt="a">أ. 7 فقرات</li>
         <li data-opt="b">ب. 12 فقرة</li>
         <li data-opt="c">ج. 5 فقرات</li>
@@ -195,7 +172,7 @@ body:not(.aa-light) .choices label {
     <!-- سؤال 9 -->
     <div class="q-box">
       <p class="q-text">9. أي المواد التالية يرسّبها النبات في جدر خلايا البشرة لمنع فقد الماء؟</p>
-      <ul class="options" onclick="checkAns(this, 'b')">
+      <ul class="options" onclick="checkAns(this, 'b', event)">
         <li data-opt="a">أ. اللجنين</li>
         <li data-opt="b">ب. الكيوتين</li>
         <li data-opt="c">ج. السليلوز</li>
@@ -206,7 +183,7 @@ body:not(.aa-light) .choices label {
     <!-- سؤال 10 -->
     <div class="q-box">
       <p class="q-text">10. عند نقص جزيئات ATP في العضلة، ماذا يحدث؟</p>
-      <ul class="options" onclick="checkAns(this, 'd')">
+      <ul class="options" onclick="checkAns(this, 'd', event)">
         <li data-opt="a">أ. تنبسط العضلة بسرعة.</li>
         <li data-opt="b">ب. تزيد سرعة الانقباض.</li>
         <li data-opt="c">ج. تنفصل خيوط الأكتين والميوسين.</li>
@@ -217,7 +194,7 @@ body:not(.aa-light) .choices label {
     <!-- سؤال 11 -->
     <div class="q-box">
       <p class="q-text">11. الجزء من الجهاز الهيكلي الذي يتكون من 8 عظام ويحمي المخ هو:</p>
-      <ul class="options" onclick="checkAns(this, 'c')">
+      <ul class="options" onclick="checkAns(this, 'c', event)">
         <li data-opt="a">أ. الجزء الوجهي من الجمجمة</li>
         <li data-opt="b">ب. العمود الفقري</li>
         <li data-opt="c">ج. الجزء المخي من الجمجمة</li>
@@ -228,7 +205,7 @@ body:not(.aa-light) .choices label {
     <!-- سؤال 12 -->
     <div class="q-box">
       <p class="q-text">12. أي المفاصل التالية يسمح بحركة واسعة ويحتوي على سائل زلالي؟</p>
-      <ul class="options" onclick="checkAns(this, 'd')">
+      <ul class="options" onclick="checkAns(this, 'd', event)">
         <li data-opt="a">أ. المفاصل الليفية</li>
         <li data-opt="b">ب. المفاصل الغضروفية</li>
         <li data-opt="c">ج. مفاصل فقرات العمود الفقري</li>
@@ -239,7 +216,7 @@ body:not(.aa-light) .choices label {
     <!-- سؤال 13 -->
     <div class="q-box">
       <p class="q-text">13. الإنزيم المسؤول عن تحطيم الأسيتيل كولين لترتاح العضلة هو:</p>
-      <ul class="options" onclick="checkAns(this, 'b')">
+      <ul class="options" onclick="checkAns(this, 'b', event)">
         <li data-opt="a">أ. الأميليز</li>
         <li data-opt="b">ب. الكولين استيريز</li>
         <li data-opt="c">ج. الببسين</li>
@@ -250,7 +227,7 @@ body:not(.aa-light) .choices label {
     <!-- سؤال 14 -->
     <div class="q-box">
       <p class="q-text">14. الحركة التي تحدث داخل الخلية عن طريق دوران السيتوبلازم تسمى:</p>
-      <ul class="options" onclick="checkAns(this, 'a')">
+      <ul class="options" onclick="checkAns(this, 'a', event)">
         <li data-opt="a">أ. الحركة الدورانية للسيتوبلازم</li>
         <li data-opt="b">ب. حركة النوم</li>
         <li data-opt="c">ج. حركة الانتحاء</li>
@@ -261,7 +238,7 @@ body:not(.aa-light) .choices label {
     <!-- سؤال 15 -->
     <div class="q-box">
       <p class="q-text">15. "الضلوع العائمة" هي:</p>
-      <ul class="options" onclick="checkAns(this, 'c')">
+      <ul class="options" onclick="checkAns(this, 'c', event)">
         <li data-opt="a">أ. أول 7 أزواج من الضلوع.</li>
         <li data-opt="b">ب. 10 أزواج تتصل بالقص.</li>
         <li data-opt="c">ج. زوجان قصيران لا يتصلان بعظمة القص.</li>
@@ -272,7 +249,7 @@ body:not(.aa-light) .choices label {
     <!-- سؤال 16 -->
     <div class="q-box">
       <p class="q-text">16. العضلات الملساء (اللاإرادية) توجد في:</p>
-      <ul class="options" onclick="checkAns(this, 'b')">
+      <ul class="options" onclick="checkAns(this, 'b', event)">
         <li data-opt="a">أ. عضلات الأطراف.</li>
         <li data-opt="b">ب. جدران الأوعية الدموية والأمعاء.</li>
         <li data-opt="c">ج. عضلة القلب فقط.</li>
@@ -283,7 +260,7 @@ body:not(.aa-light) .choices label {
     <!-- سؤال 17 -->
     <div class="q-box">
       <p class="q-text">17. في نظرية الخيوط المنزلقة، عند انقباض العضلة:</p>
-      <ul class="options" onclick="checkAns(this, 'c')">
+      <ul class="options" onclick="checkAns(this, 'c', event)">
         <li data-opt="a">أ. تتباعد خيوط الأكتين عن الميوسين.</li>
         <li data-opt="b">ب. تزيد المسافة بين خطوط Z.</li>
         <li data-opt="c">ج. تنزلق خيوط الأكتين على خيوط الميوسين وتقصر المسافة بين خطوط Z.</li>
@@ -294,7 +271,7 @@ body:not(.aa-light) .choices label {
     <!-- سؤال 18 -->
     <div class="q-box">
       <p class="q-text">18. أي النباتات التالية تتميز بحركة النوم؟</p>
-      <ul class="options" onclick="checkAns(this, 'd')">
+      <ul class="options" onclick="checkAns(this, 'd', event)">
         <li data-opt="a">أ. نبات المستحية.</li>
         <li data-opt="b">ب. نبات الصبار.</li>
         <li data-opt="c">ج. نبات الأرز.</li>
@@ -305,7 +282,7 @@ body:not(.aa-light) .choices label {
     <!-- سؤال 19 -->
     <div class="q-box">
       <p class="q-text">19. لتقوية جدر خلاياها وإكسابها صلابة، يرسّب النبات مادة اللجنين في:</p>
-      <ul class="options" onclick="checkAns(this, 'b')">
+      <ul class="options" onclick="checkAns(this, 'b', event)">
         <li data-opt="a">أ. خلايا البشرة.</li>
         <li data-opt="b">ب. الخلايا الكولنشيمية والاسكلرنشيمية.</li>
         <li data-opt="c">ج. الخلايا الفلينية.</li>
@@ -316,7 +293,7 @@ body:not(.aa-light) .choices label {
     <!-- سؤال 20 -->
     <div class="q-box">
       <p class="q-text">20. تتصل الأطراف العلوية بالعمود الفقري عن طريق:</p>
-      <ul class="options" onclick="checkAns(this, 'c')">
+      <ul class="options" onclick="checkAns(this, 'c', event)">
         <li data-opt="a">أ. عظم الحوض.</li>
         <li data-opt="b">ب. عظم الفخذ.</li>
         <li data-opt="c">ج. عظم الكتف (الحزام الصدري).</li>
@@ -327,25 +304,18 @@ body:not(.aa-light) .choices label {
   </div>
 
   <script>
-    function checkAns(ul, correctOpt) {
-  if (ul.classList.contains('answered')) return;
-  ul.classList.add('answered');
-
-  const clicked = (typeof event !== 'undefined' && event.target)
-    ? event.target.closest('li[data-opt]')
-    : null;
-
-  const lis = ul.querySelectorAll('li[data-opt]');
-  lis.forEach(li => {
-    if (li.getAttribute('data-opt') === correctOpt) {
-      li.classList.add('correct');
-    }
-  });
-
-  if (clicked && clicked.getAttribute('data-opt') !== correctOpt) {
-    clicked.classList.add('wrong');
-  }
-});
+    function checkAns(ul, correctOpt, evt) {
+      if (ul.classList.contains('answered')) return;
+      ul.classList.add('answered');
+      const clicked = evt && evt.target ? evt.target.closest('li[data-opt]') : null;
+      const lis = ul.querySelectorAll('li[data-opt]');
+      lis.forEach(li => {
+        if (li.getAttribute('data-opt') === correctOpt) li.classList.add('correct');
+      });
+      if (clicked && clicked.getAttribute('data-opt') !== correctOpt) {
+        clicked.classList.add('wrong');
+      }
+    });
     }
   </script>
     <!-- الجزء التاني: الأسئلة المقالية -->

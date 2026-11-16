@@ -40,59 +40,36 @@ body.aa-light .aa-topbar,body.aa-light .container,body.aa-light .card,body.aa-li
 @media(max-width:360px){.aa-brand{font-size:12px}.aa-actions{gap:5px}.aa-action{font-size:10px;padding:7px}.grid{grid-template-columns:1fr!important}}
 </style>
 
-
-<style id="aboarida-full-dark-readability-fix">
-/* Dark mode: make lesson explanations, passages, notes and question text readable. */
-body:not(.aa-light) .container,
-body:not(.aa-light) .q-box,
-body:not(.aa-light) .lesson-content,
-body:not(.aa-light) .content-box,
-body:not(.aa-light) .explanation,
-body:not(.aa-light) .passage,
-body:not(.aa-light) .note,
-body:not(.aa-light) .info-box,
-body:not(.aa-light) .lesson-card,
-body:not(.aa-light) .topic-card,
-body:not(.aa-light) .section-card {
-  color: #e8eef8 !important;
-}
-body:not(.aa-light) .container :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
-body:not(.aa-light) .q-box :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
-body:not(.aa-light) .lesson-content :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
-body:not(.aa-light) .content-box :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
-body:not(.aa-light) .explanation :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
-body:not(.aa-light) .passage :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
-body:not(.aa-light) .note :is(p, li, span, strong, b, em, td, th, label, small, blockquote),
-body:not(.aa-light) .info-box :is(p, li, span, strong, b, em, td, th, label, small, blockquote) {
-  color: #e8eef8 !important;
-}
-/* Keep answer choices readable in dark mode. */
-body:not(.aa-light) .options li,
-body:not(.aa-light) .options button,
-body:not(.aa-light) .options label,
-body:not(.aa-light) .option,
-body:not(.aa-light) .answer-option,
-body:not(.aa-light) .choice,
-body:not(.aa-light) .choices li,
-body:not(.aa-light) .choices button,
-body:not(.aa-light) .choices label {
-  color: #1e293b !important;
+<style id="aboarida-readable-panels-fix">
+/* Dark theme: keep lesson and question panels readable without whitening the whole page. */
+body:not(.aa-light) :is(.q-box,.lesson-content,.example-box,.text-box,.translation-box,.vocab-box,.questions-box,.definition,.example,.idiom-card,.info,.info-box,.content-box,.passage,.note,.highlight,.tree-diagram,.image-box) {
   background: #f8fafc !important;
+  color: #1e293b !important;
   border-color: #cbd5e1 !important;
 }
-/* Feedback colors must remain visible and override generic dark-mode text rules. */
-.options li.correct,
-.options .correct {
+body:not(.aa-light) :is(.q-box,.lesson-content,.example-box,.text-box,.translation-box,.vocab-box,.questions-box,.definition,.example,.idiom-card,.info,.info-box,.content-box,.passage,.note,.highlight,.tree-diagram,.image-box) :is(p,li,span,strong,b,em,small,label,td,th,h1,h2,h3,h4,summary,blockquote) {
+  color: #1e293b !important;
+}
+/* Preserve blue headings and colored callouts where they are intentionally used. */
+body:not(.aa-light) :is(.q-box,.lesson-content,.example-box,.text-box,.translation-box,.vocab-box,.questions-box,.definition,.example,.idiom-card,.info,.info-box,.content-box,.passage,.note,.highlight,.tree-diagram,.image-box) a {
+  color: #1d4ed8 !important;
+}
+/* Multiple-choice answers stay readable and retain clear result feedback. */
+body:not(.aa-light) .options li {
+  color: #1e293b !important;
+  background: #ffffff !important;
+  border-color: #cbd5e1 !important;
+}
+.options li.correct {
   color: #14532d !important;
   background: #bbf7d0 !important;
-  border: 1px solid #22c55e !important;
+  border: 2px solid #22c55e !important;
   font-weight: 700 !important;
 }
-.options li.wrong,
-.options .wrong {
+.options li.wrong {
   color: #7f1d1d !important;
   background: #fecaca !important;
-  border: 1px solid #ef4444 !important;
+  border: 2px solid #ef4444 !important;
   font-weight: 700 !important;
 }
 </style>
@@ -107,7 +84,7 @@ body:not(.aa-light) .choices label {
 
     <div class="q-box">
       <p class="q-text">1. Success is something that needs determination and stamina. No one can achieve success without facing different and difficult conditions in life.</p>
-      <ul class="options" onclick="checkAns(this, 'a')">
+      <ul class="options" onclick="checkAns(this, 'a', event)">
         <li data-opt="a">أ. النجاح هو شيء يحتاج إلى العزيمة والقدرة على التحمل. لا يمكن لأحد أن يحقق النجاح دون أن يواجه ظروفاً مختلفة وصعبة في الحياة.</li>
         <li data-opt="b">ب. النجاح هو شيء يحتاج إلى العزيمة والقدرة على التحمل. لا يمكن لأحد أن يحقق النجاح بعد أن يواجه ظروفاً مختلفة وصعبة في الحياة.</li>
         <li data-opt="c">ج. النجاح شيء يحتاج إلى الإصرار والقدرة على التحمل. يمكن لأحد أن يحقق النجاح دون أن يواجه ظروفاً مختلفة وصعبة في الحياة.</li>
@@ -117,7 +94,7 @@ body:not(.aa-light) .choices label {
 
     <div class="q-box">
       <p class="q-text">2. Resilience is the ability to become strong, happy, or successful especially after a difficult situation or event you undergo.</p>
-      <ul class="options" onclick="checkAns(this, 'c')">
+      <ul class="options" onclick="checkAns(this, 'c', event)">
         <li data-opt="a">أ. المرونة هي القدرة على أن تصبح قوياً وسعيداً وناجحاً خاصة بعد موقف أو حدث صعب تمر به.</li>
         <li data-opt="b">ب. المرونة هي القدرة على أن تصبح قوياً أو سعيداً أو ناجحاً خاصة بعد موقف أو حدث صعب تمر به.</li>
         <li data-opt="c">ج. المرونة هي القدرة على أن تصبح قوياً أو سعيداً أو ناجحاً خاصة بعد موقف أو حدث صعب تمر به.</li>
@@ -129,7 +106,7 @@ body:not(.aa-light) .choices label {
 
     <div class="q-box">
       <p class="q-text">1. تطورت الرياضة النسائية على مستوى الهواية والاحتراف دولياً، فازدادت مشاركة النساء والفتيات في الرياضة هذه الأيام وقد حققن نجاحاً كبيراً.</p>
-      <ul class="options" onclick="checkAns(this, 'd')">
+      <ul class="options" onclick="checkAns(this, 'd', event)">
         <li data-opt="a">a. Woman's sports have developing in amateur and professional level internationally, participation of women and girls in sport increased these days and they achieved great success.</li>
         <li data-opt="b">b. Female sports have developing for amateur and professional levels internationally. So participating women and girls in sports increased those days to achieve great success.</li>
         <li data-opt="c">c. Female sports developed for amateur and professional level internationally, So participating women and girls in sports has increased today so that they will achieve great success.</li>
@@ -139,7 +116,7 @@ body:not(.aa-light) .choices label {
 
     <div class="q-box">
       <p class="q-text">2. لقد أصبح النساء نفس حقوق الرجال تقريبا لكن هذا لم يحدث بسهولة، فلقد استغرق الأمر سنوات طويلة من الكفاح للحصول على هذه الحقوق.</p>
-      <ul class="options" onclick="checkAns(this, 'a')">
+      <ul class="options" onclick="checkAns(this, 'a', event)">
         <li data-opt="a">a. Women have almost the same rights as men, but this was not achieved easily. It took many years of struggle to obtain these rights.</li>
         <li data-opt="b">b. Women have at most the same rights as men, but this was not achieved easily. It took many years of struggle to obtain these rights.</li>
         <li data-opt="c">c. Women have almost the same rights as men, but this was not achieved easily. It took many years of struggle to surrender these rights.</li>
@@ -150,25 +127,18 @@ body:not(.aa-light) .choices label {
   </div>
 
   <script>
-    function checkAns(ul, correctOpt) {
-  if (ul.classList.contains('answered')) return;
-  ul.classList.add('answered');
-
-  const clicked = (typeof event !== 'undefined' && event.target)
-    ? event.target.closest('li[data-opt]')
-    : null;
-
-  const lis = ul.querySelectorAll('li[data-opt]');
-  lis.forEach(li => {
-    if (li.getAttribute('data-opt') === correctOpt) {
-      li.classList.add('correct');
+    function checkAns(ul, correctOpt, evt) {
+      if (ul.classList.contains('answered')) return;
+      ul.classList.add('answered');
+      const clicked = evt && evt.target ? evt.target.closest('li[data-opt]') : null;
+      const lis = ul.querySelectorAll('li[data-opt]');
+      lis.forEach(li => {
+        if (li.getAttribute('data-opt') === correctOpt) li.classList.add('correct');
+      });
+      if (clicked && clicked.getAttribute('data-opt') !== correctOpt) {
+        clicked.classList.add('wrong');
+      }
     }
-  });
-
-  if (clicked && clicked.getAttribute('data-opt') !== correctOpt) {
-    clicked.classList.add('wrong');
-  }
-}
       });
     }
   </script>
