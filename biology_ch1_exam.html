@@ -360,6 +360,28 @@
   </div>
 
   </div> <!-- نهاية الحاوية -->
+  
+  <!-- 3. السكريبت اللي بيخلي الإجابات تشتغل -->
+  <script>
+    function checkAns(ul, correctOpt) {
+      // إيقاف الضغط التاني لو الإجابة اتجاوبت
+      if (ul.classList.contains('answered')) return;
+      ul.classList.add('answered');
+
+      const lis = ul.querySelectorAll('li');
+      lis.forEach(li => {
+        // تلوين الإجابة الصح دايماً بالأخضر
+        if (li.getAttribute('data-opt') === correctOpt) {
+          li.classList.add('correct');
+        }
+        // لو اليوزر دوس على إجابة غلط، لونها أحمر
+        if (li === event.target && !li.classList.contains('correct')) {
+          li.classList.add('wrong');
+        }
+      });
+    }
+  </script>
+
 <script id="abo-arida-site-ui">
 (function(){
  const bar=document.createElement('nav');bar.className='aa-topbar';bar.setAttribute('aria-label','التنقل الرئيسي');
@@ -368,7 +390,3 @@
  const key='aboAridaTheme';function apply(v){document.body.classList.toggle('aa-light',v==='light');}
  let saved='dark';try{saved=localStorage.getItem(key)||'dark'}catch(e){}apply(saved);
  const btn=document.getElementById('aaTheme');btn.addEventListener('click',function(){const next=document.body.classList.contains('aa-light')?'dark':'light';apply(next);try{localStorage.setItem(key,next)}catch(e){}});
-})();
-</script>
-</body>
-                                      </html>
