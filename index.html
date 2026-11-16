@@ -1,155 +1,17 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>محمود سلمى أبو عريضة</title>
-  <style>
-    :root {
-      --bg-color: #f4f7fb;
-      --text-color: #1a2b3c;
-      --card-bg: #ffffff;
-      --header-bg: linear-gradient(135deg, #1e3a8a, #2563eb);
-      --header-text: #ffffff;
-      --border-color: #e5e7eb;
-      --sub-text: #555;
-    }
-
-    body.dark-mode {
-      --bg-color: #121212;
-      --text-color: #e0e0e0;
-      --card-bg: #1e1e1e;
-      --header-bg: linear-gradient(135deg, #0f172a, #1e3a8a);
-      --header-text: #ffffff;
-      --border-color: #333333;
-      --sub-text: #aaaaaa;
-    }
-
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Arial, sans-serif; }
-    body { background: var(--bg-color); color: var(--text-color); transition: background 0.3s, color 0.3s; }
-    
-    /* تنسيق الهيدر وزرار الوضع الليلي */
-    header { background: var(--header-bg); color: var(--header-text); padding: 20px; display: flex; justify-content: space-between; align-items: center; }
-    header h1 { font-size: 24px; }
-    
-    .theme-btn {
-      background: rgba(255, 255, 255, 0.2);
-      color: white;
-      border: 1px solid rgba(255, 255, 255, 0.4);
-      padding: 10px 15px;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 14px;
-      font-weight: bold;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      transition: 0.3s;
-    }
-    .theme-btn:hover { background: rgba(255, 255, 255, 0.3); }
-
-    .hero { text-align: center; padding: 40px 20px; background: var(--card-bg); transition: background 0.3s; }
-    .hero h2 { font-size: 24px; margin-bottom: 15px; color: #2563eb; }
-    .hero p { font-size: 16px; color: var(--sub-text); margin-bottom: 25px; }
-    .btn { display: inline-block; background: #2563eb; color: white; padding: 12px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; }
-    
-    .courses { padding: 40px 20px; max-width: 1000px; margin: 0 auto; }
-    .courses h2 { text-align: center; margin-bottom: 30px; font-size: 22px; color: #2563eb; }
-    .grid { display: grid; grid-template-columns: 1fr; gap: 15px; }
-    
-    .card { display: block; text-decoration: none; color: inherit; background: var(--card-bg); border-radius: 12px; padding: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center; border: 1px solid var(--border-color); transition: 0.3s; }
-    .card:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,0.1); }
-    
-    .card .icon { font-size: 40px; margin-bottom: 10px; }
-    .card h3 { margin-bottom: 8px; font-size: 18px; color: #2563eb; }
-    .card p { color: var(--sub-text); font-size: 14px; margin-bottom: 15px; }
-    .price { color: #16a34a; font-weight: bold; font-size: 15px; background: #dcfce7; padding: 5px 15px; border-radius: 20px; }
-    
-    footer { background: var(--header-bg); color: white; text-align: center; padding: 20px; margin-top: 30px; font-size: 14px; }
-  </style>
-</head>
-<body>
-
-  <header>
-    <h1>📚 محمود سلمى أبو عريضة</h1>
-    <button class="theme-btn" onclick="toggleTheme()" id="themeToggleBtn">
-      <span id="themeIcon">🌙</span> <span id="themeText">الوضع الليلي</span>
-    </button>
-  </header>
-
-  <section class="hero">
-    <h2>مذاكرة أسهل وأذكى</h2>
-    <p>ملخصات، امتحانات، وشرح لكل المواد في مكان واحد</p>
-    <a href="#" class="btn">ابدأ المذاكرة مجاناً</a>
-  </section>
-
-  <section class="courses">
-    <h2>أقسام المواد الدراسية</h2>
-    <div class="grid">
-      <div class="card">
-        <div class="icon">📐</div>
-        <h3>الرياضيات</h3>
-        <p>تفاضل، تكامل، جبر، وهندسة فراغية بشرح مبسط.</p>
-        <span class="price">مجاني</span>
-      </div>
-      <div class="card">
-        <div class="icon">🧪</div>
-        <h3>الفيزياء</h3>
-        <p>قوانين الكهربية، المغناطيسية، والحركة بكل سهولة.</p>
-        <span class="price">مجاني</span>
-      </div>
-      <div class="card">
-        <div class="icon">⚗️</div>
-        <h3>الكيمياء</h3>
-        <p>العناصر، التفاعلات، والمعادلات الكيميائية.</p>
-        <span class="price">مجاني</span>
-      </div>
-      
-      <a href="biology.html" class="card">
-        <div class="icon">🧬</div>
-        <h3>الأحياء</h3>
-        <p>الدعامة، الحركة، التنسيق الهرموني، والتكاثر.</p>
-        <span class="price">ابدأ الآن</span>
-      </a>
-      
-      <a href="arabic.html" class="card">
-        <div class="icon">📖</div>
-        <h3>اللغة العربية</h3>
-        <p>أدب، نصوص، قراءة، نحو، وبلاغة.</p>
-        <span class="price">ابدأ الآن</span>
-      </a>
-
-      <a href="english.html" class="card">
-        <div class="icon">🌍</div>
-        <h3>اللغة الإنجليزية</h3>
-        <p>وحدات المنهج كاملة (قواعد، كلمات، قراءة).</p>
-        <span class="price">ابدأ الآن</span>
-      </a>
-    </div>
-  </section>
-
-  <footer>
-    © 2026 محمود سلمى أبو عريضة — جميع الحقوق محفوظة
-  </footer>
-
-  <script>
-    // كود تشغيل الوضع الليلي
-    function toggleTheme() {
-      const body = document.body;
-      const icon = document.getElementById('themeIcon');
-      const text = document.getElementById('themeText');
-      
-      body.classList.toggle('dark-mode');
-      
-      if (body.classList.contains('dark-mode')) {
-        icon.textContent = '☀️';
-        text.textContent = 'الوضع النهاري';
-      } else {
-        icon.textContent = '🌙';
-        text.textContent = 'الوضع الليلي';
-      }
-    }
-  </script>
-
-</body>
-  </html>
+<!doctype html>
+<html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#07152e"><title>أبو عريضة أكاديمي | منصتك التعليمية</title>
+<style>
+:root{--bg:#07152e;--panel:#0d2144;--panel2:#102b56;--line:#244777;--txt:#f4f8ff;--muted:#b6c8e4;--blue:#1769ed;--cyan:#55c8ff;--gold:#ffc83d;--shadow:0 16px 40px #0005}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 50% -15%,#1c4380 0,transparent 50%),var(--bg);color:var(--txt);font-family:Tahoma,Arial,sans-serif;line-height:1.7}a{color:inherit;text-decoration:none}.wrap{width:min(1180px,calc(100% - 36px));margin:auto}.top{position:sticky;top:0;z-index:20;background:#07152eed;backdrop-filter:blur(14px);border-bottom:1px solid #244777}.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{display:flex;align-items:center;gap:10px;font-weight:900;font-size:20px}.logo{width:48px;height:48px;border-radius:15px;background:linear-gradient(145deg,#2685ff,#123e9b);display:grid;place-items:center;font-size:26px;box-shadow:0 0 24px #2685ff55}.brand small{display:block;color:#8fcaff;font-size:10px;letter-spacing:1px}.links{display:flex;align-items:center;gap:22px;color:#d7e6ff;font-size:13px}.links a:hover{color:var(--cyan)}.navbtn,.primary,.ghost{border:1px solid #4387e9;border-radius:13px;padding:10px 16px;background:#102c58;color:white;font-weight:700;cursor:pointer}.hero{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:25px;padding:48px 0 35px}.hero-copy{padding:26px 0}.eyebrow{display:inline-block;background:#123d85;border:1px solid #367ee9;color:#bfe4ff;padding:7px 15px;border-radius:30px;font-size:12px;font-weight:bold}.hero h1{font-size:clamp(34px,5vw,62px);line-height:1.25;margin:17px 0}.hero h1 em{font-style:normal;color:var(--gold)}.hero p{font-size:18px;color:var(--muted);max-width:560px}.primary{display:inline-block;background:linear-gradient(110deg,#ffcf42,#f5a900);border:0;color:#14213b;padding:14px 24px;border-radius:30px;margin-top:15px;box-shadow:0 8px 25px #eaa90033}.hero-art{min-height:300px;border:1px solid #3164a6;border-radius:28px;background:radial-gradient(circle at 50% 35%,#1d68c7 0,#102e60 40%,#0b1d3d 75%);display:grid;place-items:center;position:relative;overflow:hidden;box-shadow:var(--shadow)}.hero-art:before,.hero-art:after{content:'✦';position:absolute;color:#8bd6ff66;font-size:55px}.hero-art:before{top:22px;right:35px}.hero-art:after{bottom:24px;left:40px}.student{font-size:112px;filter:drop-shadow(0 12px 20px #0008)}.art-caption{position:absolute;bottom:22px;background:#07152ecc;border:1px solid #4b8bd1;border-radius:18px;padding:10px 20px;font-weight:bold}.section{padding:28px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:12px;margin-bottom:18px}.section h2{font-size:25px;margin:0}.section-head p{color:var(--muted);margin:4px 0 0;font-size:13px}.subjects{display:grid;grid-template-columns:repeat(6,1fr);gap:13px}.subject{min-height:145px;padding:17px 10px;border-radius:20px;text-align:center;border:1px solid #ffffff25;box-shadow:var(--shadow);transition:.2s}.subject:hover{transform:translateY(-4px)}.subject .ico{font-size:36px}.subject h3{margin:5px 0 0;font-size:17px}.subject small{opacity:.85}.bio{background:linear-gradient(145deg,#145b43,#0d392f)}.chem{background:linear-gradient(145deg,#763b80,#3d245f)}.phys{background:linear-gradient(145deg,#185db6,#12326e)}.math{background:linear-gradient(145deg,#176b91,#12405c)}.arab{background:linear-gradient(145deg,#96703b,#55401f)}.eng{background:linear-gradient(145deg,#176b82,#104251)}.dash{display:grid;grid-template-columns:1fr 1.15fr 1fr;gap:15px}.panel{background:linear-gradient(145deg,#102a52,#0b1d3b);border:1px solid var(--line);border-radius:20px;padding:20px;box-shadow:var(--shadow);min-width:0}.panel h3{margin:0 0 13px;font-size:19px}.muted{color:var(--muted)}.ai{display:flex;align-items:center;gap:12px}.bot{font-size:65px}.ai p{font-size:13px;color:var(--muted)}.progress{height:10px;border-radius:20px;background:#263d60;overflow:hidden;margin:10px 0}.progress span{display:block;width:55%;height:100%;background:linear-gradient(90deg,#21c58b,#6be2ae);border-radius:20px}.stat{display:flex;justify-content:space-between;gap:8px;padding:9px 0;border-bottom:1px solid #ffffff12;font-size:13px}.quick{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.quick .panel{display:flex;align-items:center;gap:15px}.quick .ico{font-size:42px}.quick h3{font-size:17px;margin:0}.quick p{font-size:12px;color:var(--muted);margin:3px 0}.smallbtn{display:inline-block;color:#8fd5ff;font-size:12px;margin-top:7px}.footer{margin-top:30px;border-top:1px solid var(--line);padding:25px 0;color:#a9c6e9;text-align:center;font-size:13px}.mobile-menu{display:none}
+@media(max-width:900px){.subjects{grid-template-columns:repeat(3,1fr)}.dash{grid-template-columns:1fr 1fr}.dash .panel:nth-child(2){grid-column:span 2}.quick{grid-template-columns:1fr 1fr}.hero{grid-template-columns:1fr  .8fr}.links{gap:12px}}
+@media(max-width:620px){.wrap{width:calc(100% - 24px)}.nav{min-height:65px}.brand{font-size:15px}.logo{width:40px;height:40px;font-size:22px}.links{display:none}.navbtn{padding:8px 10px;font-size:12px}.hero{display:flex;flex-direction:column;padding:24px 0 12px;gap:14px}.hero-copy{padding:8px 4px;text-align:center}.hero h1{font-size:35px;margin:12px 0}.hero p{font-size:15px;margin:0 auto}.hero-art{width:100%;min-height:165px;border-radius:20px}.student{font-size:72px}.art-caption{bottom:10px;font-size:12px;padding:5px 12px}.section{padding:20px 0}.section h2{font-size:20px}.section-head{align-items:start;flex-direction:column}.subjects{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.subject{min-height:120px;padding:12px 7px;border-radius:15px}.subject .ico{font-size:30px}.subject h3{font-size:15px}.dash{grid-template-columns:1fr;gap:10px}.dash .panel:nth-child(2){grid-column:auto}.panel{padding:15px;border-radius:16px}.panel h3{font-size:17px}.quick{grid-template-columns:1fr;gap:10px}.quick .panel{padding:13px}.quick .ico{font-size:35px}.footer{font-size:11px}}
+@media(max-width:350px){.hero h1{font-size:29px}.subjects{grid-template-columns:1fr}.subject{min-height:100px}}
+</style></head><body>
+<div class="top"><div class="wrap nav"><a class="brand" href="index.html"><span class="logo">🎓</span><span>أبو عريضة أكاديمي<small>ABO ARIDA ACADEMY</small></span></a><nav class="links"><a href="index.html">الرئيسية</a><a href="#subjects">المواد الدراسية</a><a href="#tools">الأدوات</a><a href="biology.html">الأحياء</a><a href="english.html">الإنجليزية</a></nav><button class="navbtn" id="themeBtn">☀️ الوضع النهاري</button></div></div>
+<main class="wrap"><section class="hero"><div class="hero-copy"><span class="eyebrow">منصتك التعليمية المتكاملة</span><h1>مستقبلك يبدأ <em>من هنا</em></h1><p>اتعلم، تدرب، اختبر نفسك، وحقق هدفك. كل أدوات المذاكرة اللي تحتاجها في مكان واحد.</p><a class="primary" href="#subjects">ابدأ رحلتك التعليمية　←</a></div><div class="hero-art"><div class="student">👨🏻‍🎓📚</div><div class="art-caption">معاً نحو النجاح ✨</div></div></section>
+<section class="section" id="subjects"><div class="section-head"><div><h2>⭐ ماذا تريد أن تدرس اليوم؟</h2><p>اختر المادة وانتقل مباشرة إلى محتواها</p></div></div><div class="subjects"><a class="subject bio" href="biology.html"><div class="ico">🌿</div><h3>الأحياء</h3><small>استكشف الدروس ←</small></a><a class="subject chem" href="#tools"><div class="ico">🧪</div><h3>الكيمياء</h3><small>قريباً</small></a><a class="subject phys" href="#tools"><div class="ico">⚛️</div><h3>الفيزياء</h3><small>قريباً</small></a><a class="subject math" href="#tools"><div class="ico">📐</div><h3>الرياضيات</h3><small>قريباً</small></a><a class="subject arab" href="arabic.html"><div class="ico">📖</div><h3>اللغة العربية</h3><small>استكشف الدروس ←</small></a><a class="subject eng" href="english.html"><div class="ico">🌍</div><h3>الإنجليزية</h3><small>استكشف الوحدات ←</small></a></div></section>
+<section class="section" id="tools"><div class="section-head"><div><h2>أدواتك التعليمية</h2><p>مساحة منظمة تساعدك تتابع رحلتك الدراسية</p></div></div><div class="dash"><div class="panel"><h3>🏆 إنجازاتك</h3><div class="stat"><span>📘 صفحات تعليمية متاحة</span><b>+80</b></div><div class="stat"><span>🎯 هدفك القادم</span><b>الاستمرار</b></div><div class="stat"><span>⭐ شعارنا</span><b>التقدم كل يوم</b></div></div><div class="panel"><h3>🤖 مساعدك الذكي</h3><div class="ai"><div class="bot">🤖</div><div><b>أهلاً بك في أبو عريضة أكاديمي</b><p>قريباً: مساعد تعليمي يساعدك في فهم الدروس والتدرب على الأسئلة.</p></div></div><span class="smallbtn">ميزة قيد التطوير</span></div><div class="panel"><h3>📅 جدول مذاكرتك</h3><b>ابدأ بخطوة صغيرة اليوم</b><div class="progress"><span></span></div><p class="muted" style="font-size:12px">نموذج توضيحي — ميزة حفظ الجدول ستضاف لاحقاً.</p></div></div></section>
+<section class="section"><div class="quick"><div class="panel"><div class="ico">📚</div><div><h3>مكتبة الملفات</h3><p>ملخصات ودروس المواد المتاحة</p><a class="smallbtn" href="biology.html">تصفح المحتوى ←</a></div></div><div class="panel"><div class="ico">📝</div><div><h3>الأسئلة والاختبارات</h3><p>تدرب من خلال صفحات الاختبارات المتاحة</p><a class="smallbtn" href="biology.html">ابدأ التدريب ←</a></div></div><div class="panel"><div class="ico">⚡</div><div><h3>روابط سريعة</h3><p>انتقل لأقسام المنصة بسهولة</p><a class="smallbtn" href="#subjects">عرض المواد ←</a></div></div></div></section></main>
+<footer class="footer"><div class="wrap">© 2026 أبو عريضة أكاديمي — جميع الحقوق محفوظة<br>رحلتك التعليمية تبدأ بخطوة.</div></footer>
+<script>const b=document.body,btn=document.getElementById('themeBtn');let light=localStorage.getItem('aa-theme')==='light';function apply(){b.classList.toggle('light',light);if(light){b.style.background='#eef4fc';b.style.color='#172b49';btn.textContent='🌙 الوضع الليلي'}else{b.style.background='';b.style.color='';btn.textContent='☀️ الوضع النهاري'}}btn.addEventListener('click',()=>{light=!light;localStorage.setItem('aa-theme',light?'light':'dark');apply()});apply();</script>
+<style>body.light .top{background:#ffffffed;border-color:#d5e1f2}body.light .links{color:#24436d}body.light .panel{background:#fff;color:#172b49;border-color:#d7e2f1}body.light .panel .muted,body.light .panel p{color:#536783}body.light .hero-art{border-color:#a9c6e9}body.light .footer{color:#536783;border-color:#d5e1f2}</style>
+</body></html>
