@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>امتحان الفصل الأول - الأحياء</title>
   
-  <!-- 1. الستايل الأساسي للامتحان -->
+  <!-- الستايل الأساسي للامتحان -->
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Arial, sans-serif; }
     body { background: #f4f7fb; color: #1a2b3c; padding: 20px; }
@@ -32,7 +32,7 @@
     .model-ans { display: none; background: #dcfce7; color: #166534; padding: 10px; border-radius: 6px; margin-top: 10px; direction: rtl; text-align: right; line-height: 1.8;}
   </style>
 
-  <!-- 2. الستايل بتاعك (الوضع الليلي والنهاري) -->
+  <!-- الستايل بتاع الوضع الليلي والنهاري -->
   <style id="abo-arida-design-system">
     :root{--aa-bg:#071329;--aa-panel:#0e2040;--aa-card:#10284d;--aa-text:#edf4ff;--aa-muted:#b4c5df;--aa-line:rgba(139,180,255,.2);--aa-blue:#2878ff;--aa-cyan:#45c7ff;--aa-gold:#ffc94a;--aa-shadow:0 14px 38px rgba(0,0,0,.22)}
     *{box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:Tahoma,'Segoe UI',Arial,sans-serif!important;background:radial-gradient(ellipse at 15% 0%,#102b59 0%,transparent 42%),linear-gradient(160deg,#071329,#091a34 55%,#071329)!important;color:var(--aa-text)!important;min-height:100vh;line-height:1.75;overflow-x:hidden}
@@ -45,7 +45,7 @@
     .card h3,.menu-card h3,h2,.section-title{color:#8fcaff!important}.card p,.menu-card p,.image-caption{color:var(--aa-muted)!important}
     .back-btn,.btn,.price{border-radius:12px!important}.back-btn,.btn{background:linear-gradient(120deg,#2878ff,#1452c2)!important;color:white!important;border:1px solid #67b7ff!important;padding:11px 18px!important;text-decoration:none!important}
 
-    /* ======== تظبيط الامتحان في الوضع الليلي ======== */
+    /* تظبيط الامتحان في الوضع الليلي */
     .q-box, .written-box { background: #0f2547 !important; border-color: #2c5282 !important; }
     .q-text { color: #edf4ff !important; }
     .options li { background: #1a365d !important; color: #ffffff !important; border-color: #4a7ab5 !important; }
@@ -54,7 +54,7 @@
     .options li.wrong { background: #991b1b !important; color: #fee2e2 !important; border-color: #ef4444 !important;}
     .model-ans { background: #064e3b !important; color: #a7f3d0 !important;}
 
-    /* ======== تظبيط الامتحان في الوضع النهاري ======== */
+    /* تظبيط الامتحان في الوضع النهاري */
     body.aa-light { --aa-bg:#f2f6fc; --aa-panel:#fff; --aa-card:#fff; --aa-text:#172b49; --aa-muted:#536783; --aa-line:rgba(39,89,150,.18); background:linear-gradient(145deg,#eef5ff,#f7f9fd)!important; color:#172b49!important; }
     body.aa-light .aa-topbar,body.aa-light .container,body.aa-light .card,body.aa-light .menu-card,body.aa-light .lesson-content,body.aa-light .image-box,body.aa-light .section-title{background:#fff!important;color:#172b49!important}
     body.aa-light .aa-brand{color:#17345d}body.aa-light h1,body.aa-light h2,body.aa-light .card h3,body.aa-light .menu-card h3{color:#174b91!important}
@@ -373,7 +373,7 @@
 
   </div> <!-- نهاية الحاوية -->
   
-  <!-- 3. السكريبت اللي بيخلي الإجابات تشتغل -->
+  <!-- كود تصحيح الإجابات -->
   <script>
     function checkAns(ul, correctOpt) {
       if (ul.classList.contains('answered')) return;
@@ -391,9 +391,16 @@
     }
   </script>
 
-<script id="abo-arida-site-ui">
-(function(){
- const bar=document.createElement('nav');bar.className='aa-topbar';bar.setAttribute('aria-label','التنقل الرئيسي');
- bar.innerHTML='<a class="aa-brand" href="index.html"><span class="aa-logo">📚</span><span>أبو عريضة أكاديمي<small>ABO ARIDA ACADEMY</small></span></a><div class="aa-actions"><a class="aa-action" href="index.html">الرئيسية</a><button class="aa-action" type="button" id="aaTheme">☀️ / 🌙</button></div>';
- document.body.insertBefore(bar,document.body.firstChild);
- const key='aboAridaTheme';function apply(v){document.body.classList.t
+  <!-- كود تشغيل الوضع الليلي والنهاري -->
+  <script>
+    (function(){
+      // إضافة الشريط العلوي
+      const bar = document.createElement('nav');
+      bar.className = 'aa-topbar';
+      bar.innerHTML = '<a class="aa-brand" href="index.html"><span class="aa-logo">📚</span><span>أبو عريضة أكاديمي<small>ABO ARIDA ACADEMY</small></span></a><div class="aa-actions"><a class="aa-action" href="index.html">الرئيسية</a><button class="aa-action" type="button" id="aaTheme">☀️ / 🌙</button></div>';
+      document.body.insertBefore(bar, document.body.firstChild);
+
+      // تشغيل الزرار
+      const key = 'aboAridaTheme';
+      function applyTheme(v) {
+        document.body.classList.toggle('aa
