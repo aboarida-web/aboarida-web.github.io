@@ -8,13 +8,8 @@
   <!-- الستايل الأساسي للصفحة -->
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Arial, sans-serif; }
-    
-    /* التعديل هنا: شيلنا الـ padding من الـ body عشان الشريط يبقى في مكانه الصح */
-    body { background: #f4f7fb; color: #1a2b3c; }
-    
-    /* التعديل هنا: ضفنا padding للـ container عشان المحتوى ميبقاش لازق في الحواف */
-    .container { max-width: 800px; margin: 0 auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-top: 20px; margin-bottom: 20px; }
-    
+    body { background: #f4f7fb; color: #1a2b3c; padding: 20px; }
+    .container { max-width: 800px; margin: 0 auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
     h1 { color: #1e3a8a; text-align: center; margin-bottom: 20px; border-bottom: 2px solid #e5e7eb; padding-bottom: 10px; font-size: 24px; }
     h2 { color: #2563eb; margin: 30px 0 15px; font-size: 22px; border-right: 4px solid #2563eb; padding-right: 10px; }
     .lesson { background: #f8fafc; padding: 25px; border-radius: 8px; margin-bottom: 25px; border: 1px solid #e5e7eb; }
@@ -33,9 +28,9 @@
     *{box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:Tahoma,'Segoe UI',Arial,sans-serif!important;background:radial-gradient(ellipse at 15% 0%,#102b59 0%,transparent 42%),linear-gradient(160deg,#071329,#091a34 55%,#071329)!important;color:var(--aa-text)!important;min-height:100vh;line-height:1.75;overflow-x:hidden}
     body *{max-width:100%}img,video,iframe{max-width:100%;height:auto}a{transition:background .2s,border-color .2s,transform .2s,color .2s}
     
-    /* ====== تعديل الشريط العلوي ====== */
+    /* ====== الشريط العلوي بالشكل اللي أنت عايزه ====== */
     .aa-topbar {
-        position: relative; 
+        position: relative;
         z-index: 5;
         width: min(1180px, calc(100% - 28px));
         margin: 14px auto 22px;
@@ -46,10 +41,10 @@
         box-shadow: var(--aa-shadow);
         display: flex;
         align-items: center;
-        justify-content: space-between; /* بيوزع اللوجو والأزرار على الطرفين */
+        justify-content: space-between;
         gap: 12px;
         backdrop-filter: blur(12px);
-        flex-wrap: wrap; /* بيخلي العناصر تنزل تحت بعضها لو الشاشة صغيرة */
+        flex-wrap: wrap; /* مهم جداً لمنع التداخل */
     }
 
     .aa-brand {
@@ -61,6 +56,7 @@
         font-weight: 800;
         font-size: 17px;
         min-width: 0;
+        flex-shrink: 1;
     }
 
     .aa-logo {
@@ -88,7 +84,7 @@
         display: flex;
         gap: 8px;
         align-items: center;
-        flex-wrap: wrap; /* عشان الأزرار تنزل تحت بعضها لو المساحة ضيقة */
+        flex-wrap: wrap;
         justify-content: flex-end;
     }
 
@@ -110,28 +106,29 @@
         border-color: #65baff;
     }
 
-    /* ====== تظبيط الشريط على الموبايل ====== */
-    @media (max-width: 768px) {
+    /* تظبيط الشريط على الموبايل */
+    @media (max-width: 600px) {
         .aa-topbar {
-            flex-direction: column; /* اللوجو فوق والأزرار تحت */
-            align-items: center;
+            flex-direction: column;
+            align-items: stretch;
             padding: 15px;
         }
         .aa-brand {
-            justify-content: center; 
+            justify-content: center;
             margin-bottom: 10px;
         }
         .aa-actions {
-            justify-content: center; 
+            justify-content: center;
             width: 100%;
         }
         .aa-action {
-            flex: 1; 
+            flex: 1;
             text-align: center;
             padding: 10px 5px;
             font-size: 12px;
         }
     }
+    /* ====== نهاية الشريط العلوي ====== */
 
     .container,.courses,.hero{width:min(1100px,calc(100% - 28px));margin:0 auto 22px!important}.container{background:linear-gradient(145deg,rgba(16,40,77,.97),rgba(10,27,54,.97))!important;color:var(--aa-text)!important;border:1px solid var(--aa-line)!important;border-radius:22px!important;padding:clamp(16px,3.5vw,34px)!important;box-shadow:var(--aa-shadow)!important}
     .hero h2,.courses h2,.header-box h1,h1{color:#eaf3ff!important}.hero p,.header-box h2{color:#bdcce3!important}
@@ -158,7 +155,6 @@
   </style>
 </head>
 <body>
-  <!-- المحتوى بتاع الشرح زي ما هو -->
   <div class="container">
     <a href="arabic.html" class="back-btn">← العودة لأقسام العربي</a>
     <h1>📚 الأدب <br><small style="font-size:16px; color:#64748b;">الصف الثالث الثانوي</small></h1>
@@ -266,7 +262,7 @@
 
   </div>
 
-<!-- كود الشريط العلوي والوضع الليلي (زي ما هو بالظبط) -->
+<!-- كود الشريط العلوي والوضع الليلي -->
 <script>
 (function(){
  const bar=document.createElement('nav');bar.className='aa-topbar';bar.setAttribute('aria-label','التنقل الرئيسي');
