@@ -91,6 +91,25 @@ body.aa-light .container :is(.lesson-content,.image-box,.answer-box,.model-answe
 body.aa-light .aa-img-missing { background:#f1f5f9; color:#334155; border-color:#cbd5e1; }
 </style>
 
+<style id="aa-model-answer-fix">
+/* تنسيق إجابات الأسئلة المقالية: وضع داكن أزرق داكن + أبيض، وضع نهاري أبيض + أزرق غامق */
+.model-answer {
+  background: #0b2a5b !important;
+  color: #ffffff !important;
+  border: 1px solid #2563eb !important;
+  padding: 10px;
+  border-radius: 6px;
+  margin-top: 10px;
+  direction: ltr;
+  text-align: left;
+}
+body.aa-light .model-answer {
+  background: #ffffff !important;
+  color: #0b2a5b !important;
+  border: 1px solid #93c5fd !important;
+}
+</style>
+
 </head>
 <body>
   <div class="container">
@@ -238,20 +257,20 @@ body.aa-light .aa-img-missing { background:#f1f5f9; color:#334155; border-color:
     </div>
     <div class="q-box">
       <p class="q-text">16. Let's .......... the town and celebrate your promotion!</p>
-      <ul class="options" onclick="checkAns(this, 'd', event)">
+      <ul class="options" onclick="checkAns(this, 'b', event)">
         <li data-opt="a">a. hang out</li>
         <li data-opt="b">b. hit</li>
         <li data-opt="c">c. boost</li>
-        <li data-opt="d">d. hit</li>
+        <li data-opt="d">d. capture</li>
       </ul>
     </div>
     <div class="q-box">
       <p class="q-text">17. True friends support you .......... thick and thin.</p>
-      <ul class="options" onclick="checkAns(this, 'b', event)">
+      <ul class="options" onclick="checkAns(this, 'a', event)">
         <li data-opt="a">a. through</li>
-        <li data-opt="b">b. through</li>
-        <li data-opt="c">c. in</li>
-        <li data-opt="d">d. on</li>
+        <li data-opt="b">b. in</li>
+        <li data-opt="c">c. on</li>
+        <li data-opt="d">d. at</li>
       </ul>
     </div>
     <div class="q-box">
@@ -307,182 +326,181 @@ body.aa-light .aa-img-missing { background:#f1f5f9; color:#334155; border-color:
   });
   if(clicked && (clicked.getAttribute('data-opt')||'').toLowerCase() !== String(correctOpt).toLowerCase()) clicked.classList.add('wrong');
 }
-  </script>
-    <!-- الجزء التاني: قراءة وترجمة وأسئلة مقالية -->
-    <h2>Part 2: Reading & Translation (22-31)</h2>
-    
-    <div class="q-box" style="background: #fffbeb; border-color: #fcd34d;">
-      <p style="font-weight:bold; margin-bottom:10px; color:#92400e;">Read the following passage and answer the questions:</p>
-      <div style="direction: ltr; text-align: left; line-height: 1.8; font-size: 15px;">
-        Have you ever wondered why hanging out with friends makes you feel so good? Research shows that socializing has incredible benefits for both our physical and mental health. When we spend time with others, our bodies release hormones that reduce stress and boost our mood. Regular social interaction can actually strengthen our immune system and help us live longer lives. People who maintain strong friendships tend to have lower rates of depression and anxiety. However, quality matters more than quantity. Having a few close friends is more beneficial than knowing many people superficially.
-      </div>
-    </div>
+          </script>
+          <!-- الجزء التاني: قراءة وترجمة وأسئلة مقالية -->
+<h2>Part 2: Reading & Translation (22-31)</h2>
 
-    <div class="q-box">
-      <p class="q-text">22. What happens to our bodies when we spend time with others?</p>
-      <ul class="options" onclick="checkAns(this, 'b', event)">
-        <li data-opt="a">a. They release toxins.</li>
-        <li data-opt="b">b. They release hormones that reduce stress.</li>
-        <li data-opt="c">c. They become weaker.</li>
-        <li data-opt="d">d. They stop working.</li>
-      </ul>
-    </div>
-    <div class="q-box">
-      <p class="q-text">23. According to the passage, what is more important than quantity in friendships?</p>
-      <ul class="options" onclick="checkAns(this, 'c', event)">
-        <li data-opt="a">a. Online interaction</li>
-        <li data-opt="b">b. Knowing many people</li>
-        <li data-opt="c">c. Quality (having a few close friends)</li>
-        <li data-opt="d">d. Having no friends</li>
-      </ul>
-    </div>
-    <div class="q-box">
-      <p class="q-text">24. What does the word "superficially" mean in the passage?</p>
-      <ul class="options" onclick="checkAns(this, 'a', event)">
-        <li data-opt="a">a. Shallowly, without deep connection</li>
-        <li data-opt="b">b. Deeply and emotionally</li>
-        <li data-opt="c">c. Very carefully</li>
-        <li data-opt="d">d. Happily</li>
-      </ul>
-    </div>
+<div class="q-box" style="background: #fffbeb; border-color: #fcd34d;">
+  <p style="font-weight:bold; margin-bottom:10px; color:#92400e;">Read the following passage and answer the questions:</p>
+  <div style="direction: ltr; text-align: left; line-height: 1.8; font-size: 15px;">
+    Have you ever wondered why hanging out with friends makes you feel so good? Research shows that socializing has incredible benefits for both our physical and mental health. When we spend time with others, our bodies release hormones that reduce stress and boost our mood. Regular social interaction can actually strengthen our immune system and help us live longer lives. People who maintain strong friendships tend to have lower rates of depression and anxiety. However, quality matters more than quantity. Having a few close friends is more beneficial than knowing many people superficially.
+  </div>
+</div>
 
-    <div class="q-box">
-      <p class="q-text">25. Choose the correct Arabic translation: "Unity and cooperation are the necessary qualities which we need to succeed in our national projects."</p>
-      <ul class="options" onclick="checkAns(this, 'a', event)">
-        <li data-opt="a">أ. التعاون والتوحد هما الصفتان الضروريتان اللتان نحتاجهما للنجاح في مشروعاتنا القومية.</li>
-        <li data-opt="b">ب. التعاون والوحدة هما الصفتان الضروريتان اللتان نحتاجهما للنجاح في مشروعاتنا الدولية.</li>
-        <li data-opt="c">ج. التعاون والاتحاد هما الصفتان الضروريتان اللتان نحتاجهما للنجاح في مشروعاتنا الدولية.</li>
-        <li data-opt="d">د. التعاون والاتحاد هما الصفتان الضروريتان اللتان نحتاجهما للنجاح في مشروعاتنا القومية.</li>
-      </ul>
-    </div>
-    <div class="q-box">
-      <p class="q-text">26. Choose the correct Arabic translation: "Having a few close friends is more beneficial than knowing many people superficially."</p>
-      <ul class="options" onclick="checkAns(this, 'b', event)">
-        <li data-opt="a">أ. معرفة الكثير من الناس بشكل سطحي أفضل من وجود عدد قليل من الأصدقاء المقربين.</li>
-        <li data-opt="b">ب. وجود عدد قليل من الأصدقاء المقربين أكثر فائدة من معرفة الكثير من الناس بشكل سطحي.</li>
-        <li data-opt="c">ج. وجود عدد كبير من الأصدقاء أفضل من الأصدقاء المقربين.</li>
-        <li data-opt="d">د. معرفة الناس بشكل سطحي هو الأفضل.</li>
-      </ul>
-    </div>
+<div class="q-box">
+  <p class="q-text">22. What happens to our bodies when we spend time with others?</p>
+  <ul class="options" onclick="checkAns(this, 'b', event)">
+    <li data-opt="a">a. They release toxins.</li>
+    <li data-opt="b">b. They release hormones that reduce stress.</li>
+    <li data-opt="c">c. They become weaker.</li>
+    <li data-opt="d">d. They stop working.</li>
+  </ul>
+</div>
+<div class="q-box">
+  <p class="q-text">23. According to the passage, what is more important than quantity in friendships?</p>
+  <ul class="options" onclick="checkAns(this, 'c', event)">
+    <li data-opt="a">a. Online interaction</li>
+    <li data-opt="b">b. Knowing many people</li>
+    <li data-opt="c">c. Quality (having a few close friends)</li>
+    <li data-opt="d">d. Having no friends</li>
+  </ul>
+</div>
+<div class="q-box">
+  <p class="q-text">24. What does the word "superficially" mean in the passage?</p>
+  <ul class="options" onclick="checkAns(this, 'a', event)">
+    <li data-opt="a">a. Shallowly, without deep connection</li>
+    <li data-opt="b">b. Deeply and emotionally</li>
+    <li data-opt="c">c. Very carefully</li>
+    <li data-opt="d">d. Happily</li>
+  </ul>
+</div>
 
-    <div class="q-box">
-      <p class="q-text">27. Choose the correct English translation: "التعاون يساعدنا على التغلب على التحديات."</p>
-      <ul class="options" onclick="checkAns(this, 'c', event)">
-        <li data-opt="a">a. Cooperation helps us to create challenges.</li>
-        <li data-opt="b">b. Cooperation makes us ignore challenges.</li>
-        <li data-opt="c">c. Cooperation helps us to overcome challenges.</li>
-        <li data-opt="d">d. Cooperation prevents us from facing challenges.</li>
-      </ul>
-    </div>
-    
-    <div class="q-box">
-      <p class="q-text">28. Choose the correct English translation: "أنا أعتبر صداقتهم أثمن ما لدي."</p>
-      <ul class="options" onclick="checkAns(this, 'a', event)">
-        <li data-opt="a">a. I consider their friendship the most precious thing I have.</li>
-        <li data-opt="b">b. I consider their friendship a waste of time.</li>
-        <li data-opt="c">c. Their friendship is not important to me.</li>
-        <li data-opt="d">d. I don't care about their friendship.</li>
-      </ul>
-    </div>
-    
-    <div class="q-box">
-      <p class="q-text">29. "Do you like reading books?" he asked me. -> He asked me .......... I liked reading books.</p>
-      <ul class="options" onclick="checkAns(this, 'b', event)">
-        <li data-opt="a">a. that</li>
-        <li data-opt="b">b. if / whether</li>
-        <li data-opt="c">c. what</li>
-        <li data-opt="d">d. which</li>
-      </ul>
-    </div>
-    
-    <div class="q-box">
-      <p class="q-text">30. "How did you solve the problem?" she asked. -> She asked how I .......... the problem.</p>
-      <ul class="options" onclick="checkAns(this, 'd', event)">
-        <li data-opt="a">a. solve</li>
-        <li data-opt="b">b. did solve</li>
-        <li data-opt="c">c. have solved</li>
-        <li data-opt="d">d. had solved</li>
-      </ul>
-    </div>
-    
-    <div class="q-box">
-      <p class="q-text">31. He wanted .......... know when the meeting would start.</p>
-      <ul class="options" onclick="checkAns(this, 'a', event)">
-        <li data-opt="a">a. to</li>
-        <li data-opt="b">b. for</li>
-        <li data-opt="c">c. at</li>
-        <li data-opt="d">d. on</li>
-      </ul>
-    </div>
+<div class="q-box">
+  <p class="q-text">25. Choose the correct Arabic translation: "Unity and cooperation are the necessary qualities which we need to succeed in our national projects."</p>
+  <ul class="options" onclick="checkAns(this, 'a', event)">
+    <li data-opt="a">أ. التعاون والتوحد هما الصفتان الضروريتان اللتان نحتاجهما للنجاح في مشروعاتنا القومية.</li>
+    <li data-opt="b">ب. التعاون والوحدة هما الصفتان الضروريتان اللتان نحتاجهما للنجاح في مشروعاتنا الدولية.</li>
+    <li data-opt="c">ج. التعاون والاتحاد هما الصفتان الضروريتان اللتان نحتاجهما للنجاح في مشروعاتنا الدولية.</li>
+    <li data-opt="d">د. التعاون والاتحاد هما الصفتان الضروريتان اللتان نحتاجهما للنجاح في مشروعاتنا القومية.</li>
+  </ul>
+</div>
+<div class="q-box">
+  <p class="q-text">26. Choose the correct Arabic translation: "Having a few close friends is more beneficial than knowing many people superficially."</p>
+  <ul class="options" onclick="checkAns(this, 'b', event)">
+    <li data-opt="a">أ. معرفة الكثير من الناس بشكل سطحي أفضل من وجود عدد قليل من الأصدقاء المقربين.</li>
+    <li data-opt="b">ب. وجود عدد قليل من الأصدقاء المقربين أكثر فائدة من معرفة الكثير من الناس بشكل سطحي.</li>
+    <li data-opt="c">ج. وجود عدد كبير من الأصدقاء أفضل من الأصدقاء المقربين.</li>
+    <li data-opt="d">د. معرفة الناس بشكل سطحي هو الأفضل.</li>
+  </ul>
+</div>
 
-    <!-- الجزء الثالث: المقالي -->
+<div class="q-box">
+  <p class="q-text">27. Choose the correct English translation: "التعاون يساعدنا على التغلب على التحديات."</p>
+  <ul class="options" onclick="checkAns(this, 'c', event)">
+    <li data-opt="a">a. Cooperation helps us to create challenges.</li>
+    <li data-opt="b">b. Cooperation makes us ignore challenges.</li>
+    <li data-opt="c">c. Cooperation helps us to overcome challenges.</li>
+    <li data-opt="d">d. Cooperation prevents us from facing challenges.</li>
+  </ul>
+</div>
+
+<div class="q-box">
+  <p class="q-text">28. Choose the correct English translation: "أنا أعتبر صداقتهم أثمن ما لدي."</p>
+  <ul class="options" onclick="checkAns(this, 'a', event)">
+    <li data-opt="a">a. I consider their friendship the most precious thing I have.</li>
+    <li data-opt="b">b. I consider their friendship a waste of time.</li>
+    <li data-opt="c">c. Their friendship is not important to me.</li>
+    <li data-opt="d">d. I don't care about their friendship.</li>
+  </ul>
+</div>
+
+<div class="q-box">
+  <p class="q-text">29. "Do you like reading books?" he asked me. -> He asked me .......... I liked reading books.</p>
+  <ul class="options" onclick="checkAns(this, 'b', event)">
+    <li data-opt="a">a. that</li>
+    <li data-opt="b">b. if / whether</li>
+    <li data-opt="c">c. what</li>
+    <li data-opt="d">d. which</li>
+  </ul>
+</div>
+
+<div class="q-box">
+  <p class="q-text">30. "How did you solve the problem?" she asked. -> She asked how I .......... the problem.</p>
+  <ul class="options" onclick="checkAns(this, 'd', event)">
+    <li data-opt="a">a. solve</li>
+    <li data-opt="b">b. did solve</li>
+    <li data-opt="c">c. have solved</li>
+    <li data-opt="d">d. had solved</li>
+  </ul>
+</div>
+
+<div class="q-box">
+  <p class="q-text">31. He wanted .......... know when the meeting would start.</p>
+  <ul class="options" onclick="checkAns(this, 'a', event)">
+    <li data-opt="a">a. to</li>
+    <li data-opt="b">b. for</li>
+    <li data-opt="c">c. at</li>
+    <li data-opt="d">d. on</li>
+  </ul>
+  </div>
+      <!-- الجزء الثالث: المقالي -->
     <h2>Part 3: Written Questions (32-42)</h2>
     
     <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
       <p class="q-text" style="color:#1e40af;">32. Rewrite using reported speech: "Where are you going?" she asked me.</p>
       <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
-      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:ltr; text-align:left;">She asked me where I was going.</p>
+      <p class="model-answer" style="display:none;">She asked me where I was going.</p>
     </div>
 
     <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
       <p class="q-text" style="color:#1e40af;">33. Rewrite using reported speech: "Did you finish the report?" he asked me.</p>
       <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
-      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:ltr; text-align:left;">He asked me if / whether I had finished the report.</p>
+      <p class="model-answer" style="display:none;">He asked me if / whether I had finished the report.</p>
     </div>
     
     <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
       <p class="q-text" style="color:#1e40af;">34. Rewrite using reported speech: "Why are you crying?" my mother asked me.</p>
       <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
-      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:ltr; text-align:left;">My mother asked me why I was crying.</p>
+      <p class="model-answer" style="display:none;">My mother asked me why I was crying.</p>
     </div>
     
     <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
       <p class="q-text" style="color:#1e40af;">35. What are the benefits of socializing according to the text?</p>
       <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
-      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:ltr; text-align:left;">It reduces stress, boosts mood, strengthens the immune system, and helps us live longer.</p>
+      <p class="model-answer" style="display:none;">It reduces stress, boosts mood, strengthens the immune system, and helps us live longer.</p>
     </div>
     
     <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
       <p class="q-text" style="color:#1e40af;">36. Mention two challenges of making plans with friends.</p>
       <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
-      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:ltr; text-align:left;">Packed schedules, preferring online interaction, too many entertainment options, or changing friend groups.</p>
+      <p class="model-answer" style="display:none;">Packed schedules, preferring online interaction, too many entertainment options, or changing friend groups.</p>
     </div>
 
     <!-- أسئلة الكتابة (Writing) -->
     <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
       <p class="q-text" style="color:#1e40af;">37. What is the purpose of a Review?</p>
       <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
-      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:ltr; text-align:left;">To inform and to persuade.</p>
+      <p class="model-answer" style="display:none;">To inform and to persuade.</p>
     </div>
     
     <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
       <p class="q-text" style="color:#1e40af;">38. What are the 4 parts of a Review?</p>
       <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
-      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:ltr; text-align:left;">1. Introduction & Overall Impression. 2. Specific Details. 3. Pros and Cons. 4. Conclusion & Recommendation.</p>
+      <p class="model-answer" style="display:none;">1. Introduction & Overall Impression. 2. Specific Details. 3. Pros and Cons. 4. Conclusion & Recommendation.</p>
     </div>
 
     <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
       <p class="q-text" style="color:#1e40af;">39. What is the difference between "pros" and "cons"?</p>
       <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
-      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:ltr; text-align:left;">"Pros" are advantages or positive points, while "cons" are disadvantages or negative points.</p>
+      <p class="model-answer" style="display:none;">"Pros" are advantages or positive points, while "cons" are disadvantages or negative points.</p>
     </div>
 
     <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
       <p class="q-text" style="color:#1e40af;">40. Write a sentence using the idiom "hit the town".</p>
       <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
-      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:ltr; text-align:left;">Let's hit the town tonight to celebrate!</p>
+      <p class="model-answer" style="display:none;">Let's hit the town tonight to celebrate!</p>
     </div>
 
     <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
       <p class="q-text" style="color:#1e40af;">41. Write a sentence using the idiom "through thick and thin".</p>
       <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
-      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:ltr; text-align:left;">True friends support each other through thick and thin.</p>
+      <p class="model-answer" style="display:none;">True friends support each other through thick and thin.</p>
     </div>
 
     <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
       <p class="q-text" style="color:#1e40af;">42. Write a short recommendation for a restaurant you visited.</p>
       <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
-      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:ltr; text-align:left;">Overall, I recommend this restaurant for its delicious food, though it might be better for casual dinners rather than special occasions.</p>
+      <p class="model-answer" style="display:none;">Overall, I recommend this restaurant for its delicious food, though it might be better for casual dinners rather than special occasions.</p>
     </div>
 
   </div> <!-- نهاية الحاوية -->
