@@ -91,6 +91,22 @@ body.aa-light .container :is(.lesson-content,.image-box,.answer-box,.model-answe
 body.aa-light .aa-img-missing { background:#f1f5f9; color:#334155; border-color:#cbd5e1; }
 </style>
 
+<style id="aa-unit6-idioms-meaning-fix">
+/* إصلاح مربع المعنى الأصفر (idiom-meaning) في الوضع الداكن والنهاري */
+body:not(.aa-light) .idiom-meaning {
+  background: #0b2a5b !important;
+  color: #ffffff !important;
+  border: 1px solid #2563eb !important;
+  font-weight: bold !important;
+}
+body.aa-light .idiom-meaning {
+  background: #ffffff !important;
+  color: #0b2a5b !important;
+  border: 1px solid #93c5fd !important;
+  font-weight: bold !important;
+}
+</style>
+
 </head>
 <body>
   <div class="container">
@@ -147,4 +163,4 @@ document.addEventListener('DOMContentLoaded', function(){
 </script>
 
 </body>
-</html>
+  </html>
