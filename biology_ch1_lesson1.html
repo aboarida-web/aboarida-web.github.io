@@ -42,41 +42,21 @@ body.aa-light .aa-topbar,body.aa-light .container,body.aa-light .card,body.aa-li
 @media(max-width:640px){.aa-topbar{width:calc(100% - 20px);margin:10px auto 15px;padding:10px 11px;border-radius:15px}.aa-brand{font-size:14px;gap:8px}.aa-logo{width:36px;height:36px;font-size:20px}.aa-brand small{font-size:9px}.aa-action{font-size:11px;padding:8px 9px}.container,.courses,.hero{width:calc(100% - 20px);margin-bottom:14px!important}.container{padding:16px!important;border-radius:17px!important}.hero{padding:27px 15px!important;border-radius:18px!important}.hero h2{font-size:clamp(21px,6vw,28px)!important}.hero p{font-size:14px!important}.courses{padding:18px 0!important}.grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}.card{padding:14px 10px!important}.card .icon{font-size:30px!important}.card h3{font-size:16px!important}.card p{font-size:12px!important}.menu-grid{grid-template-columns:1fr!important;gap:10px!important}.menu-card{padding:14px!important}.menu-card h3{font-size:15px!important}.menu-card .info{gap:9px!important;min-width:0}.menu-card .icon{font-size:25px!important}.back-btn{padding:9px 13px!important;font-size:13px!important}.lesson-content{font-size:15px!important;line-height:1.9!important}.section-title{font-size:16px!important;padding:10px 12px!important}.image-box{margin:17px 0!important}.image-caption{font-size:13px!important}h1{font-size:22px!important}h2{font-size:19px!important}footer{font-size:12px!important;padding:18px 12px!important}}
 @media(max-width:360px){.aa-brand{font-size:12px}.aa-actions{gap:5px}.aa-action{font-size:10px;padding:7px}.grid{grid-template-columns:1fr!important}}
 </style>
-
-<style id="aboarida-readable-panels-fix">
-/* Dark theme: keep lesson and question panels readable without whitening the whole page. */
-body:not(.aa-light) :is(.q-box,.lesson-content,.example-box,.text-box,.translation-box,.vocab-box,.questions-box,.definition,.example,.idiom-card,.info,.info-box,.content-box,.passage,.note,.highlight,.tree-diagram,.image-box) {
-  background: #f8fafc !important;
-  color: #1e293b !important;
-  border-color: #cbd5e1 !important;
-}
-body:not(.aa-light) :is(.q-box,.lesson-content,.example-box,.text-box,.translation-box,.vocab-box,.questions-box,.definition,.example,.idiom-card,.info,.info-box,.content-box,.passage,.note,.highlight,.tree-diagram,.image-box) :is(p,li,span,strong,b,em,small,label,td,th,h1,h2,h3,h4,summary,blockquote) {
-  color: #1e293b !important;
-}
-/* Preserve blue headings and colored callouts where they are intentionally used. */
-body:not(.aa-light) :is(.q-box,.lesson-content,.example-box,.text-box,.translation-box,.vocab-box,.questions-box,.definition,.example,.idiom-card,.info,.info-box,.content-box,.passage,.note,.highlight,.tree-diagram,.image-box) a {
-  color: #1d4ed8 !important;
-}
-/* Multiple-choice answers stay readable and retain clear result feedback. */
-body:not(.aa-light) .options li {
-  color: #1e293b !important;
-  background: #ffffff !important;
-  border-color: #cbd5e1 !important;
-}
-.options li.correct {
-  color: #14532d !important;
-  background: #bbf7d0 !important;
-  border: 2px solid #22c55e !important;
-  font-weight: 700 !important;
-}
-.options li.wrong {
-  color: #7f1d1d !important;
-  background: #fecaca !important;
-  border: 2px solid #ef4444 !important;
-  font-weight: 700 !important;
-}
+<style id="aa-final-contrast-and-quiz-fix">
+/* Theme contrast: dark mode uses dark panels + light text; light mode uses light panels + dark text. */
+body:not(.aa-light) :is(.container,.q-box,.lesson-content,.example-box,.image-box,.highlight,.info,.idiom-card,.definition,.example,.text-box,.translation-box,.vocab-box,.questions-box,.tree-diagram,.table-container,.table-responsive,.passage,.panel,.part-box,.rule-box,.trap-box,.menu-card,.q-item,.answer,.vocab-item,.show-answer){background-color:#142b4b!important;color:#f3f7ff!important;border-color:#456080!important;}
+body:not(.aa-light) :is(.container,.q-box,.lesson-content,.example-box,.image-box,.highlight,.info,.idiom-card,.definition,.example,.text-box,.translation-box,.vocab-box,.questions-box,.tree-diagram,.table-container,.table-responsive,.passage,.panel,.part-box,.rule-box,.trap-box,.menu-card,.q-item,.answer,.vocab-item,.show-answer) :is(p,li,span,strong,b,em,small,label,td,th,h1,h2,h3,h4,div,a){color:#f3f7ff!important;}
+body:not(.aa-light) :is(.q-text,.ar,.meaning,.idiom-meaning,.image-caption){color:#f3f7ff!important;}
+body:not(.aa-light) .options li{background:#203a5d!important;color:#f7faff!important;border:1px solid #66809f!important;cursor:pointer!important;}
+body.aa-light :is(.q-box,.lesson-content,.example-box,.image-box,.highlight,.info,.idiom-card,.definition,.example,.text-box,.translation-box,.vocab-box,.questions-box,.tree-diagram,.table-container,.table-responsive,.passage,.panel,.part-box,.rule-box,.trap-box,.menu-card,.q-item,.answer,.vocab-item,.show-answer){background-color:#fff!important;color:#172033!important;}
+body.aa-light :is(.q-box,.lesson-content,.example-box,.image-box,.highlight,.info,.idiom-card,.definition,.example,.text-box,.translation-box,.vocab-box,.questions-box,.tree-diagram,.table-container,.table-responsive,.passage,.panel,.part-box,.rule-box,.trap-box,.menu-card,.q-item,.answer,.vocab-item,.show-answer) :is(p,li,span,strong,b,em,small,label,td,th,h1,h2,h3,h4,div){color:#172033!important;}
+body.aa-light .options li{background:#fff!important;color:#172033!important;border:1px solid #cbd5e1!important;}
+.options li.correct{background:#bbf7d0!important;color:#14532d!important;border:2px solid #16a34a!important;font-weight:800!important;}
+.options li.wrong{background:#fecaca!important;color:#7f1d1d!important;border:2px solid #dc2626!important;font-weight:800!important;}
+body:not(.aa-light) .options li.correct,body.aa-light .options li.correct{background:#bbf7d0!important;color:#14532d!important;border:2px solid #16a34a!important;font-weight:800!important;}
+body:not(.aa-light) .options li.wrong,body.aa-light .options li.wrong{background:#fecaca!important;color:#7f1d1d!important;border:2px solid #dc2626!important;font-weight:800!important;}
+.options.answered li{cursor:default!important;}
 </style>
-
 </head>
 <body>
   <div class="container">
