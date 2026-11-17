@@ -70,15 +70,15 @@ body:not(.aa-light) .container,
 body:not(.aa-light) .container :not(img):not(video):not(iframe):not(svg):not(path) {
   color: var(--aa-text, #edf4ff);
 }
-body:not(.aa-light) .container :is(.lesson-content,.image-box,.answer-box,.model-answer,.essay-answer,.question-box,.q-box,.explanation,.note-box,.info-box,.content-box,.example-box,.passage,.text-box,.answer,.solution,.paragraph-box) {
+body:not(.aa-light) .container :is(.lesson-content,.image-box,.answer-box,.model-answer,.essay-answer,.question-box,.q-box,.explanation,.note-box,.info-box,.content-box,.example-box,.passage,.text-box,.answer,.solution,.paragraph-box,details,summary,.rule-box) {
   background: #10284a !important;
   color: #f2f6ff !important;
   border-color: #426184 !important;
 }
-body:not(.aa-light) .container :is(.lesson-content,.image-box,.answer-box,.model-answer,.essay-answer,.question-box,.q-box,.explanation,.note-box,.info-box,.content-box,.example-box,.passage,.text-box,.answer,.solution,.paragraph-box) :is(p,li,span,b,strong,em,small,label,td,th,h1,h2,h3,h4,div) {
+body:not(.aa-light) .container :is(.lesson-content,.image-box,.answer-box,.model-answer,.essay-answer,.question-box,.q-box,.explanation,.note-box,.info-box,.content-box,.example-box,.passage,.text-box,.answer,.solution,.paragraph-box,details,summary,.rule-box) :is(p,li,span,b,strong,em,small,label,td,th,h1,h2,h3,h4,div) {
   color: #f2f6ff !important;
 }
-body:not(.aa-light) .container :is(h1,h2,h3,h4,.section-title) { color:#a9d8ff !important; }
+body:not(.aa-light) .container :is(h1,h2,h3,h4,.section-title,summary) { color:#a9d8ff !important; }
 body:not(.aa-light) .container :is(.highlight) { background:#542c3b !important; color:#ffd0d5 !important; }
 body:not(.aa-light) .container :is(.term) { background:#123d59 !important; color:#a5eaff !important; }
 /* Neutralize hard-coded light inline panels only in the content area */
@@ -90,14 +90,36 @@ body:not(.aa-light) .container [style*="background-color: #fff"],
 body:not(.aa-light) .container [style*="background: white"] {
   background: #10284a !important; color:#f2f6ff !important; border-color:#426184 !important;
 }
-body.aa-light .container :is(.lesson-content,.image-box,.answer-box,.model-answer,.essay-answer,.question-box,.q-box,.explanation,.note-box,.info-box,.content-box,.example-box,.passage,.text-box,.answer,.solution,.paragraph-box) {
+body.aa-light .container :is(.lesson-content,.image-box,.answer-box,.model-answer,.essay-answer,.question-box,.q-box,.explanation,.note-box,.info-box,.content-box,.example-box,.passage,.text-box,.answer,.solution,.paragraph-box,details,summary,.rule-box) {
   background:#fff !important; color:#172b49 !important; border-color:#d7e2f1 !important;
 }
-body.aa-light .container :is(.lesson-content,.image-box,.answer-box,.model-answer,.essay-answer,.question-box,.q-box,.explanation,.note-box,.info-box,.content-box,.example-box,.passage,.text-box,.answer,.solution,.paragraph-box) :is(p,li,span,b,strong,em,small,label,td,th,h1,h2,h3,h4,div) {
+body.aa-light .container :is(.lesson-content,.image-box,.answer-box,.model-answer,.essay-answer,.question-box,.q-box,.explanation,.note-box,.info-box,.content-box,.example-box,.passage,.text-box,.answer,.solution,.paragraph-box,details,summary,.rule-box) :is(p,li,span,b,strong,em,small,label,td,th,h1,h2,h3,h4,div) {
   color:#172b49 !important;
 }
 .aa-img-missing { display:flex; min-height:110px; width:100%; align-items:center; justify-content:center; padding:22px; border:1px dashed #7892b5; border-radius:12px; background:#10284a; color:#dbeafe; font-weight:700; text-align:center; }
 body.aa-light .aa-img-missing { background:#f1f5f9; color:#334155; border-color:#cbd5e1; }
+</style>
+
+<style id="aa-unit6-example-fix">
+/* إصلاح خلفية الأمثلة داخل example-box في الوضع الداكن والنهاري */
+body:not(.aa-light) .example-box li {
+  background: #0b2a5b !important;
+  color: #ffffff !important;
+  border: 1px solid #2563eb !important;
+}
+body:not(.aa-light) .example-box li span.ar {
+  color: #cfe3ff !important;
+  border-top: 1px dashed #2563eb !important;
+}
+body.aa-light .example-box li {
+  background: #ffffff !important;
+  color: #0b2a5b !important;
+  border: 1px solid #93c5fd !important;
+}
+body.aa-light .example-box li span.ar {
+  color: #1e3a8a !important;
+  border-top: 1px dashed #93c5fd !important;
+}
 </style>
 
 </head>
