@@ -106,6 +106,109 @@ body.aa-light .container :is(.lesson-content,.image-box,.answer-box,.model-answe
 body.aa-light .aa-img-missing { background:#f1f5f9; color:#334155; border-color:#cbd5e1; }
 </style>
 
+<!-- ===== الإصلاحات: أزرار الشرح + الجداول + الأمثلة + الشريط العلوي ===== -->
+<style id="unit3-fixes">
+/* ---------- أزرار الشرح (summary) ---------- */
+body .container details > summary {
+  display: block;
+  padding: 13px 16px !important;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  line-height: 1.6;
+  transition: background .2s, border-color .2s;
+}
+
+/* الوضع الداكن: خلفية أزرق غامق وكلام أبيض */
+body:not(.aa-light) .container details {
+  background: #0c1f3f !important;
+  border: 1px solid #426184 !important;
+}
+body:not(.aa-light) .container details > summary {
+  background: #1e3a8a !important;
+  color: #ffffff !important;
+  border: 1px solid #3b6fd4 !important;
+}
+body:not(.aa-light) .container details > summary:hover {
+  background: #2748a8 !important;
+  color: #ffffff !important;
+}
+
+/* الوضع النهاري: خلفية بيضاء وكلام أزرق غامق */
+body.aa-light .container details {
+  background: #f4f7fb !important;
+  border: 1px solid #cbd5e1 !important;
+}
+body.aa-light .container details > summary {
+  background: #ffffff !important;
+  color: #1e3a8a !important;
+  border: 2px solid #1e3a8a !important;
+}
+body.aa-light .container details > summary:hover {
+  background: #eaf1ff !important;
+  color: #1e3a8a !important;
+}
+
+/* ---------- الجداول والأمثلة جوه الشرح ---------- */
+/* الوضع الداكن */
+body:not(.aa-light) .container .lesson-content table { background: #10284a !important; }
+body:not(.aa-light) .container .lesson-content td {
+  background: #142b4b !important;
+  color: #ffffff !important;
+  border-color: #426184 !important;
+}
+body:not(.aa-light) .container .lesson-content th {
+  background: #2563eb !important;
+  color: #ffffff !important;
+  border-color: #426184 !important;
+}
+body:not(.aa-light) .container .example-box li {
+  background: #1b3a66 !important;
+  color: #ffffff !important;
+}
+body:not(.aa-light) .container .example-box li b { color: #ffd166 !important; }
+
+/* الوضع النهاري */
+body.aa-light .container .lesson-content td {
+  background: #ffffff !important;
+  color: #172b49 !important;
+  border-color: #d7e2f1 !important;
+}
+body.aa-light .container .lesson-content th {
+  background: #2563eb !important;
+  color: #ffffff !important;
+}
+body.aa-light .container .example-box li {
+  background: #ffffff !important;
+  color: #172b49 !important;
+}
+
+/* ---------- الشريط العلوي: الاسم فوق والأزرار تحته ---------- */
+.aa-topbar {
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+}
+.aa-topbar .aa-brand {
+  justify-content: center;
+  width: 100%;
+}
+.aa-topbar .aa-actions {
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px !important;
+}
+@media (max-width: 640px) {
+  .aa-topbar .aa-actions .aa-action {
+    flex: 1 1 0;
+    text-align: center;
+    padding: 9px 6px;
+  }
+}
+</style>
+
 </head>
 <body>
   <div class="container">
