@@ -17,8 +17,8 @@
     .options li { background: white; padding: 12px 15px; margin-bottom: 10px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 15px; cursor: pointer; transition: 0.2s; direction: ltr; text-align: left;}
     .options li:hover { background: #f1f5f9; }
     
-    .options li.correct { background: #dcfce7; border-color: #22c55e; font-weight: bold; color: #166534; }
-    .options li.wrong { background: #fee2e2; border-color: #ef4444; color: #991b1b; }
+    .options li.correct { background: #dcfce7 !important; border-color: #22c55e !important; font-weight: bold; color: #166534 !important; }
+    .options li.wrong { background: #fee2e2 !important; border-color: #ef4444 !important; color: #991b1b !important; }
     
     .back-btn { display: inline-block; background: #64748b; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; margin-bottom: 20px; font-size: 14px; }
     .back-btn:hover { background: #475569; }
@@ -163,11 +163,11 @@
     body:not(.aa-light) h2 {
       color: #7cc4ff !important;
     }
-    /* إجابات الأسئلة المقالية في الوضع الليلي: خلفية زرقاء داكنة/خضراء وكلام أبيض */
-    body:not(.aa-light) .q-box p[style*="background:#dcfce7"] {
-      background: #0f3d2e !important;
+    /* إجابات الأسئلة المقالية في الوضع الليلي: خلفية زرقاء داكنة وكلام أبيض */
+    body:not(.aa-light) .q-box .model-answer-box {
+      background: #10284d !important;
       color: #ffffff !important;
-      border: 1px solid #10b981 !important;
+      border: 1px solid #3b6cb5 !important;
     }
 
     /* ==================== الوضع النهاري (الفاتح) ==================== */
@@ -216,7 +216,7 @@
       border: 1px solid #cbd5e1 !important;
     }
     /* إجابات الأسئلة المقالية في الوضع النهاري: خلفية بيضاء وكلام أزرق غامق */
-    body.aa-light .q-box p[style*="background:#dcfce7"] {
+    body.aa-light .q-box .model-answer-box {
       background: #ffffff !important;
       color: #1e3a8a !important;
       border: 1px solid #2563eb !important;
@@ -545,68 +545,68 @@
     <div class="q-box">
       <p class="q-text">32. Rewrite using a modal verb of deduction: I am sure he is at home because his car is here.</p>
       <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
-      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:ltr; text-align:left;">He must be at home because his car is here.</p>
+      <p class="model-answer-box" style="display:none; padding:10px; border-radius:6px; margin-top:10px; direction:ltr; text-align:left;">He must be at home because his car is here.</p>
     </div>
 
     <div class="q-box">
       <p class="q-text">33. Rewrite using a modal verb of deduction: I am sure she didn't steal the money.</p>
       <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
-      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:ltr; text-align:left;">She can't have stolen the money.</p>
+      <p class="model-answer-box" style="display:none; padding:10px; border-radius:6px; margin-top:10px; direction:ltr; text-align:left;">She can't have stolen the money.</p>
     </div>
     
     <div class="q-box">
       <p class="q-text">34. Give advice using "should": I have a terrible headache.</p>
       <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
-      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:ltr; text-align:left;">You should see a doctor.</p>
+      <p class="model-answer-box" style="display:none; padding:10px; border-radius:6px; margin-top:10px; direction:ltr; text-align:left;">You should see a doctor.</p>
     </div>
     
     <div class="q-box">
       <p class="q-text">35. Express regret using "should have": I didn't study for the exam and I failed.</p>
       <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
-      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:ltr; text-align:left;">I should have studied for the exam.</p>
+      <p class="model-answer-box" style="display:none; padding:10px; border-radius:6px; margin-top:10px; direction:ltr; text-align:left;">I should have studied for the exam.</p>
     </div>
     
     <div class="q-box">
       <p class="q-text">36. Complete the sentence with a suitable idiom: After his father became ill, he had to .......... of supporting his family.</p>
       <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
-      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:ltr; text-align:left;">shoulder the burden</p>
+      <p class="model-answer-box" style="display:none; padding:10px; border-radius:6px; margin-top:10px; direction:ltr; text-align:left;">shoulder the burden</p>
     </div>
 
     <!-- أسئلة الكتابة (Writing) -->
     <div class="q-box">
       <p class="q-text">37. What is the main purpose of a persuasive essay?</p>
       <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
-      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:ltr; text-align:left;">To convince the reader to take a specific action or adopt a particular opinion.</p>
+      <p class="model-answer-box" style="display:none; padding:10px; border-radius:6px; margin-top:10px; direction:ltr; text-align:left;">To convince the reader to take a specific action or adopt a particular opinion.</p>
     </div>
     
     <div class="q-box">
       <p class="q-text">38. What is a "Call to action" in a persuasive essay?</p>
       <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
-      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:ltr; text-align:left;">A sentence that urges the reader to act.</p>
+      <p class="model-answer-box" style="display:none; padding:10px; border-radius:6px; margin-top:10px; direction:ltr; text-align:left;">A sentence that urges the reader to act.</p>
     </div>
 
     <div class="q-box">
       <p class="q-text">39. Write a sentence to state an opinion about protecting the environment.</p>
       <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
-      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:ltr; text-align:left;">I believe that we must take urgent action to protect our environment.</p>
+      <p class="model-answer-box" style="display:none; padding:10px; border-radius:6px; margin-top:10px; direction:ltr; text-align:left;">I believe that we must take urgent action to protect our environment.</p>
     </div>
 
     <div class="q-box">
       <p class="q-text">40. Write a rhetorical question about climate change.</p>
       <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
-      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:ltr; text-align:left;">How much longer can we ignore the effects of climate change?</p>
+      <p class="model-answer-box" style="display:none; padding:10px; border-radius:6px; margin-top:10px; direction:ltr; text-align:left;">How much longer can we ignore the effects of climate change?</p>
     </div>
 
     <div class="q-box">
       <p class="q-text">41. What is "Evidence" in persuasive writing?</p>
       <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
-      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:ltr; text-align:left;">Facts or data supporting your opinion.</p>
+      <p class="model-answer-box" style="display:none; padding:10px; border-radius:6px; margin-top:10px; direction:ltr; text-align:left;">Facts or data supporting your opinion.</p>
     </div>
 
     <div class="q-box">
       <p class="q-text">42. What is the difference between "Opinion" and "Thesis statement"?</p>
       <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
-      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:ltr; text-align:left;">An opinion is a personal belief, while a thesis statement is the central idea or argument of the essay that the writer defends.</p>
+      <p class="model-answer-box" style="display:none; padding:10px; border-radius:6px; margin-top:10px; direction:ltr; text-align:left;">An opinion is a personal belief, while a thesis statement is the central idea or argument of the essay that the writer defends.</p>
     </div>
 
   </div>
