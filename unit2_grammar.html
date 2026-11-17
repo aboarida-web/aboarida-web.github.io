@@ -21,6 +21,18 @@
     .lesson-content h4 { font-size: 16px; margin: 15px 0 8px; color: #2563eb; }
     .lesson-content p { font-size: 15px; line-height: 1.8; color: #334155; text-align: justify; margin-bottom: 10px; }
     
+    /* تنسيق السطر المميز للقاعدة */
+    .rule-box {
+      text-align: center; 
+      font-weight: bold; 
+      background: #e0f2fe; 
+      padding: 10px; 
+      border-radius: 6px; 
+      color: #1e3a8a;
+      border: 1px solid #bae6fd;
+      margin-bottom: 15px;
+    }
+
     /* تنسيق الجداول */
     .table-container { overflow-x: auto; margin: 15px 0; }
     table { width: 100%; border-collapse: collapse; font-size: 14px; background: white; border-radius: 8px; overflow: hidden; }
@@ -72,6 +84,13 @@
     .lesson-content h3 { border-bottom-color: #4a7ab5 !important; }
     .lesson-content h4 { color: #8fcaff !important; }
 
+    /* تظبيط السطر المميز للقاعدة في الوضع الليلي */
+    .rule-box { 
+        background: #0c1f3d !important; 
+        color: #8fcaff !important; 
+        border-color: #2c5282 !important; 
+    }
+
     /* تظبيط صندوق المثال والجداول في الوضع الليلي */
     .example-box { background: #422006 !important; border-right-color: #d97706 !important; }
     .example-box p { color: #fcd34d !important; }
@@ -98,6 +117,13 @@
     body.aa-light .lesson-content h3 { border-bottom-color: #cbd5e1 !important; }
     body.aa-light .lesson-content h4 { color: #2563eb !important; }
 
+    /* تظبيط السطر المميز للقاعدة في الوضع النهاري */
+    body.aa-light .rule-box { 
+        background: #e0f2fe !important; 
+        color: #1e3a8a !important; 
+        border-color: #bae6fd !important; 
+    }
+
     /* تظبيط صندوق المثال والجداول في الوضع النهاري */
     body.aa-light .example-box { background: #fef3c7 !important; border-right-color: #d97706 !important; }
     body.aa-light .example-box p { color: #92400e !important; }
@@ -120,9 +146,12 @@
       <summary>1. القاعدة الأساسية لتكوين الجملة</summary>
       <div class="lesson-content">
         <p>تتكون الجملة الخبرية في الكلام غير المباشر من 4 أجزاء أساسية:</p>
-        <p style="text-align: center; font-weight: bold; background: #e0f2fe; padding: 10px; border-radius: 6px; color: #1e3a8a; border: 1px solid #bae6fd;">
+        
+        <!-- هنا استخدمنا كلاس rule-box بدل الستايل المباشر -->
+        <p class="rule-box">
           نص الكلام غير المباشر + فعل الإبلاغ + (that) + المبلغ (المتحدث)
         </p>
+        
         <div class="example-box">
           <ul>
             <li>Sama said (that) her father worked in a school.
@@ -343,4 +372,4 @@
 })();
 </script>
 </body>
-  </html>
+      </html>
