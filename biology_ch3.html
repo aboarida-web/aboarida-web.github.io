@@ -57,6 +57,43 @@ body:not(.aa-light) .options li.correct,body.aa-light .options li.correct{backgr
 body:not(.aa-light) .options li.wrong,body.aa-light .options li.wrong{background:#fecaca!important;color:#7f1d1d!important;border:2px solid #dc2626!important;font-weight:800!important;}
 .options.answered li{cursor:default!important;}
 </style>
+
+<style id="aa-night-visibility-v2">
+/* Reliable dark-mode contrast for lesson text, callouts, essay answers and image panels */
+body:not(.aa-light) .container,
+body:not(.aa-light) .container :not(img):not(video):not(iframe):not(svg):not(path) {
+  color: var(--aa-text, #edf4ff);
+}
+body:not(.aa-light) .container :is(.lesson-content,.image-box,.answer-box,.model-answer,.essay-answer,.question-box,.q-box,.explanation,.note-box,.info-box,.content-box,.example-box,.passage,.text-box,.answer,.solution,.paragraph-box) {
+  background: #10284a !important;
+  color: #f2f6ff !important;
+  border-color: #426184 !important;
+}
+body:not(.aa-light) .container :is(.lesson-content,.image-box,.answer-box,.model-answer,.essay-answer,.question-box,.q-box,.explanation,.note-box,.info-box,.content-box,.example-box,.passage,.text-box,.answer,.solution,.paragraph-box) :is(p,li,span,b,strong,em,small,label,td,th,h1,h2,h3,h4,div) {
+  color: #f2f6ff !important;
+}
+body:not(.aa-light) .container :is(h1,h2,h3,h4,.section-title) { color:#a9d8ff !important; }
+body:not(.aa-light) .container :is(.highlight) { background:#542c3b !important; color:#ffd0d5 !important; }
+body:not(.aa-light) .container :is(.term) { background:#123d59 !important; color:#a5eaff !important; }
+/* Neutralize hard-coded light inline panels only in the content area */
+body:not(.aa-light) .container [style*="background:#fff"],
+body:not(.aa-light) .container [style*="background: #fff"],
+body:not(.aa-light) .container [style*="background-color: white"],
+body:not(.aa-light) .container [style*="background-color:#fff"],
+body:not(.aa-light) .container [style*="background-color: #fff"],
+body:not(.aa-light) .container [style*="background: white"] {
+  background: #10284a !important; color:#f2f6ff !important; border-color:#426184 !important;
+}
+body.aa-light .container :is(.lesson-content,.image-box,.answer-box,.model-answer,.essay-answer,.question-box,.q-box,.explanation,.note-box,.info-box,.content-box,.example-box,.passage,.text-box,.answer,.solution,.paragraph-box) {
+  background:#fff !important; color:#172b49 !important; border-color:#d7e2f1 !important;
+}
+body.aa-light .container :is(.lesson-content,.image-box,.answer-box,.model-answer,.essay-answer,.question-box,.q-box,.explanation,.note-box,.info-box,.content-box,.example-box,.passage,.text-box,.answer,.solution,.paragraph-box) :is(p,li,span,b,strong,em,small,label,td,th,h1,h2,h3,h4,div) {
+  color:#172b49 !important;
+}
+.aa-img-missing { display:flex; min-height:110px; width:100%; align-items:center; justify-content:center; padding:22px; border:1px dashed #7892b5; border-radius:12px; background:#10284a; color:#dbeafe; font-weight:700; text-align:center; }
+body.aa-light .aa-img-missing { background:#f1f5f9; color:#334155; border-color:#cbd5e1; }
+</style>
+
 </head>
 <body>
 
@@ -125,12 +162,29 @@ body:not(.aa-light) .options li.wrong,body.aa-light .options li.wrong{background
 <script id="abo-arida-site-ui">
 (function(){
  const bar=document.createElement('nav');bar.className='aa-topbar';bar.setAttribute('aria-label','التنقل الرئيسي');
- bar.innerHTML='<a class="aa-brand" href="index.html"><span class="aa-logo">📚</span><span>أبو عريضة أكاديمي<small>ABO ARIDA ACADEMY</small></span></a><div class="aa-actions"><a class="aa-action" href="index.html">الرئيسية</a><button class="aa-action" type="button" id="aaTheme">☀️ / 🌙</button></div>';
+ bar.innerHTML='<a class="aa-brand" href="index.html"><span class="aa-logo">📚</span><span>أبو عريضة أكاديمي<small>ABO ARIDA ACADEMY</small></span></a><div class="aa-actions"><a class="aa-action" href="index.html">الرئيسية</a><a class="aa-action" href="contact.html">تواصل معنا</a><button class="aa-action" type="button" id="aaTheme">☀️ / 🌙</button></div>';
  document.body.insertBefore(bar,document.body.firstChild);
  const key='aboAridaTheme';function apply(v){document.body.classList.toggle('aa-light',v==='light');}
  let saved='dark';try{saved=localStorage.getItem(key)||'dark'}catch(e){}apply(saved);
  const btn=document.getElementById('aaTheme');btn.addEventListener('click',function(){const next=document.body.classList.contains('aa-light')?'dark':'light';apply(next);try{localStorage.setItem(key,next)}catch(e){}});
 })();
 </script>
+
+<script id="aa-night-image-fallback-v2">
+document.addEventListener('DOMContentLoaded', function(){
+  document.querySelectorAll('img').forEach(function(img){
+    img.addEventListener('error', function(){
+      if (img.dataset.aaFallbackDone) return;
+      img.dataset.aaFallbackDone='1';
+      var box=document.createElement('div');
+      box.className='aa-img-missing';
+      box.textContent='الصورة غير متاحة حاليًا' + (img.alt ? ' — '+img.alt : '');
+      img.replaceWith(box);
+    }, {once:true});
+    if (img.complete && img.naturalWidth===0 && img.src) img.dispatchEvent(new Event('error'));
+  });
+});
+</script>
+
 </body>
 </html>
