@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -23,6 +24,7 @@
     .back-btn { display: inline-block; background: #64748b; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; margin-bottom: 20px; font-size: 14px; }
     .back-btn:hover { background: #475569; }
   </style>
+
 <style id="abo-arida-design-system">
 :root{--aa-bg:#071329;--aa-panel:#0e2040;--aa-card:#10284d;--aa-text:#edf4ff;--aa-muted:#b4c5df;--aa-line:rgba(139,180,255,.2);--aa-blue:#2878ff;--aa-cyan:#45c7ff;--aa-gold:#ffc94a;--aa-shadow:0 14px 38px rgba(0,0,0,.22)}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:Tahoma,'Segoe UI',Arial,sans-serif!important;background:radial-gradient(ellipse at 15% 0%,#102b59 0%,transparent 42%),linear-gradient(160deg,#071329,#091a34 55%,#071329)!important;color:var(--aa-text)!important;min-height:100vh;line-height:1.75;overflow-x:hidden}
@@ -39,6 +41,7 @@ body.aa-light .aa-topbar,body.aa-light .container,body.aa-light .card,body.aa-li
 @media(max-width:640px){.aa-topbar{width:calc(100% - 20px);margin:10px auto 15px;padding:10px 11px;border-radius:15px}.aa-brand{font-size:14px;gap:8px}.aa-logo{width:36px;height:36px;font-size:20px}.aa-brand small{font-size:9px}.aa-action{font-size:11px;padding:8px 9px}.container,.courses,.hero{width:calc(100% - 20px);margin-bottom:14px!important}.container{padding:16px!important;border-radius:17px!important}.hero{padding:27px 15px!important;border-radius:18px!important}.hero h2{font-size:clamp(21px,6vw,28px)!important}.hero p{font-size:14px!important}.courses{padding:18px 0!important}.grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}.card{padding:14px 10px!important}.card .icon{font-size:30px!important}.card h3{font-size:16px!important}.card p{font-size:12px!important}.menu-grid{grid-template-columns:1fr!important;gap:10px!important}.menu-card{padding:14px!important}.menu-card h3{font-size:15px!important}.menu-card .info{gap:9px!important;min-width:0}.menu-card .icon{font-size:25px!important}.back-btn{padding:9px 13px!important;font-size:13px!important}.lesson-content{font-size:15px!important;line-height:1.9!important}.section-title{font-size:16px!important;padding:10px 12px!important}.image-box{margin:17px 0!important}.image-caption{font-size:13px!important}h1{font-size:22px!important}h2{font-size:19px!important}footer{font-size:12px!important;padding:18px 12px!important}}
 @media(max-width:360px){.aa-brand{font-size:12px}.aa-actions{gap:5px}.aa-action{font-size:10px;padding:7px}.grid{grid-template-columns:1fr!important}}
 </style>
+
 <style id="aa-final-contrast-and-quiz-fix">
 /* Theme contrast: dark mode uses dark panels + light text; light mode uses light panels + dark text. */
 body:not(.aa-light) :is(.container,.q-box,.lesson-content,.example-box,.image-box,.highlight,.info,.idiom-card,.definition,.example,.text-box,.translation-box,.vocab-box,.questions-box,.tree-diagram,.table-container,.table-responsive,.passage,.panel,.part-box,.rule-box,.trap-box,.menu-card,.q-item,.answer,.vocab-item,.show-answer){background-color:#142b4b!important;color:#f3f7ff!important;border-color:#456080!important;}
@@ -89,6 +92,20 @@ body.aa-light .container :is(.lesson-content,.image-box,.answer-box,.model-answe
 }
 .aa-img-missing { display:flex; min-height:110px; width:100%; align-items:center; justify-content:center; padding:22px; border:1px dashed #7892b5; border-radius:12px; background:#10284a; color:#dbeafe; font-weight:700; text-align:center; }
 body.aa-light .aa-img-missing { background:#f1f5f9; color:#334155; border-color:#cbd5e1; }
+</style>
+
+<!-- إصلاح وضوح ترجمة التعبيرات الاصطلاحية -->
+<style id="aa-idiom-meaning-fix">
+body:not(.aa-light) .idiom-meaning {
+  background: #123d59 !important;
+  color: #a5eaff !important;
+  border: 1px solid #2878a5 !important;
+}
+body.aa-light .idiom-meaning {
+  background: #fef3c7 !important;
+  color: #92400e !important;
+  border: 1px solid #fcd34d !important;
+}
 </style>
 
 </head>
