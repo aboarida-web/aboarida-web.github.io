@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -10,12 +11,12 @@
     .container { max-width: 800px; margin: 0 auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
     h1 { color: #1e3a8a; text-align: center; margin-bottom: 20px; border-bottom: 2px solid #e5e7eb; padding-bottom: 10px; font-size: 24px; }
     h2 { color: #2563eb; margin: 30px 0 15px; font-size: 22px; border-right: 4px solid #2563eb; padding-right: 10px; }
-    
+
     .lesson { background: #f8fafc; padding: 25px; border-radius: 8px; margin-bottom: 25px; border: 1px solid #e5e7eb; }
     .lesson p { font-size: 16px; line-height: 1.9; color: #334155; text-align: justify; margin-bottom: 12px; }
     .lesson ul { margin-right: 20px; margin-bottom: 15px; color: #334155; font-size: 16px; line-height: 1.8;}
     .lesson ul li { margin-bottom: 10px; }
-    
+
     .table-container { overflow-x: auto; margin: 15px 0; }
     table { width: 100%; border-collapse: collapse; font-size: 14px; background: white; border-radius: 8px; overflow: hidden; }
     th, td { padding: 12px; text-align: center; border: 1px solid #e2e8f0; }
@@ -23,10 +24,11 @@
     td { text-align: right; }
 
     .highlight { color: #1e3a8a; font-weight: bold; }
-    
+
     .back-btn { display: inline-block; background: #64748b; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; margin-bottom: 20px; font-size: 14px; }
     .back-btn:hover { background: #475569; }
   </style>
+
 <style id="abo-arida-design-system">
 :root{--aa-bg:#071329;--aa-panel:#0e2040;--aa-card:#10284d;--aa-text:#edf4ff;--aa-muted:#b4c5df;--aa-line:rgba(139,180,255,.2);--aa-blue:#2878ff;--aa-cyan:#45c7ff;--aa-gold:#ffc94a;--aa-shadow:0 14px 38px rgba(0,0,0,.22)}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:Tahoma,'Segoe UI',Arial,sans-serif!important;background:radial-gradient(ellipse at 15% 0%,#102b59 0%,transparent 42%),linear-gradient(160deg,#071329,#091a34 55%,#071329)!important;color:var(--aa-text)!important;min-height:100vh;line-height:1.75;overflow-x:hidden}
@@ -43,8 +45,8 @@ body.aa-light .aa-topbar,body.aa-light .container,body.aa-light .card,body.aa-li
 @media(max-width:640px){.aa-topbar{width:calc(100% - 20px);margin:10px auto 15px;padding:10px 11px;border-radius:15px}.aa-brand{font-size:14px;gap:8px}.aa-logo{width:36px;height:36px;font-size:20px}.aa-brand small{font-size:9px}.aa-action{font-size:11px;padding:8px 9px}.container,.courses,.hero{width:calc(100% - 20px);margin-bottom:14px!important}.container{padding:16px!important;border-radius:17px!important}.hero{padding:27px 15px!important;border-radius:18px!important}.hero h2{font-size:clamp(21px,6vw,28px)!important}.hero p{font-size:14px!important}.courses{padding:18px 0!important}.grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}.card{padding:14px 10px!important}.card .icon{font-size:30px!important}.card h3{font-size:16px!important}.card p{font-size:12px!important}.menu-grid{grid-template-columns:1fr!important;gap:10px!important}.menu-card{padding:14px!important}.menu-card h3{font-size:15px!important}.menu-card .info{gap:9px!important;min-width:0}.menu-card .icon{font-size:25px!important}.back-btn{padding:9px 13px!important;font-size:13px!important}.lesson-content{font-size:15px!important;line-height:1.9!important}.section-title{font-size:16px!important;padding:10px 12px!important}.image-box{margin:17px 0!important}.image-caption{font-size:13px!important}h1{font-size:22px!important}h2{font-size:19px!important}footer{font-size:12px!important;padding:18px 12px!important}}
 @media(max-width:360px){.aa-brand{font-size:12px}.aa-actions{gap:5px}.aa-action{font-size:10px;padding:7px}.grid{grid-template-columns:1fr!important}}
 </style>
+
 <style id="aa-final-contrast-and-quiz-fix">
-/* Theme contrast: dark mode uses dark panels + light text; light mode uses light panels + dark text. */
 body:not(.aa-light) :is(.container,.q-box,.lesson-content,.example-box,.image-box,.highlight,.info,.idiom-card,.definition,.example,.text-box,.translation-box,.vocab-box,.questions-box,.tree-diagram,.table-container,.table-responsive,.passage,.panel,.part-box,.rule-box,.trap-box,.menu-card,.q-item,.answer,.vocab-item,.show-answer){background-color:#142b4b!important;color:#f3f7ff!important;border-color:#456080!important;}
 body:not(.aa-light) :is(.container,.q-box,.lesson-content,.example-box,.image-box,.highlight,.info,.idiom-card,.definition,.example,.text-box,.translation-box,.vocab-box,.questions-box,.tree-diagram,.table-container,.table-responsive,.passage,.panel,.part-box,.rule-box,.trap-box,.menu-card,.q-item,.answer,.vocab-item,.show-answer) :is(p,li,span,strong,b,em,small,label,td,th,h1,h2,h3,h4,div,a){color:#f3f7ff!important;}
 body:not(.aa-light) :is(.q-text,.ar,.meaning,.idiom-meaning,.image-caption){color:#f3f7ff!important;}
@@ -60,7 +62,6 @@ body:not(.aa-light) .options li.wrong,body.aa-light .options li.wrong{background
 </style>
 
 <style id="aa-night-visibility-v2">
-/* Reliable dark-mode contrast for lesson text, callouts, essay answers and image panels */
 body:not(.aa-light) .container,
 body:not(.aa-light) .container :not(img):not(video):not(iframe):not(svg):not(path) {
   color: var(--aa-text, #edf4ff);
@@ -76,7 +77,7 @@ body:not(.aa-light) .container :is(.lesson-content,.image-box,.answer-box,.model
 body:not(.aa-light) .container :is(h1,h2,h3,h4,.section-title) { color:#a9d8ff !important; }
 body:not(.aa-light) .container :is(.highlight) { background:#542c3b !important; color:#ffd0d5 !important; }
 body:not(.aa-light) .container :is(.term) { background:#123d59 !important; color:#a5eaff !important; }
-/* Neutralize hard-coded light inline panels only in the content area */
+
 body:not(.aa-light) .container [style*="background:#fff"],
 body:not(.aa-light) .container [style*="background: #fff"],
 body:not(.aa-light) .container [style*="background-color: white"],
@@ -93,6 +94,134 @@ body.aa-light .container :is(.lesson-content,.image-box,.answer-box,.model-answe
 }
 .aa-img-missing { display:flex; min-height:110px; width:100%; align-items:center; justify-content:center; padding:22px; border:1px dashed #7892b5; border-radius:12px; background:#10284a; color:#dbeafe; font-weight:700; text-align:center; }
 body.aa-light .aa-img-missing { background:#f1f5f9; color:#334155; border-color:#cbd5e1; }
+</style>
+
+<!-- إصلاح ألوان درس Writing في الوضع الداكن والنهاري -->
+<style id="aa-writing-theme-fix">
+
+/* =========================
+   الوضع الداكن
+========================= */
+
+body:not(.aa-light) .container .lesson {
+  background: #10284a !important;
+  color: #f3f7ff !important;
+  border: 1px solid #456080 !important;
+}
+
+body:not(.aa-light) .container .lesson p,
+body:not(.aa-light) .container .lesson ul,
+body:not(.aa-light) .container .lesson li,
+body:not(.aa-light) .container .lesson b,
+body:not(.aa-light) .container .lesson strong {
+  color: #f3f7ff !important;
+}
+
+body:not(.aa-light) .container .lesson h2 {
+  color: #a9d8ff !important;
+  border-right-color: #45a9e8 !important;
+}
+
+body:not(.aa-light) .container .table-container {
+  background: #10284a !important;
+}
+
+body:not(.aa-light) .container table {
+  background: #10284a !important;
+  border-color: #456080 !important;
+}
+
+body:not(.aa-light) .container th {
+  background: #1d5595 !important;
+  color: #ffffff !important;
+  border-color: #456080 !important;
+}
+
+body:not(.aa-light) .container td {
+  background: #142f54 !important;
+  color: #f3f7ff !important;
+  border-color: #456080 !important;
+}
+
+body:not(.aa-light) .container .highlight {
+  color: #a9d8ff !important;
+}
+
+/* =========================
+   الوضع النهاري
+========================= */
+
+body.aa-light .container .lesson {
+  background: #ffffff !important;
+  color: #17345d !important;
+  border: 1px solid #d5e0ee !important;
+}
+
+body.aa-light .container .lesson p,
+body.aa-light .container .lesson ul,
+body.aa-light .container .lesson li,
+body.aa-light .container .lesson b,
+body.aa-light .container .lesson strong {
+  color: #17345d !important;
+}
+
+body.aa-light .container .lesson h2 {
+  color: #174b91 !important;
+  border-right-color: #2563eb !important;
+}
+
+body.aa-light .container .table-container {
+  background: #ffffff !important;
+}
+
+body.aa-light .container table {
+  background: #ffffff !important;
+  border-color: #d5e0ee !important;
+}
+
+body.aa-light .container th {
+  background: #2563eb !important;
+  color: #ffffff !important;
+  border-color: #d5e0ee !important;
+}
+
+body.aa-light .container td {
+  background: #ffffff !important;
+  color: #17345d !important;
+  border-color: #d5e0ee !important;
+}
+
+body.aa-light .container .highlight {
+  color: #174b91 !important;
+}
+
+/* الحفاظ على وضوح زر العودة */
+body:not(.aa-light) .back-btn,
+body.aa-light .back-btn {
+  color: #ffffff !important;
+}
+
+/* تحسين العرض على الموبايل */
+@media(max-width:640px) {
+  .container .lesson {
+    padding: 17px !important;
+  }
+
+  .container .lesson p,
+  .container .lesson ul {
+    font-size: 15px !important;
+  }
+
+  .container table {
+    font-size: 13px !important;
+  }
+
+  .container th,
+  .container td {
+    padding: 9px !important;
+  }
+}
+
 </style>
 
 </head>
