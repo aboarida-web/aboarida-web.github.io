@@ -90,6 +90,57 @@ body.aa-light .container :is(.lesson-content,.image-box,.answer-box,.model-answe
 body.aa-light .aa-img-missing { background:#f1f5f9; color:#334155; border-color:#cbd5e1; }
 </style>
 
+<!-- ===== إصلاح ألوان الإجابات النموذجية (الأسئلة 32-42) ===== -->
+<style id="model-answer-fix">
+/* الوضع الداكن: خلفية خضراء داكنة وكلام أبيض */
+body:not(.aa-light) .q-box .show-answer + p {
+  background: #0f3d2a !important;
+  color: #ffffff !important;
+  border: 1px solid #22c55e !important;
+  font-weight: 600;
+  line-height: 1.7;
+}
+/* الوضع النهاري: خلفية بيضاء وكلام داكن */
+body.aa-light .q-box .show-answer + p {
+  background: #ffffff !important;
+  color: #14532d !important;
+  border: 1px solid #16a34a !important;
+  font-weight: 600;
+  line-height: 1.7;
+}
+/* الشريط العلوي: الاسم فوق والأزرار تحته */
+.aa-topbar {
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+}
+.aa-topbar .aa-brand {
+  justify-content: center;
+  width: 100%;
+}
+.aa-topbar .aa-actions {
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px !important;
+}
+@media (max-width: 640px) {
+  .aa-topbar .aa-actions .aa-action {
+    flex: 1 1 0;
+    text-align: center;
+    padding: 9px 6px;
+  }
+}
+
+/* زرار "إظهار الإجابة" واضح في الوضعين */
+body .q-box .show-answer {
+  background: #2563eb !important;
+  color: #ffffff !important;
+  border: none !important;
+}
+</style>
+
 </head>
 <body>
   <div class="container">
@@ -292,25 +343,8 @@ body.aa-light .aa-img-missing { background:#f1f5f9; color:#334155; border-color:
       </ul>
     </div>
 
-  </div>
-
-  <script>
-    function checkAns(ul, correctOpt, evt){
-  if(!ul || ul.classList.contains('answered')) return;
-  ul.classList.add('answered');
-  var ev=evt || window.event;
-  var clicked=ev && ev.target && ev.target.closest ? ev.target.closest('li[data-opt]') : null;
-  if(clicked && !ul.contains(clicked)) clicked=null;
-  var items=ul.querySelectorAll('li[data-opt]');
-  items.forEach(function(li){
-    li.classList.remove('correct','wrong');
-    if((li.getAttribute('data-opt')||'').toLowerCase() === String(correctOpt).toLowerCase()) li.classList.add('correct');
-  });
-  if(clicked && (clicked.getAttribute('data-opt')||'').toLowerCase() !== String(correctOpt).toLowerCase()) clicked.classList.add('wrong');
-}
-  </script>
     <!-- الجزء التاني: قراءة وترجمة وأسئلة مقالية -->
-    <h2>Part 2: Reading & Translation (22-31)</h2>
+    <h2>Part 2: Reading &amp; Translation (22-31)</h2>
     
     <div class="q-box" style="background: #fffbeb; border-color: #fcd34d;">
       <p style="font-weight:bold; margin-bottom:10px; color:#92400e;">Read the following passage and answer the questions:</p>
@@ -487,6 +521,23 @@ body.aa-light .aa-img-missing { background:#f1f5f9; color:#334155; border-color:
     </div>
 
   </div> <!-- نهاية الحاوية -->
+
+  <script>
+    function checkAns(ul, correctOpt, evt){
+  if(!ul || ul.classList.contains('answered')) return;
+  ul.classList.add('answered');
+  var ev=evt || window.event;
+  var clicked=ev && ev.target && ev.target.closest ? ev.target.closest('li[data-opt]') : null;
+  if(clicked && !ul.contains(clicked)) clicked=null;
+  var items=ul.querySelectorAll('li[data-opt]');
+  items.forEach(function(li){
+    li.classList.remove('correct','wrong');
+    if((li.getAttribute('data-opt')||'').toLowerCase() === String(correctOpt).toLowerCase()) li.classList.add('correct');
+  });
+  if(clicked && (clicked.getAttribute('data-opt')||'').toLowerCase() !== String(correctOpt).toLowerCase()) clicked.classList.add('wrong');
+}
+  </script>
+
 <script id="abo-arida-site-ui">
 (function(){
  const bar=document.createElement('nav');bar.className='aa-topbar';bar.setAttribute('aria-label','التنقل الرئيسي');
