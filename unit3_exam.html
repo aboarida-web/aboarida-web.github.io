@@ -10,21 +10,20 @@
     .container { max-width: 800px; margin: 0 auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
     h1 { color: #1e3a8a; text-align: center; margin-bottom: 20px; border-bottom: 2px solid #e5e7eb; padding-bottom: 10px; font-size: 24px; }
     h2 { color: #2563eb; margin: 30px 0 15px; font-size: 20px; border-right: 4px solid #2563eb; padding-right: 10px; }
-    
+
     .q-box { background: #f8fafc; padding: 20px; border-radius: 8px; margin-bottom: 20px; border: 1px solid #e5e7eb; }
     .q-text { font-weight: bold; margin-bottom: 15px; font-size: 16px; color: #1e293b; direction: ltr; text-align: left; line-height: 1.5;}
     .options { list-style-type: none; padding: 0; }
     .options li { background: white; padding: 12px 15px; margin-bottom: 10px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 15px; cursor: pointer; transition: 0.2s; direction: ltr; text-align: left;}
     .options li:hover { background: #f1f5f9; }
-    
+
     .options li.correct { background: #dcfce7 !important; border-color: #22c55e !important; font-weight: bold; color: #166534 !important; }
     .options li.wrong { background: #fee2e2 !important; border-color: #ef4444 !important; color: #991b1b !important; }
-    
+
     .back-btn { display: inline-block; background: #64748b; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; margin-bottom: 20px; font-size: 14px; }
     .back-btn:hover { background: #475569; }
-  </style>
-
-  <style id="abo-arida-design-system">
+      </style>
+        <style id="abo-arida-design-system">
     :root {
       --aa-bg: #071329;
       --aa-panel: #0e2040;
@@ -215,6 +214,22 @@
       color: #0f2954 !important;
       border: 1px solid #cbd5e1 !important;
     }
+
+    /* ألوان تصحيح الاختيارات: أخضر للصحيح وأحمر للاختيار الخطأ */
+    body:not(.aa-light) .options li.correct,
+    body.aa-light .options li.correct {
+      background: #dcfce7 !important;
+      border: 1px solid #22c55e !important;
+      color: #166534 !important;
+      font-weight: bold !important;
+    }
+    body:not(.aa-light) .options li.wrong,
+    body.aa-light .options li.wrong {
+      background: #fee2e2 !important;
+      border: 1px solid #ef4444 !important;
+      color: #991b1b !important;
+      font-weight: bold !important;
+    }
     /* إجابات الأسئلة المقالية في الوضع النهاري: خلفية بيضاء وكلام أزرق غامق */
     body.aa-light .q-box .model-answer-box {
       background: #ffffff !important;
@@ -234,7 +249,7 @@
   </style>
 </head>
 <body>
-  <div class="container">
+    <div class="container">
     <a href="unit3.html" class="back-btn">← العودة للوحدة</a>
     <h1>Unit 3: Full Exam</h1>
     <p style="text-align:center; color:#64748b; margin-bottom:20px; font-weight:bold;">الجزء الأول: اختياري (21 سؤال)</p>
@@ -377,7 +392,7 @@
         <li data-opt="d">d. might not</li>
       </ul>
     </div>
-    <div class="q-box">
+        <div class="q-box">
       <p class="q-text">16. The professor's office light is still on at midnight. He .......... the research paper.</p>
       <ul class="options" onclick="checkAns(this, 'b', event)">
         <li data-opt="a">a. can't be finishing</li>
@@ -434,7 +449,7 @@
 
     <!-- الجزء التاني: قراءة وترجمة وأسئلة مقالية -->
     <h2>Part 2: Reading & Translation (22-31)</h2>
-    
+
     <div class="q-box">
       <p style="font-weight:bold; margin-bottom:10px;">Read the following passage and answer the questions:</p>
       <div style="direction: ltr; text-align: left; line-height: 1.8; font-size: 15px;">
@@ -484,8 +499,8 @@
       <ul class="options" onclick="checkAns(this, 'b', event)">
         <li data-opt="a">أ. يمكن إصلاح الخراب البيئي بسهولة.</li>
         <li data-opt="b">ب. لا يمكن عكس الخراب البيئي بين عشية وضحاها.</li>
-        <li data-opt="ج. الخراب البيئي لن يحدث أبداً.</li>
-        <li data-opt="د. البيئة لا تحتاج إلى إصلاح.</li>
+        <li data-opt="c">ج. الخراب البيئي لن يحدث أبداً.</li>
+        <li data-opt="d">د. البيئة لا تحتاج إلى إصلاح.</li>
       </ul>
     </div>
 
@@ -498,7 +513,7 @@
         <li data-opt="d">d. Farmers shoulder the burden during storms.</li>
       </ul>
     </div>
-    
+
     <div class="q-box">
       <p class="q-text">28. Choose the correct English translation: "يجب أن نستخدم المعرفة التي نكتسبها للتفكير في مسؤولياتنا العالمية."</p>
       <ul class="options" onclick="checkAns(this, 'd', event)">
@@ -508,7 +523,7 @@
         <li data-opt="d">d. We should use the knowledge we gain to reflect on our global responsibilities.</li>
       </ul>
     </div>
-    
+
     <div class="q-box">
       <p class="q-text">29. He has been working all day. He .......... be exhausted.</p>
       <ul class="options" onclick="checkAns(this, 'a', event)">
@@ -518,7 +533,7 @@
         <li data-opt="d">d. shouldn't</li>
       </ul>
     </div>
-    
+
     <div class="q-box">
       <p class="q-text">30. I don't know where she is. She .......... be at the library.</p>
       <ul class="options" onclick="checkAns(this, 'c', event)">
@@ -528,7 +543,7 @@
         <li data-opt="d">d. should</li>
       </ul>
     </div>
-    
+
     <div class="q-box">
       <p class="q-text">31. You .......... have told me earlier! I could have helped you.</p>
       <ul class="options" onclick="checkAns(this, 'd', event)">
@@ -538,10 +553,9 @@
         <li data-opt="d">d. should</li>
       </ul>
     </div>
-
-    <!-- الجزء الثالث: المقالي -->
+        <!-- الجزء الثالث: المقالي -->
     <h2>Part 3: Written Questions (32-42)</h2>
-    
+
     <div class="q-box">
       <p class="q-text">32. Rewrite using a modal verb of deduction: I am sure he is at home because his car is here.</p>
       <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
@@ -553,19 +567,19 @@
       <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
       <p class="model-answer-box" style="display:none; padding:10px; border-radius:6px; margin-top:10px; direction:ltr; text-align:left;">She can't have stolen the money.</p>
     </div>
-    
+
     <div class="q-box">
       <p class="q-text">34. Give advice using "should": I have a terrible headache.</p>
       <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
       <p class="model-answer-box" style="display:none; padding:10px; border-radius:6px; margin-top:10px; direction:ltr; text-align:left;">You should see a doctor.</p>
     </div>
-    
+
     <div class="q-box">
       <p class="q-text">35. Express regret using "should have": I didn't study for the exam and I failed.</p>
       <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
       <p class="model-answer-box" style="display:none; padding:10px; border-radius:6px; margin-top:10px; direction:ltr; text-align:left;">I should have studied for the exam.</p>
     </div>
-    
+
     <div class="q-box">
       <p class="q-text">36. Complete the sentence with a suitable idiom: After his father became ill, he had to .......... of supporting his family.</p>
       <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
@@ -578,7 +592,7 @@
       <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
       <p class="model-answer-box" style="display:none; padding:10px; border-radius:6px; margin-top:10px; direction:ltr; text-align:left;">To convince the reader to take a specific action or adopt a particular opinion.</p>
     </div>
-    
+
     <div class="q-box">
       <p class="q-text">38. What is a "Call to action" in a persuasive essay?</p>
       <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
@@ -614,16 +628,26 @@
   <script>
     function checkAns(ul, correctOpt, evt){
       if(!ul || ul.classList.contains('answered')) return;
-      ul.classList.add('answered');
       var ev = evt || window.event;
-      var clicked = ev && ev.target && ev.target.closest ? ev.target.closest('li[data-opt]') : null;
-      if(clicked && !ul.contains(clicked)) clicked = null;
+      var target = ev && ev.target ? ev.target : null;
+      var clicked = target && target.closest ? target.closest('li[data-opt]') : null;
+      if(!clicked || !ul.contains(clicked)) return;
+
+      ul.classList.add('answered');
+      var correct = String(correctOpt).toLowerCase();
+      var selected = String(clicked.getAttribute('data-opt') || '').toLowerCase();
       var items = ul.querySelectorAll('li[data-opt]');
+
       items.forEach(function(li){
-        li.classList.remove('correct','wrong');
-        if((li.getAttribute('data-opt')||'').toLowerCase() === String(correctOpt).toLowerCase()) li.classList.add('correct');
+        li.classList.remove('correct', 'wrong');
+        if(String(li.getAttribute('data-opt') || '').toLowerCase() === correct){
+          li.classList.add('correct');
+        }
       });
-      if(clicked && (clicked.getAttribute('data-opt')||'').toLowerCase() !== String(correctOpt).toLowerCase()) clicked.classList.add('wrong');
+
+      if(selected !== correct){
+        clicked.classList.add('wrong');
+      }
     }
   </script>
 
@@ -634,13 +658,13 @@
     bar.setAttribute('aria-label', 'التنقل الرئيسي');
     bar.innerHTML = '<a class="aa-brand" href="index.html"><span class="aa-logo">📚</span><span>أبو عريضة أكاديمي<small>ABO ARIDA ACADEMY</small></span></a><div class="aa-actions"><a class="aa-action" href="index.html">الرئيسية</a><a class="aa-action" href="contact.html">تواصل معنا</a><button class="aa-action" type="button" id="aaTheme">☀️ / 🌙</button></div>';
     document.body.insertBefore(bar, document.body.firstChild);
-    
+
     const key = 'aboAridaTheme';
     function apply(v){ document.body.classList.toggle('aa-light', v === 'light'); }
     let saved = 'dark';
     try { saved = localStorage.getItem(key) || 'dark'; } catch(e) {}
     apply(saved);
-    
+
     const btn = document.getElementById('aaTheme');
     btn.addEventListener('click', function(){
       const next = document.body.classList.contains('aa-light') ? 'dark' : 'light';
