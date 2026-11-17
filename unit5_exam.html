@@ -91,6 +91,25 @@ body.aa-light .container :is(.lesson-content,.image-box,.answer-box,.model-answe
 body.aa-light .aa-img-missing { background:#f1f5f9; color:#334155; border-color:#cbd5e1; }
 </style>
 
+<style id="aa-model-answer-fix">
+/* تنسيق إجابات الأسئلة المقالية: وضع داكن أزرق داكن + أبيض، وضع نهاري أبيض + أزرق غامق */
+.model-answer {
+  background: #0b2a5b !important;
+  color: #ffffff !important;
+  border: 1px solid #2563eb !important;
+  padding: 10px;
+  border-radius: 6px;
+  margin-top: 10px;
+  direction: ltr;
+  text-align: left;
+}
+body.aa-light .model-answer {
+  background: #ffffff !important;
+  color: #0b2a5b !important;
+  border: 1px solid #93c5fd !important;
+}
+</style>
+
 </head>
 <body>
   <div class="container">
@@ -307,182 +326,181 @@ body.aa-light .aa-img-missing { background:#f1f5f9; color:#334155; border-color:
   });
   if(clicked && (clicked.getAttribute('data-opt')||'').toLowerCase() !== String(correctOpt).toLowerCase()) clicked.classList.add('wrong');
 }
-  </script>
-    <!-- الجزء التاني: قراءة وترجمة وأسئلة مقالية -->
-    <h2>Part 2: Reading & Translation (22-31)</h2>
-    
-    <div class="q-box" style="background: #fffbeb; border-color: #fcd34d;">
-      <p style="font-weight:bold; margin-bottom:10px; color:#92400e;">Read the following passage and answer the questions:</p>
-      <div style="direction: ltr; text-align: left; line-height: 1.8; font-size: 15px;">
-        We are now in the year 2045, the world had changed in ways no one expected. Technology had advanced so far that it could do almost everything people once did. Digital systems diagnosed illnesses with perfect accuracy, automated assistants wrote flawless contracts, and machines composed music that moved people to tears. As a result, many jobs disappeared. In response, governments introduced basic income, and schools began teaching "future-proof" skills. However, in a quiet corner of Cairo, a small café remained a place of warmth and humanity. An elderly woman named Amina told stories in a way no machine could match.
-      </div>
-    </div>
+          </script>
+          <!-- الجزء التاني: قراءة وترجمة وأسئلة مقالية -->
+<h2>Part 2: Reading & Translation (22-31)</h2>
 
-    <div class="q-box">
-      <p class="q-text">22. Why did many jobs disappear in the year 2045?</p>
-      <ul class="options" onclick="checkAns(this, 'b', event)">
-        <li data-opt="a">a. Because people stopped working.</li>
-        <li data-opt="b">b. Because technology advanced and could do almost everything.</li>
-        <li data-opt="c">c. Because schools closed.</li>
-        <li data-opt="d">d. Because of the basic income.</li>
-      </ul>
-    </div>
-    <div class="q-box">
-      <p class="q-text">23. What did governments do in response to job losses?</p>
-      <ul class="options" onclick="checkAns(this, 'c', event)">
-        <li data-opt="a">a. They banned technology.</li>
-        <li data-opt="b">b. They closed the factories.</li>
-        <li data-opt="c">c. They introduced basic income.</li>
-        <li data-opt="d">d. They built more cafés.</li>
-      </ul>
-    </div>
-    <div class="q-box">
-      <p class="q-text">24. What makes Amina's storytelling special?</p>
-      <ul class="options" onclick="checkAns(this, 'd', event)">
-        <li data-opt="a">a. She uses advanced technology.</li>
-        <li data-opt="b">b. She tells stories about machines.</li>
-        <li data-opt="c">c. She writes flawless contracts.</li>
-        <li data-opt="d">d. She has a deep emotion and a human spark that machines can't imitate.</li>
-      </ul>
-    </div>
+<div class="q-box" style="background: #fffbeb; border-color: #fcd34d;">
+  <p style="font-weight:bold; margin-bottom:10px; color:#92400e;">Read the following passage and answer the questions:</p>
+  <div style="direction: ltr; text-align: left; line-height: 1.8; font-size: 15px;">
+    We are now in the year 2045, the world had changed in ways no one expected. Technology had advanced so far that it could do almost everything people once did. Digital systems diagnosed illnesses with perfect accuracy, automated assistants wrote flawless contracts, and machines composed music that moved people to tears. As a result, many jobs disappeared. In response, governments introduced basic income, and schools began teaching "future-proof" skills. However, in a quiet corner of Cairo, a small café remained a place of warmth and humanity. An elderly woman named Amina told stories in a way no machine could match.
+  </div>
+</div>
 
-    <div class="q-box">
-      <p class="q-text">25. Choose the correct Arabic translation: "Technology had advanced so far that it could do almost everything people once did."</p>
-      <ul class="options" onclick="checkAns(this, 'a', event)">
-        <li data-opt="a">أ. لقد تقدمت التكنولوجيا لدرجة أنها يمكنها فعل كل شيء تقريباً كان الناس يفعلونه.</li>
-        <li data-opt="b">ب. التكنولوجيا لم تتقدم كثيراً لدرجة أنها لا تستطيع فعل ما يفعله الناس.</li>
-        <li data-opt="c">ج. تقدمت التكنولوجيا لدرجة أنها يمكنها فعل القليل مما كان الناس يفعلونه.</li>
-        <li data-opt="d">د. التكنولوجيا سوف تتقدم لتستطيع فعل كل شيء يفعله الناس.</li>
-      </ul>
-    </div>
-    <div class="q-box">
-      <p class="q-text">26. Choose the correct Arabic translation: "We can copy the words, but we can't restore the passion."</p>
-      <ul class="options" onclick="checkAns(this, 'b', event)">
-        <li data-opt="a">أ. يمكننا نسخ الكلمات، ويمكننا استعادة الشغف.</li>
-        <li data-opt="b">ب. يمكننا نسخ الكلمات، لكننا لا نستطيع استعادة الشغف.</li>
-        <li data-opt="c">ج. لا يمكننا نسخ الكلمات، لكننا نستطيع استعادة الشغف.</li>
-        <li data-opt="d">د. يمكننا نسخ المشاعر، لكننا لا نستطيع استعادة الكلمات.</li>
-      </ul>
-    </div>
+<div class="q-box">
+  <p class="q-text">22. Why did many jobs disappear in the year 2045?</p>
+  <ul class="options" onclick="checkAns(this, 'b', event)">
+    <li data-opt="a">a. Because people stopped working.</li>
+    <li data-opt="b">b. Because technology advanced and could do almost everything.</li>
+    <li data-opt="c">c. Because schools closed.</li>
+    <li data-opt="d">d. Because of the basic income.</li>
+  </ul>
+</div>
+<div class="q-box">
+  <p class="q-text">23. What did governments do in response to job losses?</p>
+  <ul class="options" onclick="checkAns(this, 'c', event)">
+    <li data-opt="a">a. They banned technology.</li>
+    <li data-opt="b">b. They closed the factories.</li>
+    <li data-opt="c">c. They introduced basic income.</li>
+    <li data-opt="d">d. They built more cafés.</li>
+  </ul>
+</div>
+<div class="q-box">
+  <p class="q-text">24. What makes Amina's storytelling special?</p>
+  <ul class="options" onclick="checkAns(this, 'd', event)">
+    <li data-opt="a">a. She uses advanced technology.</li>
+    <li data-opt="b">b. She tells stories about machines.</li>
+    <li data-opt="c">c. She writes flawless contracts.</li>
+    <li data-opt="d">d. She has a deep emotion and a human spark that machines can't imitate.</li>
+  </ul>
+</div>
 
-    <div class="q-box">
-      <p class="q-text">27. Choose the correct English translation: "يجب أن يتسلح الشباب بالعلم والتكنولوجيا ليحققوا طموحاتهم."</p>
-      <ul class="options" onclick="checkAns(this, 'c', event)">
-        <li data-opt="a">a. Young people must arm with science to achieve their ambitions.</li>
-        <li data-opt="b">b. Young people should be armed with science to achieve their dreams.</li>
-        <li data-opt="c">c. Young people must be armed with science and technology to achieve their ambitions.</li>
-        <li data-opt="d">d. Young people must be armed with technology to achieve their goals.</li>
-      </ul>
-    </div>
-    
-    <div class="q-box">
-      <p class="q-text">28. Choose the correct English translation: "إنها الحياة، إما أن تقبلها أو ترفضها، ولكن لتعيشها يجب أن تفهمها."</p>
-      <ul class="options" onclick="checkAns(this, 'a', event)">
-        <li data-opt="a">a. It's life, take it or leave it, but to live it, you should understand it.</li>
-        <li data-opt="b">b. It was life, take it or leave it, but to live it, you should have understood it.</li>
-        <li data-opt="c">c. It's life, take it or live it, but to understand it, you should live it.</li>
-        <li data-opt="d">d. It is life, leave it or take it, but to live it, you must understood it.</li>
-      </ul>
-    </div>
-    
-    <div class="q-box">
-      <p class="q-text">29. My father didn't .......... me use his car yesterday.</p>
-      <ul class="options" onclick="checkAns(this, 'b', event)">
-        <li data-opt="a">a. allow</li>
-        <li data-opt="b">b. let</li>
-        <li data-opt="c">c. make</li>
-        <li data-opt="d">d. get</li>
-      </ul>
-    </div>
-    
-    <div class="q-box">
-      <p class="q-text">30. The students were .......... to stay after school.</p>
-      <ul class="options" onclick="checkAns(this, 'd', event)">
-        <li data-opt="a">a. let</li>
-        <li data-opt="b">b. made</li>
-        <li data-opt="c">c. allowed</li>
-        <li data-opt="d">d. forced</li>
-      </ul>
-    </div>
-    
-    <div class="q-box">
-      <p class="q-text">31. I got my brother .......... the window.</p>
-      <ul class="options" onclick="checkAns(this, 'a', event)">
-        <li data-opt="a">a. to open</li>
-        <li data-opt="b">b. open</li>
-        <li data-opt="c">c. opening</li>
-        <li data-opt="d">d. opened</li>
-      </ul>
-    </div>
+<div class="q-box">
+  <p class="q-text">25. Choose the correct Arabic translation: "Technology had advanced so far that it could do almost everything people once did."</p>
+  <ul class="options" onclick="checkAns(this, 'a', event)">
+    <li data-opt="a">أ. لقد تقدمت التكنولوجيا لدرجة أنها يمكنها فعل كل شيء تقريباً كان الناس يفعلونه.</li>
+    <li data-opt="b">ب. التكنولوجيا لم تتقدم كثيراً لدرجة أنها لا تستطيع فعل ما يفعله الناس.</li>
+    <li data-opt="c">ج. تقدمت التكنولوجيا لدرجة أنها يمكنها فعل القليل مما كان الناس يفعلونه.</li>
+    <li data-opt="d">د. التكنولوجيا سوف تتقدم لتستطيع فعل كل شيء يفعله الناس.</li>
+  </ul>
+</div>
+<div class="q-box">
+  <p class="q-text">26. Choose the correct Arabic translation: "We can copy the words, but we can't restore the passion."</p>
+  <ul class="options" onclick="checkAns(this, 'b', event)">
+    <li data-opt="a">أ. يمكننا نسخ الكلمات، ويمكننا استعادة الشغف.</li>
+    <li data-opt="b">ب. يمكننا نسخ الكلمات، لكننا لا نستطيع استعادة الشغف.</li>
+    <li data-opt="c">ج. لا يمكننا نسخ الكلمات، لكننا نستطيع استعادة الشغف.</li>
+    <li data-opt="d">د. يمكننا نسخ المشاعر، لكننا لا نستطيع استعادة الكلمات.</li>
+  </ul>
+</div>
 
-    <!-- الجزء الثالث: المقالي -->
+<div class="q-box">
+  <p class="q-text">27. Choose the correct English translation: "يجب أن يتسلح الشباب بالعلم والتكنولوجيا ليحققوا طموحاتهم."</p>
+  <ul class="options" onclick="checkAns(this, 'c', event)">
+    <li data-opt="a">a. Young people must arm with science to achieve their ambitions.</li>
+    <li data-opt="b">b. Young people should be armed with science to achieve their dreams.</li>
+    <li data-opt="c">c. Young people must be armed with science and technology to achieve their ambitions.</li>
+    <li data-opt="d">d. Young people must be armed with technology to achieve their goals.</li>
+  </ul>
+</div>
+
+<div class="q-box">
+  <p class="q-text">28. Choose the correct English translation: "إنها الحياة، إما أن تقبلها أو ترفضها، ولكن لتعيشها يجب أن تفهمها."</p>
+  <ul class="options" onclick="checkAns(this, 'a', event)">
+    <li data-opt="a">a. It's life, take it or leave it, but to live it, you should understand it.</li>
+    <li data-opt="b">b. It was life, take it or leave it, but to live it, you should have understood it.</li>
+    <li data-opt="c">c. It's life, take it or live it, but to understand it, you should live it.</li>
+    <li data-opt="d">d. It is life, leave it or take it, but to live it, you must understood it.</li>
+  </ul>
+</div>
+
+<div class="q-box">
+  <p class="q-text">29. My father didn't .......... me use his car yesterday.</p>
+  <ul class="options" onclick="checkAns(this, 'b', event)">
+    <li data-opt="a">a. allow</li>
+    <li data-opt="b">b. let</li>
+    <li data-opt="c">c. make</li>
+    <li data-opt="d">d. get</li>
+  </ul>
+</div>
+
+<div class="q-box">
+  <p class="q-text">30. The students were .......... to stay after school.</p>
+  <ul class="options" onclick="checkAns(this, 'd', event)">
+    <li data-opt="a">a. let</li>
+    <li data-opt="b">b. made</li>
+    <li data-opt="c">c. allowed</li>
+    <li data-opt="d">d. forced</li>
+  </ul>
+</div>
+
+<div class="q-box">
+  <p class="q-text">31. I got my brother .......... the window.</p>
+  <ul class="options" onclick="checkAns(this, 'a', event)">
+    <li data-opt="a">a. to open</li>
+    <li data-opt="b">b. open</li>
+    <li data-opt="c">c. opening</li>
+    <li data-opt="d">d. opened</li>
+  </ul>
+    </div>
+        <!-- الجزء الثالث: المقالي -->
     <h2>Part 3: Written Questions (32-42)</h2>
     
     <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
       <p class="q-text" style="color:#1e40af;">32. Rewrite using the causative verb "make": The teacher forced the students to study.</p>
       <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
-      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:ltr; text-align:left;">The teacher made the students study.</p>
+      <p class="model-answer" style="display:none;">The teacher made the students study.</p>
     </div>
 
     <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
       <p class="q-text" style="color:#1e40af;">33. Rewrite using the passive voice: My father let me go out.</p>
       <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
-      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:ltr; text-align:left;">I was allowed to go out (by my father).</p>
+      <p class="model-answer" style="display:none;">I was allowed to go out (by my father).</p>
     </div>
     
     <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
       <p class="q-text" style="color:#1e40af;">34. Rewrite using the causative "have": Someone painted my house.</p>
       <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
-      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:ltr; text-align:left;">I had my house painted.</p>
+      <p class="model-answer" style="display:none;">I had my house painted.</p>
     </div>
     
     <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
       <p class="q-text" style="color:#1e40af;">35. Combine using "stop... from": He makes noise. The teacher prevents him.</p>
       <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
-      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:ltr; text-align:left;">The teacher stopped him from making noise.</p>
+      <p class="model-answer" style="display:none;">The teacher stopped him from making noise.</p>
     </div>
     
     <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
       <p class="q-text" style="color:#1e40af;">36. What is the main idea of the first reading passage?</p>
       <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
-      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:ltr; text-align:left;">While technology can do many things, it cannot replace human emotions, passion, and the special spark in storytelling.</p>
+      <p class="model-answer" style="display:none;">While technology can do many things, it cannot replace human emotions, passion, and the special spark in storytelling.</p>
     </div>
 
     <!-- أسئلة الكتابة (Writing) -->
     <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
       <p class="q-text" style="color:#1e40af;">37. What are the main elements of narrative writing?</p>
       <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
-      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:ltr; text-align:left;">Characters, Setting, Plot, Point of View, Dialog and Description, Theme, Emotion and Voice.</p>
+      <p class="model-answer" style="display:none;">Characters, Setting, Plot, Point of View, Dialog and Description, Theme, Emotion and Voice.</p>
     </div>
     
     <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
       <p class="q-text" style="color:#1e40af;">38. Define "climax" in narrative writing.</p>
       <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
-      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:ltr; text-align:left;">The most exciting turning point in the story.</p>
+      <p class="model-answer" style="display:none;">The most exciting turning point in the story.</p>
     </div>
 
     <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
       <p class="q-text" style="color:#1e40af;">39. What is "foreshadowing"?</p>
       <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
-      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:ltr; text-align:left;">Hints about what will happen later in the story.</p>
+      <p class="model-answer" style="display:none;">Hints about what will happen later in the story.</p>
     </div>
 
     <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
       <p class="q-text" style="color:#1e40af;">40. Give an example of a "Common Error" in narrative writing.</p>
       <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
-      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:ltr; text-align:left;">Over-description, flat characters, weak endings, or unfocused plots.</p>
+      <p class="model-answer" style="display:none;">Over-description, flat characters, weak endings, or unfocused plots.</p>
     </div>
 
     <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
       <p class="q-text" style="color:#1e40af;">41. Write a sentence using the idiom "think outside the box".</p>
       <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
-      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:ltr; text-align:left;">We need to think outside the box to solve this problem.</p>
+      <p class="model-answer" style="display:none;">We need to think outside the box to solve this problem.</p>
     </div>
 
     <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
       <p class="q-text" style="color:#1e40af;">42. Write a sentence using the idiom "climb the career ladder".</p>
       <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
-      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:ltr; text-align:left;">He worked hard to climb the career ladder in his company.</p>
+      <p class="model-answer" style="display:none;">He worked hard to climb the career ladder in his company.</p>
     </div>
 
   </div> <!-- نهاية الحاوية -->
