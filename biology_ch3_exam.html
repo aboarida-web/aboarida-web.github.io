@@ -40,7 +40,6 @@ body.aa-light .aa-topbar,body.aa-light .container,body.aa-light .card,body.aa-li
 @media(max-width:360px){.aa-brand{font-size:12px}.aa-actions{gap:5px}.aa-action{font-size:10px;padding:7px}.grid{grid-template-columns:1fr!important}}
 </style>
 <style id="aa-final-contrast-and-quiz-fix">
-/* Theme contrast: dark mode uses dark panels + light text; light mode uses light panels + dark text. */
 body:not(.aa-light) :is(.container,.q-box,.lesson-content,.example-box,.image-box,.highlight,.info,.idiom-card,.definition,.example,.text-box,.translation-box,.vocab-box,.questions-box,.tree-diagram,.table-container,.table-responsive,.passage,.panel,.part-box,.rule-box,.trap-box,.menu-card,.q-item,.answer,.vocab-item,.show-answer){background-color:#142b4b!important;color:#f3f7ff!important;border-color:#456080!important;}
 body:not(.aa-light) :is(.container,.q-box,.lesson-content,.example-box,.image-box,.highlight,.info,.idiom-card,.definition,.example,.text-box,.translation-box,.vocab-box,.questions-box,.tree-diagram,.table-container,.table-responsive,.passage,.panel,.part-box,.rule-box,.trap-box,.menu-card,.q-item,.answer,.vocab-item,.show-answer) :is(p,li,span,strong,b,em,small,label,td,th,h1,h2,h3,h4,div,a){color:#f3f7ff!important;}
 body:not(.aa-light) :is(.q-text,.ar,.meaning,.idiom-meaning,.image-caption){color:#f3f7ff!important;}
@@ -54,43 +53,49 @@ body:not(.aa-light) .options li.correct,body.aa-light .options li.correct{backgr
 body:not(.aa-light) .options li.wrong,body.aa-light .options li.wrong{background:#fecaca!important;color:#7f1d1d!important;border:2px solid #dc2626!important;font-weight:800!important;}
 .options.answered li{cursor:default!important;}
 </style>
-
 <style id="aa-night-visibility-v2">
-/* Reliable dark-mode contrast for lesson text, callouts, essay answers and image panels */
 body:not(.aa-light) .container,
-body:not(.aa-light) .container :not(img):not(video):not(iframe):not(svg):not(path) {
-  color: var(--aa-text, #edf4ff);
-}
+body:not(.aa-light) .container :not(img):not(video):not(iframe):not(svg):not(path) { color: var(--aa-text, #edf4ff); }
 body:not(.aa-light) .container :is(.lesson-content,.image-box,.answer-box,.model-answer,.essay-answer,.question-box,.q-box,.explanation,.note-box,.info-box,.content-box,.example-box,.passage,.text-box,.answer,.solution,.paragraph-box) {
-  background: #10284a !important;
-  color: #f2f6ff !important;
-  border-color: #426184 !important;
+  background: #10284a !important; color: #f2f6ff !important; border-color: #426184 !important;
 }
-body:not(.aa-light) .container :is(.lesson-content,.image-box,.answer-box,.model-answer,.essay-answer,.question-box,.q-box,.explanation,.note-box,.info-box,.content-box,.example-box,.passage,.text-box,.answer,.solution,.paragraph-box) :is(p,li,span,b,strong,em,small,label,td,th,h1,h2,h3,h4,div) {
-  color: #f2f6ff !important;
-}
+body:not(.aa-light) .container :is(.lesson-content,.image-box,.answer-box,.model-answer,.essay-answer,.question-box,.q-box,.explanation,.note-box,.info-box,.content-box,.example-box,.passage,.text-box,.answer,.solution,.paragraph-box) :is(p,li,span,b,strong,em,small,label,td,th,h1,h2,h3,h4,div) { color: #f2f6ff !important; }
 body:not(.aa-light) .container :is(h1,h2,h3,h4,.section-title) { color:#a9d8ff !important; }
 body:not(.aa-light) .container :is(.highlight) { background:#542c3b !important; color:#ffd0d5 !important; }
 body:not(.aa-light) .container :is(.term) { background:#123d59 !important; color:#a5eaff !important; }
-/* Neutralize hard-coded light inline panels only in the content area */
-body:not(.aa-light) .container [style*="background:#fff"],
-body:not(.aa-light) .container [style*="background: #fff"],
-body:not(.aa-light) .container [style*="background-color: white"],
-body:not(.aa-light) .container [style*="background-color:#fff"],
-body:not(.aa-light) .container [style*="background-color: #fff"],
-body:not(.aa-light) .container [style*="background: white"] {
+body:not(.aa-light) .container [style*="background:#fff"], body:not(.aa-light) .container [style*="background: #fff"], body:not(.aa-light) .container [style*="background-color: white"], body:not(.aa-light) .container [style*="background-color:#fff"], body:not(.aa-light) .container [style*="background-color: #fff"], body:not(.aa-light) .container [style*="background: white"] {
   background: #10284a !important; color:#f2f6ff !important; border-color:#426184 !important;
 }
 body.aa-light .container :is(.lesson-content,.image-box,.answer-box,.model-answer,.essay-answer,.question-box,.q-box,.explanation,.note-box,.info-box,.content-box,.example-box,.passage,.text-box,.answer,.solution,.paragraph-box) {
   background:#fff !important; color:#172b49 !important; border-color:#d7e2f1 !important;
 }
-body.aa-light .container :is(.lesson-content,.image-box,.answer-box,.model-answer,.essay-answer,.question-box,.q-box,.explanation,.note-box,.info-box,.content-box,.example-box,.passage,.text-box,.answer,.solution,.paragraph-box) :is(p,li,span,b,strong,em,small,label,td,th,h1,h2,h3,h4,div) {
-  color:#172b49 !important;
-}
+body.aa-light .container :is(.lesson-content,.image-box,.answer-box,.model-answer,.essay-answer,.question-box,.q-box,.explanation,.note-box,.info-box,.content-box,.example-box,.passage,.text-box,.answer,.solution,.paragraph-box) :is(p,li,span,b,strong,em,small,label,td,th,h1,h2,h3,h4,div) { color:#172b49 !important; }
 .aa-img-missing { display:flex; min-height:110px; width:100%; align-items:center; justify-content:center; padding:22px; border:1px dashed #7892b5; border-radius:12px; background:#10284a; color:#dbeafe; font-weight:700; text-align:center; }
 body.aa-light .aa-img-missing { background:#f1f5f9; color:#334155; border-color:#cbd5e1; }
 </style>
-
+<style id="aa-biology-answers-fix">
+/* تنسيق إجابات الأسئلة المقالية (41-50) في الوضع الداكن والنهاري */
+body:not(.aa-light) .q-box .model-answer {
+  background: #0b2a5b !important;
+  color: #ffffff !important;
+  border: 1px solid #2563eb !important;
+  padding: 10px;
+  border-radius: 6px;
+  margin-top: 10px;
+  direction: rtl;
+  text-align: right;
+}
+body.aa-light .q-box .model-answer {
+  background: #ffffff !important;
+  color: #0b2a5b !important;
+  border: 1px solid #93c5fd !important;
+  padding: 10px;
+  border-radius: 6px;
+  margin-top: 10px;
+  direction: rtl;
+  text-align: right;
+}
+</style>
 </head>
 <body>
   <div class="container">
@@ -98,7 +103,6 @@ body.aa-light .aa-img-missing { background:#f1f5f9; color:#334155; border-color:
     <h1>امتحان الفصل الثالث الشامل</h1>
     <p style="text-align:center; color:#64748b; margin-bottom:20px;">الجزء الأول: اختياري (40 سؤال) - من السهل للصعب</p>
 
-    <!-- الأسئلة من 1 إلى 10 (سهلة) -->
     <div class="q-box">
       <p class="q-text">1. التكاثر الذي يضمن استمرار النوع وليس الفرد هو:</p>
       <ul class="options" onclick="checkAns(this, 'b', event)">
@@ -189,8 +193,6 @@ body.aa-light .aa-img-missing { background:#f1f5f9; color:#334155; border-color:
         <li data-opt="d">د. الطلع.</li>
       </ul>
     </div>
-
-    <!-- الأسئلة من 11 إلى 20 (متوسطة) -->
     <div class="q-box">
       <p class="q-text">11. تكوين حبوب اللقاح يحدث داخل:</p>
       <ul class="options" onclick="checkAns(this, 'b', event)">
@@ -282,190 +284,6 @@ body.aa-light .aa-img-missing { background:#f1f5f9; color:#334155; border-color:
       </ul>
     </div>
 
-    <!-- الأسئلة من 21 إلى 30 (متوسطة - صعبة) -->
-    <div class="q-box">
-      <p class="q-text">21. تبدأ دورة الطمث عادة في سن:</p>
-      <ul class="options" onclick="checkAns(this, 'c', event)">
-        <li data-opt="a">أ. 5 سنوات.</li>
-        <li data-opt="b">ب. 20 سنة.</li>
-        <li data-opt="c">ج. 12-15 سنة.</li>
-        <li data-opt="d">د. 50 سنة.</li>
-      </ul>
-    </div>
-    <div class="q-box">
-      <p class="q-text">22. الهرمون الذي يسبب انفجار حويصلة جراف وخروج البويضة:</p>
-      <ul class="options" onclick="checkAns(this, 'b', event)">
-        <li data-opt="a">أ. FSH.</li>
-        <li data-opt="b">ب. LH.</li>
-        <li data-opt="c">ج. الإستروجين.</li>
-        <li data-opt="d">د. البروجسترون.</li>
-      </ul>
-    </div>
-    <div class="q-box">
-      <p class="q-text">23. إذا لم تلقح البويضة، يضمحل الجسم الأصفر ويقل إفراز:</p>
-      <ul class="options" onclick="checkAns(this, 'a', event)">
-        <li data-opt="a">أ. البروجسترون والإستروجين.</li>
-        <li data-opt="b">ب. LH و FSH.</li>
-        <li data-opt="c">ج. التستوستيرون.</li>
-        <li data-opt="d">د. الأنسولين.</li>
-      </ul>
-    </div>
-    <div class="q-box">
-      <p class="q-text">24. يتم إخصاب البويضة عادة في:</p>
-      <ul class="options" onclick="checkAns(this, 'c', event)">
-        <li data-opt="a">أ. الرحم.</li>
-        <li data-opt="b">ب. المبيض.</li>
-        <li data-opt="c">ج. الثلث الأول من قناة فالوب.</li>
-        <li data-opt="d">د. المهبل.</li>
-      </ul>
-    </div>
-    <div class="q-box">
-      <p class="q-text">25. الإنزيم الذي يفرزه الحيوان المنوي لاختراق البويضة:</p>
-      <ul class="options" onclick="checkAns(this, 'd', event)">
-        <li data-opt="a">أ. الأميليز.</li>
-        <li data-opt="b">ب. الليباز.</li>
-        <li data-opt="c">ج. الكولين استيريز.</li>
-        <li data-opt="d">د. الهيالويورنيز.</li>
-      </ul>
-    </div>
-    <div class="q-box">
-      <p class="q-text">26. عدد الحيوانات المنوية في المرة الواحدة للرجل السليم:</p>
-      <ul class="options" onclick="checkAns(this, 'b', event)">
-        <li data-opt="a">أ. 20 مليون.</li>
-        <li data-opt="b">ب. 300 إلى 500 مليون.</li>
-        <li data-opt="c">ج. 1000 فقط.</li>
-        <li data-opt="d">د. 50 مليون.</li>
-      </ul>
-    </div>
-    <div class="q-box">
-      <p class="q-text">27. الغشاء الذي يحيط بالجنين من الداخل ويحتوي على سائل واقٍ:</p>
-      <ul class="options" onclick="checkAns(this, 'a', event)">
-        <li data-opt="a">أ. الرهل (Amnion).</li>
-        <li data-opt="b">ب. السلى (Chorion).</li>
-        <li data-opt="c">ج. المشيمة.</li>
-        <li data-opt="d">د. الحبل السري.</li>
-      </ul>
-    </div>
-    <div class="q-box">
-      <p class="q-text">28. التوائم التي تنتج من بويضة واحدة وحيوان منوي واحد هي:</p>
-      <ul class="options" onclick="checkAns(this, 'c', event)">
-        <li data-opt="a">أ. غير متماثلة.</li>
-        <li data-opt="b">ب. ثنائية اللاقحة.</li>
-        <li data-opt="c">ج. متماثلة.</li>
-        <li data-opt="d">د. سيامية فقط.</li>
-      </ul>
-    </div>
-    <div class="q-box">
-      <p class="q-text">29. وسيلة منع الحمل التي تمنع انغراس البويضة في الرحم:</p>
-      <ul class="options" onclick="checkAns(this, 'b', event)">
-        <li data-opt="a">أ. الأقراص.</li>
-        <li data-opt="b">ب. اللولب.</li>
-        <li data-opt="c">ج. الواقي الذكري.</li>
-        <li data-opt="d">د. التعقيم.</li>
-      </ul>
-    </div>
-    <div class="q-box">
-      <p class="q-text">30. النعجة دوللي تم استنساخها باستخدام:</p>
-      <ul class="options" onclick="checkAns(this, 'd', event)">
-        <li data-opt="a">أ. خلية جنينية فقط.</li>
-        <li data-opt="b">ب. بويضة مخصبة.</li>
-        <li data-opt="c">ج. حيوان منوي.</li>
-        <li data-opt="d">د. خلية جسدية من ضرع النعجة.</li>
-      </ul>
-    </div>
-
-    <!-- الأسئلة من 31 إلى 40 (صعبة) -->
-    <div class="q-box">
-      <p class="q-text">31. تفرز الغدة النخامية هرمون FSH الذي يحفز:</p>
-      <ul class="options" onclick="checkAns(this, 'a', event)">
-        <li data-opt="a">أ. نمو حويصلة جراف في المبيض.</li>
-        <li data-opt="b">ب. انفجار حويصلة جراف.</li>
-        <li data-opt="c">ج. إفراز البروجسترون.</li>
-        <li data-opt="d">د. انقباض الرحم.</li>
-      </ul>
-    </div>
-    <div class="q-box">
-      <p class="q-text">32. الخلايا التي تتحد لتكوين نواة الإندوسبيرم هي:</p>
-      <ul class="options" onclick="checkAns(this, 'c', event)">
-        <li data-opt="a">أ. نواتين ذكريتين.</li>
-        <li data-opt="b">ب. نواة ذكرية ونواة بويضة.</li>
-        <li data-opt="c">ج. نواة ذكرية والنواتين القطبيتين.</li>
-        <li data-opt="d">د. نواتين قطبيتين فقط.</li>
-      </ul>
-    </div>
-    <div class="q-box">
-      <p class="q-text">33. الأزهار وحيدة الجنس تلجأ إلى:</p>
-      <ul class="options" onclick="checkAns(this, 'b', event)">
-        <li data-opt="a">أ. التلقيح الذاتي.</li>
-        <li data-opt="b">ب. التلقيح الخلطي.</li>
-        <li data-opt="c">ج. الإثمار العذري.</li>
-        <li data-opt="d">د. التكاثر اللاجنسي.</li>
-      </ul>
-    </div>
-    <div class="q-box">
-      <p class="q-text">34. الثمرة التي يتشحم فيها جزء غير المبيض تسمى:</p>
-      <ul class="options" onclick="checkAns(this, 'd', event)">
-        <li data-opt="a">أ. ثمرة عذرية.</li>
-        <li data-opt="b">ب. ثمرة حقيقية.</li>
-        <li data-opt="c">ج. بذرة.</li>
-        <li data-opt="d">د. ثمرة كاذبة.</li>
-      </ul>
-    </div>
-    <div class="q-box">
-      <p class="q-text">35. يتكون الجنين في النبات من:</p>
-      <ul class="options" onclick="checkAns(this, 'a', event)">
-        <li data-opt="a">أ. الزيجوت (2ن).</li>
-        <li data-opt="b">ب. نواة الإندوسبيرم (3ن).</li>
-        <li data-opt="c">ج. النواتين القطبيتين.</li>
-        <li data-opt="d">د. الخلية الجرثومية الأمية.</li>
-      </ul>
-    </div>
-    <div class="q-box">
-      <p class="q-text">36. تتكون نواة الإندوسبيرم في عملية الإخصاب المزدوج لتكون:</p>
-      <ul class="options" onclick="checkAns(this, 'c', event)">
-        <li data-opt="a">أ. 2ن</li>
-        <li data-opt="b">ب. 1ن</li>
-        <li data-opt="c">ج. 3ن</li>
-        <li data-opt="d">د. 4ن</li>
-      </ul>
-    </div>
-    <div class="q-box">
-      <p class="q-text">37. لتكوين حيوان منوي واحد سليم، يجب أن تنقسم الخلية المنوية الأولية بـ:</p>
-      <ul class="options" onclick="checkAns(this, 'b', event)">
-        <li data-opt="a">أ. انقسام ميتوزي واحد.</li>
-        <li data-opt="b">ب. انقسام ميتوزي أول ثم انقسام ميتوزي ثانٍ.</li>
-        <li data-opt="c">ج. انقسام ميتوزي فقط.</li>
-        <li data-opt="d">د. لا تنقسم.</li>
-      </ul>
-    </div>
-    <div class="q-box">
-      <p class="q-text">38. للوصول إلى بويضة ناضجة، تنتج الخلية البيضية الأولية:</p>
-      <ul class="options" onclick="checkAns(this, 'd', event)">
-        <li data-opt="a">أ. 4 بويضات ناضجة.</li>
-        <li data-opt="b">ب. 2 بويضة ناضجة.</li>
-        <li data-opt="c">ج. 1 بويضة و3 أجسام قطبية.</li>
-        <li data-opt="d">د. 1 بويضة و3 أجسام قطبية.</li>
-      </ul>
-    </div>
-    <div class="q-box">
-      <p class="q-text">39. في دورة الطمث، يكون اليوم 14 هو وقت:</p>
-      <ul class="options" onclick="checkAns(this, 'a', event)">
-        <li data-opt="a">أ. التبويض.</li>
-        <li data-opt="b">ب. بداية الطمث.</li>
-        <li data-opt="c">ج. نضج حويصلة جراف.</li>
-        <li data-opt="d">د. إفراز البروجسترون فقط.</li>
-      </ul>
-    </div>
-    <div class="q-box">
-      <p class="q-text">40. التوائم المتماثلة تكون دائماً:</p>
-      <ul class="options" onclick="checkAns(this, 'b', event)">
-        <li data-opt="a">أ. من جنسين مختلفين.</li>
-        <li data-opt="b">ب. من نفس الجنس ومتطابقة وراثياً.</li>
-        <li data-opt="c">ج. مختلفة وراثياً.</li>
-        <li data-opt="d">د. من نفس الجنس وغير متطابقة.</li>
-      </ul>
-    </div>
-
   </div>
 
   <script>
@@ -482,68 +300,248 @@ body.aa-light .aa-img-missing { background:#f1f5f9; color:#334155; border-color:
   });
   if(clicked && (clicked.getAttribute('data-opt')||'').toLowerCase() !== String(correctOpt).toLowerCase()) clicked.classList.add('wrong');
 }
-  </script>
+                                                                           </script>
+                                                                           <div class="q-box">
+  <p class="q-text">21. تبدأ دورة الطمث عادة في سن:</p>
+  <ul class="options" onclick="checkAns(this, 'c', event)">
+    <li data-opt="a">أ. 5 سنوات.</li>
+    <li data-opt="b">ب. 20 سنة.</li>
+    <li data-opt="c">ج. 12-15 سنة.</li>
+    <li data-opt="d">د. 50 سنة.</li>
+  </ul>
+</div>
+<div class="q-box">
+  <p class="q-text">22. الهرمون الذي يسبب انفجار حويصلة جراف وخروج البويضة:</p>
+  <ul class="options" onclick="checkAns(this, 'b', event)">
+    <li data-opt="a">أ. FSH.</li>
+    <li data-opt="b">ب. LH.</li>
+    <li data-opt="c">ج. الإستروجين.</li>
+    <li data-opt="d">د. البروجسترون.</li>
+  </ul>
+</div>
+<div class="q-box">
+  <p class="q-text">23. إذا لم تلقح البويضة، يضمحل الجسم الأصفر ويقل إفراز:</p>
+  <ul class="options" onclick="checkAns(this, 'a', event)">
+    <li data-opt="a">أ. البروجسترون والإستروجين.</li>
+    <li data-opt="b">ب. LH و FSH.</li>
+    <li data-opt="c">ج. التستوستيرون.</li>
+    <li data-opt="d">د. الأنسولين.</li>
+  </ul>
+</div>
+<div class="q-box">
+  <p class="q-text">24. يتم إخصاب البويضة عادة في:</p>
+  <ul class="options" onclick="checkAns(this, 'c', event)">
+    <li data-opt="a">أ. الرحم.</li>
+    <li data-opt="b">ب. المبيض.</li>
+    <li data-opt="c">ج. الثلث الأول من قناة فالوب.</li>
+    <li data-opt="d">د. المهبل.</li>
+  </ul>
+</div>
+<div class="q-box">
+  <p class="q-text">25. الإنزيم الذي يفرزه الحيوان المنوي لاختراق البويضة:</p>
+  <ul class="options" onclick="checkAns(this, 'd', event)">
+    <li data-opt="a">أ. الأميليز.</li>
+    <li data-opt="b">ب. الليباز.</li>
+    <li data-opt="c">ج. الكولين استيريز.</li>
+    <li data-opt="d">د. الهيالويورنيز.</li>
+  </ul>
+</div>
+<div class="q-box">
+  <p class="q-text">26. عدد الحيوانات المنوية في المرة الواحدة للرجل السليم:</p>
+  <ul class="options" onclick="checkAns(this, 'b', event)">
+    <li data-opt="a">أ. 20 مليون.</li>
+    <li data-opt="b">ب. 300 إلى 500 مليون.</li>
+    <li data-opt="c">ج. 1000 فقط.</li>
+    <li data-opt="d">د. 50 مليون.</li>
+  </ul>
+</div>
+<div class="q-box">
+  <p class="q-text">27. الغشاء الذي يحيط بالجنين من الداخل ويحتوي على سائل واقٍ:</p>
+  <ul class="options" onclick="checkAns(this, 'a', event)">
+    <li data-opt="a">أ. الرهل (Amnion).</li>
+    <li data-opt="b">ب. السلى (Chorion).</li>
+    <li data-opt="c">ج. المشيمة.</li>
+    <li data-opt="d">د. الحبل السري.</li>
+  </ul>
+</div>
+<div class="q-box">
+  <p class="q-text">28. التوائم التي تنتج من بويضة واحدة وحيوان منوي واحد هي:</p>
+  <ul class="options" onclick="checkAns(this, 'c', event)">
+    <li data-opt="a">أ. غير متماثلة.</li>
+    <li data-opt="b">ب. ثنائية اللاقحة.</li>
+    <li data-opt="c">ج. متماثلة.</li>
+    <li data-opt="d">د. سيامية فقط.</li>
+  </ul>
+</div>
+<div class="q-box">
+  <p class="q-text">29. وسيلة منع الحمل التي تمنع انغراس البويضة في الرحم:</p>
+  <ul class="options" onclick="checkAns(this, 'b', event)">
+    <li data-opt="a">أ. الأقراص.</li>
+    <li data-opt="b">ب. اللولب.</li>
+    <li data-opt="c">ج. الواقي الذكري.</li>
+    <li data-opt="d">د. التعقيم.</li>
+  </ul>
+</div>
+<div class="q-box">
+  <p class="q-text">30. النعجة دوللي تم استنساخها باستخدام:</p>
+  <ul class="options" onclick="checkAns(this, 'd', event)">
+    <li data-opt="a">أ. خلية جنينية فقط.</li>
+    <li data-opt="b">ب. بويضة مخصبة.</li>
+    <li data-opt="c">ج. حيوان منوي.</li>
+    <li data-opt="d">د. خلية جسدية من ضرع النعجة.</li>
+  </ul>
+</div>
+<div class="q-box">
+  <p class="q-text">31. تفرز الغدة النخامية هرمون FSH الذي يحفز:</p>
+  <ul class="options" onclick="checkAns(this, 'a', event)">
+    <li data-opt="a">أ. نمو حويصلة جراف في المبيض.</li>
+    <li data-opt="b">ب. انفجار حويصلة جراف.</li>
+    <li data-opt="c">ج. إفراز البروجسترون.</li>
+    <li data-opt="d">د. انقباض الرحم.</li>
+  </ul>
+</div>
+<div class="q-box">
+  <p class="q-text">32. الخلايا التي تتحد لتكوين نواة الإندوسبيرم هي:</p>
+  <ul class="options" onclick="checkAns(this, 'c', event)">
+    <li data-opt="a">أ. نواتين ذكريتين.</li>
+    <li data-opt="b">ب. نواة ذكرية ونواة بويضة.</li>
+    <li data-opt="c">ج. نواة ذكرية والنواتين القطبيتين.</li>
+    <li data-opt="d">د. نواتين قطبيتين فقط.</li>
+  </ul>
+</div>
+<div class="q-box">
+  <p class="q-text">33. الأزهار وحيدة الجنس تلجأ إلى:</p>
+  <ul class="options" onclick="checkAns(this, 'b', event)">
+    <li data-opt="a">أ. التلقيح الذاتي.</li>
+    <li data-opt="b">ب. التلقيح الخلطي.</li>
+    <li data-opt="c">ج. الإثمار العذري.</li>
+    <li data-opt="d">د. التكاثر اللاجنسي.</li>
+  </ul>
+</div>
+<div class="q-box">
+  <p class="q-text">34. الثمرة التي يتشحم فيها جزء غير المبيض تسمى:</p>
+  <ul class="options" onclick="checkAns(this, 'd', event)">
+    <li data-opt="a">أ. ثمرة عذرية.</li>
+    <li data-opt="b">ب. ثمرة حقيقية.</li>
+    <li data-opt="c">ج. بذرة.</li>
+    <li data-opt="d">د. ثمرة كاذبة.</li>
+  </ul>
+</div>
+<div class="q-box">
+  <p class="q-text">35. يتكون الجنين في النبات من:</p>
+  <ul class="options" onclick="checkAns(this, 'a', event)">
+    <li data-opt="a">أ. الزيجوت (2ن).</li>
+    <li data-opt="b">ب. نواة الإندوسبيرم (3ن).</li>
+    <li data-opt="c">ج. النواتين القطبيتين.</li>
+    <li data-opt="d">د. الخلية الجرثومية الأمية.</li>
+  </ul>
+</div>
+<div class="q-box">
+  <p class="q-text">36. تتكون نواة الإندوسبيرم في عملية الإخصاب المزدوج لتكون:</p>
+  <ul class="options" onclick="checkAns(this, 'c', event)">
+    <li data-opt="a">أ. 2ن</li>
+    <li data-opt="b">ب. 1ن</li>
+    <li data-opt="c">ج. 3ن</li>
+    <li data-opt="d">د. 4ن</li>
+  </ul>
+</div>
+<div class="q-box">
+  <p class="q-text">37. لتكوين حيوان منوي واحد سليم، يجب أن تنقسم الخلية المنوية الأولية بـ:</p>
+  <ul class="options" onclick="checkAns(this, 'b', event)">
+    <li data-opt="a">أ. انقسام ميتوزي واحد.</li>
+    <li data-opt="b">ب. انقسام ميتوزي أول ثم انقسام ميتوزي ثانٍ.</li>
+    <li data-opt="c">ج. انقسام ميتوزي فقط.</li>
+    <li data-opt="d">د. لا تنقسم.</li>
+  </ul>
+</div>
+<div class="q-box">
+  <p class="q-text">38. للوصول إلى بويضة ناضجة، تنتج الخلية البيضية الأولية:</p>
+  <ul class="options" onclick="checkAns(this, 'd', event)">
+    <li data-opt="a">أ. 4 بويضات ناضجة.</li>
+    <li data-opt="b">ب. 2 بويضة ناضجة.</li>
+    <li data-opt="c">ج. 1 بويضة و3 أجسام قطبية.</li>
+    <li data-opt="d">د. 1 بويضة و3 أجسام قطبية.</li>
+  </ul>
+</div>
+<div class="q-box">
+  <p class="q-text">39. في دورة الطمث، يكون اليوم 14 هو وقت:</p>
+  <ul class="options" onclick="checkAns(this, 'a', event)">
+    <li data-opt="a">أ. التبويض.</li>
+    <li data-opt="b">ب. بداية الطمث.</li>
+    <li data-opt="c">ج. نضج حويصلة جراف.</li>
+    <li data-opt="d">د. إفراز البروجسترون فقط.</li>
+  </ul>
+</div>
+<div class="q-box">
+  <p class="q-text">40. التوائم المتماثلة تكون دائماً:</p>
+  <ul class="options" onclick="checkAns(this, 'b', event)">
+    <li data-opt="a">أ. من جنسين مختلفين.</li>
+    <li data-opt="b">ب. من نفس الجنس ومتطابقة وراثياً.</li>
+    <li data-opt="c">ج. مختلفة وراثياً.</li>
+    <li data-opt="d">د. من نفس الجنس وغير متطابقة.</li>
+  </ul>
+</div>
     <!-- الجزء التاني: الأسئلة المقالية -->
     <h2>Part 2: Written Questions (41-50)</h2>
     
     <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
       <p class="q-text" style="color:#1e40af; direction: rtl; text-align: right;">41. علل: يلجأ نبات الإسبيروجيرا للاقتران أحياناً.</p>
       <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
-      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:rtl; text-align:right;">يلجأ للاقتران (التكاثر الجنسي) عند تعرضه للظروف غير المناسبة مثل الجفاف أو تغير درجة حرارة الماء أو نقص الماء، لضمان استمرار النوع وتكوين لاقحة جرثومية مقاومة للظروف الصعبة.</p>
+      <p class="model-answer" style="display:none;">يلجأ للاقتران (التكاثر الجنسي) عند تعرضه للظروف غير المناسبة مثل الجفاف أو تغير درجة حرارة الماء أو نقص الماء، لضمان استمرار النوع وتكوين لاقحة جرثومية مقاومة للظروف الصعبة.</p>
     </div>
 
     <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
       <p class="q-text" style="color:#1e40af; direction: rtl; text-align: right;">42. قارن بين التوائم المتماثلة والتوائم غير المتماثلة (الشقيقة).</p>
       <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
-      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:rtl; text-align:right;"><b>التوائم المتماثلة (أحادية اللاقحة):</b> تنتج من بويضة واحدة وحيوان منوي واحد، وتنقسم اللاقحة إلى قسمين، وتكون متطابقة وراثياً ومن نفس الجنس.<br><b>التوائم غير المتماثلة (ثنائية اللاقحة):</b> تنتج من بويضتين وحيوانين منويين مختلفين، وتكون مختلفة وراثياً وقد تكون من جنسين مختلفين.</p>
+      <p class="model-answer" style="display:none;"><b>التوائم المتماثلة (أحادية اللاقحة):</b> تنتج من بويضة واحدة وحيوان منوي واحد، وتنقسم اللاقحة إلى قسمين، وتكون متطابقة وراثياً ومن نفس الجنس.<br><b>التوائم غير المتماثلة (ثنائية اللاقحة):</b> تنتج من بويضتين وحيوانين منويين مختلفين، وتكون مختلفة وراثياً وقد تكون من جنسين مختلفين.</p>
     </div>
 
     <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
       <p class="q-text" style="color:#1e40af; direction: rtl; text-align: right;">43. اذكر أهمية وجود القطعة الوسطى في الحيوان المنوي.</p>
       <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
-      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:rtl; text-align:right;">تحتوي القطعة الوسطى على الميتوكوندريا التي تمد الحيوان المنوي بالطاقة اللازمة لحركته وسباحته للوصول إلى البويضة.</p>
+      <p class="model-answer" style="display:none;">تحتوي القطعة الوسطى على الميتوكوندريا التي تمد الحيوان المنوي بالطاقة اللازمة لحركته وسباحته للوصول إلى البويضة.</p>
     </div>
 
     <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
       <p class="q-text" style="color:#1e40af; direction: rtl; text-align: right;">44. علل: يعتبر الرجل عقيماً إذا كان عدد الحيوانات المنوية أقل من 20 مليون.</p>
       <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
-      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:rtl; text-align:right;">لأن الكثير من الحيوانات المنوية يهلك أثناء رحلته في الجهاز التناسلي الأنثوي حتى يصل إلى البويضة، فإذا كان العدد قليلاً فلن يستطيع أي حيوان منوي الوصول لإخصاب البويضة.</p>
+      <p class="model-answer" style="display:none;">لأن الكثير من الحيوانات المنوية يهلك أثناء رحلته في الجهاز التناسلي الأنثوي حتى يصل إلى البويضة، فإذا كان العدد قليلاً فلن يستطيع أي حيوان منوي الوصول لإخصاب البويضة.</p>
     </div>
 
     <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
       <p class="q-text" style="color:#1e40af; direction: rtl; text-align: right;">45. علل: يتضخم جدار الرحم ويصبح غنياً بالدم استعداداً للحمل.</p>
       <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
-      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:rtl; text-align:right;">لتوفير البيئة المناسبة والغذاء الكافي (عبر الأوعية الدموية) للبويضة المخصبة لتستقر فيه (الانغراس) وتكمل نمو الجنين حتى الولادة.</p>
+      <p class="model-answer" style="display:none;">لتوفير البيئة المناسبة والغذاء الكافي (عبر الأوعية الدموية) للبويضة المخصبة لتستقر فيه (الانغراس) وتكمل نمو الجنين حتى الولادة.</p>
     </div>
 
     <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
       <p class="q-text" style="color:#1e40af; direction: rtl; text-align: right;">46. ما المقصود بـ: (أ) التوائم المتماثلة، (ب) الثمار الكاذبة، (ج) الإثمار العذري.</p>
       <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
-      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:rtl; text-align:right;">(أ) التوائم المتماثلة: توائم تنتج من بويضة واحدة ملقحة تنقسم إلى قسمين، وتكون متطابقة وراثياً.<br>(ب) الثمار الكاذبة: ثمار يتشحم فيها جزء غير المبيض مثل التفاح.<br>(ج) الإثمار العذري: تكوين ثمار بدون بذور دون حدوث إخصاب مثل الموز.</p>
+      <p class="model-answer" style="display:none;">(أ) التوائم المتماثلة: توائم تنتج من بويضة واحدة ملقحة تنقسم إلى قسمين، وتكون متطابقة وراثياً.<br>(ب) الثمار الكاذبة: ثمار يتشحم فيها جزء غير المبيض مثل التفاح.<br>(ج) الإثمار العذري: تكوين ثمار بدون بذور دون حدوث إخصاب مثل الموز.</p>
     </div>
 
     <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
       <p class="q-text" style="color:#1e40af; direction: rtl; text-align: right;">47. اذكر خطوات تكوين حبوب اللقاح في المتك.</p>
       <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
-      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:rtl; text-align:right;">1. تنقسم الخلية الجرثومية الأمية (2ن) ميتوزياً لتكوين 4 جراثيم صغيرة (ن).<br>2. كل جرثومة تتحول إلى حبة لقاح.<br>3. نواة حبة اللقاح تنقسم ميتوزياً لتكوين نواة أنبوبية ونواة مولدة.<br>4. النواة المولدة تتحاط بغلاف وتصبح حبة اللقاح جاهزة للانتشار.</p>
+      <p class="model-answer" style="display:none;">1. تنقسم الخلية الجرثومية الأمية (2ن) ميتوزياً لتكوين 4 جراثيم صغيرة (ن).<br>2. كل جرثومة تتحول إلى حبة لقاح.<br>3. نواة حبة اللقاح تنقسم ميتوزياً لتكوين نواة أنبوبية ونواة مولدة.<br>4. النواة المولدة تتحاط بغلاف وتصبح حبة اللقاح جاهزة للانتشار.</p>
     </div>
 
     <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
       <p class="q-text" style="color:#1e40af; direction: rtl; text-align: right;">48. اشرح عملية الإخصاب المزدوج في النباتات الزهرية.</p>
       <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
-      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:rtl; text-align:right;">عندما يصل أنبوب اللقاح إلى البويضة، تخرج منه نواتان ذكريتان:<br>1. تتحد النواة الأولى مع نواة البويضة لتكوين الزيجوت (2ن) الذي ينمو ليكون الجنين.<br>2. تتحد النواة الثانية مع النواتين القطبيتين لتكوين نواة الإندوسبيرم (3ن) التي تغذي الجنين.</p>
+      <p class="model-answer" style="display:none;">عندما يصل أنبوب اللقاح إلى البويضة، تخرج منه نواتان ذكريتان:<br>1. تتحد النواة الأولى مع نواة البويضة لتكوين الزيجوت (2ن) الذي ينمو ليكون الجنين.<br>2. تتحد النواة الثانية مع النواتين القطبيتين لتكوين نواة الإندوسبيرم (3ن) التي تغذي الجنين.</p>
     </div>
 
     <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
       <p class="q-text" style="color:#1e40af; direction: rtl; text-align: right;">49. وضح أهمية المشيمة.</p>
       <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
-      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:rtl; text-align:right;">1. نقل المواد الغذائية والأكسجين من دم الأم إلى دم الجنين.<br>2. التخلص من ثاني أكسيد الكربون والفضلات من الجنين.<br>3. إفراز هرمونات مثل البروجسترون لاستمرار الحمل.<br>4. نقل المواد الضارة (أدوية، كحول، فيروسات) التي قد تسبب تشوهات للجنين.</p>
+      <p class="model-answer" style="display:none;">1. نقل المواد الغذائية والأكسجين من دم الأم إلى دم الجنين.<br>2. التخلص من ثاني أكسيد الكربون والفضلات من الجنين.<br>3. إفراز هرمونات مثل البروجسترون لاستمرار الحمل.<br>4. نقل المواد الضارة (أدوية، كحول، فيروسات) التي قد تسبب تشوهات للجنين.</p>
     </div>
 
     <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
       <p class="q-text" style="color:#1e40af; direction: rtl; text-align: right;">50. وضح بالرسم مراحل تكوين البويضة في النباتات الزهرية (مراحل نضج المبيض).</p>
       <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
-      <p style="display:none; background:#dcfce7; color:#166534; padding:10px; border-radius:6px; margin-top:10px; direction:rtl; text-align:right;">(إجابة مقالية بالرسم): يتم رسم المبيض وتوضيح:<br>1. الخلية الجرثومية الأمية (2ن) تنقسم ميتوزياً لتكون 4 خلايا (ن).<br>2. تبقى خلية واحدة وتكبر لتكون الكيس الجنيني.<br>3. الكيس الجنيني ينقسم 3 مرات ميتوزية لتكوين 8 أنوية (منها البويضة والنواتين القطبيتين والخلايا المساعدة والسمتية).<br>4. التلقيح والإخصاب.</p>
+      <p class="model-answer" style="display:none;">(إجابة مقالية بالرسم): يتم رسم المبيض وتوضيح:<br>1. الخلية الجرثومية الأمية (2ن) تنقسم ميتوزياً لتكون 4 خلايا (ن).<br>2. تبقى خلية واحدة وتكبر لتكون الكيس الجنيني.<br>3. الكيس الجنيني ينقسم 3 مرات ميتوزية لتكوين 8 أنوية (منها البويضة والنواتين القطبيتين والخلايا المساعدة والسمتية).<br>4. التلقيح والإخصاب.</p>
     </div>
 
   </div> <!-- نهاية الحاوية -->
