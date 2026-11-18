@@ -46,7 +46,6 @@ body.aa-light .aa-topbar,body.aa-light .container,body.aa-light .card,body.aa-li
 @media(max-width:360px){.aa-brand{font-size:12px}.aa-actions{gap:5px}.aa-action{font-size:10px;padding:7px}.grid{grid-template-columns:1fr!important}}
 </style>
 <style id="aa-final-contrast-and-quiz-fix">
-/* Theme contrast: dark mode uses dark panels + light text; light mode uses light panels + dark text. */
 body:not(.aa-light) :is(.container,.q-box,.lesson-content,.example-box,.image-box,.highlight,.info,.idiom-card,.definition,.example,.text-box,.translation-box,.vocab-box,.questions-box,.tree-diagram,.table-container,.table-responsive,.passage,.panel,.part-box,.rule-box,.trap-box,.menu-card,.q-item,.answer,.vocab-item,.show-answer){background-color:#142b4b!important;color:#f3f7ff!important;border-color:#456080!important;}
 body:not(.aa-light) :is(.container,.q-box,.lesson-content,.example-box,.image-box,.highlight,.info,.idiom-card,.definition,.example,.text-box,.translation-box,.vocab-box,.questions-box,.tree-diagram,.table-container,.table-responsive,.passage,.panel,.part-box,.rule-box,.trap-box,.menu-card,.q-item,.answer,.vocab-item,.show-answer) :is(p,li,span,strong,b,em,small,label,td,th,h1,h2,h3,h4,div,a){color:#f3f7ff!important;}
 body:not(.aa-light) :is(.q-text,.ar,.meaning,.idiom-meaning,.image-caption){color:#f3f7ff!important;}
@@ -60,43 +59,37 @@ body:not(.aa-light) .options li.correct,body.aa-light .options li.correct{backgr
 body:not(.aa-light) .options li.wrong,body.aa-light .options li.wrong{background:#fecaca!important;color:#7f1d1d!important;border:2px solid #dc2626!important;font-weight:800!important;}
 .options.answered li{cursor:default!important;}
 </style>
-
 <style id="aa-night-visibility-v2">
-/* Reliable dark-mode contrast for lesson text, callouts, essay answers and image panels */
 body:not(.aa-light) .container,
-body:not(.aa-light) .container :not(img):not(video):not(iframe):not(svg):not(path) {
-  color: var(--aa-text, #edf4ff);
-}
+body:not(.aa-light) .container :not(img):not(video):not(iframe):not(svg):not(path) { color: var(--aa-text, #edf4ff); }
 body:not(.aa-light) .container :is(.lesson-content,.image-box,.answer-box,.model-answer,.essay-answer,.question-box,.q-box,.explanation,.note-box,.info-box,.content-box,.example-box,.passage,.text-box,.answer,.solution,.paragraph-box) {
-  background: #10284a !important;
-  color: #f2f6ff !important;
-  border-color: #426184 !important;
+  background: #10284a !important; color: #f2f6ff !important; border-color: #426184 !important;
 }
-body:not(.aa-light) .container :is(.lesson-content,.image-box,.answer-box,.model-answer,.essay-answer,.question-box,.q-box,.explanation,.note-box,.info-box,.content-box,.example-box,.passage,.text-box,.answer,.solution,.paragraph-box) :is(p,li,span,b,strong,em,small,label,td,th,h1,h2,h3,h4,div) {
-  color: #f2f6ff !important;
-}
+body:not(.aa-light) .container :is(.lesson-content,.image-box,.answer-box,.model-answer,.essay-answer,.question-box,.q-box,.explanation,.note-box,.info-box,.content-box,.example-box,.passage,.text-box,.answer,.solution,.paragraph-box) :is(p,li,span,b,strong,em,small,label,td,th,h1,h2,h3,h4,div) { color: #f2f6ff !important; }
 body:not(.aa-light) .container :is(h1,h2,h3,h4,.section-title) { color:#a9d8ff !important; }
 body:not(.aa-light) .container :is(.highlight) { background:#542c3b !important; color:#ffd0d5 !important; }
 body:not(.aa-light) .container :is(.term) { background:#123d59 !important; color:#a5eaff !important; }
-/* Neutralize hard-coded light inline panels only in the content area */
-body:not(.aa-light) .container [style*="background:#fff"],
-body:not(.aa-light) .container [style*="background: #fff"],
-body:not(.aa-light) .container [style*="background-color: white"],
-body:not(.aa-light) .container [style*="background-color:#fff"],
-body:not(.aa-light) .container [style*="background-color: #fff"],
-body:not(.aa-light) .container [style*="background: white"] {
+body:not(.aa-light) .container [style*="background:#fff"], body:not(.aa-light) .container [style*="background: #fff"], body:not(.aa-light) .container [style*="background-color: white"], body:not(.aa-light) .container [style*="background-color:#fff"], body:not(.aa-light) .container [style*="background-color: #fff"], body:not(.aa-light) .container [style*="background: white"] {
   background: #10284a !important; color:#f2f6ff !important; border-color:#426184 !important;
 }
 body.aa-light .container :is(.lesson-content,.image-box,.answer-box,.model-answer,.essay-answer,.question-box,.q-box,.explanation,.note-box,.info-box,.content-box,.example-box,.passage,.text-box,.answer,.solution,.paragraph-box) {
   background:#fff !important; color:#172b49 !important; border-color:#d7e2f1 !important;
 }
-body.aa-light .container :is(.lesson-content,.image-box,.answer-box,.model-answer,.essay-answer,.question-box,.q-box,.explanation,.note-box,.info-box,.content-box,.example-box,.passage,.text-box,.answer,.solution,.paragraph-box) :is(p,li,span,b,strong,em,small,label,td,th,h1,h2,h3,h4,div) {
-  color:#172b49 !important;
-}
+body.aa-light .container :is(.lesson-content,.image-box,.answer-box,.model-answer,.essay-answer,.question-box,.q-box,.explanation,.note-box,.info-box,.content-box,.example-box,.passage,.text-box,.answer,.solution,.paragraph-box) :is(p,li,span,b,strong,em,small,label,td,th,h1,h2,h3,h4,div) { color:#172b49 !important; }
 .aa-img-missing { display:flex; min-height:110px; width:100%; align-items:center; justify-content:center; padding:22px; border:1px dashed #7892b5; border-radius:12px; background:#10284a; color:#dbeafe; font-weight:700; text-align:center; }
 body.aa-light .aa-img-missing { background:#f1f5f9; color:#334155; border-color:#cbd5e1; }
 </style>
-
+<style id="aa-image-caption-fix">
+/* إصلاح وضوح العناوين اللي تحت الصور (image-caption) في الوضع الداكن والنهاري */
+body:not(.aa-light) .image-caption {
+  background: #0b2a5b !important; color: #ffffff !important; border: 1px solid #2563eb !important;
+  font-weight: bold !important; padding: 5px 15px !important; border-radius: 20px !important;
+}
+body.aa-light .image-caption {
+  background: #e0f2fe !important; color: #0c4a6e !important; border: 1px solid #93c5fd !important;
+  font-weight: bold !important; padding: 5px 15px !important; border-radius: 20px !important;
+}
+</style>
 </head>
 <body>
   <div class="container">
@@ -150,95 +143,93 @@ body.aa-light .aa-img-missing { background:#f1f5f9; color:#334155; border-color:
       <img src="https://i.ibb.co/8nVyQqQF/1794780493661.jpg" alt="قطاع طولي في الزهرة">
       <div class="image-caption">شكل (1): قطاع طولي في الزهرة</div>
     </div>
-
     <h2>2. آلية التكاثر (من تكوين الأمشاج للإخصاب)</h2>
-    <div class="lesson-content">
-      <p>عشان الزهرة تقوم بوظيفتها وتستمر، لازم يحصل تكوين لحبوب اللقاح (في المتك) وتكوين للبويضات (في المبيض). وبعدين لازم يحصل تلقيح (وصول اللقاح للميسم) وإخصاب (اندماج الأمشاج).</p>
-    </div>
+<div class="lesson-content">
+  <p>عشان الزهرة تقوم بوظيفتها وتستمر، لازم يحصل تكوين لحبوب اللقاح (في المتك) وتكوين للبويضات (في المبيض). وبعدين لازم يحصل تلقيح (وصول اللقاح للميسم) وإخصاب (اندماج الأمشاج).</p>
+</div>
 
-    <h3>أولاً: تكوين حبوب اللقاح (في المتك)</h3>
-    <div class="lesson-content">
-      <p>لو فحصنا قطاع عرضي في متك ناضج، هنلاقي جواه 4 أكياس لقاح، مليانة بخلايا كبيرة اسمها <span class="term">الخلايا الجرثومية الأمية</span> (2ن).</p>
+<h3>أولاً: تكوين حبوب اللقاح (في المتك)</h3>
+<div class="lesson-content">
+  <p>لو فحصنا قطاع عرضي في متك ناضج، هنلاقي جواه 4 أكياس لقاح، مليانة بخلايا كبيرة اسمها <span class="term">الخلايا الجرثومية الأمية</span> (2ن).</p>
+  <ul>
+    <li><b>الانقسام الميوزي:</b> كل خلية جرثومية أمية بتنقسم انقسام ميوزي (اختزالي) لتكوّن 4 خلايا، كل واحدة فيها نصف عدد الصبغيات (ن)، وبنسميها <span class="highlight">الجراثيم الصغيرة (Microspores)</span>.</li>
+    <li><b>تكوين حبة اللقاح:</b> كل جرثومة صغيرة بتتحول لحبة لقاح، ونواتها بتنقسم انقسام ميتوزي لتعمل نواتين:
       <ul>
-        <li><b>الانقسام الميوزي:</b> كل خلية جرثومية أمية بتنقسم انقسام ميوزي (اختزالي) لتكوّن 4 خلايا، كل واحدة فيها نصف عدد الصبغيات (ن)، وبنسميها <span class="highlight">الجراثيم الصغيرة (Microspores)</span>.</li>
-        <li><b>تكوين حبة اللقاح:</b> كل جرثومة صغيرة بتتحول لحبة لقاح، ونواتها بتنقسم انقسام ميتوزي لتعمل نواتين:
-          <ul>
-            <li>نواة أنبوبية (Tube nucleus).</li>
-            <li>نواة مولدة (Generative Nucleus).</li>
-          </ul>
-        </li>
-        <li><b>التغليف:</b> بعد الانقسام، النواة المولدة بتتلف بغلاف عشان تحميها، وبالتالي حبة اللقاح بتتكون جاهزة للانتشار لما الأكياس تتفتح.</li>
+        <li>نواة أنبوبية (Tube nucleus).</li>
+        <li>نواة مولدة (Generative Nucleus).</li>
       </ul>
-    </div>
+    </li>
+    <li><b>التغليف:</b> بعد الانقسام، النواة المولدة بتتلف بغلاف عشان تحميها، وبالتالي حبة اللقاح بتتكون جاهزة للانتشار لما الأكياس تتفتح.</li>
+  </ul>
+</div>
 
-    <div class="image-box">
-      <img src="https://i.ibb.co/d4LVjrr8/1794780667252.jpg" alt="مراحل نضح المتك والمبيض">
-      <div class="image-caption">شكل (2): مراحل نضح المتك والمبيض</div>
-    </div>
+<div class="image-box">
+  <img src="https://i.ibb.co/d4LVjrr8/1794780667252.jpg" alt="مراحل نضح المتك والمبيض">
+  <div class="image-caption">شكل (2): مراحل نضح المتك والمبيض</div>
+</div>
 
-    <h3>ثانياً: تكوين البويضات (في المبيض)</h3>
-    <div class="lesson-content">
-      <p>في نفس الوقت اللي بيحصل فيه تكوين حبوب اللقاح، بيحصل تغيرات في المبيض:</p>
+<h3>ثانياً: تكوين البويضات (في المبيض)</h3>
+<div class="lesson-content">
+  <p>في نفس الوقت اللي بيحصل فيه تكوين حبوب اللقاح، بيحصل تغيرات في المبيض:</p>
+  <ul>
+    <li><b>ظهور البويضة:</b> البويضة بتبدأ في الظهور، وبتتكون ليها عنق أو حبل سري (Funicle) بيوصلها بجدار المبيض، عشان توصلها المواد الغذائية.</li>
+    <li><b>الأغلفة:</b> بيتكون حواليها غلافين (Integuments) بيسيبوا فتحة صغيرة اسمها <span class="term">النقير (Micropyle)</span>، وده اللي بيتم من خلاله إخصاب البويضة.</li>
+    <li><b>الانقسام الميوزي:</b> جوه البويضة، الخلية الجرثومية الأمية (2ن) بتنقسم ميتوزياً لـ 4 خلايا (ن)، 3 منهم بيموتوا، وواحدة بتكبر وتكون <span class="highlight">الكيس الجنيني (Embryo Sac)</span>.</li>
+    <li><b>مراحل الكيس الجنيني:</b> الكيس الجنيني ده بيمر بـ 3 انقسامات ميتوزية لتكوين 8 أنوية:
       <ul>
-        <li><b>ظهور البويضة:</b> البويضة بتبدأ في الظهور، وبتتكون ليها عنق أو حبل سري (Funicle) بيوصلها بجدار المبيض، عشان توصلها المواد الغذائية.</li>
-        <li><b>الأغلفة:</b> بيتكون حواليها غلافين (Integuments) بيسيبوا فتحة صغيرة اسمها <span class="term">النقير (Micropyle)</span>، وده اللي بيتم من خلاله إخصاب البويضة.</li>
-        <li><b>الانقسام الميوزي:</b> جوه البويضة، الخلية الجرثومية الأمية (2ن) بتنقسم ميتوزياً لـ 4 خلايا (ن)، 3 منهم بيموتوا، وواحدة بتكبر وتكون <span class="highlight">الكيس الجنيني (Embryo Sac)</span>.</li>
-        <li><b>مراحل الكيس الجنيني:</b> الكيس الجنيني ده بيمر بـ 3 انقسامات ميتوزية لتكوين 8 أنوية:
-          <ul>
-            <li>4 أنوية بتروح للأطراف (كل طرف خد 4).</li>
-            <li>واحدة من كل طرف بتروح للنص وبتندمج مع بعض لتكوين <b>النواتين القطبيتين (Polar Nuclei)</b>.</li>
-            <li>الـ 6 الباقيين بيكوّنوا غشاء رقيق وسيتوبلازم.</li>
-          </ul>
-        </li>
-        <li><b>النتيجة النهائية:</b> بنلاقي 3 خلايا قريبة من النقير (واحدة منهم بتبقى البويضة (Egg cell) والاتنين التانيين بيسموا خلايا مساعدة أو Synergids)، و3 خلايا بعيدة عن النقير (بتسموا خلايا سمتية أو Antipodal Cells). وبذلك البويضة بتبقى جاهزة للإخصاب.</li>
+        <li>4 أنوية بتروح للأطراف (كل طرف خد 4).</li>
+        <li>واحدة من كل طرف بتروح للنص وبتندمج مع بعض لتكوين <b>النواتين القطبيتين (Polar Nuclei)</b>.</li>
+        <li>الـ 6 الباقيين بيكوّنوا غشاء رقيق وسيتوبلازم.</li>
       </ul>
-    </div>
+    </li>
+    <li><b>النتيجة النهائية:</b> بنلاقي 3 خلايا قريبة من النقير (واحدة منهم بتبقى البويضة (Egg cell) والاتنين التانيين بيسموا خلايا مساعدة أو Synergids)، و3 خلايا بعيدة عن النقير (بتسموا خلايا سمتية أو Antipodal Cells). وبذلك البويضة بتبقى جاهزة للإخصاب.</li>
+  </ul>
+</div>
 
-    <div class="image-box">
-      <img src="https://i.ibb.co/yFZt7SC1/1794780756904.jpg" alt="قطاع في مبيض ناضج">
-      <div class="image-caption">شكل (3): قطاع في مبيض ناضج</div>
-    </div>
+<div class="image-box">
+  <img src="https://i.ibb.co/yFZt7SC1/1794780756904.jpg" alt="قطاع في مبيض ناضج">
+  <div class="image-caption">شكل (3): قطاع في مبيض ناضج</div>
+</div>
 
-    <h3>ثالثاً: التلقيح (Pollination)</h3>
-    <div class="lesson-content">
-      <p>هو انتقال حبوب اللقاح من المتك إلى ميسم الزهرة. وله نوعان:</p>
+<h3>ثالثاً: التلقيح (Pollination)</h3>
+<div class="lesson-content">
+  <p>هو انتقال حبوب اللقاح من المتك إلى ميسم الزهرة. وله نوعان:</p>
+  <ul>
+    <li><b>تلقيح ذاتي:</b> انتقال حبوب اللقاح من متك زهرة إلى ميسم نفس الزهرة أو زهرة أخرى على نفس النبات. (بيحصل في نباتات قليلة).</li>
+    <li><b>تلقيح خلطي:</b> انتقال حبوب اللقاح من متك زهرة إلى ميسم زهرة على نبات آخر من نفس النوع. (وده الأكثر شيوعاً).
       <ul>
-        <li><b>تلقيح ذاتي:</b> انتقال حبوب اللقاح من متك زهرة إلى ميسم نفس الزهرة أو زهرة أخرى على نفس النبات. (بيحصل في نباتات قليلة).</li>
-        <li><b>تلقيح خلطي:</b> انتقال حبوب اللقاح من متك زهرة إلى ميسم زهرة على نبات آخر من نفس النوع. (وده الأكثر شيوعاً).
-          <ul>
-            <li><b>ليه بيشيع؟</b> لأن الأزهار وحيدة الجنس، أو نضج أحد شقي الأعضاء الجنسية قبل الآخر، أو يكون مستوى المتك منخفض عن مستوى الميسم.</li>
-            <li><b>وسائل التلقيح الخلطي:</b> بيحتاج وسائل لنقل حبوب اللقاح زي (الهواء، الماء، الحشرات، الإنسان).</li>
-          </ul>
-        </li>
+        <li><b>ليه بيشيع؟</b> لأن الأزهار وحيدة الجنس، أو نضج أحد شقي الأعضاء الجنسية قبل الآخر، أو يكون مستوى المتك منخفض عن مستوى الميسم.</li>
+        <li><b>وسائل التلقيح الخلطي:</b> بيحتاج وسائل لنقل حبوب اللقاح زي (الهواء، الماء، الحشرات، الإنسان).</li>
       </ul>
-    </div>
+    </li>
+  </ul>
+</div>
 
-    <h3>رابعاً: الإخصاب (Fertilization) والإخصاب المزدوج</h3>
-    <div class="lesson-content">
-      <p>بيبدأ لما حبة اللقاح تسقط على الميسم، وتقوم النواة الأنبوبية بإنبات أنبوب لقاح بيخترق القلم لحد ما يوصل للنقير في المبيض. النواة المولدة بتنقسم ميتوزياً لتكوّن نواتين ذكريتين.</p>
-      <ul>
-        <li><b>الإخصاب الأول:</b> نواة ذكرية بتتحد مع نواة البويضة (ن) لتكوين <span class="highlight">الزيجوت (2ن)</span> اللي بينمو ويكوّن الجنين (2ن).</li>
-        <li><b>الإخصاب الثاني (المزدوج):</b> النواة الذكرية التانية بتتحد مع النواتين القطبيتين لتكوين <span class="term">نواة الإندوسبيرم (3ن)</span>، وده اللي بيتغذى عليه الجنين في مراحل نموه الأولى.</li>
-      </ul>
-      <p><b>ملاحظة:</b> العملية دي بنسميها "الإخصاب المزدوج" لأن فيه اندماج بيحصل مرتين (اندماج مع البويضة، واندماج مع النواتين القطبيتين).</p>
-    </div>
+<h3>رابعاً: الإخصاب (Fertilization) والإخصاب المزدوج</h3>
+<div class="lesson-content">
+  <p>بيبدأ لما حبة اللقاح تسقط على الميسم، وتقوم النواة الأنبوبية بإنبات أنبوب لقاح بيخترق القلم لحد ما يوصل للنقير في المبيض. النواة المولدة بتنقسم ميتوزياً لتكوّن نواتين ذكريتين.</p>
+  <ul>
+    <li><b>الإخصاب الأول:</b> نواة ذكرية بتتحد مع نواة البويضة (ن) لتكوين <span class="highlight">الزيجوت (2ن)</span> اللي بينمو ويكوّن الجنين (2ن).</li>
+    <li><b>الإخصاب الثاني (المزدوج):</b> النواة الذكرية التانية بتتحد مع النواتين القطبيتين لتكوين <span class="term">نواة الإندوسبيرم (3ن)</span>، وده اللي بيتغذى عليه الجنين في مراحل نموه الأولى.</li>
+  </ul>
+  <p><b>ملاحظة:</b> العملية دي بنسميها "الإخصاب المزدوج" لأن فيه اندماج بيحصل مرتين (اندماج مع البويضة، واندماج مع النواتين القطبيتين).</p>
+</div>
 
-    <div class="image-box">
-      <img src="https://i.ibb.co/gFHtV7Lg/1794780830791.jpg" alt="مراحل إنبات حبة لقاح">
-      <div class="image-caption">شكل (4): مراحل إنبات حبة اللقاح</div>
-    </div>
+<div class="image-box">
+  <img src="https://i.ibb.co/gFHtV7Lg/1794780830791.jpg" alt="مراحل إنبات حبة لقاح">
+  <div class="image-caption">شكل (4): مراحل إنبات حبة اللقاح</div>
+</div>
 
-    <div class="image-box">
-      <img src="https://i.ibb.co/7P1Cd46/1794780911508.jpg" alt="حبة لقاح تحت الميكروسكوب">
-      <div class="image-caption">شكل (5): حبة لقاح تحت الميكروسكوب</div>
-    </div>
+<div class="image-box">
+  <img src="https://i.ibb.co/7P1Cd46/1794780911508.jpg" alt="حبة لقاح تحت الميكروسكوب">
+  <div class="image-caption">شكل (5): حبة لقاح تحت الميكروسكوب</div>
+</div>
 
-    <div class="image-box">
-      <img src="https://i.ibb.co/hkBmtGP/1794781362398.jpg" alt="عملية الإخصاب">
-      <div class="image-caption">شكل (6): عملية الإخصاب</div>
-    </div>
-
-    <h2>3. تكوين البذرة والثمرة</h2>
+<div class="image-box">
+  <img src="https://i.ibb.co/hkBmtGP/1794781362398.jpg" alt="عملية الإخصاب">
+  <div class="image-caption">شكل (6): عملية الإخصاب</div>
+        </div>
+            <h2>3. تكوين البذرة والثمرة</h2>
     
     <h3>أ. تكوين البذرة:</h3>
     <div class="lesson-content">
