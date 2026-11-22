@@ -510,7 +510,33 @@ body.aa-light .q-box .model-answer { background: #ffffff !important; color: #0b2
     </div>
 
   </div> <!-- نهاية الحاوية -->
-
+<script>
+  function checkAns(ul, correctOpt, evt){
+    // التحقق لو تم الإجابة على السؤال قبل كده لمنع التغيير
+    if(!ul || ul.classList.contains('answered')) return;
+    ul.classList.add('answered'); // منع التعديل
+    
+    var ev = evt || window.event;
+    var clicked = ev && ev.target && ev.target.closest ? ev.target.closest('li[data-opt]') : null;
+    if(clicked && !ul.contains(clicked)) clicked = null;
+    
+    var items = ul.querySelectorAll('li[data-opt]');
+    
+    items.forEach(function(li){
+      li.classList.remove('correct','wrong'); // مسح أي ألوان قديمة
+      
+      // إظهار الإجابة الصحيحة دائماً باللون الأخضر
+      if((li.getAttribute('data-opt')||'').toLowerCase() === String(correctOpt).toLowerCase()) {
+          li.classList.add('correct');
+      }
+    });
+    
+    // لو المستخدم اختار إجابة غلط، نخليها حمراء
+    if(clicked && (clicked.getAttribute('data-opt')||'').toLowerCase() !== String(correctOpt).toLowerCase()) {
+        clicked.classList.add('wrong');
+    }
+  }
+</script>
 <script id="abo-arida-site-ui">
 (function(){
  const bar=document.createElement('nav');bar.className='aa-topbar';bar.setAttribute('aria-label','التنقل الرئيسي');
