@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الحمض النووي DNA - الأحياء</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Arial, sans-serif; }
+    body { background: #f4f7fb; color: #1a2b3c; padding: 20px; }
+    .container { max-width: 800px; margin: 0 auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+    h1 { color: #1e3a8a; text-align: center; margin-bottom: 20px; border-bottom: 2px solid #e5e7eb; padding-bottom: 10px; font-size: 24px; }
+    h2 { color: #2563eb; margin: 35px 0 15px; font-size: 22px; border-right: 4px solid #2563eb; padding-right: 10px; background: #f0f9ff; padding: 10px; border-radius: 6px;}
+    h3 { color: #1e293b; margin: 25px 0 10px; font-size: 19px; border-bottom: 1px dashed #cbd5e1; padding-bottom: 5px;}
+    h4 { color: #0369a1; font-size: 17px; margin: 20px 0 10px; }
+    
+    .lesson-content { background: #f8fafc; padding: 25px; border-radius: 8px; margin-bottom: 20px; border: 1px solid #e5e7eb; line-height: 2.2; font-size: 17px; text-align: justify; }
+    .lesson-content p { margin-bottom: 15px; }
+    .lesson-content ul { margin-right: 20px; margin-bottom: 15px; }
+    .lesson-content li { margin-bottom: 10px; }
+    
+    .highlight { color: #b91c1c; font-weight: bold; background-color: #fef2f2; padding: 0 5px; border-radius: 4px; }
+    .term { color: #0369a1; font-weight: bold; background-color: #f0f9ff; padding: 0 5px; border-radius: 4px; }
+
+    .image-box { background: #f1f5f9; border: 2px solid #cbd5e1; border-radius: 12px; padding: 15px; margin: 25px 0; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.08); }
+    .image-box img { width: 100%; max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    .image-caption { color: #475569; font-size: 15px; margin-top: 15px; font-weight: bold; }
+
+    .back-btn { display: inline-block; background: #64748b; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; margin-bottom: 20px; font-size: 14px; }
+    .back-btn:hover { background: #475569; }
+  </style>
+<style id="abo-arida-design-system">
+:root{--aa-bg:#071329;--aa-panel:#0e2040;--aa-card:#10284d;--aa-text:#edf4ff;--aa-muted:#b4c5df;--aa-line:rgba(139,180,255,.2);--aa-blue:#2878ff;--aa-cyan:#45c7ff;--aa-gold:#ffc94a;--aa-shadow:0 14px 38px rgba(0,0,0,.22)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:Tahoma,'Segoe UI',Arial,sans-serif!important;background:radial-gradient(ellipse at 15% 0%,#102b59 0%,transparent 42%),linear-gradient(160deg,#071329,#091a34 55%,#071329)!important;color:var(--aa-text)!important;min-height:100vh;line-height:1.75;overflow-x:hidden}
+body *{max-width:100%}img,video,iframe{max-width:100%;height:auto}a{transition:background .2s,border-color .2s,transform .2s,color .2s}
+.aa-topbar{position:relative;z-index:5;width:min(1180px,calc(100% - 28px));margin:14px auto 22px;padding:12px 16px;border:1px solid var(--aa-line);border-radius:18px;background:rgba(8,24,50,.88);box-shadow:var(--aa-shadow);display:flex;align-items:center;justify-content:space-between;gap:12px;backdrop-filter:blur(12px);flex-wrap:wrap}
+.aa-brand{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-weight:800;font-size:17px;min-width:0}.aa-logo{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;background:linear-gradient(145deg,#2878ff,#1645a5);box-shadow:0 0 22px #2878ff55;font-size:23px;flex:none}.aa-brand small{display:block;color:#9fc5ff;font-size:10px;letter-spacing:.6px;font-weight:600;line-height:1.3}.aa-actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.aa-action{border:1px solid #477ac0;background:#122c54;color:#eaf3ff;border-radius:11px;padding:9px 12px;text-decoration:none;font:600 13px Tahoma,Arial;cursor:pointer;white-space:nowrap;flex-shrink:0}.aa-action:hover{background:#1c4380;border-color:#65baff}
+@media (max-width: 600px) {
+    .aa-topbar { flex-direction: column; align-items: stretch; padding: 15px; }
+    .aa-brand { justify-content: center; margin-bottom: 10px; }
+    .aa-actions { justify-content: center; width: 100%; }
+    .aa-action { flex: 1; text-align: center; padding: 10px 5px; font-size: 12px; }
+}
+.container,.courses,.hero{width:min(1100px,calc(100% - 28px));margin:0 auto 22px!important}.container{background:linear-gradient(145deg,rgba(16,40,77,.97),rgba(10,27,54,.97))!important;color:var(--aa-text)!important;border:1px solid var(--aa-line)!important;border-radius:22px!important;padding:clamp(16px,3.5vw,34px)!important;box-shadow:var(--aa-shadow)!important}
+.hero h2,.courses h2,.header-box h1,h1{color:#eaf3ff!important}.hero p,.header-box h2{color:#bdcce3!important}
+.card,.menu-card,.lesson-content,.image-box,.section-title{background:linear-gradient(145deg,#122c53,#0c2040)!important;color:var(--aa-text)!important;border:1px solid var(--aa-line)!important;border-radius:17px!important;box-shadow:0 8px 22px rgba(0,0,0,.15)!important}
+.card h3,.menu-card h3,h2,.section-title{color:#8fcaff!important}.card p,.menu-card p,.image-caption{color:var(--aa-muted)!important}
+.back-btn,.btn,.price{border-radius:12px!important}.back-btn,.btn{background:linear-gradient(120deg,#2878ff,#1452c2)!important;color:white!important;border:1px solid #67b7ff!important;padding:11px 18px!important;text-decoration:none!important}
+
+.lesson-content { background: #0f2547 !important; border-color: #2c5282 !important; }
+.lesson-content h3, .lesson-content h4, .lesson-content p, .lesson-content ul li { color: #edf4ff !important; }
+.lesson-content h3 { border-bottom-color: #4a7ab5 !important; }
+.lesson-content h4 { color: #8fcaff !important; }
+h2 { background: #0c1f3d !important; border-right-color: #38bdf8 !important; color: #8fcaff !important; }
+h3 { color: #edf4ff !important; border-bottom-color: #4a7ab5 !important; }
+h4 { color: #8fcaff !important; }
+.highlight { background: #542c3b !important; color: #ffb5bd !important; }
+.term { background: #123d59 !important; color: #8fe1ff !important; }
+.image-box { background: #0f2547 !important; border-color: #2c5282 !important; }
+.image-caption { color: #b4c5df !important; }
+
+body.aa-light { --aa-bg:#f2f6fc; --aa-panel:#fff; --aa-card:#fff; --aa-text:#172b49; --aa-muted:#536783; --aa-line:rgba(39,89,150,.18); background:linear-gradient(145deg,#eef5ff,#f7f9fd)!important; color:#172b49!important; }
+body.aa-light .aa-topbar,body.aa-light .container,body.aa-light .card,body.aa-light .menu-card,body.aa-light .lesson-content,body.aa-light .image-box,body.aa-light .section-title{background:#fff!important;color:#172b49!important}
+body.aa-light .aa-brand{color:#17345d}body.aa-light h1,body.aa-light h2,body.aa-light .card h3,body.aa-light .menu-card h3{color:#174b91!important}
+body.aa-light .lesson-content { background: #f8fafc !important; border-color: #e5e7eb !important; }
+body.aa-light .lesson-content h3, body.aa-light .lesson-content h4, body.aa-light .lesson-content p, body.aa-light .lesson-content ul li { color: #334155 !important; }
+body.aa-light .lesson-content h3 { border-bottom-color: #cbd5e1 !important; }
+body.aa-light .lesson-content h4 { color: #2563eb !important; }
+body.aa-light h2 { background: #f0f9ff !important; border-right-color: #2563eb !important; color: #1e3a8a !important; }
+body.aa-light h3 { color: #1e293b !important; border-bottom-color: #cbd5e1 !important; }
+body.aa-light h4 { color: #0369a1 !important; }
+body.aa-light .highlight { background: #fef2f2 !important; color: #b91c1c !important; }
+body.aa-light .term { background: #f0f9ff !important; color: #0369a1 !important; }
+body.aa-light .image-box { background: #f1f5f9 !important; border-color: #cbd5e1 !important; }
+body.aa-light .image-caption { color: #475569 !important; }
+</style>
+</head>
+<body>
+  <div class="container">
+    <a href="biology_ch5.html" class="back-btn">← العودة للفصل</a>
+    <h1>الدرس الثاني: الحمض النووي DNA</h1>
+
+    <h2>1. تركيب جزيء DNA</h2>
+    <div class="lesson-content">
+      <p>من أول القرن الخمسينيات، اتأكد العلماء إن الـ DNA هو المادة الوراثية. عشان كده بدأوا يدرسوا تركيبه ويضعوا نماذج توضح شكله، بناءً على تجارب كتير. واتضح إن الـ DNA بيتكون من حاجات بسيطة جداً:</p>
+      
+      <h3>أ. النيوكليوتيدة (وحدة البناء الأساسية):</h3>
+      <p>الـ DNA عبارة عن سلسلة طويلة جداً من وحدات متكررة اسمها <b>النيوكليوتيدات (Nucleotides)</b>. وكل نيوكليوتيدة بتتكون من 3 أجزاء أساسية:</p>
+      <ul>
+        <li><b>سكر خماسي (دي أوكسي ريبوز):</b> سكر فيه 5 ذرات كربون، وده اللي بيميز الـ DNA.</li>
+        <li><b>مجموعة فوسفات:</b> بترتبط بذرة الكربون رقم 5 في السكر.</li>
+        <li><b>قاعدة نيتروجينية:</b> بترتبط بذرة الكربون رقم 1 في السكر.</li>
+      </ul>
+
+      <h3>ب. القواعد النيتروجينية (اللغة الوراثية):</h3>
+      <p>القواعد دي نوعين حسب تركيبها الكيميائي:</p>
+      <ul>
+        <li><b>بيورينات (Purines):</b> حلقاتها مزدوجة (حجمها أكبر)، وبتشمل: <b>الأدينين (A)</b> و <b>الجوانين (G)</b>.</li>
+        <li><b>بيريميدينات (Pyrimidines):</b> حلقاتها مفردة (حجمها أصغر)، وبتشمل: <b>الثايمين (T)</b> و <b>السيتوزين (C)</b>.</li>
+      </ul>
+
+      <h3>ج. طريقة ارتباط النيوكليوتيدات (السلسلة):</h3>
+      <p>النيوكليوتيدات بترتبط مع بعضها لتكوين الشريط (السلسلة) عن طريق:</p>
+      <ul>
+        <li>مجموعة الفوسفات اللي عند ذرة الكربون 5 بترتبط مع ذرة الكربون 3 في السكر اللي جنبها (رابطة تساهمية).</li>
+        <li>القواعد النيتروجينية بتبرز على جانب واحد من هيكل السكر والفوسفات.</li>
+      </ul>
+    </div>
+
+    <h3>د. قواعد تشارجاف (قاعدة التكامل):</h3>
+    <div class="lesson-content">
+      <p>العالم تشارجاف لاحظ حاجة مهمة جداً في كل جزيئات الـ DNA في أي كائن حي:</p>
+      <ul>
+        <li>عدد نيوكليوتيدات الأدينين (A) بيساوي عدد نيوكليوتيدات الثايمين (T) دايماً.</li>
+        <li>عدد نيوكليوتيدات الجوانين (G) بيساوي عدد نيوكليوتيدات السيتوزين (C) دايماً.</li>
+        <li>يعني <span class="highlight">A = T</span> و <span class="highlight">G = C</span>.</li>
+      </ul>
+      <p>القاعدة دي كانت المفتاح لفهم شكل الـ DNA.</p>
+    </div>
+
+    <h2>2. نموذج واتسون وكريك (اللولب المزدوج)</h2>
+    <div class="lesson-content">
+      <p>العالمة <b>روزاليند فرانكلين (Franklin)</b> صورت الـ DNA بأشعة X، واكتشفت من الصور دي إنه شكله زي اللولب (Helix). بناءً على الصور دي، العالمين <b>واتسون وكريك</b> وضعوا النموذج الأشهر لتركيب الـ DNA سنة 1953.</p>
+      
+      <p><b>النموذج ده بيعتمد على إيه؟</b></p>
+      <ul>
+        <li>الـ DNA بيتكون من <b>شريطين</b> (سلسلتين) ملتفين حوالين بعض زي السلم الحلزوني، وده اللي بنسميه <span class="term">اللولب المزدوج (Double Helix)</span>.</li>
+        <li>السلم ده، جانبيه (الدرابزين) بيتكونوا من السكر والفوسفات (بالتبادل).</li>
+        <li>درجات السلم بيتكونوا من القواعد النيتروجينية المتزاوجة.</li>
+      </ul>
+
+      <p><b>إزاي القواعد بتترابط (الدرجات)؟</b></p>
+      <ul>
+        <li>الأدينين (A) بيرتبط دايماً بالثايمين (T) بروابط هيدروجينية (2 رابطة).</li>
+        <li>الجوانين (G) بيرتبط دايماً بالسيتوزين (C) بروابط هيدروجينية (3 روابط).</li>
+        <li>عشان كده، عرض السلم (المسافة بين الشريطين) بيكون متساوي دايماً، لأن كل زوج من القواعد (بيورين + بيريميدين) بيكمل التاني.</li>
+      </ul>
+    </div>
+
+    <div class="image-box">
+      <img src="[رابط شكل 1]" alt="تركيب DNA">
+      <div class="image-caption">شكل (1): تركيب DNA (سكر - فوسفات - قاعدة نيتروجينية)</div>
+    </div>
+
+    <h3>هـ. اتجاه الشريطين (Antiparallel):</h3>
+    <div class="lesson-content">
+      <p>في نموذج واتسون وكريك، الشريطين مش ماشيين في نفس الاتجاه، هما <b>متعاكسين (Antiparallel)</b>:</p>
+      <ul>
+        <li>شريط بيبدأ من النهاية <b>5'</b> وينتهي بـ <b>3'</b>.</li>
+        <li>الشريط التاني بيبدأ من النهاية <b>3'</b> وينتهي بـ <b>5'</b>.</li>
+      </ul>
+      <p>اللفة الواحدة في اللولب بتاخد حوالي 11 نيوكليوتيدة.</p>
+    </div>
+
+    <div class="image-box">
+      <img src="[رابط شكل 2]" alt="اللولب المزدوج">
+      <div class="image-caption">شكل (2): اللولب المزدوج (Double Helix)</div>
+    </div>
+
+    <h2>3. تضاعف الـ DNA (Replication)</h2>
+    <div class="lesson-content">
+      <p>قبل ما الخلية تنقسم (سواء ميتوز أو ميوز)، لازم تتضاعف كمية الـ DNA بتاعتها، عشان كل خلية جديدة تاخد نسخة طبق الأصل من المادة الوراثية.</p>
+      <p><b>الفكرة الأساسية:</b> لما الشريطين بتوع اللولب المزدوج بينفصلوا عن بعض، كل شريط بيشتغل كـ "قالب". كل شريط بيجمع نيوكليوتيدات جديدة مكملة ليه (حسب قاعدة التكامل A-T و G-C). النتيجة: تكوين شريطين جديدين، كل واحد فيهم بيتكون من شريط قديم (أصلي) وشريط جديد.</p>
+    </div>
+
+    <h3>خطوات التضاعف (بمساعدة الإنزيمات):</h3>
+    <div class="lesson-content">
+      <p>عملية التضاعف معقدة وبيشتغل فيها إنزيمات كتير زي "الورشة":</p>
+      <ul>
+        <li><b>1. فك اللولب (Helicase):</b> إنزيم اسمه هيليكيز (DNA-helicases) بيمشي على طول اللولب المزدوج ويفك الروابط الهيدروجينية بين الشريطين. المنطقة اللي بيفك فيها اسمها <span class="term">شوكة التضاعف (Replication fork)</span>.</li>
+        <li><b>2. إضافة النيوكليوتيدات (Polymerase):</b> إنزيم البلمرة (DNA Polymerase) بيمشي على الشريط، وبيضيف نيوكليوتيدات جديدة بترتبط بالقواعد اللي على الشريط القديم (قالب).</li>
+        <li><b>3. البادئات (Primase):</b> إنزيم البلمرة مش بيعرف يبدأ لوحده، محتاج بداية. بيجي إنزيم اسمه بريميز (Primase) بيصنع قطعة صغيرة من الـ RNA اسمها <span class="term">البادئ (Primer)</span>، وبعدين البلمرة بتبدأ تضيف عليه DNA.</li>
+      </ul>
+    </div>
+
+    <h3>أهم ملاحظة: اتجاه البناء (Leading & Lagging):</h3>
+    <div class="lesson-content">
+      <p>إنزيم البلمرة عنده "قاعدة" صارمة: بيبني الشريط الجديد في اتجاه واحد بس، وهو من <b>5' إلى 3'</b>. عشان كده:</p>
+      <ul>
+        <li><b>الشريط القائد (Leading strand):</b> ده الشريط اللي بيتبني في نفس اتجاه فك اللولب. بيتبني بسهولة وباستمرار لأن البلمرة بتمشي مع اتجاه الشوكة (5' ← 3').</li>
+        <li><b>الشريط المتأخر (Lagging strand):</b> ده الشريط التاني اللي اتجاهه معاكس. البلمرة مش بتقدر تمشي عليه باستمرار. عشان كده بيتبني على شكل قطع صغيرة اسمها <span class="highlight">قطع أوكازاكي (Okazaki fragments)</span>.</li>
+        <li><b>4. إنزيم الربط (DNA Ligase):</b> بعد ما القطع الصغيرة (أوكازاكي) تتكون، بيجي إنزيم الليجيز ويلحم القطع دي مع بعضها، ويشيل البادئات (RNA) ويستبدلها بـ DNA، عشان يكون شريط متصل.</li>
+      </ul>
+    </div>
+
+    <div class="image-box">
+      <img src="[رابط شكل 3]" alt="عملية تضاعف DNA">
+      <div class="image-caption">شكل (3): عملية تضاعف DNA</div>
+    </div>
+
+    <div class="image-box">
+      <img src="[رابط شكل 4]" alt="الشريط القائد والمتأخر">
+      <div class="image-caption">شكل (4): الشريط القائد والمتأخر (قطع أوكازاكي)</div>
+    </div>
+
+    <h2>4. إصلاح عيوب DNA</h2>
+    <div class="lesson-content">
+      <p>جزيء الـ DNA بيتعرض لآلاف التغييرات والطفرات كل يوم بسبب الحرارة، الإشعاع، أو مواد كيميائية. لو التغييرات دي مترمتش، ممكن تسبب أمراض خطيرة.</p>
+      <p>لحسن الحظ، الخلية عندها "ورشة تصليح" مخصصة:</p>
+      <ul>
+        <li>في كل يوم بتفقد الخلية حوالي 5000 قاعدة نيتروجينية وتتصنع غيرها.</li>
+        <li>فيه أكتر من 20 إنزيم مختلف بيشتغلوا في إصلاح الـ DNA.</li>
+        <li>إنزيم الربط (DNA Ligase) بيلعب دور مهم جداً في عملية الإصلاح دي.</li>
+      </ul>
+      <p><b>إزاي بيحصل الإصلاح؟</b> العملية بتعتمد على وجود نسختين من المعلومات الوراثية (الشريطين). لو شريط اتلف، الإنزيمات بتستخدم الشريط التاني السليم كـ قالب عشان تصلح التلف اللي في الشريط الأول.</p>
+      <p><b>ليه الفيروسات بتتحور بسرعة؟</b> لأن فيروسات الـ RNA (زي الإنفلونزا أو كورونا) بتمتلك شريط واحد بس من الـ RNA (مش شريطين زي الـ DNA). فمفيش عندها "نسخة احتياطية" تصلح منها التلف، وده بيخلي معدل التغيير الوراثي (الطفرات) فيها عالي جداً.</p>
+    </div>
+
+  </div>
+
+<script id="abo-arida-site-ui">
+(function(){
+ const bar=document.createElement('nav');bar.className='aa-topbar';bar.setAttribute('aria-label','التنقل الرئيسي');
+ bar.innerHTML='<a class="aa-brand" href="index.html"><span class="aa-logo">📚</span><span>أبو عريضة أكاديمي<small>ABO ARIDA ACADEMY</small></span></a><div class="aa-actions"><a class="aa-action" href="index.html">الرئيسية</a><a class="aa-action" href="contact.html">تواصل معنا</a><button class="aa-action" type="button" id="aaTheme">☀️ / 🌙</button></div>';
+ document.body.insertBefore(bar,document.body.firstChild);
+ const key='aboAridaTheme';function apply(v){document.body.classList.toggle('aa-light',v==='light');}
+ let saved='dark';try{saved=localStorage.getItem(key)||'dark'}catch(e){}apply(saved);
+ const btn=document.getElementById('aaTheme');btn.addEventListener('click',function(){const next=document.body.classList.contains('aa-light')?'dark':'light';apply(next);try{localStorage.setItem(key,next)}catch(e){}});
+})();
+</script>
+</body>
+</html>
