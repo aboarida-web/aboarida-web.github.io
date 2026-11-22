@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>امتحان الفصل الرابع - الأحياء</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Arial, sans-serif; }
+    body { background: #f4f7fb; color: #1a2b3c; padding: 20px; }
+    .container { max-width: 800px; margin: 0 auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+    h1 { color: #1e3a8a; text-align: center; margin-bottom: 20px; border-bottom: 2px solid #e5e7eb; padding-bottom: 10px; font-size: 24px; }
+    h2 { color: #2563eb; margin: 30px 0 15px; font-size: 20px; border-right: 4px solid #2563eb; padding-right: 10px; }
+    
+    .q-box { background: #f8fafc; padding: 20px; border-radius: 8px; margin-bottom: 20px; border: 1px solid #e5e7eb; }
+    .q-text { font-weight: bold; margin-bottom: 15px; font-size: 17px; color: #1e293b; line-height: 1.6;}
+    .options { list-style-type: none; padding: 0; }
+    .options li { background: white; padding: 12px 15px; margin-bottom: 10px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 16px; cursor: pointer; transition: 0.2s; text-align: right;}
+    .options li:hover { background: #f1f5f9; }
+    
+    .options li.correct { background: #dcfce7; border-color: #22c55e; font-weight: bold; color: #166534; }
+    .options li.wrong { background: #fee2e2; border-color: #ef4444; color: #991b1b; }
+    
+    .back-btn { display: inline-block; background: #64748b; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; margin-bottom: 20px; font-size: 14px; }
+    .back-btn:hover { background: #475569; }
+  </style>
+<style id="abo-arida-design-system">
+:root{--aa-bg:#071329;--aa-panel:#0e2040;--aa-card:#10284d;--aa-text:#edf4ff;--aa-muted:#b4c5df;--aa-line:rgba(139,180,255,.2);--aa-blue:#2878ff;--aa-cyan:#45c7ff;--aa-gold:#ffc94a;--aa-shadow:0 14px 38px rgba(0,0,0,.22)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:Tahoma,'Segoe UI',Arial,sans-serif!important;background:radial-gradient(ellipse at 15% 0%,#102b59 0%,transparent 42%),linear-gradient(160deg,#071329,#091a34 55%,#071329)!important;color:var(--aa-text)!important;min-height:100vh;line-height:1.75;overflow-x:hidden}
+body *{max-width:100%}img,video,iframe{max-width:100%;height:auto}a{transition:background .2s,border-color .2s,transform .2s,color .2s}
+.aa-topbar{position:relative;z-index:5;width:min(1180px,calc(100% - 28px));margin:14px auto 22px;padding:12px 16px;border:1px solid var(--aa-line);border-radius:18px;background:rgba(8,24,50,.88);box-shadow:var(--aa-shadow);display:flex;align-items:center;justify-content:space-between;gap:12px;backdrop-filter:blur(12px)}
+.aa-brand{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-weight:800;font-size:17px;min-width:0}.aa-logo{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;background:linear-gradient(145deg,#2878ff,#1645a5);box-shadow:0 0 22px #2878ff55;font-size:23px;flex:none}.aa-brand small{display:block;color:#9fc5ff;font-size:10px;letter-spacing:.6px;font-weight:600;line-height:1.3}.aa-actions{display:flex;gap:8px;align-items:center}.aa-action{border:1px solid #477ac0;background:#122c54;color:#eaf3ff;border-radius:11px;padding:9px 12px;text-decoration:none;font:600 13px Tahoma,Arial;cursor:pointer;white-space:nowrap}.aa-action:hover{background:#1c4380;border-color:#65baff}
+.container,.courses,.hero{width:min(1100px,calc(100% - 28px));margin:0 auto 22px!important}.container{background:linear-gradient(145deg,rgba(16,40,77,.97),rgba(10,27,54,.97))!important;color:var(--aa-text)!important;border:1px solid var(--aa-line)!important;border-radius:22px!important;padding:clamp(16px,3.5vw,34px)!important;box-shadow:var(--aa-shadow)!important}.hero{background:linear-gradient(120deg,#102d61,#0b1c3b)!important;border:1px solid var(--aa-line);border-radius:24px;padding:clamp(25px,5vw,58px) 20px!important;color:#fff!important;box-shadow:var(--aa-shadow)}
+header:not(.aa-topbar){background:linear-gradient(120deg,#123d83,#102653)!important;color:#fff!important;border:1px solid var(--aa-line);border-radius:18px;padding:18px!important;width:min(1100px,calc(100% - 28px));margin:0 auto 18px;gap:12px;flex-wrap:wrap}
+.hero h2,.courses h2,.header-box h1,h1{color:#eaf3ff!important}.hero p,.header-box h2{color:#bdcce3!important}.courses{padding:clamp(18px,3vw,34px) 0!important}.grid,.menu-grid{display:grid!important;grid-template-columns:repeat(auto-fit,minmax(min(100%,235px),1fr))!important;gap:14px!important}
+.card,.menu-card,.lesson-content,.image-box,.section-title{background:linear-gradient(145deg,#122c53,#0c2040)!important;color:var(--aa-text)!important;border:1px solid var(--aa-line)!important;border-radius:17px!important;box-shadow:0 8px 22px rgba(0,0,0,.15)!important}.card,.menu-card{padding:clamp(15px,2.5vw,22px)!important}.card h3,.menu-card h3,h2,.section-title{color:#8fcaff!important}.card p,.menu-card p,.image-caption{color:var(--aa-muted)!important}.card:hover,.menu-card:hover{transform:translateY(-3px);border-color:#4daeff!important;background:linear-gradient(145deg,#173a70,#10294f)!important}
+.section-title{border-right:4px solid var(--aa-cyan)!important}.lesson-content{line-height:2!important;font-size:clamp(15px,1.7vw,18px)!important;padding:clamp(15px,3vw,25px)!important;text-align:start!important}.image-box{padding:12px!important}.image-box img{display:block;margin:auto;object-fit:contain}.highlight{background:#542c3b!important;color:#ffb5bd!important}.term{background:#123d59!important;color:#8fe1ff!important}.back-btn,.btn,.price{border-radius:12px!important}.back-btn,.btn{background:linear-gradient(120deg,#2878ff,#1452c2)!important;color:white!important;border:1px solid #67b7ff!important;padding:11px 18px!important;text-decoration:none!important}.price{background:#123f42!important;color:#8af0ca!important}footer{background:#091a34!important;color:#a9c9f4!important;border-top:1px solid var(--aa-line);padding:22px!important;margin-top:30px!important}
+body.aa-light{--aa-bg:#f2f6fc;--aa-panel:#fff;--aa-card:#fff;--aa-text:#172b49;--aa-muted:#536783;--aa-line:rgba(39,89,150,.18);background:linear-gradient(145deg,#eef5ff,#f7f9fd)!important;color:#172b49!important}
+body.aa-light .aa-topbar,body.aa-light .container,body.aa-light .card,body.aa-light .menu-card,body.aa-light .lesson-content,body.aa-light .image-box,body.aa-light .section-title{background:#fff!important;color:#172b49!important}body.aa-light .aa-brand{color:#17345d}body.aa-light h1,body.aa-light h2,body.aa-light .card h3,body.aa-light .menu-card h3{color:#174b91!important}body.aa-light .card p,body.aa-light .menu-card p,body.aa-light .header-box h2{color:#536783!important}
+@media(max-width:640px){.aa-topbar{width:calc(100% - 20px);margin:10px auto 15px;padding:10px 11px;border-radius:15px}.aa-brand{font-size:14px;gap:8px}.aa-logo{width:36px;height:36px;font-size:20px}.aa-brand small{font-size:9px}.aa-action{font-size:11px;padding:8px 9px}.container,.courses,.hero{width:calc(100% - 20px);margin-bottom:14px!important}.container{padding:16px!important;border-radius:17px!important}.hero{padding:27px 15px!important;border-radius:18px!important}.hero h2{font-size:clamp(21px,6vw,28px)!important}.hero p{font-size:14px!important}.courses{padding:18px 0!important}.grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}.card{padding:14px 10px!important}.card .icon{font-size:30px!important}.card h3{font-size:16px!important}.card p{font-size:12px!important}.menu-grid{grid-template-columns:1fr!important;gap:10px!important}.menu-card{padding:14px!important}.menu-card h3{font-size:15px!important}.menu-card .info{gap:9px!important;min-width:0}.menu-card .icon{font-size:25px!important}.back-btn{padding:9px 13px!important;font-size:13px!important}.lesson-content{font-size:15px!important;line-height:1.9!important}.section-title{font-size:16px!important;padding:10px 12px!important}.image-box{margin:17px 0!important}.image-caption{font-size:13px!important}h1{font-size:22px!important}h2{font-size:19px!important}footer{font-size:12px!important;padding:18px 12px!important}}
+@media(max-width:360px){.aa-brand{font-size:12px}.aa-actions{gap:5px}.aa-action{font-size:10px;padding:7px}.grid{grid-template-columns:1fr!important}}
+</style>
+<style id="aa-final-contrast-and-quiz-fix">
+body:not(.aa-light) :is(.container,.q-box,.lesson-content,.example-box,.image-box,.highlight,.info,.idiom-card,.definition,.example,.text-box,.translation-box,.vocab-box,.questions-box,.tree-diagram,.table-container,.table-responsive,.passage,.panel,.part-box,.rule-box,.trap-box,.menu-card,.q-item,.answer,.vocab-item,.show-answer){background-color:#142b4b!important;color:#f3f7ff!important;border-color:#456080!important;}
+body:not(.aa-light) :is(.container,.q-box,.lesson-content,.example-box,.image-box,.highlight,.info,.idiom-card,.definition,.example,.text-box,.translation-box,.vocab-box,.questions-box,.tree-diagram,.table-container,.table-responsive,.passage,.panel,.part-box,.rule-box,.trap-box,.menu-card,.q-item,.answer,.vocab-item,.show-answer) :is(p,li,span,strong,b,em,small,label,td,th,h1,h2,h3,h4,div,a){color:#f3f7ff!important;}
+body:not(.aa-light) :is(.q-text,.ar,.meaning,.idiom-meaning,.image-caption){color:#f3f7ff!important;}
+body:not(.aa-light) .options li{background:#203a5d!important;color:#f7faff!important;border:1px solid #66809f!important;cursor:pointer!important;}
+body.aa-light :is(.q-box,.lesson-content,.example-box,.image-box,.highlight,.info,.idiom-card,.definition,.example,.text-box,.translation-box,.vocab-box,.questions-box,.tree-diagram,.table-container,.table-responsive,.passage,.panel,.part-box,.rule-box,.trap-box,.menu-card,.q-item,.answer,.vocab-item,.show-answer){background-color:#fff!important;color:#172033!important;}
+body.aa-light :is(.q-box,.lesson-content,.example-box,.image-box,.highlight,.info,.idiom-card,.definition,.example,.text-box,.translation-box,.vocab-box,.questions-box,.tree-diagram,.table-container,.table-responsive,.passage,.panel,.part-box,.rule-box,.trap-box,.menu-card,.q-item,.answer,.vocab-item,.show-answer) :is(p,li,span,strong,b,em,small,label,td,th,h1,h2,h3,h4,div){color:#172033!important;}
+body.aa-light .options li{background:#fff!important;color:#172033!important;border:1px solid #cbd5e1!important;}
+.options li.correct{background:#bbf7d0!important;color:#14532d!important;border:2px solid #16a34a!important;font-weight:800!important;}
+.options li.wrong{background:#fecaca!important;color:#7f1d1d!important;border:2px solid #dc2626!important;font-weight:800!important;}
+body:not(.aa-light) .options li.correct,body.aa-light .options li.correct{background:#bbf7d0!important;color:#14532d!important;border:2px solid #16a34a!important;font-weight:800!important;}
+body:not(.aa-light) .options li.wrong,body.aa-light .options li.wrong{background:#fecaca!important;color:#7f1d1d!important;border:2px solid #dc2626!important;font-weight:800!important;}
+.options.answered li{cursor:default!important;}
+</style>
+<style id="aa-night-visibility-v2">
+body:not(.aa-light) .container,
+body:not(.aa-light) .container :not(img):not(video):not(iframe):not(svg):not(path) { color: var(--aa-text, #edf4ff); }
+body:not(.aa-light) .container :is(.lesson-content,.image-box,.answer-box,.model-answer,.essay-answer,.question-box,.q-box,.explanation,.note-box,.info-box,.content-box,.example-box,.passage,.text-box,.answer,.solution,.paragraph-box) {
+  background: #10284a !important; color: #f2f6ff !important; border-color: #426184 !important;
+}
+body:not(.aa-light) .container :is(.lesson-content,.image-box,.answer-box,.model-answer,.essay-answer,.question-box,.q-box,.explanation,.note-box,.info-box,.content-box,.example-box,.passage,.text-box,.answer,.solution,.paragraph-box) :is(p,li,span,b,strong,em,small,label,td,th,h1,h2,h3,h4,div) { color: #f2f6ff !important; }
+body:not(.aa-light) .container :is(h1,h2,h3,h4,.section-title) { color:#a9d8ff !important; }
+body:not(.aa-light) .container :is(.highlight) { background:#542c3b !important; color:#ffd0d5 !important; }
+body:not(.aa-light) .container :is(.term) { background:#123d59 !important; color:#a5eaff !important; }
+body:not(.aa-light) .container [style*="background:#fff"], body:not(.aa-light) .container [style*="background: #fff"], body:not(.aa-light) .container [style*="background-color: white"], body:not(.aa-light) .container [style*="background-color:#fff"], body:not(.aa-light) .container [style*="background-color: #fff"], body:not(.aa-light) .container [style*="background: white"] {
+  background: #10284a !important; color:#f2f6ff !important; border-color:#426184 !important;
+}
+body.aa-light .container :is(.lesson-content,.image-box,.answer-box,.model-answer,.essay-answer,.question-box,.q-box,.explanation,.note-box,.info-box,.content-box,.example-box,.passage,.text-box,.answer,.solution,.paragraph-box) {
+  background:#fff !important; color:#172b49 !important; border-color:#d7e2f1 !important;
+}
+body.aa-light .container :is(.lesson-content,.image-box,.answer-box,.model-answer,.essay-answer,.question-box,.q-box,.explanation,.note-box,.info-box,.content-box,.example-box,.passage,.text-box,.answer,.solution,.paragraph-box) :is(p,li,span,b,strong,em,small,label,td,th,h1,h2,h3,h4,div) { color:#172b49 !important; }
+.aa-img-missing { display:flex; min-height:110px; width:100%; align-items:center; justify-content:center; padding:22px; border:1px dashed #7892b5; border-radius:12px; background:#10284a; color:#dbeafe; font-weight:700; text-align:center; }
+body.aa-light .aa-img-missing { background:#f1f5f9; color:#334155; border-color:#cbd5e1; }
+</style>
+<style id="aa-biology-answers-fix">
+body:not(.aa-light) .q-box .model-answer { background: #0b2a5b !important; color: #ffffff !important; border: 1px solid #2563eb !important; padding: 10px; border-radius: 6px; margin-top: 10px; direction: rtl; text-align: right; }
+body.aa-light .q-box .model-answer { background: #ffffff !important; color: #0b2a5b !important; border: 1px solid #93c5fd !important; padding: 10px; border-radius: 6px; margin-top: 10px; direction: rtl; text-align: right; }
+</style>
+</head>
+<body>
+  <div class="container">
+    <a href="biology_ch4.html" class="back-btn">← العودة للفصل</a>
+    <h1>امتحان الفصل الرابع الشامل (المناعة)</h1>
+    <p style="text-align:center; color:#64748b; margin-bottom:20px;">الجزء الأول: اختياري (40 سؤال) - من السهل للصعب</p>
+
+    <div class="q-box">
+      <p class="q-text">1. من أمثلة المناعة البيوكيميائية في النباتات:</p>
+      <ul class="options" onclick="checkAns(this, 'b', event)">
+        <li data-opt="a">أ. تكوين الفلين.</li>
+        <li data-opt="b">ب. إنتاج الفينولات.</li>
+        <li data-opt="c">ج. ترسيب الصموغ.</li>
+        <li data-opt="d">د. تكوين التيلوزات.</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">2. يتم نضج الخلايا الليمفاوية الجذعية إلى الخلايا التائية T وتمایزها إلى أنواعها المختلفة في:</p>
+      <ul class="options" onclick="checkAns(this, 'b', event)">
+        <li data-opt="a">أ. نخاع العظام.</li>
+        <li data-opt="b">ب. الغدة التيموسية.</li>
+        <li data-opt="c">ج. الطحال.</li>
+        <li data-opt="d">د. اللوزتان.</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">3. تصنع الخلايا البائية B وتنضج في:</p>
+      <ul class="options" onclick="checkAns(this, 'b', event)">
+        <li data-opt="a">أ. الغدة التيموسية.</li>
+        <li data-opt="b">ب. نخاع العظام.</li>
+        <li data-opt="c">ج. الطحال.</li>
+        <li data-opt="d">د. اللوزتان.</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">4. الخلايا الليمفاوية التي توجد في الدم هي:</p>
+      <ul class="options" onclick="checkAns(this, 'd', event)">
+        <li data-opt="a">أ. الخلايا البائية B.</li>
+        <li data-opt="b">ب. الخلايا التائية T.</li>
+        <li data-opt="c">ج. الخلايا القاتلة الطبيعية.</li>
+        <li data-opt="d">د. جميع ما سبق.</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">5. الخلايا الليمفاوية التي تهاجم الخلايا السرطانية والأعضاء المزروعة هي:</p>
+      <ul class="options" onclick="checkAns(this, 'b', event)">
+        <li data-opt="a">أ. الخلايا التائية T المساعدة.</li>
+        <li data-opt="b">ب. الخلايا التائية T السامة.</li>
+        <li data-opt="c">ج. الخلايا التائية T المثبطة.</li>
+        <li data-opt="d">د. جميع ما سبق.</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">6. من الخلايا التي لها القدرة على التهام الميكروبات والأجسام الغريبة:</p>
+      <ul class="options" onclick="checkAns(this, 'd', event)">
+        <li data-opt="a">أ. الخلايا البلعمية الكبيرة.</li>
+        <li data-opt="b">ب. خلايا الدم البيضاء عديمة النواة.</li>
+        <li data-opt="c">ج. خلايا الدم البيضاء وحيدة النواة.</li>
+        <li data-opt="d">د. جميع ما سبق.</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">7. من وسائل خط الدفاع الأول في الإنسان:</p>
+      <ul class="options" onclick="checkAns(this, 'c', event)">
+        <li data-opt="a">أ. الالتهاب.</li>
+        <li data-opt="b">ب. الخلايا البلعمية.</li>
+        <li data-opt="c">ج. حمض المعدة.</li>
+        <li data-opt="d">د. الأجسام المضادة.</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">8. المادة التي تفرزها الخلايا الصارية وتسبب تمدد الأوعية الدموية:</p>
+      <ul class="options" onclick="checkAns(this, 'b', event)">
+        <li data-opt="a">أ. الإنترفيرون.</li>
+        <li data-opt="b">ب. الهيستامين.</li>
+        <li data-opt="c">ج. الأنتيجين.</li>
+        <li data-opt="d">د. الأجسام المضادة.</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">9. المناعة التي تنتج عن دخول الميكروب للجسم لأول مرة:</p>
+      <ul class="options" onclick="checkAns(this, 'a', event)">
+        <li data-opt="a">أ. الاستجابة المناعية الأولية.</li>
+        <li data-opt="b">ب. الاستجابة المناعية الثانوية.</li>
+        <li data-opt="c">ج. المناعة الطبيعية.</li>
+        <li data-opt="d">د. المناعة الفطرية.</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">10. الخلايا المسؤولة عن إنتاج الأجسام المضادة هي:</p>
+      <ul class="options" onclick="checkAns(this, 'c', event)">
+        <li data-opt="a">أ. الخلايا التائية المساعدة.</li>
+        <li data-opt="b">ب. الخلايا القاتلة الطبيعية.</li>
+        <li data-opt="c">ج. الخلايا البلازمية.</li>
+        <li data-opt="d">د. الخلايا البلعمية.</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">11. الأجسام المضادة عبارة عن:</p>
+      <ul class="options" onclick="checkAns(this, 'a', event)">
+        <li data-opt="a">أ. بروتينات.</li>
+        <li data-opt="b">ب. كربوهيدرات.</li>
+        <li data-opt="c">ج. دهون.</li>
+        <li data-opt="d">د. أحماض نووية.</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">12. الجسم المضاد له شكل:</p>
+      <ul class="options" onclick="checkAns(this, 'd', event)">
+        <li data-opt="a">أ. حرف U.</li>
+        <li data-opt="b">ب. دائري.</li>
+        <li data-opt="c">ج. حلزوني.</li>
+        <li data-opt="d">د. حرف Y.</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">13. ارتباط الأجسام المضادة بالميكروب وتجميعه في كتل سهلة الالتهام يسمى:</p>
+      <ul class="options" onclick="checkAns(this, 'b', event)">
+        <li data-opt="a">أ. التعادل.</li>
+        <li data-opt="b">ب. التلازن (الالتصاق).</li>
+        <li data-opt="c">ج. التحلل.</li>
+        <li data-opt="d">د. الترسيب.</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">14. الخلايا التي تفرز البيرفورين لتحليل غشاء الخلية المصابة:</p>
+      <ul class="options" onclick="checkAns(this, 'c', event)">
+        <li data-opt="a">أ. T المساعدة.</li>
+        <li data-opt="b">ب. T المثبطة.</li>
+        <li data-opt="c">ج. T القاتلة.</li>
+        <li data-opt="d">د. البائية.</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">15. الجسم الغريب الذي يحفز الاستجابة المناعية يسمى:</p>
+      <ul class="options" onclick="checkAns(this, 'a', event)">
+        <li data-opt="a">أ. أنتيجين.</li>
+        <li data-opt="b">ب. جسم مضاد.</li>
+        <li data-opt="c">ج. متمم.</li>
+        <li data-opt="d">د. إنترفيرون.</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">16. تنشط الخلايا التائية المساعدة الخلايا البائية عن طريق إفراز:</p>
+      <ul class="options" onclick="checkAns(this, 'b', event)">
+        <li data-opt="a">أ. الهيستامين.</li>
+        <li data-opt="b">ب. الإنترليوكينات.</li>
+        <li data-opt="c">ج. البيرفورين.</li>
+        <li data-opt="d">د. الأجسام المضادة.</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">17. الخلايا التي تكون موجودة في الأغشية المخاطية للأمعاء الدقيقة:</p>
+      <ul class="options" onclick="checkAns(this, 'c', event)">
+        <li data-opt="a">أ. اللوزتان.</li>
+        <li data-opt="b">ب. الطحال.</li>
+        <li data-opt="c">ج. بقع باير.</li>
+        <li data-opt="d">د. الغدة التيموسية.</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">18. العضو الليمفاوي الذي يقع في الجزء الأيسر العلوي من تجويف البطن:</p>
+      <ul class="options" onclick="checkAns(this, 'd', event)">
+        <li data-opt="a">أ. اللوزتان.</li>
+        <li data-opt="b">ب. الغدة التيموسية.</li>
+        <li data-opt="c">ج. نخاع العظام.</li>
+        <li data-opt="d">د. الطحال.</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">19. الغدة التي تفرز هرمون الثيموسين:</p>
+      <ul class="options" onclick="checkAns(this, 'b', event)">
+        <li data-opt="a">أ. الطحال.</li>
+        <li data-opt="b">ب. الغدة التيموسية.</li>
+        <li data-opt="c">ج. اللوزتان.</li>
+        <li data-opt="d">د. نخاع العظام.</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">20. من خصائص المناعة الطبيعية (غير المتخصصة) أنها:</p>
+      <ul class="options" onclick="checkAns(this, 'c', event)">
+        <li data-opt="a">أ. بطيئة.</li>
+        <li data-opt="b">ب. متخصصة ضد ميكروب معين.</li>
+        <li data-opt="c">ج. سريعة وغير متخصصة.</li>
+        <li data-opt="d">د. لها ذاكرة مناعية.</li>
+      </ul>
+    </div>
+
+    <div class="q-box">
+      <p class="q-text">21. عندما يتعرض النبات لجرح، فإنه يفرز مواد صمغية لالتقاط الميكروب. هذه الظاهرة تسمى:</p>
+      <ul class="options" onclick="checkAns(this, 'b', event)">
+        <li data-opt="a">أ. تكوين الفللين.</li>
+        <li data-opt="b">ب. ترسيب الصموغ.</li>
+        <li data-opt="c">ج. تكوين التيلوزات.</li>
+        <li data-opt="d">د. الاستجابة بالالتهاب.</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">22. أي مما يلي يعتبر من وسائل المناعة التركيبية الموجودة أصلاً في النبات؟</p>
+      <ul class="options" onclick="checkAns(this, 'a', event)">
+        <li data-opt="a">أ. طبقة الكيوتين الشمعية.</li>
+        <li data-opt="b">ب. الفينولات.</li>
+        <li data-opt="c">ج. ترسيب الصموغ.</li>
+        <li data-opt="d">د. التيلوزات.</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">23. الإنترفيرونات هي مواد كيميائية تفرزها:</p>
+      <ul class="options" onclick="checkAns(this, 'c', event)">
+        <li data-opt="a">أ. البكتيريا المصابة.</li>
+        <li data-opt="b">ب. الخلايا السليمة للتحذير.</li>
+        <li data-opt="c">ج. الخلايا المصابة بالفيروسات.</li>
+        <li data-opt="d">د. كريات الدم الحمراء.</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">24. الخلايا التي تقوم بتقديم الأنتيجين للخلايا التائية المساعدة:</p>
+      <ul class="options" onclick="checkAns(this, 'd', event)">
+        <li data-opt="a">أ. الخلايا البائية.</li>
+        <li data-opt="b">ب. الخلايا التائية القاتلة.</li>
+        <li data-opt="c">ج. الخلايا القاتلة الطبيعية.</li>
+        <li data-opt="d">د. الخلايا البلعمية الكبيرة.</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">25. أي من الخلايا التالية تنشط الخلايا البائية والخلايا التائية القاتلة؟</p>
+      <ul class="options" onclick="checkAns(this, 'a', event)">
+        <li data-opt="a">أ. الخلايا التائية المساعدة (TH).</li>
+        <li data-opt="b">ب. الخلايا التائية المثبطة (TS).</li>
+        <li data-opt="c">ج. الخلايا القاتلة الطبيعية (NK).</li>
+        <li data-opt="d">د. الخلايا البلعمية.</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">26. المواد الكيميائية التي تجذب الخلايا البلعمية إلى موقع الإصابة تسمى:</p>
+      <ul class="options" onclick="checkAns(this, 'b', event)">
+        <li data-opt="a">أ. الإنترليوكينات.</li>
+        <li data-opt="b">ب. الكيموكينات.</li>
+        <li data-opt="c">ج. الإنترفيرونات.</li>
+        <li data-opt="d">د. المتممات.</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">27. سلسلة المتممات عبارة عن:</p>
+      <ul class="options" onclick="checkAns(this, 'c', event)">
+        <li data-opt="a">أ. خلايا مناعية.</li>
+        <li data-opt="b">ب. مواد كيميائية تجذب الخلايا.</li>
+        <li data-opt="c">ج. مجموعة من البروتينات والإنزيمات في الدم.</li>
+        <li data-opt="d">د. نوع من الأجسام المضادة.</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">28. ما يحدث عند تعرض نبات لميكروب في منطقة صغيرة جداً، فيقوم بقتل هذه المنطقة:</p>
+      <ul class="options" onclick="checkAns(this, 'd', event)">
+        <li data-opt="a">أ. تكوين الفللين.</li>
+        <li data-opt="b">ب. ترسيب الصموغ.</li>
+        <li data-opt="c">ج. تكوين التيلوزات.</li>
+        <li data-opt="d">د. التخلص من النسيج المصاب (الحساسية المفرطة).</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">29. من خصائص الاستجابة المناعية الثانوية:</p>
+      <ul class="options" onclick="checkAns(this, 'a', event)">
+        <li data-opt="a">أ. أسرع وأقوى من الأولية.</li>
+        <li data-opt="b">ب. أبطأ من الأولية.</li>
+        <li data-opt="c">ج. تنتج أجسام مضادة أقل.</li>
+        <li data-opt="d">د. لا تنتج خلايا ذاكرة.</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">30. الخلايا التي توقف الاستجابة المناعية بعد القضاء على الميكروب:</p>
+      <ul class="options" onclick="checkAns(this, 'c', event)">
+        <li data-opt="a">أ. TH.</li>
+        <li data-opt="b">ب. TC.</li>
+        <li data-opt="c">ج. TS.</li>
+        <li data-opt="d">د. NK.</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">31. الجسم المضاد الموجود في إفرازات الجسم (مثل اللعاب والدموع واللبن):</p>
+      <ul class="options" onclick="checkAns(this, 'b', event)">
+        <li data-opt="a">أ. IgG.</li>
+        <li data-opt="b">ب. IgA.</li>
+        <li data-opt="c">ج. IgE.</li>
+        <li data-opt="d">د. IgM.</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">32. أي من التالي يعتبر من الأنسجة الليمفاوية الأولية؟</p>
+      <ul class="options" onclick="checkAns(this, 'a', event)">
+        <li data-opt="a">أ. نخاع العظام والغدة التيموسية.</li>
+        <li data-opt="b">ب. الطحال واللوزتان.</li>
+        <li data-opt="c">ج. العقد الليمفاوية.</li>
+        <li data-opt="d">د. بقع باير.</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">33. تحتوي الخلايا المحببة في سيتوبلازمها على:</p>
+      <ul class="options" onclick="checkAns(this, 'c', event)">
+        <li data-opt="a">أ. نواة فقط.</li>
+        <li data-opt="b">ب. ميتوكوندريا ضخمة.</li>
+        <li data-opt="c">ج. حبيبات تلتقط الصبغة.</li>
+        <li data-opt="d">د. لا شيء مما سبق.</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">34. الطبقة الشمعية (الكيوتين) التي تغطي سطح النبات تعتبر:</p>
+      <ul class="options" onclick="checkAns(this, 'b', event)">
+        <li data-opt="a">أ. مناعة بيوكيميائية.</li>
+        <li data-opt="b">ب. مناعة تركيبية.</li>
+        <li data-opt="c">ج. استجابة بالالتهاب.</li>
+        <li data-opt="d">د. مناعة مكتسبة.</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">35. البروتين الذي يربط الأنتيجين على سطح الخلية البائية ويعرضه للخلية التائية:</p>
+      <ul class="options" onclick="checkAns(this, 'd', event)">
+        <li data-opt="a">أ. الإنترفيرون.</li>
+        <li data-opt="b">ب. البيرفورين.</li>
+        <li data-opt="c">ج. الهيستامين.</li>
+        <li data-opt="d">د. MHC (التوافق النسيجي).</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">36. أي مما يلي يعتبر من وسائل المناعة التركيبية التي تتكون كاستجابة للإصابة؟</p>
+      <ul class="options" onclick="checkAns(this, 'c', event)">
+        <li data-opt="a">أ. الجدار الخلوي.</li>
+        <li data-opt="b">ب. الأدمة الخارجية.</li>
+        <li data-opt="c">ج. تكوين التيلوزات.</li>
+        <li data-opt="d">د. طبقة الكيوتين.</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">37. إذا أصيب شخص بالحصبة مرة واحدة، فإنه لا يصاب بها مرة أخرى بسبب:</p>
+      <ul class="options" onclick="checkAns(this, 'b', event)">
+        <li data-opt="a">أ. المناعة الطبيعية.</li>
+        <li data-opt="b">ب. خلايا الذاكرة.</li>
+        <li data-opt="c">ج. الإنترفيرونات.</li>
+        <li data-opt="d">د. الالتهاب.</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">38. يتم إنتاج الخلايا القاتلة الطبيعية (NK) في:</p>
+      <ul class="options" onclick="checkAns(this, 'a', event)">
+        <li data-opt="a">أ. نخاع العظام.</li>
+        <li data-opt="b">ب. الغدة التيموسية.</li>
+        <li data-opt="c">ج. الطحال.</li>
+        <li data-opt="d">د. الكبد.</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">39. الأجسام المضادة التي تسبب تحلل غشاء الخلية البكتيرية بمساعدة المتممات:</p>
+      <ul class="options" onclick="checkAns(this, 'd', event)">
+        <li data-opt="a">أ. إبطال مفعول السموم.</li>
+        <li data-opt="b">ب. الترسيب.</li>
+        <li data-opt="c">ج. التلازن.</li>
+        <li data-opt="d">د. التحلل (Lysis).</li>
+      </ul>
+    </div>
+    <div class="q-box">
+      <p class="q-text">40. في النبات، إفراز الفينولات والمواد السامة للميكروبات يعتبر:</p>
+      <ul class="options" onclick="checkAns(this, 'c', event)">
+        <li data-opt="a">أ. مناعة تركيبية.</li>
+        <li data-opt="b">ب. وسيلة موجودة أصلاً.</li>
+        <li data-opt="c">ج. مناعة بيوكيميائية.</li>
+        <li data-opt="d">د. استجابة بالالتهاب.</li>
+      </ul>
+    </div>
+
+    <!-- الجزء الثالث: الأسئلة المقالية -->
+    <h2>Part 2: Written Questions (41-50)</h2>
+    
+    <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
+      <p class="q-text" style="color:#1e40af; direction: rtl; text-align: right;">41. علل: تتفلطح الجدر الخلوية لخلايا النبات عند تعرضه للميكروب.</p>
+      <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
+      <p class="model-answer" style="display:none;">تحدث بعض التغيرات الشكلية نتيجة للغزو، حيث تنتفخ الجدر الخلوية لخلايا كل من البشرة وتحت البشرة أثناء الاختراق المباشر للكائن الممرض معاً، مما يؤدي إلى تثبيط اختراقه لتلك الخلايا.</p>
+    </div>
+
+    <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
+      <p class="q-text" style="color:#1e40af; direction: rtl; text-align: right;">42. علل: تمتد البروزات من الخلايا البارنشيمية المجاورة للقصيبات الخشبية عند تعرض النبات للقطع.</p>
+      <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
+      <p class="model-answer" style="display:none;">لتكوين التيلوزات التي تعمل على سد القصيبات الخشبية وإعاقة تحرك الكائنات الممرضة (البكتيريا والفطريات) إلى الأجزاء الأخرى في النبات لمنع انتشارها.</p>
+    </div>
+
+    <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
+      <p class="q-text" style="color:#1e40af; direction: rtl; text-align: right;">43. علل: يفرز هرمون الثيموسين دوراً في عمل الجهاز المناعي.</p>
+      <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
+      <p class="model-answer" style="display:none;">لأنه يحفز نضج الخلايا الليمفاوية الجذعية (من نخاع العظام) إلى خلايا تائية (T) مختلفة، وتمایزها إلى أنواعها المختلفة داخل الغدة التيموسية.</p>
+    </div>
+
+    <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
+      <p class="q-text" style="color:#1e40af; direction: rtl; text-align: right;">44. علل: يزداد إفراز الإنترفيرونات في الخلايا المصابة بالفيروسات.</p>
+      <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
+      <p class="model-answer" style="display:none;">لأنها ترتبط بالخلايا السليمة المجاورة وتحفزها على إنتاج بروتينات مضادة للفيروسات (أو إنزيمات تثبط نسخ الحمض النووي الفيروسي)، وبذلك تمنع تكاثر الفيروس وانتشاره في الجسم.</p>
+    </div>
+
+    <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
+      <p class="q-text" style="color:#1e40af; direction: rtl; text-align: right;">45. علل: تعتبر الدموع واللعاب من أنواع المناعة الطبيعية.</p>
+      <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
+      <p class="model-answer" style="display:none;">لأنها تعمل كخط دفاع أول (حواجز طبيعية) لمنع دخول الميكروبات؛ فالدموع تحتوي على مواد محللة للميكروبات، واللعاب يحتوي على مواد قاتلة ومذيبة للميكروبات، وهي استجابة سريعة غير متخصصة.</p>
+    </div>
+
+    <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
+      <p class="q-text" style="color:#1e40af; direction: rtl; text-align: right;">46. علل: لا يصاب الإنسان بالحصبة إلا مرة واحدة.</p>
+      <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
+      <p class="model-answer" style="display:none;">لأن الإصابة الأولى تحفز تكون خلايا الذاكرة (البائية والتائية) التي تبقى في الجسم لسنوات طويلة. فإذا دخل نفس الميكروب مرة أخرى، تستجيب خلايا الذاكرة بسرعة وقوة (استجابة ثانوية) وتقضي عليه قبل ظهور الأعراض.</p>
+    </div>
+
+    <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
+      <p class="q-text" style="color:#1e40af; direction: rtl; text-align: right;">47. علل: يقتل النبات بعض أنسجته المصابة بالميكروب.</p>
+      <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
+      <p class="model-answer" style="display:none;">فيما يعرف بالحساسية المفرطة، وذلك لمنع انتشار الكائن الممرض من الأنسجة المصابة إلى الأنسجة السليمة المجاورة، وبالتالي يتخلص النبات من الكائن الممرض بموت النسيج المصاب.</p>
+    </div>
+
+    <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
+      <p class="q-text" style="color:#1e40af; direction: rtl; text-align: right;">48. ماذا يحدث في الحالات التالية: (أ) دخول ميكروب حامل على سطحه أنتيجين معين إلى الجسم. (ب) إصابة النباتات ببكتيريا سامة.</p>
+      <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
+      <p class="model-answer" style="display:none;">(أ) يتم تنشيط المناعة المكتسبة (الخلطية)، فتتعرف الخلايا البائية على الأنتيجين وتفرز أجساماً مضادة ترتبط به وتعادله أو تلازمه ليلتهمه البلعميات.<br>(ب) تفرز النباتات مواد كيميائية مضادة للبكتيريا (مثل الفينولات أو أحماض أمينية غير بروتينية) لتثبيط نموها أو قتلها.</p>
+    </div>
+
+    <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
+      <p class="q-text" style="color:#1e40af; direction: rtl; text-align: right;">49. قارن بين: المناعة الطبيعية والمناعة المكتسبة في الإنسان.</p>
+      <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
+      <p class="model-answer" style="display:none;"><b>المناعة الطبيعية (غير المتخصصة):</b> سريعة، غير متخصصة ضد ميكروب معين، لا تكون خلايا ذاكرة، تشمل خطوط الدفاع الأولى والثانية.<br><b>المناعة المكتسبة (المتخصصة):</b> بطيئة في الاستجابة الأولية، متخصصة ضد أنتيجين معين، تكون خلايا ذاكرة (استجابة ثانوية سريعة)، تشمل الخلايا الليمفاوية (B و T).</p>
+    </div>
+
+    <div class="q-box" style="background: #eff6ff; border-color: #bfdbfe;">
+      <p class="q-text" style="color:#1e40af; direction: rtl; text-align: right;">50. وضح بالرسم تركيب الجسم المضاد مع كتابة البيانات.</p>
+      <button class="show-answer" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';" style="background:#3b82f6; color:white; border:none; padding:8px 15px; border-radius:6px; cursor:pointer;">إظهار الإجابة النموذجية</button>
+      <p class="model-answer" style="display:none;">(إجابة مقالية بالرسم): يتم رسم شكل حرف Y موضحاً عليه:<br>1. سلاسل ثقيلة (طويلة).<br>2. سلاسل خفيفة (قصيرة).<br>3. موقع ارتباط الأنتيجين (الجزء المتغير في نهاية الذراعين).<br>4. منطقة ثابتة (الجزء السفلي).<br>5. روابط ثنائية كبريتيدية تربط السلاسل.</p>
+    </div>
+
+  </div> <!-- نهاية الحاوية -->
+
+<script id="abo-arida-site-ui">
+(function(){
+ const bar=document.createElement('nav');bar.className='aa-topbar';bar.setAttribute('aria-label','التنقل الرئيسي');
+ bar.innerHTML='<a class="aa-brand" href="index.html"><span class="aa-logo">📚</span><span>أبو عريضة أكاديمي<small>ABO ARIDA ACADEMY</small></span></a><div class="aa-actions"><a class="aa-action" href="index.html">الرئيسية</a><a class="aa-action" href="contact.html">تواصل معنا</a><button class="aa-action" type="button" id="aaTheme">☀️ / 🌙</button></div>';
+ document.body.insertBefore(bar,document.body.firstChild);
+ const key='aboAridaTheme';function apply(v){document.body.classList.toggle('aa-light',v==='light');}
+ let saved='dark';try{saved=localStorage.getItem(key)||'dark'}catch(e){}apply(saved);
+ const btn=document.getElementById('aaTheme');btn.addEventListener('click',function(){const next=document.body.classList.contains('aa-light')?'dark':'light';apply(next);try{localStorage.setItem(key,next)}catch(e){}});
+})();
+</script>
+
+<script id="aa-night-image-fallback-v2">
+document.addEventListener('DOMContentLoaded', function(){
+  document.querySelectorAll('img').forEach(function(img){
+    img.addEventListener('error', function(){
+      if (img.dataset.aaFallbackDone) return;
+      img.dataset.aaFallbackDone='1';
+      var box=document.createElement('div');
+      box.className='aa-img-missing';
+      box.textContent='الصورة غير متاحة حاليًا' + (img.alt ? ' — '+img.alt : '');
+      img.replaceWith(box);
+    }, {once:true});
+    if (img.complete && img.naturalWidth===0 && img.src) img.dispatchEvent(new Event('error'));
+  });
+});
+</script>
+
+</body>
+</html>
